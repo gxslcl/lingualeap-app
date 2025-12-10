@@ -103,23 +103,27 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
 
   const playAudio = (e: React.MouseEvent, text: string, wordId: string) => {
     e.stopPropagation();
-    // 标记单词为已学习
-    setLearnedWords((prev) => {
-      const newSet = new Set(prev);
-      newSet.add(wordId);
-      return newSet;
-    });
+    // 标记单词为已学习，但不在"生词练习"模式下进行
+    if (activeCategory !== "Unlearned") {
+      setLearnedWords((prev) => {
+        const newSet = new Set(prev);
+        newSet.add(wordId);
+        return newSet;
+      });
+    }
     ttsService.speak(text, ttsConfig);
   };
 
   const playSlowAudio = (e: React.MouseEvent, text: string, wordId: string) => {
     e.stopPropagation();
-    // 标记单词为已学习
-    setLearnedWords((prev) => {
-      const newSet = new Set(prev);
-      newSet.add(wordId);
-      return newSet;
-    });
+    // 标记单词为已学习，但不在"生词练习"模式下进行
+    if (activeCategory !== "Unlearned") {
+      setLearnedWords((prev) => {
+        const newSet = new Set(prev);
+        newSet.add(wordId);
+        return newSet;
+      });
+    }
     // 如果只有一个单词，则正常播放
     if (text.trim().split(/\s+/).length <= 1) {
       ttsService.speak(text, ttsConfig);
