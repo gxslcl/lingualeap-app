@@ -8,6 +8,8 @@ import {
   Shuffle,
   ListOrdered,
   RefreshCw,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { Category, TTSConfig } from "../types";
 import { vocabularyData } from "../data/vocabulary";
@@ -45,7 +47,8 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
 
   // Pagination & Display Settings
   const [pageSize, setPageSize] = useState(20);
-  const [visibleCount, setVisibleCount] = useState(20);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [additionalCount, setAdditionalCount] = useState(0);
 
   // New states for mode switching
   const [isRandomMode, setIsRandomMode] = useState(false);
@@ -66,14 +69,22 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
   }, [learnedWords]);
 
   // 1. Filter by Category
+  // 优化：分离基础分类过滤逻辑，保持引用稳定
+  const categoryBaseWords = useMemo(() => {
+    if (activeCategory === "All") return vocabularyData;
+    if (activeCategory === "Unlearned") return null;
+    return vocabularyData.filter((w) => w.category === activeCategory);
+  }, [activeCategory]);
+
   const filteredWords = useMemo(() => {
     if (activeCategory === "All") return vocabularyData;
     if (activeCategory === "Unlearned") {
       // 过滤出未学习的单词
       return vocabularyData.filter((w) => !learnedWords.has(w.id));
     }
-    return vocabularyData.filter((w) => w.category === activeCategory);
-  }, [activeCategory, learnedWords]);
+    // 其他分类下，使用稳定的引用，避免learnedWords变化触发重排
+    return categoryBaseWords || [];
+  }, [activeCategory, learnedWords, categoryBaseWords]);
 
   // 2. Apply Sorting/Shuffling
   const processedWords = useMemo(() => {
@@ -85,11 +96,15 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
 
   // Reset pagination when category, mode, or pageSize changes
   React.useEffect(() => {
-    setVisibleCount(pageSize);
+    setCurrentPage(1);
+    setAdditionalCount(0);
   }, [activeCategory, isRandomMode, shuffleSeed, pageSize]);
 
   // 3. Apply Pagination
-  const displayedWords = processedWords.slice(0, visibleCount);
+  const totalPages = Math.ceil(processedWords.length / pageSize);
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize + additionalCount;
+  const displayedWords = processedWords.slice(startIndex, endIndex);
 
   const toggleReveal = (id: string) => {
     const newSet = new Set(revealedWords);
@@ -134,11 +149,16 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
   };
 
   const loadMore = () => {
-    setVisibleCount((prev) => prev + pageSize);
+    setAdditionalCount((prev) => prev + pageSize);
   };
 
   const handleRefreshRandom = () => {
     setShuffleSeed((prev) => prev + 1);
+  };
+
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+    setAdditionalCount(0); // Reset load more when changing pages
   };
 
   return (
@@ -247,6 +267,29 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
               </select>
             </div>
 
+            {/* Pagination Controls */}
+            <div className="flex items-center gap-2 bg-white dark:bg-slate-800 rounded-lg px-2 py-1 border border-slate-200 dark:border-slate-700 shadow-sm">
+              <button
+                onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                disabled={currentPage === 1}
+                className="p-1 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-md disabled:opacity-30 disabled:hover:bg-transparent transition-colors"
+              >
+                <ChevronLeft className="w-4 h-4 text-slate-600 dark:text-slate-300" />
+              </button>
+              <span className="text-sm font-medium text-slate-600 dark:text-slate-300 min-w-[3rem] text-center font-mono">
+                {currentPage} / {Math.max(1, totalPages)}
+              </span>
+              <button
+                onClick={() =>
+                  handlePageChange(Math.min(totalPages, currentPage + 1))
+                }
+                disabled={currentPage === totalPages || totalPages === 0}
+                className="p-1 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-md disabled:opacity-30 disabled:hover:bg-transparent transition-colors"
+              >
+                <ChevronRight className="w-4 h-4 text-slate-600 dark:text-slate-300" />
+              </button>
+            </div>
+
             <div className="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-2">
               <span className="hidden sm:inline">共</span>
               <span className="font-mono">{processedWords.length}</span>
@@ -313,7 +356,9 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
                 >
                   {isRevealed ? (
                     <span className="text-lg font-bold text-brand-600 dark:text-brand-400 animate-in fade-in slide-in-from-bottom-2 block">
-                      {word.chinese}
+                      {Array.isArray(word.chinese)
+                        ? word.chinese.join(", ")
+                        : word.chinese}
                     </span>
                   ) : (
                     <div className="flex items-center justify-center gap-2 text-slate-400 dark:text-slate-500 py-0.5">
@@ -333,15 +378,16 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
             <p>该分类下暂无单词</p>
           </div>
         )}
+
         {/* Load More Button */}
-        {visibleCount < processedWords.length && (
+        {endIndex < processedWords.length && (
           <div className="mt-8 flex justify-center pb-8">
             <button
               onClick={loadMore}
               className="flex items-center gap-2 px-8 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-bold rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-brand-600 dark:hover:text-brand-400 hover:border-brand-200 transition-all shadow-sm active:scale-95"
             >
               <ArrowDown className="w-4 h-4" />
-              加载更多单词 ({processedWords.length - visibleCount})
+              加载更多单词
             </button>
           </div>
         )}

@@ -11,7 +11,7 @@ export enum Category {
 export interface WordItem {
   id: string;
   english: string;
-  chinese: string;
+  chinese: string | string[];
   pronunciation?: string; // IPA
   category: Category;
 }

@@ -12,7 +12,7 @@ import {
   Layers,
   MessageCircle,
   Eye,
-  EyeOff
+  EyeOff,
 } from "lucide-react";
 import { WordItem, TTSConfig, Category } from "../types";
 import { vocabularyData } from "../data/vocabulary";
@@ -324,7 +324,7 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
 
   // 切换特定单词的中文显示状态
   const toggleWordReveal = (wordId: string) => {
-    setRevealedWords(prev => {
+    setRevealedWords((prev) => {
       const newSet = new Set(prev);
       if (newSet.has(wordId)) {
         newSet.delete(wordId);
@@ -374,7 +374,6 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
       }
     };
   }, [timerShutdown, isPlaying, remainingTime]);
-
 
   return (
     <div className="h-[calc(100vh-8rem)] flex flex-col w-full mx-auto px-2">
@@ -489,7 +488,7 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
               <MessageCircle className="w-3 h-3" />
               短句模式
             </button>
-            
+
             {/* 恢复全局显示中文按钮 */}
             <button
               onClick={() => setShowChinese(!showChinese)}
@@ -499,7 +498,11 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
                   : "bg-slate-50 dark:bg-slate-700/50 text-slate-600 dark:text-slate-200 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700"
               }`}
             >
-              {showChinese ? <EyeOff className="w-3 h-3" /> : <Eye className="w-3 h-3" />}
+              {showChinese ? (
+                <EyeOff className="w-3 h-3" />
+              ) : (
+                <Eye className="w-3 h-3" />
+              )}
               显示中文
             </button>
           </div>
@@ -620,10 +623,14 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
                       }}
                     >
                       {/* <EyeOff className="w-3 h-3 flex-shrink-0" /> */}
-                      <span>{word.chinese}</span>
+                      <span>
+                        {Array.isArray(word.chinese)
+                          ? word.chinese.join(", ")
+                          : word.chinese}
+                      </span>
                     </div>
                   ) : (
-                    <div 
+                    <div
                       className="text-sm font-medium text-slate-600 dark:text-slate-300 transition-colors whitespace-normal cursor-pointer flex items-center justify-end gap-1"
                       onClick={(e) => {
                         e.stopPropagation();
