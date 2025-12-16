@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Volume2, MessageCircle, Tag, Sparkles } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Volume2, MessageCircle, Tag, Sparkles, Shuffle } from 'lucide-react';
 import { phrasesData } from '../data/phrases';
 import { TTSConfig } from '../types';
 import { ttsService } from '../services/ttsService';
@@ -10,6 +10,16 @@ interface PhrasesViewProps {
 
 export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [isRandomMode, setIsRandomMode] = useState(false);
+  const [displayPhrases, setDisplayPhrases] = useState(phrasesData);
+
+  useEffect(() => {
+    if (isRandomMode) {
+      setDisplayPhrases([...phrasesData].sort(() => Math.random() - 0.5));
+    } else {
+      setDisplayPhrases(phrasesData);
+    }
+  }, [isRandomMode]);
 
   const handlePlay = (e: React.MouseEvent, text: string) => {
     e.stopPropagation();
@@ -28,10 +38,22 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
           常用情景短语
         </h2>
         <p className="text-brand-100 text-sm">点击卡片查看中文释义，模仿发音进行跟读练习</p>
+        
+        <button
+          onClick={() => setIsRandomMode(!isRandomMode)}
+          className={`mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${
+            isRandomMode 
+              ? 'bg-white text-brand-600 shadow-md transform scale-105' 
+              : 'bg-brand-700/30 text-brand-100 hover:bg-brand-700/50'
+          }`}
+        >
+          <Shuffle className={`w-4 h-4 ${isRandomMode ? 'animate-pulse' : ''}`} />
+          {isRandomMode ? '随机模式：开启' : '随机模式：关闭'}
+        </button>
       </div>
 
       <div className="space-y-4">
-        {phrasesData.map(phrase => {
+        {displayPhrases.map(phrase => {
           const isExpanded = expandedId === phrase.id;
           return (
             <div

@@ -49,7 +49,7 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState<number | null>(null);
   const [showSettingsMenu, setShowSettingsMenu] = useState(false);
   const [remainingTime, setRemainingTime] = useState<number | null>(null);
-  const [showChinese, setShowChinese] = useState(false); // 全局控制中文显示
+  const [showChinese, setShowChinese] = useState(true); // 全局控制中文显示
   // 单独控制每个单词的中文显示
   const [revealedWords, setRevealedWords] = useState<Set<string>>(new Set());
 
@@ -114,7 +114,7 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
       // 清空已揭示的单词
       setRevealedWords(new Set());
       // 重置全局显示设置
-      setShowChinese(false);
+      setShowChinese(true);
 
       if (autoPlay) {
         setIsPlaying(true);

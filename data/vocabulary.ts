@@ -711,7 +711,7 @@ const baseVocabulary: WordItem[] = [
   createWord('w541', 'immediate', ['立即的', '直接的', '紧迫的'], '/ɪˈmiːdiət/', Category.DailyLife),
   createWord('w542', 'wish', ['希望', '祝愿', '愿望'], '/wɪʃ/', Category.DailyLife),
   createWord('w543', 'contain', ['包含', '容纳', '抑制'], '/kənˈteɪn/', Category.DailyLife),
-  createWord('w544', 'feed', ['喂养', '饲养', ' feed'], '/fiːd/', Category.DailyLife),
+  createWord('w544', 'feed', ['喂养', '饲养'], '/fiːd/', Category.DailyLife),
   createWord('w545', 'raise', ['提高', '筹集', '抚养'], '/reɪz/', Category.DailyLife),
   createWord('w546', 'describe', ['描述', '形容', '描绘'], '/dɪˈskraɪb/', Category.DailyLife),
   createWord('w547', 'ready', ['准备好的', '乐意的', '现成的'], '/ˈredi/', Category.DailyLife),
