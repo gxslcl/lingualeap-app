@@ -269,6 +269,15 @@ const App: React.FC = () => {
                     <span className="text-[10px] font-medium">词库</span>
                 </button>
                 <button
+                    onClick={() => setCurrentView('phrases')}
+                    className={`flex flex-col items-center justify-center w-full h-full space-y-1 active:scale-95 transition-transform ${
+                    currentView === 'phrases' ? 'text-brand-600 dark:text-brand-400' : 'text-slate-400 dark:text-slate-500'
+                    }`}
+                >
+                    <MessageSquare className={`w-6 h-6 ${currentView === 'phrases' ? 'fill-current opacity-20' : ''}`} />
+                    <span className="text-[10px] font-medium">短语</span>
+                </button>
+                <button
                     onClick={() => setCurrentView('game')}
                     className={`flex flex-col items-center justify-center w-full h-full space-y-1 active:scale-95 transition-transform ${
                     currentView === 'game' ? 'text-brand-600 dark:text-brand-400' : 'text-slate-400 dark:text-slate-500'
