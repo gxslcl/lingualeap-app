@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
+// 引入单词检查器
+// import { checkMissingWords } from './services/wordChecker';
 
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+// 渲染应用程序
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
+
+// 执行单词检查
+// checkMissingWords();

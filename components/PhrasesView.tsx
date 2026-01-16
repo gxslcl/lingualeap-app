@@ -7,6 +7,7 @@ import {
   Shuffle,
   X,
   ArrowUp,
+  ArrowDown,
 } from "lucide-react";
 import { phrasesData } from "../data/phrases";
 import { vocabularyData } from "../data/vocabulary";
@@ -19,9 +20,12 @@ interface PhrasesViewProps {
 
 export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [isRandomMode, setIsRandomMode] = useState(false);
+  const [isRandomMode, setIsRandomMode] = useState(true);
   const [displayPhrases, setDisplayPhrases] = useState(phrasesData);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [pageSize] = useState(20); // 每页显示20个
+  const [currentPage, setCurrentPage] = useState(1);
+  const [additionalCount, setAdditionalCount] = useState(0);
 
   // State for word popup
   const [selectedWord, setSelectedWord] = useState<{
@@ -97,7 +101,16 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
     } else {
       setDisplayPhrases(phrasesData);
     }
+    // Reset to first page when changing random mode
+    setCurrentPage(1);
+    setAdditionalCount(0);
   }, [isRandomMode]);
+
+  // 计算当前页面显示的短语
+  const totalPages = Math.ceil(displayPhrases.length / pageSize);
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize + additionalCount;
+  const displayedPhrases = displayPhrases.slice(startIndex, endIndex);
 
   const handlePlay = (e: React.MouseEvent, text: string) => {
     e.stopPropagation();
@@ -300,6 +313,11 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
     });
   };
 
+  // 加载更多短语
+  const loadMore = () => {
+    setAdditionalCount((prev) => prev + pageSize);
+  };
+
   // 清理定时器
   useEffect(() => {
     return () => {
@@ -336,41 +354,41 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
       </div>
 
       <div className="space-y-4">
-        {displayPhrases.map((phrase) => {
+        {displayedPhrases.map((phrase) => {
           const isExpanded = expandedId === phrase.id;
           return (
             <div
               key={phrase.id}
               onClick={() => toggleExpand(phrase.id)}
-              className={`bg-white rounded-xl shadow-sm border transition-all cursor-pointer overflow-hidden ${
+              className={`bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 transition-all cursor-pointer overflow-hidden ${
                 isExpanded
                   ? "border-brand-400 shadow-md ring-1 ring-brand-100"
-                  : "border-slate-100 hover:border-brand-200"
+                  : "hover:border-brand-200"
               }`}
             >
               <div className="p-5">
                 <div className="flex justify-between items-start gap-4">
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="px-2 py-0.5 bg-indigo-50 text-indigo-600 text-[10px] font-bold rounded uppercase tracking-wider border border-indigo-100">
+                      <span className="px-2 py-0.5 bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 text-[10px] font-bold rounded uppercase tracking-wider border border-indigo-100 dark:border-slate-600">
                         {phrase.context}
                       </span>
                       {phrase.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[10px] text-slate-400 flex items-center gap-1 bg-slate-50 px-1.5 py-0.5 rounded"
+                          className="text-[10px] text-slate-400 dark:text-slate-300 flex items-center gap-1 bg-slate-50 dark:bg-slate-700 px-1.5 py-0.5 rounded"
                         >
                           <Tag className="w-3 h-3" /> {tag}
                         </span>
                       ))}
                     </div>
-                    <h3 className="text-lg md:text-xl font-semibold text-slate-800 leading-relaxed pr-8">
+                    <h3 className="text-lg md:text-xl font-semibold text-slate-800 dark:text-slate-100 leading-relaxed pr-8">
                       {renderClickableSentence(phrase.english)}
                     </h3>
                   </div>
                   <button
                     onClick={(e) => handlePlay(e, phrase.english)}
-                    className="flex-shrink-0 p-3 rounded-full bg-brand-50 text-brand-600 hover:bg-brand-500 hover:text-white transition-all shadow-sm active:scale-90"
+                    className="flex-shrink-0 p-3 rounded-full bg-brand-50 dark:bg-slate-700 text-brand-600 dark:text-brand-300 hover:bg-brand-500 hover:text-white transition-all shadow-sm active:scale-90"
                   >
                     <Volume2 className="w-5 h-5 md:w-6 md:h-6" />
                   </button>
@@ -379,18 +397,18 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
                 <div
                   className={`grid transition-all duration-300 ease-in-out ${
                     isExpanded
-                      ? "grid-rows-[1fr] opacity-100 mt-4 pt-4 border-t border-slate-100"
+                      ? "grid-rows-[1fr] opacity-100 mt-4 pt-4 border-t border-slate-100 dark:border-slate-600"
                       : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden min-h-0">
-                    <div className="flex items-start gap-3 bg-slate-50 p-3 rounded-lg">
-                      <MessageCircle className="w-5 h-5 text-brand-500 mt-0.5" />
+                    <div className="flex items-start gap-3 bg-slate-50 dark:bg-slate-700 p-3 rounded-lg">
+                      <MessageCircle className="w-5 h-5 text-brand-500 dark:text-brand-300 mt-0.5" />
                       <div>
-                        <p className="text-lg text-slate-800 font-bold">
+                        <p className="text-lg text-slate-800 dark:text-slate-100 font-bold">
                           {phrase.chinese}
                         </p>
-                        <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                        <p className="text-xs text-slate-500 dark:text-slate-300 mt-2 leading-relaxed">
                           💡
                           建议：多次点击喇叭图标听发音，并尝试不看屏幕复述这句话。
                         </p>
@@ -404,13 +422,26 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
         })}
       </div>
 
+      {/* Load More Button */}
+      {endIndex < displayPhrases.length && (
+        <div className="mt-8 flex justify-center pb-8">
+          <button
+            onClick={loadMore}
+            className="flex items-center gap-2 px-8 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-bold rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-brand-600 dark:hover:text-brand-400 hover:border-brand-200 transition-all shadow-sm active:scale-95"
+          >
+            <ArrowDown className="w-4 h-4" />
+            加载更多短语
+          </button>
+        </div>
+      )}
+
       {/* Word Definition Popup */}
       {selectedWord && (
         <div
           ref={popupRef}
           onMouseEnter={handlePopupMouseEnter}
           onMouseLeave={handlePopupMouseLeave}
-          className="fixed z-50 bg-white rounded-xl shadow-xl border border-brand-100 w-64 p-4 animate-in fade-in zoom-in duration-200"
+          className="fixed z-50 bg-white dark:bg-slate-800 rounded-xl shadow-xl w-64 p-4 animate-in fade-in zoom-in duration-200"
           style={{
             left: `${selectedWord.x}px`,
             top: `${selectedWord.y}px`,
@@ -418,11 +449,11 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
         >
           <div className="flex justify-between items-start mb-2">
             <div>
-              <h4 className="text-lg font-bold text-slate-800">
+              <h4 className="text-lg font-bold text-slate-800 dark:text-slate-100">
                 {selectedWord.word}
               </h4>
               {selectedWord.def?.pronunciation && (
-                <span className="text-sm text-slate-500 font-mono">
+                <span className="text-sm text-slate-500 dark:text-slate-300 font-mono">
                   {selectedWord.def.pronunciation}
                 </span>
               )}
@@ -432,7 +463,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
                 e.stopPropagation();
                 setSelectedWord(null);
               }}
-              className="text-slate-400 hover:text-slate-600 p-1 rounded-full hover:bg-slate-100"
+              className="text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 p-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700"
             >
               <X className="w-4 h-4" />
             </button>
@@ -440,23 +471,23 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
 
           <div className="mt-2">
             {selectedWord.def ? (
-              <div className="text-slate-700">
+              <div className="text-slate-700 dark:text-slate-200">
                 {Array.isArray(selectedWord.def.chinese)
                   ? selectedWord.def.chinese.join("; ")
                   : selectedWord.def.chinese}
               </div>
             ) : (
-              <div className="text-slate-400 text-sm italic">暂无详细释义</div>
+              <div className="text-slate-400 dark:text-slate-500 text-sm italic">暂无详细释义</div>
             )}
           </div>
 
-          <div className="mt-3 pt-2 border-t border-slate-100 flex justify-end">
+          <div className="mt-3 pt-2 flex justify-end">
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 ttsService.speak(selectedWord.word, ttsConfig);
               }}
-              className="text-xs flex items-center gap-1 text-brand-600 hover:text-brand-700 font-medium px-2 py-1 rounded hover:bg-brand-50"
+              className="text-xs flex items-center gap-1 text-brand-600 dark:text-brand-300 hover:text-brand-700 dark:hover:text-brand-200 font-medium px-2 py-1 rounded hover:bg-brand-50 dark:hover:bg-slate-700"
             >
               <Volume2 className="w-3.5 h-3.5" />
               重播发音
