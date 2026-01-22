@@ -1,5 +1,5 @@
 
-import { WordProgress, UserStats, AppSettings, TTSConfig, ListenSettings, Category } from '../types';
+import { WordProgress, UserStats, AppSettings, TTSConfig, ListenSettings, Category, PhrasesSettings } from '../types';
 
 const KEYS = {
   PROGRESS: 'lingualeap_progress',
@@ -7,6 +7,7 @@ const KEYS = {
   SETTINGS: 'lingualeap_settings',
   TTS_CONFIG: 'lingualeap_tts_config',
   LISTEN_SETTINGS: 'lingualeap_listen_settings',
+  PHRASES_SETTINGS: 'lingualeap_phrases_settings',
 };
 
 const DEFAULT_STATS: UserStats = {
@@ -36,6 +37,13 @@ const DEFAULT_LISTEN_SETTINGS: ListenSettings = {
   batchSize: 10,
   repeatCount: 2,
   intervalMs: 500
+};
+
+const DEFAULT_PHRASES_SETTINGS: PhrasesSettings = {
+  isRandomMode: true,
+  repeatCount: 2,
+  intervalMs: 500,
+  showChinese: true
 };
 
 export const storageService = {
@@ -167,5 +175,15 @@ export const storageService = {
     const data = localStorage.getItem(KEYS.LISTEN_SETTINGS);
     // Merge with default to handle potential missing keys in future updates
     return data ? { ...DEFAULT_LISTEN_SETTINGS, ...JSON.parse(data) } : DEFAULT_LISTEN_SETTINGS;
+  },
+
+  // Phrases View Settings
+  savePhrasesSettings: (settings: PhrasesSettings) => {
+    localStorage.setItem(KEYS.PHRASES_SETTINGS, JSON.stringify(settings));
+  },
+
+  getPhrasesSettings: (): PhrasesSettings => {
+    const data = localStorage.getItem(KEYS.PHRASES_SETTINGS);
+    return data ? { ...DEFAULT_PHRASES_SETTINGS, ...JSON.parse(data) } : DEFAULT_PHRASES_SETTINGS;
   }
 };

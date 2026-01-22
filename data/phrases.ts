@@ -11199,6 +11199,7983 @@ export const phrasesData: PhraseItem[] = [
     "chinese": "我会打破现状/引起争议。",
     "context": "通常用于否定：我不想惹麻烦",
     "tags": ["地道", "职场"]
+  },
+  {
+    "id": "a1",
+    "english": "I would appreciate it if you could provide more detailed information about this issue.",
+    "chinese": "如果你能提供关于这个问题的更多详细信息，我将不胜感激。",
+    "context": "请求对方提供更多详细信息。",
+    "tags": ["职场", "礼貌"]
+  },
+  {
+    "id": "a2",
+    "english": "Despite the challenges we faced, we managed to complete the project on time and within budget.",
+    "chinese": "尽管我们面临许多挑战，但我们还是在时间和预算内完成了项目。",
+    "context": "描述项目完成情况。",
+    "tags": ["职场", "成就"]
+  },
+  {
+    "id": "a3",
+    "english": "In order to improve our customer service, we have implemented several new strategies.",
+    "chinese": "为了改善我们的客户服务，我们实施了几项新策略。",
+    "context": "介绍公司改进措施。",
+    "tags": ["职场", "改进"]
+  },
+  {
+    "id": "a4",
+    "english": "The company has decided to invest in new technology to enhance our production capabilities.",
+    "chinese": "公司决定投资新技术以增强我们的生产能力。",
+    "context": "介绍公司的投资决策。",
+    "tags": ["职场", "投资"]
+  },
+  {
+    "id": "a5",
+    "english": "We need to conduct a thorough analysis of the market trends before making any major decisions.",
+    "chinese": "在做出任何重大决策之前，我们需要对市场趋势进行彻底分析。",
+    "context": "强调市场分析的重要性。",
+    "tags": ["职场", "决策"]
+  },
+  {
+    "id": "a6",
+    "english": "The team worked tirelessly to meet the deadline, and their efforts paid off in the end.",
+    "chinese": "团队不辞辛劳地工作以完成截止日期，最终他们的努力得到了回报。",
+    "context": "赞扬团队的努力。",
+    "tags": ["职场", "表扬"]
+  },
+  {
+    "id": "a7",
+    "english": "I strongly believe that effective communication is key to building strong relationships with clients.",
+    "chinese": "我坚信有效的沟通是与客户建立良好关系的关键。",
+    "context": "强调沟通的重要性。",
+    "tags": ["职场", "沟通"]
+  },
+  {
+    "id": "a8",
+    "english": "To ensure the success of the event, we need to coordinate with multiple departments and stakeholders.",
+    "chinese": "为确保活动成功，我们需要与多个部门和利益相关者协调。",
+    "context": "强调协调的重要性。",
+    "tags": ["职场", "协调"]
+  },
+  {
+    "id": "a9",
+    "english": "The new policy aims to streamline our processes and increase efficiency across the organization.",
+    "chinese": "新政策旨在简化我们的流程并提高整个组织的效率。",
+    "context": "介绍新政策的目标。",
+    "tags": ["职场", "政策"]
+  },
+  {
+    "id": "a10",
+    "english": "We have received positive feedback from customers regarding the recent changes to our product line.",
+    "chinese": "我们收到了客户对我们产品线最近变化的积极反馈。",
+    "context": "报告客户的反馈。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a11",
+    "english": "The board of directors has approved the budget for the upcoming fiscal year.",
+    "chinese": "董事会已批准下财年的预算。",
+    "context": "报告预算批准情况。",
+    "tags": ["职场", "财务"]
+  },
+  {
+    "id": "a12",
+    "english": "To address the growing demand for our services, we plan to expand our operations into new markets.",
+    "chinese": "为了应对对我们服务日益增长的需求，我们计划扩展到新市场。",
+    "context": "介绍市场扩展计划。",
+    "tags": ["职场", "扩展"]
+  },
+  {
+    "id": "a13",
+    "english": "The marketing department has launched a new campaign to promote our latest product.",
+    "chinese": "营销部门已经启动了一项新活动来推广我们的最新产品。",
+    "context": "介绍营销活动。",
+    "tags": ["职场", "营销"]
+  },
+  {
+    "id": "a14",
+    "english": "We have implemented a comprehensive training program to enhance the skills of our employees.",
+    "chinese": "我们实施了一个全面的培训计划来提升员工的技能。",
+    "context": "介绍培训计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a15",
+    "english": "The company has established a clear set of goals and objectives for the next quarter.",
+    "chinese": "公司为下一季度制定了明确的目标和目标。",
+    "context": "介绍公司目标。",
+    "tags": ["职场", "目标"]
+  },
+  {
+    "id": "a16",
+    "english": "To maintain our competitive edge, we need to continuously innovate and adapt to changing market conditions.",
+    "chinese": "为了保持我们的竞争优势，我们需要不断创新并适应不断变化的市场条件。",
+    "context": "强调创新和适应性的重要性。",
+    "tags": ["职场", "竞争"]
+  },
+  {
+    "id": "a17",
+    "english": "The project manager will be responsible for overseeing the entire project and ensuring its successful completion.",
+    "chinese": "项目经理将负责监督整个项目并确保其成功完成。",
+    "context": "介绍项目经理的职责。",
+    "tags": ["职场", "管理"]
+  },
+  {
+    "id": "a18",
+    "english": "We have developed a robust risk management plan to mitigate potential issues during the project.",
+    "chinese": "我们制定了一项稳健的风险管理计划，以减轻项目期间可能出现的问题。",
+    "context": "介绍风险管理计划。",
+    "tags": ["职场", "风险"]
+  },
+  {
+    "id": "a19",
+    "english": "The new software will significantly improve our data processing capabilities and reduce operational costs.",
+    "chinese": "新软件将显著提高我们的数据处理能力并降低运营成本。",
+    "context": "介绍新软件的好处。",
+    "tags": ["职场", "技术"]
+  },
+  {
+    "id": "a20",
+    "english": "To ensure the quality of our products, we have implemented strict quality control measures throughout the production process.",
+    "chinese": "为确保产品质量，我们在整个生产过程中实施了严格的质量控制措施。",
+    "context": "介绍质量控制措施。",
+    "tags": ["职场", "质量"]
+  },
+  {
+    "id": "a21",
+    "english": "The team is working diligently to identify and resolve any issues that may arise during the implementation phase.",
+    "chinese": "团队正在勤奋地识别和解决实施阶段可能出现的任何问题。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a22",
+    "english": "We have established a strong partnership with a leading technology firm to enhance our research and development efforts.",
+    "chinese": "我们与一家领先的技术公司建立了强大的合作关系，以增强我们的研发工作。",
+    "context": "介绍合作伙伴关系。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a23",
+    "english": "The company has introduced a flexible work schedule to improve employee satisfaction and productivity.",
+    "chinese": "公司引入了灵活的工作时间表，以提高员工满意度和生产力。",
+    "context": "介绍灵活工作时间表。",
+    "tags": ["职场", "福利"]
+  },
+  {
+    "id": "a24",
+    "english": "We have received numerous inquiries from potential clients who are interested in our new product line.",
+    "chinese": "我们收到了许多潜在客户的询问，他们对我们的新产品线感兴趣。",
+    "context": "报告客户兴趣。",
+    "tags": ["职场", "销售"]
+  },
+  {
+    "id": "a25",
+    "english": "The board has appointed a new CEO to lead the company through a period of significant change.",
+    "chinese": "董事会任命了一位新的CEO来领导公司度过一个重要的变革时期。",
+    "context": "介绍新CEO的任命。",
+    "tags": ["职场", "领导"]
+  },
+  {
+    "id": "a26",
+    "english": "To foster a culture of innovation, we encourage our employees to share their ideas and suggestions.",
+    "chinese": "为了培养创新文化，我们鼓励员工分享他们的想法和建议。",
+    "context": "强调创新文化的重要性。",
+    "tags": ["职场", "文化"]
+  },
+  {
+    "id": "a27",
+    "english": "The company has implemented a performance-based bonus system to reward high-performing employees.",
+    "chinese": "公司实施了基于绩效的奖金制度，以奖励表现优秀的员工。",
+    "context": "介绍奖金制度。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a28",
+    "english": "We have conducted extensive market research to better understand our target audience and their needs.",
+    "chinese": "我们进行了广泛的市场研究，以更好地了解我们的目标受众及其需求。",
+    "context": "介绍市场研究。",
+    "tags": ["职场", "研究"]
+  },
+  {
+    "id": "a29",
+    "english": "The team is working closely with external consultants to develop a comprehensive business plan.",
+    "chinese": "团队正与外部顾问紧密合作，制定一项全面的商业计划。",
+    "context": "介绍商业计划的制定。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a30",
+    "english": "We have received positive reviews from industry experts regarding our new product launch.",
+    "chinese": "我们收到了行业专家对我们新产品发布的正面评价。",
+    "context": "报告行业专家的评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a31",
+    "english": "The company has invested heavily in employee training and development programs to build a skilled workforce.",
+    "chinese": "公司大力投资于员工培训和发展计划，以打造一支熟练的员工队伍。",
+    "context": "介绍培训和发展计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a32",
+    "english": "We have implemented a robust customer feedback system to gather insights and improve our services.",
+    "chinese": "我们实施了一套健全的客户反馈系统，以收集见解并改进我们的服务。",
+    "context": "介绍客户反馈系统。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a33",
+    "english": "The project team has successfully completed the pilot phase and is now ready to move on to the next stage.",
+    "chinese": "项目团队已成功完成试点阶段，现在准备进入下一阶段。",
+    "context": "报告项目的进展。",
+    "tags": ["职场", "项目"]
+  },
+  {
+    "id": "a34",
+    "english": "To ensure compliance with industry regulations, we have established a dedicated compliance team.",
+    "chinese": "为确保遵守行业法规，我们成立了一个专门的合规团队。",
+    "context": "介绍合规团队。",
+    "tags": ["职场", "合规"]
+  },
+  {
+    "id": "a35",
+    "english": "The company has launched a new initiative to promote sustainability and reduce our environmental impact.",
+    "chinese": "公司发起了一项新倡议，以促进可持续发展并减少我们的环境影响。",
+    "context": "介绍可持续发展倡议。",
+    "tags": ["职场", "环保"]
+  },
+  {
+    "id": "a36",
+    "english": "We have developed a comprehensive crisis management plan to handle any unexpected situations.",
+    "chinese": "我们制定了一项全面的危机管理计划，以应对任何意外情况。",
+    "context": "介绍危机管理计划。",
+    "tags": ["职场", "危机管理"]
+  },
+  {
+    "id": "a37",
+    "english": "The board has approved a significant increase in the marketing budget to boost our brand awareness.",
+    "chinese": "董事会批准大幅增加营销预算，以提高我们的品牌知名度。",
+    "context": "报告营销预算的增加。",
+    "tags": ["职场", "营销"]
+  },
+  {
+    "id": "a38",
+    "english": "We have implemented a new inventory management system to optimize our supply chain operations.",
+    "chinese": "我们实施了一种新的库存管理系统，以优化我们的供应链运营。",
+    "context": "介绍库存管理系统。",
+    "tags": ["职场", "技术"]
+  },
+  {
+    "id": "a39",
+    "english": "The company has established a clear set of guidelines to ensure ethical business practices.",
+    "chinese": "公司制定了一套明确的指南，以确保道德的商业行为。",
+    "context": "介绍道德指南。",
+    "tags": ["职场", "伦理"]
+  },
+  {
+    "id": "a40",
+    "english": "We have received a prestigious award for our innovative approach to solving industry challenges.",
+    "chinese": "我们因解决行业挑战的创新方法而获得了享有盛誉的奖项。",
+    "context": "报告获奖情况。",
+    "tags": ["职场", "成就"]
+  },
+  {
+    "id": "a41",
+    "english": "The team has been working tirelessly to meet the tight deadline for the project.",
+    "chinese": "团队一直在不辞辛劳地工作，以满足项目的紧张截止日期。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a42",
+    "english": "To improve our customer service, we have introduced a new online support system.",
+    "chinese": "为了改善我们的客户服务，我们引入了一个新的在线支持系统。",
+    "context": "介绍新的支持系统。",
+    "tags": ["职场", "服务"]
+  },
+  {
+    "id": "a43",
+    "english": "The company has established a strong presence in the international market through strategic partnerships.",
+    "chinese": "公司通过战略伙伴关系在国际市场上建立了强大的地位。",
+    "context": "介绍国际市场地位。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a44",
+    "english": "We have received numerous positive testimonials from satisfied customers.",
+    "chinese": "我们收到了许多满意的客户的正面评价。",
+    "context": "报告客户评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a45",
+    "english": "The board has approved a new strategic plan to guide the company's growth over the next five years.",
+    "chinese": "董事会批准了一项新的战略计划，以指导公司在未来五年的增长。",
+    "context": "介绍战略计划。",
+    "tags": ["职场", "规划"]
+  },
+  {
+    "id": "a46",
+    "english": "We have implemented a robust data security system to protect sensitive information.",
+    "chinese": "我们实施了一套健全的数据安全系统，以保护敏感信息。",
+    "context": "介绍数据安全系统。",
+    "tags": ["职场", "安全"]
+  },
+  {
+    "id": "a47",
+    "english": "The company has introduced a new employee recognition program to boost morale and motivation.",
+    "chinese": "公司引入了一项新的员工认可计划，以提高士气和积极性。",
+    "context": "介绍员工认可计划。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a48",
+    "english": "We have received positive feedback from our partners regarding the recent collaboration.",
+    "chinese": "我们从合作伙伴那里收到了关于我们最近合作的积极反馈。",
+    "context": "报告合作伙伴的反馈。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a49",
+    "english": "The team has been working closely with the design department to ensure the product meets all specifications.",
+    "chinese": "团队一直在与设计部门密切合作，以确保产品符合所有规格。",
+    "context": "描述团队的合作。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a50",
+    "english": "We have established a clear set of performance metrics to evaluate the success of our initiatives.",
+    "chinese": "我们制定了一套明确的绩效指标来评估我们举措的成功。",
+    "context": "介绍绩效指标。",
+    "tags": ["职场", "评估"]
+  },
+  {
+    "id": "a51",
+    "english": "The company has launched a new product line to cater to a wider range of customer needs.",
+    "chinese": "公司推出了一条新的产品线，以满足更广泛的客户需求。",
+    "context": "介绍新产品线。",
+    "tags": ["职场", "产品"]
+  },
+  {
+    "id": "a52",
+    "english": "We have implemented a comprehensive training program to prepare our employees for the new system.",
+    "chinese": "我们实施了一个全面的培训计划，以准备员工使用新系统。",
+    "context": "介绍培训计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a53",
+    "english": "The board has approved a significant investment in research and development to drive innovation.",
+    "chinese": "董事会批准了对研究和开发的重大投资，以推动创新。",
+    "context": "介绍研发投资。",
+    "tags": ["职场", "投资"]
+  },
+  {
+    "id": "a54",
+    "english": "We have received positive feedback from our clients regarding the recent improvements to our services.",
+    "chinese": "我们从客户那里收到了关于我们最近服务改进的积极反馈。",
+    "context": "报告客户的反馈。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a55",
+    "english": "The company has established a clear set of guidelines to ensure consistent quality across all products.",
+    "chinese": "公司制定了一套明确的指南，以确保所有产品的质量一致。",
+    "context": "介绍质量指南。",
+    "tags": ["职场", "质量"]
+  },
+  {
+    "id": "a56",
+    "english": "We have implemented a robust project management system to track progress and ensure timely delivery.",
+    "chinese": "我们实施了一套健全的项目管理系统，以跟踪进度并确保按时交付。",
+    "context": "介绍项目管理系统。",
+    "tags": ["职场", "管理"]
+  },
+  {
+    "id": "a57",
+    "english": "The team has been working diligently to identify and resolve any issues that may affect the project timeline.",
+    "chinese": "团队一直在勤奋地识别和解决可能影响项目时间表的任何问题。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a58",
+    "english": "We have established a strong partnership with a leading technology firm to enhance our product offerings.",
+    "chinese": "我们与一家领先的技术公司建立了强大的合作关系，以增强我们的产品供应。",
+    "context": "介绍合作伙伴关系。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a59",
+    "english": "The company has introduced a flexible work schedule to improve employee satisfaction and productivity.",
+    "chinese": "公司引入了灵活的工作时间表，以提高员工满意度和生产力。",
+    "context": "介绍灵活工作时间表。",
+    "tags": ["职场", "福利"]
+  },
+  {
+    "id": "a60",
+    "english": "We have received numerous inquiries from potential clients who are interested in our new product line.",
+    "chinese": "我们收到了许多潜在客户的询问，他们对我们的新产品线感兴趣。",
+    "context": "报告客户兴趣。",
+    "tags": ["职场", "销售"]
+  },
+  {
+    "id": "a61",
+    "english": "The board has appointed a new CEO to lead the company through a period of significant change.",
+    "chinese": "董事会任命了一位新的CEO来领导公司度过一个重要的变革时期。",
+    "context": "介绍新CEO的任命。",
+    "tags": ["职场", "领导"]
+  },
+  {
+    "id": "a62",
+    "english": "To foster a culture of innovation, we encourage our employees to share their ideas and suggestions.",
+    "chinese": "为了培养创新文化，我们鼓励员工分享他们的想法和建议。",
+    "context": "强调创新文化的重要性。",
+    "tags": ["职场", "文化"]
+  },
+  {
+    "id": "a63",
+    "english": "The company has implemented a performance-based bonus system to reward high-performing employees.",
+    "chinese": "公司实施了基于绩效的奖金制度，以奖励表现优秀的员工。",
+    "context": "介绍奖金制度。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a64",
+    "english": "We have conducted extensive market research to better understand our target audience and their needs.",
+    "chinese": "我们进行了广泛的市场研究，以更好地了解我们的目标受众及其需求。",
+    "context": "介绍市场研究。",
+    "tags": ["职场", "研究"]
+  },
+  {
+    "id": "a65",
+    "english": "The team is working closely with external consultants to develop a comprehensive business plan.",
+    "chinese": "团队正与外部顾问紧密合作，制定一项全面的商业计划。",
+    "context": "介绍商业计划的制定。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a66",
+    "english": "We have received positive reviews from industry experts regarding our new product launch.",
+    "chinese": "我们收到了行业专家对我们新产品发布的正面评价。",
+    "context": "报告行业专家的评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a67",
+    "english": "The company has invested heavily in employee training and development programs to build a skilled workforce.",
+    "chinese": "公司大力投资于员工培训和发展计划，以打造一支熟练的员工队伍。",
+    "context": "介绍培训和发展计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a68",
+    "english": "We have implemented a robust customer feedback system to gather insights and improve our services.",
+    "chinese": "我们实施了一套健全的客户反馈系统，以收集见解并改进我们的服务。",
+    "context": "介绍客户反馈系统。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a69",
+    "english": "The project team has successfully completed the pilot phase and is now ready to move on to the next stage.",
+    "chinese": "项目团队已成功完成试点阶段，现在准备进入下一阶段。",
+    "context": "报告项目的进展。",
+    "tags": ["职场", "项目"]
+  },
+  {
+    "id": "a70",
+    "english": "To ensure compliance with industry regulations, we have established a dedicated compliance team.",
+    "chinese": "为确保遵守行业法规，我们成立了一个专门的合规团队。",
+    "context": "介绍合规团队。",
+    "tags": ["职场", "合规"]
+  },
+  {
+    "id": "a71",
+    "english": "The company has launched a new initiative to promote sustainability and reduce our environmental impact.",
+    "chinese": "公司发起了一项新倡议，以促进可持续发展并减少我们的环境影响。",
+    "context": "介绍可持续发展倡议。",
+    "tags": ["职场", "环保"]
+  },
+  {
+    "id": "a72",
+    "english": "We have developed a comprehensive crisis management plan to handle any unexpected situations.",
+    "chinese": "我们制定了一项全面的危机管理计划，以应对任何意外情况。",
+    "context": "介绍危机管理计划。",
+    "tags": ["职场", "危机管理"]
+  },
+  {
+    "id": "a73",
+    "english": "The board has approved a significant increase in the marketing budget to boost our brand awareness.",
+    "chinese": "董事会批准大幅增加营销预算，以提高我们的品牌知名度。",
+    "context": "报告营销预算的增加。",
+    "tags": ["职场", "营销"]
+  },
+  {
+    "id": "a74",
+    "english": "We have implemented a new inventory management system to optimize our supply chain operations.",
+    "chinese": "我们实施了一种新的库存管理系统，以优化我们的供应链运营。",
+    "context": "介绍库存管理系统。",
+    "tags": ["职场", "技术"]
+  },
+  {
+    "id": "a75",
+    "english": "The company has established a clear set of guidelines to ensure ethical business practices.",
+    "chinese": "公司制定了一套明确的指南，以确保道德的商业行为。",
+    "context": "介绍道德指南。",
+    "tags": ["职场", "伦理"]
+  },
+  {
+    "id": "a76",
+    "english": "We have received a prestigious award for our innovative approach to solving industry challenges.",
+    "chinese": "我们因解决行业挑战的创新方法而获得了享有盛誉的奖项。",
+    "context": "报告获奖情况。",
+    "tags": ["职场", "成就"]
+  },
+  {
+    "id": "a77",
+    "english": "The team has been working tirelessly to meet the tight deadline for the project.",
+    "chinese": "团队一直在不辞辛劳地工作，以满足项目的紧张截止日期。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a78",
+    "english": "To improve our customer service, we have introduced a new online support system.",
+    "chinese": "为了改善我们的客户服务，我们引入了一个新的在线支持系统。",
+    "context": "介绍新的支持系统。",
+    "tags": ["职场", "服务"]
+  },
+  {
+    "id": "a79",
+    "english": "The company has established a strong presence in the international market through strategic partnerships.",
+    "chinese": "公司通过战略伙伴关系在国际市场上建立了强大的地位。",
+    "context": "介绍国际市场地位。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a80",
+    "english": "We have received numerous positive testimonials from satisfied customers.",
+    "chinese": "我们收到了许多满意的客户的正面评价。",
+    "context": "报告客户评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a81",
+    "english": "The board has approved a new strategic plan to guide the company's growth over the next five years.",
+    "chinese": "董事会批准了一项新的战略计划，以指导公司在未来五年的增长。",
+    "context": "介绍战略计划。",
+    "tags": ["职场", "规划"]
+  },
+  {
+    "id": "a82",
+    "english": "We have implemented a robust data security system to protect sensitive information.",
+    "chinese": "我们实施了一套健全的数据安全系统，以保护敏感信息。",
+    "context": "介绍数据安全系统。",
+    "tags": ["职场", "安全"]
+  },
+  {
+    "id": "a83",
+    "english": "The company has introduced a new employee recognition program to boost morale and motivation.",
+    "chinese": "公司引入了一项新的员工认可计划，以提高士气和积极性。",
+    "context": "介绍员工认可计划。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a84",
+    "english": "We have received positive feedback from our partners regarding the recent collaboration.",
+    "chinese": "我们从合作伙伴那里收到了关于我们最近合作的积极反馈。",
+    "context": "报告合作伙伴的反馈。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a85",
+    "english": "The team has been working closely with the design department to ensure the product meets all specifications.",
+    "chinese": "团队一直在与设计部门密切合作，以确保产品符合所有规格。",
+    "context": "描述团队的合作。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a86",
+    "english": "We have established a clear set of performance metrics to evaluate the success of our initiatives.",
+    "chinese": "我们制定了一套明确的绩效指标来评估我们举措的成功。",
+    "context": "介绍绩效指标。",
+    "tags": ["职场", "评估"]
+  },
+  {
+    "id": "a87",
+    "english": "The company has launched a new product line to cater to a wider range of customer needs.",
+    "chinese": "公司推出了一条新的产品线，以满足更广泛的客户需求。",
+    "context": "介绍新产品线。",
+    "tags": ["职场", "产品"]
+  },
+  {
+    "id": "a88",
+    "english": "We have implemented a comprehensive training program to prepare our employees for the new system.",
+    "chinese": "我们实施了一个全面的培训计划，以准备员工使用新系统。",
+    "context": "介绍培训计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a89",
+    "english": "The board has approved a significant investment in research and development to drive innovation.",
+    "chinese": "董事会批准了对研究和开发的重大投资，以推动创新。",
+    "context": "介绍研发投资。",
+    "tags": ["职场", "投资"]
+  },
+  {
+    "id": "a90",
+    "english": "We have received positive feedback from our clients regarding the recent improvements to our services.",
+    "chinese": "我们从客户那里收到了关于我们最近服务改进的积极反馈。",
+    "context": "报告客户的反馈。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a91",
+    "english": "The company has established a clear set of guidelines to ensure consistent quality across all products.",
+    "chinese": "公司制定了一套明确的指南，以确保所有产品的质量一致。",
+    "context": "介绍质量指南。",
+    "tags": ["职场", "质量"]
+  },
+  {
+    "id": "a92",
+    "english": "We have implemented a robust project management system to track progress and ensure timely delivery.",
+    "chinese": "我们实施了一套健全的项目管理系统，以跟踪进度并确保按时交付。",
+    "context": "介绍项目管理系统。",
+    "tags": ["职场", "管理"]
+  },
+  {
+    "id": "a93",
+    "english": "The team has been working diligently to identify and resolve any issues that may affect the project timeline.",
+    "chinese": "团队一直在勤奋地识别和解决可能影响项目时间表的任何问题。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a94",
+    "english": "We have established a strong partnership with a leading technology firm to enhance our product offerings.",
+    "chinese": "我们与一家领先的技术公司建立了强大的合作关系，以增强我们的产品供应。",
+    "context": "介绍合作伙伴关系。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a95",
+    "english": "The company has introduced a flexible work schedule to improve employee satisfaction and productivity.",
+    "chinese": "公司引入了灵活的工作时间表，以提高员工满意度和生产力。",
+    "context": "介绍灵活工作时间表。",
+    "tags": ["职场", "福利"]
+  },
+  {
+    "id": "a96",
+    "english": "We have received numerous inquiries from potential clients who are interested in our new product line.",
+    "chinese": "我们收到了许多潜在客户的询问，他们对我们的新产品线感兴趣。",
+    "context": "报告客户兴趣。",
+    "tags": ["职场", "销售"]
+  },
+  {
+    "id": "a97",
+    "english": "The board has appointed a new CEO to lead the company through a period of significant change.",
+    "chinese": "董事会任命了一位新的CEO来领导公司度过一个重要的变革时期。",
+    "context": "介绍新CEO的任命。",
+    "tags": ["职场", "领导"]
+  },
+  {
+    "id": "a98",
+    "english": "To foster a culture of innovation, we encourage our employees to share their ideas and suggestions.",
+    "chinese": "为了培养创新文化，我们鼓励员工分享他们的想法和建议。",
+    "context": "强调创新文化的重要性。",
+    "tags": ["职场", "文化"]
+  },
+  {
+    "id": "a99",
+    "english": "The company has implemented a performance-based bonus system to reward high-performing employees.",
+    "chinese": "公司实施了基于绩效的奖金制度，以奖励表现优秀的员工。",
+    "context": "介绍奖金制度。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a100",
+    "english": "We have conducted extensive market research to better understand our target audience and their needs.",
+    "chinese": "我们进行了广泛的市场研究，以更好地了解我们的目标受众及其需求。",
+    "context": "介绍市场研究。",
+    "tags": ["职场", "研究"]
+  },
+  {
+    "id": "a101",
+    "english": "The team is working closely with external consultants to develop a comprehensive business plan.",
+    "chinese": "团队正与外部顾问紧密合作，制定一项全面的商业计划。",
+    "context": "介绍商业计划的制定。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a102",
+    "english": "We have received positive reviews from industry experts regarding our new product launch.",
+    "chinese": "我们收到了行业专家对我们新产品发布的正面评价。",
+    "context": "报告行业专家的评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a103",
+    "english": "The company has invested heavily in employee training and development programs to build a skilled workforce.",
+    "chinese": "公司大力投资于员工培训和发展计划，以打造一支熟练的员工队伍。",
+    "context": "介绍培训和发展计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a104",
+    "english": "We have implemented a robust customer feedback system to gather insights and improve our services.",
+    "chinese": "我们实施了一套健全的客户反馈系统，以收集见解并改进我们的服务。",
+    "context": "介绍客户反馈系统。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a105",
+    "english": "The project team has successfully completed the pilot phase and is now ready to move on to the next stage.",
+    "chinese": "项目团队已成功完成试点阶段，现在准备进入下一阶段。",
+    "context": "报告项目的进展。",
+    "tags": ["职场", "项目"]
+  },
+  {
+    "id": "a106",
+    "english": "To ensure compliance with industry regulations, we have established a dedicated compliance team.",
+    "chinese": "为确保遵守行业法规，我们成立了一个专门的合规团队。",
+    "context": "介绍合规团队。",
+    "tags": ["职场", "合规"]
+  },
+  {
+    "id": "a107",
+    "english": "The company has launched a new initiative to promote sustainability and reduce our environmental impact.",
+    "chinese": "公司发起了一项新倡议，以促进可持续发展并减少我们的环境影响。",
+    "context": "介绍可持续发展倡议。",
+    "tags": ["职场", "环保"]
+  },
+  {
+    "id": "a108",
+    "english": "We have developed a comprehensive crisis management plan to handle any unexpected situations.",
+    "chinese": "我们制定了一项全面的危机管理计划，以应对任何意外情况。",
+    "context": "介绍危机管理计划。",
+    "tags": ["职场", "危机管理"]
+  },
+  {
+    "id": "a109",
+    "english": "The board has approved a significant increase in the marketing budget to boost our brand awareness.",
+    "chinese": "董事会批准大幅增加营销预算，以提高我们的品牌知名度。",
+    "context": "报告营销预算的增加。",
+    "tags": ["职场", "营销"]
+  },
+  {
+    "id": "a1",
+    "english": "I would appreciate it if you could provide more detailed information about this issue.",
+    "chinese": "如果你能提供关于这个问题的更多详细信息，我将不胜感激。",
+    "context": "请求对方提供更多详细信息。",
+    "tags": ["职场", "礼貌"]
+  },
+  {
+    "id": "a2",
+    "english": "Despite the challenges we faced, we managed to complete the project on time and within budget.",
+    "chinese": "尽管我们面临许多挑战，但我们还是在时间和预算内完成了项目。",
+    "context": "描述项目完成情况。",
+    "tags": ["职场", "成就"]
+  },
+  {
+    "id": "a3",
+    "english": "In order to improve our customer service, we have implemented several new strategies.",
+    "chinese": "为了改善我们的客户服务，我们实施了几项新策略。",
+    "context": "介绍公司改进措施。",
+    "tags": ["职场", "改进"]
+  },
+  {
+    "id": "a4",
+    "english": "The company has decided to invest in new technology to enhance our production capabilities.",
+    "chinese": "公司决定投资新技术以增强我们的生产能力。",
+    "context": "介绍公司的投资决策。",
+    "tags": ["职场", "投资"]
+  },
+  {
+    "id": "a5",
+    "english": "We need to conduct a thorough analysis of the market trends before making any major decisions.",
+    "chinese": "在做出任何重大决策之前，我们需要对市场趋势进行彻底分析。",
+    "context": "强调市场分析的重要性。",
+    "tags": ["职场", "决策"]
+  },
+  {
+    "id": "a6",
+    "english": "The team worked tirelessly to meet the deadline, and their efforts paid off in the end.",
+    "chinese": "团队不辞辛劳地工作以完成截止日期，最终他们的努力得到了回报。",
+    "context": "赞扬团队的努力。",
+    "tags": ["职场", "表扬"]
+  },
+  {
+    "id": "a7",
+    "english": "I strongly believe that effective communication is key to building strong relationships with clients.",
+    "chinese": "我坚信有效的沟通是与客户建立良好关系的关键。",
+    "context": "强调沟通的重要性。",
+    "tags": ["职场", "沟通"]
+  },
+  {
+    "id": "a8",
+    "english": "To ensure the success of the event, we need to coordinate with multiple departments and stakeholders.",
+    "chinese": "为确保活动成功，我们需要与多个部门和利益相关者协调。",
+    "context": "强调协调的重要性。",
+    "tags": ["职场", "协调"]
+  },
+  {
+    "id": "a9",
+    "english": "The new policy aims to streamline our processes and increase efficiency across the organization.",
+    "chinese": "新政策旨在简化我们的流程并提高整个组织的效率。",
+    "context": "介绍新政策的目标。",
+    "tags": ["职场", "政策"]
+  },
+  {
+    "id": "a10",
+    "english": "We have received positive feedback from customers regarding the recent changes to our product line.",
+    "chinese": "我们收到了客户对我们产品线最近变化的积极反馈。",
+    "context": "报告客户的反馈。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a11",
+    "english": "The board of directors has approved the budget for the upcoming fiscal year.",
+    "chinese": "董事会已批准下财年的预算。",
+    "context": "报告预算批准情况。",
+    "tags": ["职场", "财务"]
+  },
+  {
+    "id": "a12",
+    "english": "To address the growing demand for our services, we plan to expand our operations into new markets.",
+    "chinese": "为了应对对我们服务日益增长的需求，我们计划扩展到新市场。",
+    "context": "介绍市场扩展计划。",
+    "tags": ["职场", "扩展"]
+  },
+  {
+    "id": "a13",
+    "english": "The marketing department has launched a new campaign to promote our latest product.",
+    "chinese": "营销部门已经启动了一项新活动来推广我们的最新产品。",
+    "context": "介绍营销活动。",
+    "tags": ["职场", "营销"]
+  },
+  {
+    "id": "a14",
+    "english": "We have implemented a comprehensive training program to enhance the skills of our employees.",
+    "chinese": "我们实施了一个全面的培训计划来提升员工的技能。",
+    "context": "介绍培训计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a15",
+    "english": "The company has established a clear set of goals and objectives for the next quarter.",
+    "chinese": "公司为下一季度制定了明确的目标和目标。",
+    "context": "介绍公司目标。",
+    "tags": ["职场", "目标"]
+  },
+  {
+    "id": "a16",
+    "english": "To maintain our competitive edge, we need to continuously innovate and adapt to changing market conditions.",
+    "chinese": "为了保持我们的竞争优势，我们需要不断创新并适应不断变化的市场条件。",
+    "context": "强调创新和适应性的重要性。",
+    "tags": ["职场", "竞争"]
+  },
+  {
+    "id": "a17",
+    "english": "The project manager will be responsible for overseeing the entire project and ensuring its successful completion.",
+    "chinese": "项目经理将负责监督整个项目并确保其成功完成。",
+    "context": "介绍项目经理的职责。",
+    "tags": ["职场", "管理"]
+  },
+  {
+    "id": "a18",
+    "english": "We have developed a robust risk management plan to mitigate potential issues during the project.",
+    "chinese": "我们制定了一项稳健的风险管理计划，以减轻项目期间可能出现的问题。",
+    "context": "介绍风险管理计划。",
+    "tags": ["职场", "风险"]
+  },
+  {
+    "id": "a19",
+    "english": "The new software will significantly improve our data processing capabilities and reduce operational costs.",
+    "chinese": "新软件将显著提高我们的数据处理能力并降低运营成本。",
+    "context": "介绍新软件的好处。",
+    "tags": ["职场", "技术"]
+  },
+  {
+    "id": "a20",
+    "english": "To ensure the quality of our products, we have implemented strict quality control measures throughout the production process.",
+    "chinese": "为确保产品质量，我们在整个生产过程中实施了严格的质量控制措施。",
+    "context": "介绍质量控制措施。",
+    "tags": ["职场", "质量"]
+  },
+  {
+    "id": "a21",
+    "english": "The team is working diligently to identify and resolve any issues that may arise during the implementation phase.",
+    "chinese": "团队正在勤奋地识别和解决实施阶段可能出现的任何问题。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a22",
+    "english": "We have established a strong partnership with a leading technology firm to enhance our research and development efforts.",
+    "chinese": "我们与一家领先的技术公司建立了强大的合作关系，以增强我们的研发工作。",
+    "context": "介绍合作伙伴关系。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a23",
+    "english": "The company has introduced a flexible work schedule to improve employee satisfaction and productivity.",
+    "chinese": "公司引入了灵活的工作时间表，以提高员工满意度和生产力。",
+    "context": "介绍灵活工作时间表。",
+    "tags": ["职场", "福利"]
+  },
+  {
+    "id": "a24",
+    "english": "We have received numerous inquiries from potential clients who are interested in our new product line.",
+    "chinese": "我们收到了许多潜在客户的询问，他们对我们的新产品线感兴趣。",
+    "context": "报告客户兴趣。",
+    "tags": ["职场", "销售"]
+  },
+  {
+    "id": "a25",
+    "english": "The board has appointed a new CEO to lead the company through a period of significant change.",
+    "chinese": "董事会任命了一位新的CEO来领导公司度过一个重要的变革时期。",
+    "context": "介绍新CEO的任命。",
+    "tags": ["职场", "领导"]
+  },
+  {
+    "id": "a26",
+    "english": "To foster a culture of innovation, we encourage our employees to share their ideas and suggestions.",
+    "chinese": "为了培养创新文化，我们鼓励员工分享他们的想法和建议。",
+    "context": "强调创新文化的重要性。",
+    "tags": ["职场", "文化"]
+  },
+  {
+    "id": "a27",
+    "english": "The company has implemented a performance-based bonus system to reward high-performing employees.",
+    "chinese": "公司实施了基于绩效的奖金制度，以奖励表现优秀的员工。",
+    "context": "介绍奖金制度。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a28",
+    "english": "We have conducted extensive market research to better understand our target audience and their needs.",
+    "chinese": "我们进行了广泛的市场研究，以更好地了解我们的目标受众及其需求。",
+    "context": "介绍市场研究。",
+    "tags": ["职场", "研究"]
+  },
+  {
+    "id": "a29",
+    "english": "The team is working closely with external consultants to develop a comprehensive business plan.",
+    "chinese": "团队正与外部顾问紧密合作，制定一项全面的商业计划。",
+    "context": "介绍商业计划的制定。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a30",
+    "english": "We have received positive reviews from industry experts regarding our new product launch.",
+    "chinese": "我们收到了行业专家对我们新产品发布的正面评价。",
+    "context": "报告行业专家的评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a31",
+    "english": "The company has invested heavily in employee training and development programs to build a skilled workforce.",
+    "chinese": "公司大力投资于员工培训和发展计划，以打造一支熟练的员工队伍。",
+    "context": "介绍培训和发展计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a32",
+    "english": "We have implemented a robust customer feedback system to gather insights and improve our services.",
+    "chinese": "我们实施了一套健全的客户反馈系统，以收集见解并改进我们的服务。",
+    "context": "介绍客户反馈系统。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a33",
+    "english": "The project team has successfully completed the pilot phase and is now ready to move on to the next stage.",
+    "chinese": "项目团队已成功完成试点阶段，现在准备进入下一阶段。",
+    "context": "报告项目的进展。",
+    "tags": ["职场", "项目"]
+  },
+  {
+    "id": "a34",
+    "english": "To ensure compliance with industry regulations, we have established a dedicated compliance team.",
+    "chinese": "为确保遵守行业法规，我们成立了一个专门的合规团队。",
+    "context": "介绍合规团队。",
+    "tags": ["职场", "合规"]
+  },
+  {
+    "id": "a35",
+    "english": "The company has launched a new initiative to promote sustainability and reduce our environmental impact.",
+    "chinese": "公司发起了一项新倡议，以促进可持续发展并减少我们的环境影响。",
+    "context": "介绍可持续发展倡议。",
+    "tags": ["职场", "环保"]
+  },
+  {
+    "id": "a36",
+    "english": "We have developed a comprehensive crisis management plan to handle any unexpected situations.",
+    "chinese": "我们制定了一项全面的危机管理计划，以应对任何意外情况。",
+    "context": "介绍危机管理计划。",
+    "tags": ["职场", "危机管理"]
+  },
+  {
+    "id": "a37",
+    "english": "The board has approved a significant increase in the marketing budget to boost our brand awareness.",
+    "chinese": "董事会批准大幅增加营销预算，以提高我们的品牌知名度。",
+    "context": "报告营销预算的增加。",
+    "tags": ["职场", "营销"]
+  },
+  {
+    "id": "a38",
+    "english": "We have implemented a new inventory management system to optimize our supply chain operations.",
+    "chinese": "我们实施了一种新的库存管理系统，以优化我们的供应链运营。",
+    "context": "介绍库存管理系统。",
+    "tags": ["职场", "技术"]
+  },
+  {
+    "id": "a39",
+    "english": "The company has established a clear set of guidelines to ensure ethical business practices.",
+    "chinese": "公司制定了一套明确的指南，以确保道德的商业行为。",
+    "context": "介绍道德指南。",
+    "tags": ["职场", "伦理"]
+  },
+  {
+    "id": "a40",
+    "english": "We have received a prestigious award for our innovative approach to solving industry challenges.",
+    "chinese": "我们因解决行业挑战的创新方法而获得了享有盛誉的奖项。",
+    "context": "报告获奖情况。",
+    "tags": ["职场", "成就"]
+  },
+  {
+    "id": "a41",
+    "english": "The team has been working tirelessly to meet the tight deadline for the project.",
+    "chinese": "团队一直在不辞辛劳地工作，以满足项目的紧张截止日期。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a42",
+    "english": "To improve our customer service, we have introduced a new online support system.",
+    "chinese": "为了改善我们的客户服务，我们引入了一个新的在线支持系统。",
+    "context": "介绍新的支持系统。",
+    "tags": ["职场", "服务"]
+  },
+  {
+    "id": "a43",
+    "english": "The company has established a strong presence in the international market through strategic partnerships.",
+    "chinese": "公司通过战略伙伴关系在国际市场上建立了强大的地位。",
+    "context": "介绍国际市场地位。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a44",
+    "english": "We have received numerous positive testimonials from satisfied customers.",
+    "chinese": "我们收到了许多满意的客户的正面评价。",
+    "context": "报告客户评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a45",
+    "english": "The board has approved a new strategic plan to guide the company's growth over the next five years.",
+    "chinese": "董事会批准了一项新的战略计划，以指导公司在未来五年的增长。",
+    "context": "介绍战略计划。",
+    "tags": ["职场", "规划"]
+  },
+  {
+    "id": "a46",
+    "english": "We have implemented a robust data security system to protect sensitive information.",
+    "chinese": "我们实施了一套健全的数据安全系统，以保护敏感信息。",
+    "context": "介绍数据安全系统。",
+    "tags": ["职场", "安全"]
+  },
+  {
+    "id": "a47",
+    "english": "The company has introduced a new employee recognition program to boost morale and motivation.",
+    "chinese": "公司引入了一项新的员工认可计划，以提高士气和积极性。",
+    "context": "介绍员工认可计划。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a48",
+    "english": "We have received positive feedback from our partners regarding the recent collaboration.",
+    "chinese": "我们从合作伙伴那里收到了关于我们最近合作的积极反馈。",
+    "context": "报告合作伙伴的反馈。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a49",
+    "english": "The team has been working closely with the design department to ensure the product meets all specifications.",
+    "chinese": "团队一直在与设计部门密切合作，以确保产品符合所有规格。",
+    "context": "描述团队的合作。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a50",
+    "english": "We have established a clear set of performance metrics to evaluate the success of our initiatives.",
+    "chinese": "我们制定了一套明确的绩效指标来评估我们举措的成功。",
+    "context": "介绍绩效指标。",
+    "tags": ["职场", "评估"]
+  },
+  {
+    "id": "a51",
+    "english": "The company has launched a new product line to cater to a wider range of customer needs.",
+    "chinese": "公司推出了一条新的产品线，以满足更广泛的客户需求。",
+    "context": "介绍新产品线。",
+    "tags": ["职场", "产品"]
+  },
+  {
+    "id": "a52",
+    "english": "We have implemented a comprehensive training program to prepare our employees for the new system.",
+    "chinese": "我们实施了一个全面的培训计划，以准备员工使用新系统。",
+    "context": "介绍培训计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a53",
+    "english": "The board has approved a significant investment in research and development to drive innovation.",
+    "chinese": "董事会批准了对研究和开发的重大投资，以推动创新。",
+    "context": "介绍研发投资。",
+    "tags": ["职场", "投资"]
+  },
+  {
+    "id": "a54",
+    "english": "We have received positive feedback from our clients regarding the recent improvements to our services.",
+    "chinese": "我们从客户那里收到了关于我们最近服务改进的积极反馈。",
+    "context": "报告客户的反馈。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a55",
+    "english": "The company has established a clear set of guidelines to ensure consistent quality across all products.",
+    "chinese": "公司制定了一套明确的指南，以确保所有产品的质量一致。",
+    "context": "介绍质量指南。",
+    "tags": ["职场", "质量"]
+  },
+  {
+    "id": "a56",
+    "english": "We have implemented a robust project management system to track progress and ensure timely delivery.",
+    "chinese": "我们实施了一套健全的项目管理系统，以跟踪进度并确保按时交付。",
+    "context": "介绍项目管理系统。",
+    "tags": ["职场", "管理"]
+  },
+  {
+    "id": "a57",
+    "english": "The team has been working diligently to identify and resolve any issues that may affect the project timeline.",
+    "chinese": "团队一直在勤奋地识别和解决可能影响项目时间表的任何问题。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a58",
+    "english": "We have established a strong partnership with a leading technology firm to enhance our product offerings.",
+    "chinese": "我们与一家领先的技术公司建立了强大的合作关系，以增强我们的产品供应。",
+    "context": "介绍合作伙伴关系。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a59",
+    "english": "The company has introduced a flexible work schedule to improve employee satisfaction and productivity.",
+    "chinese": "公司引入了灵活的工作时间表，以提高员工满意度和生产力。",
+    "context": "介绍灵活工作时间表。",
+    "tags": ["职场", "福利"]
+  },
+  {
+    "id": "a60",
+    "english": "We have received numerous inquiries from potential clients who are interested in our new product line.",
+    "chinese": "我们收到了许多潜在客户的询问，他们对我们的新产品线感兴趣。",
+    "context": "报告客户兴趣。",
+    "tags": ["职场", "销售"]
+  },
+  {
+    "id": "a61",
+    "english": "The board has appointed a new CEO to lead the company through a period of significant change.",
+    "chinese": "董事会任命了一位新的CEO来领导公司度过一个重要的变革时期。",
+    "context": "介绍新CEO的任命。",
+    "tags": ["职场", "领导"]
+  },
+  {
+    "id": "a62",
+    "english": "To foster a culture of innovation, we encourage our employees to share their ideas and suggestions.",
+    "chinese": "为了培养创新文化，我们鼓励员工分享他们的想法和建议。",
+    "context": "强调创新文化的重要性。",
+    "tags": ["职场", "文化"]
+  },
+  {
+    "id": "a63",
+    "english": "The company has implemented a performance-based bonus system to reward high-performing employees.",
+    "chinese": "公司实施了基于绩效的奖金制度，以奖励表现优秀的员工。",
+    "context": "介绍奖金制度。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a64",
+    "english": "We have conducted extensive market research to better understand our target audience and their needs.",
+    "chinese": "我们进行了广泛的市场研究，以更好地了解我们的目标受众及其需求。",
+    "context": "介绍市场研究。",
+    "tags": ["职场", "研究"]
+  },
+  {
+    "id": "a65",
+    "english": "The team is working closely with external consultants to develop a comprehensive business plan.",
+    "chinese": "团队正与外部顾问紧密合作，制定一项全面的商业计划。",
+    "context": "介绍商业计划的制定。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a66",
+    "english": "We have received positive reviews from industry experts regarding our new product launch.",
+    "chinese": "我们收到了行业专家对我们新产品发布的正面评价。",
+    "context": "报告行业专家的评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a67",
+    "english": "The company has invested heavily in employee training and development programs to build a skilled workforce.",
+    "chinese": "公司大力投资于员工培训和发展计划，以打造一支熟练的员工队伍。",
+    "context": "介绍培训和发展计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a68",
+    "english": "We have implemented a robust customer feedback system to gather insights and improve our services.",
+    "chinese": "我们实施了一套健全的客户反馈系统，以收集见解并改进我们的服务。",
+    "context": "介绍客户反馈系统。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a69",
+    "english": "The project team has successfully completed the pilot phase and is now ready to move on to the next stage.",
+    "chinese": "项目团队已成功完成试点阶段，现在准备进入下一阶段。",
+    "context": "报告项目的进展。",
+    "tags": ["职场", "项目"]
+  },
+  {
+    "id": "a70",
+    "english": "To ensure compliance with industry regulations, we have established a dedicated compliance team.",
+    "chinese": "为确保遵守行业法规，我们成立了一个专门的合规团队。",
+    "context": "介绍合规团队。",
+    "tags": ["职场", "合规"]
+  },
+  {
+    "id": "a71",
+    "english": "The company has launched a new initiative to promote sustainability and reduce our environmental impact.",
+    "chinese": "公司发起了一项新倡议，以促进可持续发展并减少我们的环境影响。",
+    "context": "介绍可持续发展倡议。",
+    "tags": ["职场", "环保"]
+  },
+  {
+    "id": "a72",
+    "english": "We have developed a comprehensive crisis management plan to handle any unexpected situations.",
+    "chinese": "我们制定了一项全面的危机管理计划，以应对任何意外情况。",
+    "context": "介绍危机管理计划。",
+    "tags": ["职场", "危机管理"]
+  },
+  {
+    "id": "a73",
+    "english": "The board has approved a significant increase in the marketing budget to boost our brand awareness.",
+    "chinese": "董事会批准大幅增加营销预算，以提高我们的品牌知名度。",
+    "context": "报告营销预算的增加。",
+    "tags": ["职场", "营销"]
+  },
+  {
+    "id": "a74",
+    "english": "We have implemented a new inventory management system to optimize our supply chain operations.",
+    "chinese": "我们实施了一种新的库存管理系统，以优化我们的供应链运营。",
+    "context": "介绍库存管理系统。",
+    "tags": ["职场", "技术"]
+  },
+  {
+    "id": "a75",
+    "english": "The company has established a clear set of guidelines to ensure ethical business practices.",
+    "chinese": "公司制定了一套明确的指南，以确保道德的商业行为。",
+    "context": "介绍道德指南。",
+    "tags": ["职场", "伦理"]
+  },
+  {
+    "id": "a76",
+    "english": "We have received a prestigious award for our innovative approach to solving industry challenges.",
+    "chinese": "我们因解决行业挑战的创新方法而获得了享有盛誉的奖项。",
+    "context": "报告获奖情况。",
+    "tags": ["职场", "成就"]
+  },
+  {
+    "id": "a77",
+    "english": "The team has been working tirelessly to meet the tight deadline for the project.",
+    "chinese": "团队一直在不辞辛劳地工作，以满足项目的紧张截止日期。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a78",
+    "english": "To improve our customer service, we have introduced a new online support system.",
+    "chinese": "为了改善我们的客户服务，我们引入了一个新的在线支持系统。",
+    "context": "介绍新的支持系统。",
+    "tags": ["职场", "服务"]
+  },
+  {
+    "id": "a79",
+    "english": "The company has established a strong presence in the international market through strategic partnerships.",
+    "chinese": "公司通过战略伙伴关系在国际市场上建立了强大的地位。",
+    "context": "介绍国际市场地位。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a80",
+    "english": "We have received numerous positive testimonials from satisfied customers.",
+    "chinese": "我们收到了许多满意的客户的正面评价。",
+    "context": "报告客户评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a81",
+    "english": "The board has approved a new strategic plan to guide the company's growth over the next five years.",
+    "chinese": "董事会批准了一项新的战略计划，以指导公司在未来五年的增长。",
+    "context": "介绍战略计划。",
+    "tags": ["职场", "规划"]
+  },
+  {
+    "id": "a82",
+    "english": "We have implemented a robust data security system to protect sensitive information.",
+    "chinese": "我们实施了一套健全的数据安全系统，以保护敏感信息。",
+    "context": "介绍数据安全系统。",
+    "tags": ["职场", "安全"]
+  },
+  {
+    "id": "a83",
+    "english": "The company has introduced a new employee recognition program to boost morale and motivation.",
+    "chinese": "公司引入了一项新的员工认可计划，以提高士气和积极性。",
+    "context": "介绍员工认可计划。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a84",
+    "english": "We have received positive feedback from our partners regarding the recent collaboration.",
+    "chinese": "我们从合作伙伴那里收到了关于我们最近合作的积极反馈。",
+    "context": "报告合作伙伴的反馈。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a85",
+    "english": "The team has been working closely with the design department to ensure the product meets all specifications.",
+    "chinese": "团队一直在与设计部门密切合作，以确保产品符合所有规格。",
+    "context": "描述团队的合作。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a86",
+    "english": "We have established a clear set of performance metrics to evaluate the success of our initiatives.",
+    "chinese": "我们制定了一套明确的绩效指标来评估我们举措的成功。",
+    "context": "介绍绩效指标。",
+    "tags": ["职场", "评估"]
+  },
+  {
+    "id": "a87",
+    "english": "The company has launched a new product line to cater to a wider range of customer needs.",
+    "chinese": "公司推出了一条新的产品线，以满足更广泛的客户需求。",
+    "context": "介绍新产品线。",
+    "tags": ["职场", "产品"]
+  },
+  {
+    "id": "a88",
+    "english": "We have implemented a comprehensive training program to prepare our employees for the new system.",
+    "chinese": "我们实施了一个全面的培训计划，以准备员工使用新系统。",
+    "context": "介绍培训计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a89",
+    "english": "The board has approved a significant investment in research and development to drive innovation.",
+    "chinese": "董事会批准了对研究和开发的重大投资，以推动创新。",
+    "context": "介绍研发投资。",
+    "tags": ["职场", "投资"]
+  },
+  {
+    "id": "a90",
+    "english": "We have received positive feedback from our clients regarding the recent improvements to our services.",
+    "chinese": "我们从客户那里收到了关于我们最近服务改进的积极反馈。",
+    "context": "报告客户的反馈。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a91",
+    "english": "The company has established a clear set of guidelines to ensure consistent quality across all products.",
+    "chinese": "公司制定了一套明确的指南，以确保所有产品的质量一致。",
+    "context": "介绍质量指南。",
+    "tags": ["职场", "质量"]
+  },
+  {
+    "id": "a92",
+    "english": "We have implemented a robust project management system to track progress and ensure timely delivery.",
+    "chinese": "我们实施了一套健全的项目管理系统，以跟踪进度并确保按时交付。",
+    "context": "介绍项目管理系统。",
+    "tags": ["职场", "管理"]
+  },
+  {
+    "id": "a93",
+    "english": "The team has been working diligently to identify and resolve any issues that may affect the project timeline.",
+    "chinese": "团队一直在勤奋地识别和解决可能影响项目时间表的任何问题。",
+    "context": "描述团队的工作。",
+    "tags": ["职场", "团队"]
+  },
+  {
+    "id": "a94",
+    "english": "We have established a strong partnership with a leading technology firm to enhance our product offerings.",
+    "chinese": "我们与一家领先的技术公司建立了强大的合作关系，以增强我们的产品供应。",
+    "context": "介绍合作伙伴关系。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a95",
+    "english": "The company has introduced a flexible work schedule to improve employee satisfaction and productivity.",
+    "chinese": "公司引入了灵活的工作时间表，以提高员工满意度和生产力。",
+    "context": "介绍灵活工作时间表。",
+    "tags": ["职场", "福利"]
+  },
+  {
+    "id": "a96",
+    "english": "We have received numerous inquiries from potential clients who are interested in our new product line.",
+    "chinese": "我们收到了许多潜在客户的询问，他们对我们的新产品线感兴趣。",
+    "context": "报告客户兴趣。",
+    "tags": ["职场", "销售"]
+  },
+  {
+    "id": "a97",
+    "english": "The board has appointed a new CEO to lead the company through a period of significant change.",
+    "chinese": "董事会任命了一位新的CEO来领导公司度过一个重要的变革时期。",
+    "context": "介绍新CEO的任命。",
+    "tags": ["职场", "领导"]
+  },
+  {
+    "id": "a98",
+    "english": "To foster a culture of innovation, we encourage our employees to share their ideas and suggestions.",
+    "chinese": "为了培养创新文化，我们鼓励员工分享他们的想法和建议。",
+    "context": "强调创新文化的重要性。",
+    "tags": ["职场", "文化"]
+  },
+  {
+    "id": "a99",
+    "english": "The company has implemented a performance-based bonus system to reward high-performing employees.",
+    "chinese": "公司实施了基于绩效的奖金制度，以奖励表现优秀的员工。",
+    "context": "介绍奖金制度。",
+    "tags": ["职场", "激励"]
+  },
+  {
+    "id": "a100",
+    "english": "We have conducted extensive market research to better understand our target audience and their needs.",
+    "chinese": "我们进行了广泛的市场研究，以更好地了解我们的目标受众及其需求。",
+    "context": "介绍市场研究。",
+    "tags": ["职场", "研究"]
+  },
+  {
+    "id": "a101",
+    "english": "The team is working closely with external consultants to develop a comprehensive business plan.",
+    "chinese": "团队正与外部顾问紧密合作，制定一项全面的商业计划。",
+    "context": "介绍商业计划的制定。",
+    "tags": ["职场", "合作"]
+  },
+  {
+    "id": "a102",
+    "english": "We have received positive reviews from industry experts regarding our new product launch.",
+    "chinese": "我们收到了行业专家对我们新产品发布的正面评价。",
+    "context": "报告行业专家的评价。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a103",
+    "english": "The company has invested heavily in employee training and development programs to build a skilled workforce.",
+    "chinese": "公司大力投资于员工培训和发展计划，以打造一支熟练的员工队伍。",
+    "context": "介绍培训和发展计划。",
+    "tags": ["职场", "培训"]
+  },
+  {
+    "id": "a104",
+    "english": "We have implemented a robust customer feedback system to gather insights and improve our services.",
+    "chinese": "我们实施了一套健全的客户反馈系统，以收集见解并改进我们的服务。",
+    "context": "介绍客户反馈系统。",
+    "tags": ["职场", "反馈"]
+  },
+  {
+    "id": "a105",
+    "english": "The project team has successfully completed the pilot phase and is now ready to move on to the next stage.",
+    "chinese": "项目团队已成功完成试点阶段，现在准备进入下一阶段。",
+    "context": "报告项目的进展。",
+    "tags": ["职场", "项目"]
+  },
+  {
+    "id": "a106",
+    "english": "To ensure compliance with industry regulations, we have established a dedicated compliance team.",
+    "chinese": "为确保遵守行业法规，我们成立了一个专门的合规团队。",
+    "context": "介绍合规团队。",
+    "tags": ["职场", "合规"]
+  },
+  {
+    "id": "a107",
+    "english": "The company has launched a new initiative to promote sustainability and reduce our environmental impact.",
+    "chinese": "公司发起了一项新倡议，以促进可持续发展并减少我们的环境影响。",
+    "context": "介绍可持续发展倡议。",
+    "tags": ["职场", "环保"]
+  },
+  {
+    "id": "a108",
+    "english": "We have developed a comprehensive crisis management plan to handle any unexpected situations.",
+    "chinese": "我们制定了一项全面的危机管理计划，以应对任何意外情况。",
+    "context": "介绍危机管理计划。",
+    "tags": ["职场", "危机管理"]
+  },
+  {
+    "id": "a109",
+    "english": "The board has approved a significant increase in the marketing budget to boost our brand awareness.",
+    "chinese": "董事会批准大幅增加营销预算，以提高我们的品牌知名度。",
+    "context": "报告营销预算的增加。",
+    "tags": ["职场", "营销"]
+  }, {
+    "id": "a111",
+    "english": "Could you please tell me when the next bus to the city center leaves?",
+    "chinese": "请问下一班去市中心的公交车什么时候发车？",
+    "context": "询问公交车发车时间。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a112",
+    "english": "I'd like to buy a one-way ticket to New York, please.",
+    "chinese": "我想买一张去纽约的单程票。",
+    "context": "购买火车票。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a113",
+    "english": "Could you help me find the platform for train number 1234?",
+    "chinese": "你能帮我找到1234次列车的站台吗？",
+    "context": "寻找火车站台。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a114",
+    "english": "Is there a taxi stand nearby?",
+    "chinese": "附近有出租车站吗？",
+    "context": "寻找出租车站。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a115",
+    "english": "Can you recommend a reliable car rental service?",
+    "chinese": "你能推荐一个可靠的汽车租赁服务吗？",
+    "context": "询问汽车租赁服务。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a116",
+    "english": "Where can I exchange currency?",
+    "chinese": "在哪里可以兑换货币？",
+    "context": "询问货币兑换地点。",
+    "tags": ["旅行", "金融"]
+  },
+  {
+    "id": "a117",
+    "english": "Could you please show me how to use the self-check-in kiosk?",
+    "chinese": "你能告诉我如何使用自助值机终端吗？",
+    "context": "询问机场自助值机终端的使用方法。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a118",
+    "english": "I need to check in two pieces of luggage.",
+    "chinese": "我需要托运两件行李。",
+    "context": "在机场办理行李托运。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a119",
+    "english": "Could you please confirm my flight details?",
+    "chinese": "请确认我的航班详情。",
+    "context": "确认航班信息。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a120",
+    "english": "Is there a lounge I can use for my flight?",
+    "chinese": "我有航班的休息室可以使用吗？",
+    "context": "询问机场休息室。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a121",
+    "english": "Could you please direct me to the departure gate for my flight?",
+    "chinese": "你能带我去我的航班登机口吗？",
+    "context": "寻找登机口。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a122",
+    "english": "I need to rebook my flight due to a schedule change.",
+    "chinese": "由于行程改变，我需要重新预订航班。",
+    "context": "重新预订航班。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a123",
+    "english": "Can I get an aisle seat for my flight?",
+    "chinese": "我能要一个靠过道的座位吗？",
+    "context": "请求特定座位。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a124",
+    "english": "I lost my boarding pass. Can I get a new one?",
+    "chinese": "我的登机牌丢了，能再给我一张吗？",
+    "context": "补办登机牌。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a125",
+    "english": "Could you please assist me with my carry-on luggage?",
+    "chinese": "你能帮我拿手提行李吗？",
+    "context": "请求帮助搬运行李。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a126",
+    "english": "I need to report a lost item at the airport.",
+    "chinese": "我需要在机场报告丢失物品。",
+    "context": "报告丢失物品。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a127",
+    "english": "Could you please help me with the customs declaration form?",
+    "chinese": "你能帮我填写海关申报单吗？",
+    "context": "填写海关申报单。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a128",
+    "english": "I need to pick up my luggage at the baggage claim area.",
+    "chinese": "我需要在行李提取区取行李。",
+    "context": "提取行李。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a129",
+    "english": "Could you please show me the way to the hotel?",
+    "chinese": "你能带我去酒店吗？",
+    "context": "寻找酒店。",
+    "tags": ["旅行", "住宿"]
+  },
+  {
+    "id": "a130",
+    "english": "I would like to book a room for two nights, please.",
+    "chinese": "我想预订一间房住两晚。",
+    "context": "预订酒店房间。",
+    "tags": ["旅行", "住宿"]
+  },
+  {
+    "id": "a131",
+    "english": "Do you have any rooms available for tonight?",
+    "chinese": "今晚有空房吗？",
+    "context": "询问是否有空房。",
+    "tags": ["旅行", "住宿"]
+  },
+  {
+    "id": "a132",
+    "english": "I need to check out by 11 AM tomorrow.",
+    "chinese": "我明天需要在上午11点前退房。",
+    "context": "告知退房时间。",
+    "tags": ["旅行", "住宿"]
+  },
+  {
+    "id": "a133",
+    "english": "Could you please wake me up at 6 AM?",
+    "chinese": "你能明天早上6点叫醒我吗？",
+    "context": "请求叫醒服务。",
+    "tags": ["旅行", "住宿"]
+  },
+  {
+    "id": "a134",
+    "english": "I need to extend my stay for one more night.",
+    "chinese": "我需要再住一晚。",
+    "context": "延长住宿时间。",
+    "tags": ["旅行", "住宿"]
+  },
+  {
+    "id": "a135",
+    "english": "Could you please recommend a good restaurant nearby?",
+    "chinese": "你能推荐附近的餐馆吗？",
+    "context": "询问附近餐馆。",
+    "tags": ["旅行", "餐饮"]
+  },
+  {
+    "id": "a136",
+    "english": "I would like to make a reservation for four people at 7 PM.",
+    "chinese": "我想预订四个人晚上7点的位子。",
+    "context": "预订餐厅。",
+    "tags": ["旅行", "餐饮"]
+  },
+  {
+    "id": "a137",
+    "english": "Could you please suggest some local specialties?",
+    "chinese": "你能推荐一些当地特色菜吗？",
+    "context": "询问当地特色菜。",
+    "tags": ["旅行", "餐饮"]
+  },
+  {
+    "id": "a138",
+    "english": "I have a food allergy. Could you please inform the kitchen?",
+    "chinese": "我对某些食物过敏，请通知厨房。",
+    "context": "告知食物过敏。",
+    "tags": ["旅行", "餐饮"]
+  },
+  {
+    "id": "a139",
+    "english": "Could you please bring me the bill?",
+    "chinese": "请给我结账。",
+    "context": "要求结账。",
+    "tags": ["旅行", "餐饮"]
+  },
+  {
+    "id": "a140",
+    "english": "I would like to split the bill, please.",
+    "chinese": "我想分账。",
+    "context": "请求分账。",
+    "tags": ["旅行", "餐饮"]
+  },
+  {
+    "id": "a141",
+    "english": "Could you please recommend a good place to try local cuisine?",
+    "chinese": "你能推荐一个尝当地美食的好地方吗？",
+    "context": "询问尝试当地美食的地方。",
+    "tags": ["旅行", "餐饮"]
+  },
+  {
+    "id": "a142",
+    "english": "I need to cancel my reservation due to an emergency.",
+    "chinese": "由于紧急情况，我需要取消预订。",
+    "context": "取消预订。",
+    "tags": ["旅行", "餐饮"]
+  },
+  {
+    "id": "a143",
+    "english": "Could you please suggest a good place to see the sunset?",
+    "chinese": "你能推荐一个看日落的好地方吗？",
+    "context": "询问看日落的地方。",
+    "tags": ["旅行", "景点"]
+  },
+  {
+    "id": "a144",
+    "english": "I would like to visit the main tourist attractions. Could you recommend a tour?",
+    "chinese": "我想参观主要的旅游景点，你能推荐一个旅游团吗？",
+    "context": "询问旅游团。",
+    "tags": ["旅行", "景点"]
+  },
+  {
+    "id": "a145",
+    "english": "Could you please provide a map of the city?",
+    "chinese": "你能提供一张城市地图吗？",
+    "context": "请求城市地图。",
+    "tags": ["旅行", "景点"]
+  },
+  {
+    "id": "a146",
+    "english": "I need to rent a bike to explore the city.",
+    "chinese": "我需要租一辆自行车来游览城市。",
+    "context": "租自行车。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "a147",
+    "english": "Could you please recommend a good place to take photos?",
+    "chinese": "你能推荐一个拍照的好地方吗？",
+    "context": "询问拍照地点。",
+    "tags": ["旅行", "景点"]
+  },
+  {
+    "id": "a148",
+    "english": "I need to buy some souvenirs for my friends and family.",
+    "chinese": "我需要买一些纪念品给朋友和家人。",
+    "context": "购买纪念品。",
+    "tags": ["旅行", "购物"]
+  },
+  {
+    "id": "a149",
+    "english": "Could you please suggest a good shopping mall or market?",
+    "chinese": "你能推荐一个好的购物中心或市场吗？",
+    "context": "询问购物中心或市场。",
+    "tags": ["旅行", "购物"]
+  },
+  {
+    "id": "a150",
+    "english": "I need to find a pharmacy. Could you tell me where the nearest one is?",
+    "chinese": "我需要找一家药店。你能告诉我最近的一家在哪里吗？",
+    "context": "寻找药店。",
+    "tags": ["旅行", "医疗"]
+  },
+  {
+    "id": "a151",
+    "english": "I need to see a doctor. Could you recommend a good clinic or hospital?",
+    "chinese": "我需要看医生。你能推荐一个好的诊所或医院吗？",
+    "context": "寻找诊所或医院。",
+    "tags": ["旅行", "医疗"]
+  },
+  {
+    "id": "a152",
+    "english": "I need to get a prescription filled. Could you help me find a pharmacy?",
+    "chinese": "我需要配药。你能帮我找一家药店吗？",
+    "context": "配药。",
+    "tags": ["旅行", "医疗"]
+  },
+  {
+    "id": "a153",
+    "english": "I need to get some cash. Is there an ATM nearby?",
+    "chinese": "我需要取些现金。附近有ATM吗？",
+    "context": "寻找ATM。",
+    "tags": ["旅行", "金融"]
+  },
+  {
+    "id": "a154",
+    "english": "Could you please tell me the opening hours of the bank?",
+    "chinese": "你能告诉我银行的营业时间吗？",
+    "context": "询问银行营业时间。",
+    "tags": ["旅行", "金融"]
+  },
+  {
+    "id": "a155",
+    "english": "I need to send a package back home. Could you recommend a shipping service?",
+    "chinese": "我需要寄一个包裹回家。你能推荐一个快递服务吗？",
+    "context": "寻找快递服务。",
+    "tags": ["旅行", "物流"]
+  },
+  {
+    "id": "a156",
+    "english": "Could you please help me find a post office?",
+    "chinese": "你能帮我找一个邮局吗？",
+    "context": "寻找邮局。",
+    "tags": ["旅行", "物流"]
+  },
+  {
+    "id": "a157",
+    "english": "I need to send a letter. Could you tell me where to buy stamps?",
+    "chinese": "我需要寄一封信。你能告诉我哪里可以买到邮票吗？",
+    "context": "购买邮票。",
+    "tags": ["旅行", "物流"]
+  },
+  {
+    "id": "a158",
+    "english": "I need to make a phone call. Is there a public phone nearby?",
+    "chinese": "我需要打个电话。附近有公共电话吗？",
+    "context": "寻找公共电话。",
+    "tags": ["旅行", "通信"]
+  },
+  {
+    "id": "a159",
+    "english": "I need to charge my phone. Is there a power outlet available?",
+    "chinese": "我需要充电。这里有电源插座吗？",
+    "context": "寻找电源插座。",
+    "tags": ["旅行", "通信"]
+  },
+  {
+    "id": "a160",
+    "english": "I need to connect to Wi-Fi. Could you provide the password?",
+    "chinese": "我需要连接Wi-Fi。你能提供密码吗？",
+    "context": "连接Wi-Fi。",
+    "tags": ["旅行", "通信"]
+  },
+  {
+    "id": "a161",
+    "english": "I need to find a place to relax and have a drink. Could you recommend a bar or café?",
+    "chinese": "我需要找一个地方放松喝一杯。你能推荐一个酒吧或咖啡馆吗？",
+    "context": "寻找酒吧或咖啡馆。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a162",
+    "english": "I need to find a place to do some sightseeing. Could you recommend a tour guide?",
+    "chinese": "我需要找一个地方观光。你能推荐一个导游吗？",
+    "context": "寻找导游。",
+    "tags": ["旅行", "景点"]
+  },
+  {
+    "id": "a163",
+    "english": "I need to find a place to do some exercise. Is there a gym nearby?",
+    "chinese": "我需要找一个地方锻炼。附近有健身房吗？",
+    "context": "寻找健身房。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a164",
+    "english": "I need to find a place to do some shopping. Could you recommend a good mall or market?",
+    "chinese": "我需要找一个地方购物。你能推荐一个好的商场或市场吗？",
+    "context": "寻找商场或市场。",
+    "tags": ["旅行", "购物"]
+  },
+  {
+    "id": "a165",
+    "english": "I need to find a place to do some sightseeing. Could you recommend a good spot?",
+    "chinese": "我需要找一个地方观光。你能推荐一个好的景点吗？",
+    "context": "寻找景点。",
+    "tags": ["旅行", "景点"]
+  },
+  {
+    "id": "a166",
+    "english": "I need to find a place to do some reading. Is there a library nearby?",
+    "chinese": "我需要找一个地方读书。附近有图书馆吗？",
+    "context": "寻找图书馆。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a167",
+    "english": "I need to find a place to do some writing. Is there a quiet café or library nearby?",
+    "chinese": "我需要找一个地方写作。附近有安静的咖啡馆或图书馆吗？",
+    "context": "寻找安静的地方。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a168",
+    "english": "I need to find a place to do some art. Is there an art studio or gallery nearby?",
+    "chinese": "我需要找一个地方做艺术。附近有艺术工作室或画廊吗？",
+    "context": "寻找艺术工作室或画廊。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a169",
+    "english": "I need to find a place to do some photography. Could you recommend a good spot?",
+    "chinese": "我需要找一个地方摄影。你能推荐一个好的拍摄地点吗？",
+    "context": "寻找拍摄地点。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a170",
+    "english": "I need to find a place to do some yoga. Is there a yoga studio nearby?",
+    "chinese": "我需要找一个地方做瑜伽。附近有瑜伽馆吗？",
+    "context": "寻找瑜伽馆。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a171",
+    "english": "I need to find a place to do some swimming. Is there a pool or beach nearby?",
+    "chinese": "我需要找一个地方游泳。附近有游泳池或海滩吗？",
+    "context": "寻找游泳池或海滩。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a172",
+    "english": "I need to find a place to do some hiking. Could you recommend a good trail?",
+    "chinese": "我需要找一个地方徒步。你能推荐一条好的步道吗？",
+    "context": "寻找步道。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a173",
+    "english": "I need to find a place to do some cycling. Is there a bike path nearby?",
+    "chinese": "我需要找一个地方骑自行车。附近有自行车道吗？",
+    "context": "寻找自行车道。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a174",
+    "english": "I need to find a place to do some boating. Is there a lake or river nearby?",
+    "chinese": "我需要找一个地方划船。附近有湖泊或河流吗？",
+    "context": "寻找湖泊或河流。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a175",
+    "english": "I need to find a place to do some fishing. Is there a good spot nearby?",
+    "chinese": "我需要找一个地方钓鱼。附近有好的钓点吗？",
+    "context": "寻找钓点。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a176",
+    "english": "I need to find a place to do some bird watching. Is there a nature reserve nearby?",
+    "chinese": "我需要找一个地方观鸟。附近有自然保护区吗？",
+    "context": "寻找自然保护区。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a177",
+    "english": "I need to find a place to do some stargazing. Is there a dark sky park nearby?",
+    "chinese": "我需要找一个地方观星。附近有暗夜公园吗？",
+    "context": "寻找暗夜公园。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a178",
+    "english": "I need to find a place to do some camping. Is there a campsite nearby?",
+    "chinese": "我需要找一个地方露营。附近有露营地吗？",
+    "context": "寻找露营地。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a179",
+    "english": "I need to find a place to do some rock climbing. Is there a climbing wall or outdoor site nearby?",
+    "chinese": "我需要找一个地方攀岩。附近有攀岩墙或户外场地吗？",
+    "context": "寻找攀岩场地。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a180",
+    "english": "I need to find a place to do some skiing. Is there a ski resort nearby?",
+    "chinese": "我需要找一个地方滑雪。附近有滑雪场吗？",
+    "context": "寻找滑雪场。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a181",
+    "english": "I need to find a place to do some snowboarding. Is there a snowboarding park nearby?",
+    "chinese": "我需要找一个地方玩单板滑雪。附近有单板滑雪场吗？",
+    "context": "寻找单板滑雪场。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a182",
+    "english": "I need to find a place to do some surfing. Is there a beach with good waves nearby?",
+    "chinese": "我需要找一个地方冲浪。附近有浪好的海滩吗？",
+    "context": "寻找冲浪海滩。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a183",
+    "english": "I need to find a place to do some kayaking. Is there a river or lake with kayak rentals?",
+    "chinese": "我需要找一个地方划皮艇。附近有提供皮艇租赁的河流或湖泊吗？",
+    "context": "寻找皮艇租赁。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a184",
+    "english": "I need to find a place to do some scuba diving. Is there a dive shop nearby?",
+    "chinese": "我需要找一个地方潜水。附近有潜水店吗？",
+    "context": "寻找潜水店。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a185",
+    "english": "I need to find a place to do some snorkeling. Is there a beach with clear water nearby?",
+    "chinese": "我需要找一个地方浮潜。附近有水质清澈的海滩吗？",
+    "context": "寻找浮潜海滩。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a186",
+    "english": "I need to find a place to do some paragliding. Is there a paragliding school nearby?",
+    "chinese": "我需要找一个地方滑翔伞。附近有滑翔伞学校吗？",
+    "context": "寻找滑翔伞学校。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a187",
+    "english": "I need to find a place to do some bungee jumping. Is there a bungee jumping site nearby?",
+    "chinese": "我需要找一个地方蹦极。附近有蹦极场地吗？",
+    "context": "寻找蹦极场地。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a188",
+    "english": "I need to find a place to do some hot air ballooning. Is there a hot air balloon tour nearby?",
+    "chinese": "我需要找一个地方热气球。附近有热气球之旅吗？",
+    "context": "寻找热气球之旅。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a189",
+    "english": "I need to find a place to do some zip-lining. Is there a zip-line course nearby?",
+    "chinese": "我需要找一个地方体验高空滑索。附近有高空滑索课程吗？",
+    "context": "寻找高空滑索课程。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a190",
+    "english": "I need to find a place to do some white-water rafting. Is there a river with rafting tours?",
+    "chinese": "我需要找一个地方体验漂流。附近有漂流之旅的河流吗？",
+    "context": "寻找漂流之旅。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a191",
+    "english": "I need to find a place to do some caving. Is there a cave system nearby?",
+    "chinese": "我需要找一个地方探洞。附近有洞穴系统吗？",
+    "context": "寻找洞穴系统。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a192",
+    "english": "I need to find a place to do some horseback riding. Is there a stable nearby?",
+    "chinese": "我需要找一个地方骑马。附近有马厩吗？",
+    "context": "寻找马厩。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a193",
+    "english": "I need to find a place to do some mountain biking. Is there a trail network nearby?",
+    "chinese": "我需要找一个地方山地自行车。附近有山地自行车道网络吗？",
+    "context": "寻找山地自行车道网络。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a194",
+    "english": "I need to find a place to do some ice skating. Is there an ice rink nearby?",
+    "chinese": "我需要找一个地方滑冰。附近有溜冰场吗？",
+    "context": "寻找溜冰场。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a195",
+    "english": "I need to find a place to do some snowshoeing. Is there a trail with snowshoe rentals?",
+    "chinese": "我需要找一个地方雪鞋行走。附近有提供雪鞋租赁的步道吗？",
+    "context": "寻找雪鞋租赁。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a196",
+    "english": "I need to find a place to do some cross-country skiing. Is there a trail network nearby?",
+    "chinese": "我需要找一个地方越野滑雪。附近有越野滑雪道网络吗？",
+    "context": "寻找越野滑雪道网络。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a197",
+    "english": "I need to find a place to do some ice climbing. Is there a guided tour available?",
+    "chinese": "我需要找一个地方冰攀。附近有导览服务吗？",
+    "context": "寻找冰攀导览服务。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a198",
+    "english": "I need to find a place to do some dog sledding. Is there a tour operator nearby?",
+    "chinese": "我需要找一个地方体验狗拉雪橇。附近有旅行社吗？",
+    "context": "寻找狗拉雪橇旅行社。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a199",
+    "english": "I need to find a place to do some snowmobiling. Is there a trail network nearby?",
+    "chinese": "我需要找一个地方驾驶雪地摩托。附近有雪地摩托车道网络吗？",
+    "context": "寻找雪地摩托车道网络。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "a200",
+    "english": "I need to find a place to do some wildlife watching. Is there a national park or reserve nearby?",
+    "chinese": "我需要找一个地方观察野生动物。附近有国家公园或保护区吗？",
+    "context": "寻找国家公园或保护区。",
+    "tags": ["旅行", "休闲"]
+  },
+  {
+    "id": "sent0061",
+    "english": "Much as I admire his talent, I cannot agree with his opinions.",
+    "chinese": "虽然我很欣赏他的才能，但我无法同意他的观点。",
+    "context": "让步状语从句：much as引导，相当于although，表示强烈对比。",
+    "tags": ["让步状语从句", "连词"]
+  },
+  {
+    "id": "sent0062",
+    "english": "There being no further questions, the meeting was adjourned.",
+    "chinese": "由于没有进一步的问题，会议休会了。",
+    "context": "独立主格结构：there being + 名词，表示原因或条件。",
+    "tags": ["独立主格", "非谓语动词"]
+  },
+  {
+    "id": "sent0063",
+    "english": "Seldom have I encountered such generosity from a stranger.",
+    "chinese": "我很少遇到陌生人如此慷慨。",
+    "context": "频率副词seldom置于句首，主句倒装，使用现在完成时。",
+    "tags": ["倒装句", "频率副词"]
+  },
+  {
+    "id": "sent0064",
+    "english": "It is recommended that the proposal be discussed at the next meeting.",
+    "chinese": "建议在下次会议上讨论该提案。",
+    "context": "Recommend后的that从句使用虚拟语气（be + 过去分词被动）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0065",
+    "english": "The book is worth reading twice.",
+    "chinese": "这本书值得读两遍。",
+    "context": "Be worth + doing结构，使用动名词主动表被动含义。",
+    "tags": ["固定句型", "动名词"]
+  },
+  {
+    "id": "sent0066",
+    "english": "In spite of the heavy rain, the match continued as planned.",
+    "chinese": "尽管大雨，比赛仍按计划进行。",
+    "context": "让步状语：in spite of + 名词短语，表示“尽管”。",
+    "tags": ["让步状语", "介词短语"]
+  },
+  {
+    "id": "sent0067",
+    "english": "Were it not for gravity, objects would float in space.",
+    "chinese": "如果没有引力，物体就会在太空中漂浮。",
+    "context": "对现在情况的虚拟，倒装形式：Were it not for... = If it were not for...。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0068",
+    "english": "The manager demanded that the report be finished by Friday.",
+    "chinese": "经理要求报告在周五前完成。",
+    "context": "Demand后的that从句使用虚拟语气（be + 过去分词）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0069",
+    "english": "So rapidly does technology advance that we can hardly keep up.",
+    "chinese": "技术进步如此迅速，我们几乎跟不上。",
+    "context": "So + 副词 + 动词 + 主语 + that... 强调结构，导致倒装。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0070",
+    "english": "The students are accustomed to doing homework every evening.",
+    "chinese": "学生们习惯于每晚做作业。",
+    "context": "Be accustomed to + doing，使用动名词表示习惯。",
+    "tags": ["固定搭配", "动名词"]
+  },
+  {
+    "id": "sent0071",
+    "english": "Nowhere else can you find such beautiful scenery.",
+    "chinese": "你在其他任何地方都找不到如此美丽的风景。",
+    "context": "否定地点副词nowhere置于句首，主句倒装。",
+    "tags": ["倒装句", "否定前置"]
+  },
+  {
+    "id": "sent0072",
+    "english": "He acted as if nothing had happened.",
+    "chinese": "他表现得好像什么都没发生似的。",
+    "context": "As if引导的方式状语从句，对过去用过去完成时虚拟。",
+    "tags": ["方式状语从句", "虚拟语气"]
+  },
+  {
+    "id": "sent0073",
+    "english": "The bridge having been repaired, traffic resumed normally.",
+    "chinese": "桥梁修好后，交通恢复正常。",
+    "context": "独立主格结构：having been done表示被动完成动作。",
+    "tags": ["独立主格", "非谓语动词"]
+  },
+  {
+    "id": "sent0074",
+    "english": "It suddenly occurred to me that I had forgotten my keys.",
+    "chinese": "我突然想起我忘了带钥匙。",
+    "context": "It occurs to sb. that... 结构，主语从句使用that引导。",
+    "tags": ["主语从句", "固定句型"]
+  },
+  {
+    "id": "sent0075",
+    "english": "Only when the war ended did people realize the full extent of the damage.",
+    "chinese": "只有战争结束后，人们才意识到破坏的全部程度。",
+    "context": "Only + 时间状语从句置于句首，主句倒装。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0076",
+    "english": "Preferable to waiting is taking immediate action.",
+    "chinese": "立即采取行动比等待更好。",
+    "context": "Preferable to + doing，使用动名词比较结构。",
+    "tags": ["比较结构", "动名词"]
+  },
+  {
+    "id": "sent0077",
+    "english": "Under the circumstances, we have no choice but to cancel the event.",
+    "chinese": "在这种情况下，我们别无选择，只能取消活动。",
+    "context": "Have no choice but to do 固定结构，表示“只能”。",
+    "tags": ["固定句型", "不定式"]
+  },
+  {
+    "id": "sent0078",
+    "english": "The experiment failed in that the results were inconclusive.",
+    "chinese": "实验失败了，因为结果不明确。",
+    "context": "In that引导原因状语从句，表示“因为”。",
+    "tags": ["原因状语从句", "连词"]
+  },
+  {
+    "id": "sent0079",
+    "english": "At no time was the president aware of the scandal.",
+    "chinese": "总统在任何时候都不知道这个丑闻。",
+    "context": "否定时间短语at no time置于句首，主句倒装。",
+    "tags": ["倒装句", "否定前置"]
+  },
+  {
+    "id": "sent0080",
+    "english": "I regret to say that your application has been rejected.",
+    "chinese": "我很遗憾地说，你的申请被拒绝了。",
+    "context": "Regret to do 表示“遗憾地做某事”（还未做）；regret doing 表示后悔做过。",
+    "tags": ["动词搭配", "不定式"]
+  }, {
+    "id": "sent0041",
+    "english": "No matter how hard I try, I still make mistakes in English grammar.",
+    "chinese": "无论我多么努力，我还是会在英语语法上出错。",
+    "context": "让步状语从句：no matter how引导，表示“无论多么”。",
+    "tags": ["让步状语从句", "连词"]
+  },
+  {
+    "id": "sent0042",
+    "english": "There is no point in arguing with him because he never changes his mind.",
+    "chinese": "和他争论没有意义，因为他从不改变主意。",
+    "context": "There is no point in + doing 固定结构，表示“做某事没有意义”。",
+    "tags": ["固定句型", "动名词"]
+  },
+  {
+    "id": "sent0043",
+    "english": "Little did I know that the decision would change my life forever.",
+    "chinese": "我当时几乎不知道这个决定会永远改变我的人生。",
+    "context": "Little + 否定词置于句首的倒装结构，用于强调“几乎不知道”。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0044",
+    "english": "It is essential that every student attend the safety briefing.",
+    "chinese": "每个学生参加安全简报是至关重要的。",
+    "context": "It is essential + that从句，使用虚拟语气（动词原形）。",
+    "tags": ["虚拟语气", "主语从句"]
+  },
+  {
+    "id": "sent0045",
+    "english": "The film was so moving that many people in the audience cried.",
+    "chinese": "这部电影如此感人，以至于许多观众都哭了。",
+    "context": "So + 形容词 + that结果状语从句，无倒装的常见强调结构。",
+    "tags": ["结果状语从句", "强调"]
+  },
+  {
+    "id": "sent0046",
+    "english": "Supposing he fails the exam, what will he do next?",
+    "chinese": "假如他考试不及格，他接下来会怎么办？",
+    "context": "Supposing引导的条件从句，表示假设情况（较正式）。",
+    "tags": ["条件状语从句", "虚拟语气"]
+  },
+  {
+    "id": "sent0047",
+    "english": "Rarely does she complain about her workload.",
+    "chinese": "她很少抱怨工作量。",
+    "context": "频率副词rarely置于句首，主句倒装（does + 主语 + 原形）。",
+    "tags": ["倒装句", "频率副词"]
+  },
+  {
+    "id": "sent0048",
+    "english": "He would have arrived on time had the train not been delayed.",
+    "chinese": "如果火车没有晚点，他本可以准时到达。",
+    "context": "混合条件句：对过去的虚拟（had not been）+ 对过去的假设结果（would have arrived）。",
+    "tags": ["虚拟语气", "混合条件句"]
+  },
+  {
+    "id": "sent0049",
+    "english": "The reason why he resigned is still unknown.",
+    "chinese": "他辞职的原因仍然未知。",
+    "context": "The reason why + 从句结构，why可省略。",
+    "tags": ["表语从句", "定语从句"]
+  },
+  {
+    "id": "sent0050",
+    "english": "On no account must this door be left unlocked overnight.",
+    "chinese": "这扇门绝不能整夜不锁。",
+    "context": "否定短语on no account置于句首，主句使用情态动词倒装。",
+    "tags": ["倒装句", "否定前置"]
+  },
+  {
+    "id": "sent0051",
+    "english": "So that the experiment could be repeated, detailed notes were taken.",
+    "chinese": "为了能重复实验，详细的笔记被记录下来。",
+    "context": "目的状语从句：so that引导，从句中使用情态动词could；主句被动语态。",
+    "tags": ["目的状语从句", "被动语态"]
+  },
+  {
+    "id": "sent0052",
+    "english": "Not only is the book informative, but it is also entertaining.",
+    "chinese": "这本书不仅信息丰富，而且很有趣。",
+    "context": "Not only...but also... 结构，not only置于句首时主句倒装。",
+    "tags": ["倒装句", "并列结构"]
+  },
+  {
+    "id": "sent0053",
+    "english": "Had you followed the instructions carefully, you wouldn't have failed.",
+    "chinese": "如果你仔细遵循了指示，你就不会失败了。",
+    "context": "对过去的虚拟条件句倒装形式：Had you + done = If you had done。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0054",
+    "english": "Whenever I feel stressed, I go for a long walk.",
+    "chinese": "每当我感到压力时，我就去散长步。",
+    "context": "时间状语从句：whenever引导，表示“每当”。",
+    "tags": ["时间状语从句", "连词"]
+  },
+  {
+    "id": "sent0055",
+    "english": "The data having been analyzed, the team presented their findings.",
+    "chinese": "数据分析完成后，团队展示了他们的发现。",
+    "context": "独立主格结构：having been done表示被动完成动作。",
+    "tags": ["独立主格", "非谓语动词"]
+  },
+  {
+    "id": "sent0056",
+    "english": "It seems as if the weather is going to clear up soon.",
+    "chinese": "天气似乎很快就要放晴了。",
+    "context": "As if引导的方式状语从句，对现在情况用陈述语气（看起来真实）。",
+    "tags": ["方式状语从句", "虚拟语气"]
+  },
+  {
+    "id": "sent0057",
+    "english": "In case of fire, break the glass and press the alarm button.",
+    "chinese": "如遇火灾，请打破玻璃并按下警报按钮。",
+    "context": "In case of + 名词，表示“万一”。",
+    "tags": ["条件状语", "祈使句"]
+  },
+  {
+    "id": "sent0058",
+    "english": "He spoke confidently, as though he knew all the answers.",
+    "chinese": "他自信地说着，好像他知道所有答案似的。",
+    "context": "As though引导的方式状语从句，对现在用过去式虚拟。",
+    "tags": ["方式状语从句", "虚拟语气"]
+  },
+  {
+    "id": "sent0059",
+    "english": "By the end of this year, the construction will have been completed.",
+    "chinese": "到今年年底，建设将已经完成。",
+    "context": "将来完成时的被动语态。",
+    "tags": ["将来完成时", "被动语态"]
+  },
+  {
+    "id": "sent0060",
+    "english": "Lest you forget, please set a reminder on your phone.",
+    "chinese": "以免你忘记，请在手机上设置提醒。",
+    "context": "Lest引导的目的状语从句，从句中使用should + 原形（可省略should）。",
+    "tags": ["目的状语从句", "虚拟语气"]
+  },
+  {
+    "id": "sent0021",
+    "english": "Provided that you finish your homework, you can go out with friends tonight.",
+    "chinese": "只要你完成作业，今晚就可以和朋友出去玩。",
+    "context": "条件状语从句：provided that / providing that 引导真实条件，相当于if。",
+    "tags": ["条件状语从句", "连词"]
+  },
+  {
+    "id": "sent0022",
+    "english": "Scarcely had the guests left when the house felt empty again.",
+    "chinese": "客人刚走，房子就又显得空荡荡的了。",
+    "context": "Scarcely...when... 结构，scarcely置于句首时主句倒装，使用过去完成时。",
+    "tags": ["倒装句", "时间状语"]
+  },
+  {
+    "id": "sent0023",
+    "english": "So excited was she about the news that she couldn't sleep all night.",
+    "chinese": "她对这个消息如此兴奋，以至于整晚都睡不着。",
+    "context": "So + 形容词/副词 + be + 主语 + that... 结构，用于强调，导致部分倒装。",
+    "tags": ["倒装句", "强调结构", "结果状语从句"]
+  },
+  {
+    "id": "sent0024",
+    "english": "It was not until midnight that the noise finally stopped.",
+    "chinese": "直到午夜噪音才终于停下来。",
+    "context": "Not until... 置于句首时的强调倒装结构，主句使用倒装语序。",
+    "tags": ["倒装句", "强调句型"]
+  },
+  {
+    "id": "sent0025",
+    "english": "Should you need any help, please don't hesitate to contact me.",
+    "chinese": "如果你需要任何帮助，请随时联系我。",
+    "context": "对将来情况的虚拟，倒装形式：Should you... = If you should...。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0026",
+    "english": "The evidence suggests that the suspect was not at the scene of the crime.",
+    "chinese": "证据表明嫌疑人不在犯罪现场。",
+    "context": "Suggest后的宾语从句使用虚拟语气（动词用原形或过去式）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0027",
+    "english": "Even if it rains tomorrow, the outdoor event will still take place.",
+    "chinese": "即使明天下雨，户外活动仍将举行。",
+    "context": "让步状语从句：even if 引导，表示假设的让步（可能发生）。",
+    "tags": ["让步状语从句", "连词"]
+  },
+  {
+    "id": "sent0028",
+    "english": "The teacher explained the grammar rule in order that every student might understand it clearly.",
+    "chinese": "老师解释了语法规则，以便每个学生都能清楚理解。",
+    "context": "目的状语从句：in order that引导，从句中使用情态动词might表示目的。",
+    "tags": ["目的状语从句", "情态动词"]
+  },
+  {
+    "id": "sent0029",
+    "english": "What surprised me most was that he spoke fluent Chinese after only one year of study.",
+    "chinese": "最让我惊讶的是，他只学了一年中文就说得这么流利。",
+    "context": "主语从句：what引导主语从句；表语从句：that引导。",
+    "tags": ["主语从句", "表语从句"]
+  },
+  {
+    "id": "sent0030",
+    "english": "Never before have I seen such a spectacular fireworks display.",
+    "chinese": "我以前从未见过如此壮观的烟花表演。",
+    "context": "否定词never置于句首，主句使用倒装（have + 主语 + done），现在完成时。",
+    "tags": ["倒装句", "否定前置", "现在完成时"]
+  },
+  {
+    "id": "sent0031",
+    "english": "As long as you keep practicing, your English will improve steadily.",
+    "chinese": "只要你坚持练习，你的英语就会稳步提高。",
+    "context": "条件状语从句：as long as引导，表示“只要”这一持续条件。",
+    "tags": ["条件状语从句", "连词"]
+  },
+  {
+    "id": "sent0032",
+    "english": "The project will be completed on time provided everyone works together efficiently.",
+    "chinese": "只要大家高效合作，项目就会按时完成。",
+    "context": "将来时的被动语态 + provided引导的条件状语从句。",
+    "tags": ["被动语态", "条件状语从句"]
+  },
+  {
+    "id": "sent0033",
+    "english": "Such a complicated problem was it that even experts struggled to solve it.",
+    "chinese": "这个问题如此复杂，以至于连专家都很难解决。",
+    "context": "Such + 名词 + be + 主语 + that... 结构，用于强调，导致部分倒装。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0034",
+    "english": "I would rather you came tomorrow instead of today.",
+    "chinese": "我宁愿你明天来而不是今天。",
+    "context": "Would rather后的从句使用过去式表示对将来的虚拟愿望。",
+    "tags": ["虚拟语气", "would rather从句"]
+  },
+  {
+    "id": "sent0035",
+    "english": "Wherever you go, you should always carry your ID card with you.",
+    "chinese": "无论你去哪里，都应该随身携带身份证。",
+    "context": "让步状语从句：wherever引导，表示地点让步，相当于no matter where。",
+    "tags": ["让步状语从句", "地点状语"]
+  },
+  {
+    "id": "sent0036",
+    "english": "By next month, we will have been living in this city for ten years.",
+    "chinese": "到下个月，我们就在这个城市住了十年了。",
+    "context": "将来完成进行时，强调动作的持续到将来某一时间点。",
+    "tags": ["将来完成进行时", "时态"]
+  },
+  {
+    "id": "sent0037",
+    "english": "Only by working hard can one achieve true success.",
+    "chinese": "只有努力工作才能取得真正的成功。",
+    "context": "Only + 状语置于句首，主句倒装（can + 主语 + 原形）。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0038",
+    "english": "He insisted that the door be locked before leaving the house.",
+    "chinese": "他坚持要在离开房子前锁门。",
+    "context": "Insist后的宾语从句在“坚持要求”含义时使用虚拟语气（be + 过去分词）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0039",
+    "english": "The moment the bell rings, the students rush out of the classroom.",
+    "chinese": "铃声一响，学生们就冲出教室。",
+    "context": "时间状语从句：the moment引导，相当于as soon as，表示“一……就……”。",
+    "tags": ["时间状语从句", "连词"]
+  },
+  {
+    "id": "sent0040",
+    "english": "If only I knew the answer to this difficult question!",
+    "chinese": "要是我知道这个难题的答案就好了！",
+    "context": "If only感叹句，表示强烈的愿望，对现在情况使用过去式虚拟。",
+    "tags": ["虚拟语气", "感叹句"]
+  },
+  {
+    "id": "sent0001",
+    "english": "If I had studied harder when I was younger, I might have gotten into a better university.",
+    "chinese": "如果我年轻时更努力学习，我可能就已经进入更好的大学了。",
+    "context": "第三条件句（虚拟语气），表示对过去情况的假设和可能结果。用于练习过去完成时 + might/could have done 结构。",
+    "tags": ["虚拟语气", "条件句", "过去假设"]
+  },
+  {
+    "id": "sent0002",
+    "english": "By the time we arrive at the airport tomorrow, the flight will already have departed.",
+    "chinese": "等到我们明天到达机场时，航班就已经起飞了。",
+    "context": "将来完成时，强调在将来某一时间点之前已经完成的动作。",
+    "tags": ["将来完成时", "时间从句"]
+  },
+  {
+    "id": "sent0003",
+    "english": "The book that I borrowed from the library last week is now overdue.",
+    "chinese": "我上周从图书馆借的那本书现在已经逾期了。",
+    "context": "限制性定语从句，用that引导，修饰先行词book。",
+    "tags": ["定语从句", "关系代词"]
+  },
+  {
+    "id": "sent0004",
+    "english": "Not only did she finish the project ahead of schedule, but she also helped her colleagues with theirs.",
+    "chinese": "她不仅提前完成了项目，还帮助同事完成了他们的项目。",
+    "context": "倒装句：not only...but also... 结构，not only置于句首时主句倒装。",
+    "tags": ["倒装句", "并列结构"]
+  },
+  {
+    "id": "sent0005",
+    "english": "Had it not been for your timely advice, I would have made a serious mistake.",
+    "chinese": "要不是你的及时建议，我早就犯了大错了。",
+    "context": "混合条件句的倒装形式：Had it not been for... = If it had not been for... 表示对过去的虚拟。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0006",
+    "english": "The house, which was built in the 19th century, has been beautifully restored.",
+    "chinese": "这座建于19世纪的房子已经被漂亮地修复了。",
+    "context": "非限制性定语从句，用which引导，提供额外信息；主句使用现在完成时被动语态。",
+    "tags": ["定语从句", "被动语态"]
+  },
+  {
+    "id": "sent0007",
+    "english": "No sooner had we sat down to eat than the phone rang loudly.",
+    "chinese": "我们刚坐下吃饭，电话就响了。",
+    "context": "No sooner...than... 结构，no sooner置于句首时使用倒装（had + 主语 + done）。",
+    "tags": ["倒装句", "时间状语"]
+  },
+  {
+    "id": "sent0008",
+    "english": "She speaks English so fluently that everyone thinks she is a native speaker.",
+    "chinese": "她英语说得如此流利，以至于每个人都以为她是母语者。",
+    "context": "结果状语从句：so...that... 表示“如此……以至于”。",
+    "tags": ["结果状语从句", "副词用法"]
+  },
+  {
+    "id": "sent0009",
+    "english": "It is high time that we took immediate action to address climate change.",
+    "chinese": "是我们立即采取行动应对气候变化的时候了。",
+    "context": "It is high time + that从句，使用虚拟语气（动词用过去式）。",
+    "tags": ["虚拟语气", "固定句型"]
+  },
+  {
+    "id": "sent0010",
+    "english": "Under no circumstances should you reveal your password to anyone.",
+    "chinese": "在任何情况下你都不应该把密码告诉任何人。",
+    "context": "否定词under no circumstances置于句首，主句使用情态动词倒装（should + 原形）。",
+    "tags": ["倒装句", "否定前置"]
+  },
+  {
+    "id": "sent0011",
+    "english": "The manager suggested that the meeting be postponed until next week.",
+    "chinese": "经理建议把会议推迟到下周。",
+    "context": "suggest后的宾语从句使用虚拟语气（动词原形或should + 原形，这里用be postponed）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0012",
+    "english": "Although he was exhausted after the long journey, he still managed to finish the report.",
+    "chinese": "虽然长途旅行后他很疲惫，但他还是设法完成了报告。",
+    "context": "让步状语从句：although引导，后面用正常陈述语序。",
+    "tags": ["让步状语从句", "连词"]
+  },
+  {
+    "id": "sent0013",
+    "english": "Many species of animals are endangered because their natural habitats are being destroyed rapidly.",
+    "chinese": "许多动物物种正处于濒危状态，因为它们的自然栖息地正在迅速被破坏。",
+    "context": "原因状语从句 + 现在进行时被动语态。",
+    "tags": ["原因状语从句", "被动语态", "进行时"]
+  },
+  {
+    "id": "sent0014",
+    "english": "The professor, whose research on renewable energy is world-renowned, will give a lecture tomorrow.",
+    "chinese": "那位以可再生能源研究闻名于世的教授明天将做讲座。",
+    "context": "非限制性定语从句，用whose引导所有格关系。",
+    "tags": ["定语从句", "关系代词whose"]
+  },
+  {
+    "id": "sent0015",
+    "english": "Only after the deadline had passed did they realize the importance of time management.",
+    "chinese": "只有在截止日期过去后，他们才意识到时间管理的重要性。",
+    "context": "Only + 状语置于句首，主句倒装；had passed表示过去完成时。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0016",
+    "english": "In order that we may arrive on time, we should leave the house at least an hour earlier.",
+    "chinese": "为了能准时到达，我们应该至少提前一小时出门。",
+    "context": "目的状语从句：in order that引导，从句中使用情态动词may。",
+    "tags": ["目的状语从句", "情态动词"]
+  },
+  {
+    "id": "sent0017",
+    "english": "Were I to win the lottery, I would travel around the world.",
+    "chinese": "如果我中了彩票，我会环游世界。",
+    "context": "对将来的虚拟，倒装形式：Were I to... = If I were to...。",
+    "tags": ["虚拟语气", "倒装", "将来假设"]
+  },
+  {
+    "id": "sent0018",
+    "english": "Hardly had the concert begun when the power went out suddenly.",
+    "chinese": "音乐会刚开始，电源就突然断了。",
+    "context": "Hardly...when... 结构，hardly置于句首时倒装。",
+    "tags": ["倒装句", "时间状语"]
+  },
+  {
+    "id": "sent0019",
+    "english": "The new policy has been implemented in such a way that all employees benefit from it.",
+    "chinese": "新政策以这样一种方式实施，以至于所有员工都从中受益。",
+    "context": "方式状语从句：in such a way that... = so that...。",
+    "tags": ["方式状语从句", "结果状语"]
+  },
+  {
+    "id": "sent0020",
+    "english": "I wish I had listened to my parents' advice when I was younger.",
+    "chinese": "我真希望年轻时听了父母的建议。",
+    "context": "wish后的宾语从句表示对过去的遗憾，使用过去完成时虚拟语气。",
+    "tags": ["虚拟语气", "wish从句"]
+  },
+  {
+    "id": "ph0041",
+    "english": "break the ice",
+    "chinese": "打破沉默/打破僵局",
+    "context": "在社交场合用轻松方式开启对话。",
+    "tags": ["地道", "社交"]
+  },
+  {
+    "id": "ph0042",
+    "english": "hit the hay",
+    "chinese": "上床睡觉",
+    "context": "表示累了要去睡觉，非常口语化。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0043",
+    "english": "hit the sack",
+    "chinese": "上床睡觉",
+    "context": "和hit the hay同义，强调去睡。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0044",
+    "english": "kick the habit",
+    "chinese": "戒掉坏习惯",
+    "context": "成功戒除某不良嗜好（如吸烟）。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0045",
+    "english": "pull someone's leg",
+    "chinese": "开某人玩笑/捉弄",
+    "context": "善意地戏弄或骗人，不是认真的。",
+    "tags": ["地道", "社交"]
+  },
+  {
+    "id": "ph0046",
+    "english": "rain cats and dogs",
+    "chinese": "倾盆大雨",
+    "context": "描述下非常大的雨。",
+    "tags": ["地道", "天气"]
+  },
+  {
+    "id": "ph0047",
+    "english": "save for a rainy day",
+    "chinese": "未雨绸缪/存钱以备不时之需",
+    "context": "为将来可能困难的日子储蓄。",
+    "tags": ["地道", "理财"]
+  },
+  {
+    "id": "ph0048",
+    "english": "steal someone's thunder",
+    "chinese": "抢风头/窃取他人功劳",
+    "context": "用别人的想法或成就吸引注意力。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0049",
+    "english": "take it with a grain of salt",
+    "chinese": "半信半疑/不全信",
+    "context": "对某事不要完全相信。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0050",
+    "english": "the last straw",
+    "chinese": "压垮骆驼的最后一根稻草",
+    "context": "导致忍耐到达极限的最后一件事。",
+    "tags": ["地道", "情感"]
+  },
+  {
+    "id": "ph0051",
+    "english": "turn over a new leaf",
+    "chinese": "改过自新/重新开始",
+    "context": "决定改变不良行为，开启新生活。",
+    "tags": ["地道", "励志"]
+  },
+  {
+    "id": "ph0052",
+    "english": "when pigs fly",
+    "chinese": "不可能发生",
+    "context": "强调某事绝无可能，和pigs might fly同义。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0053",
+    "english": "a dime a dozen",
+    "chinese": "不值钱/到处都是",
+    "context": "非常普通，毫无特别之处。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0054",
+    "english": "bark up the wrong tree",
+    "chinese": "找错对象/搞错方向",
+    "context": "误会情况或找错人（重复出现但经典）。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0055",
+    "english": "beat around the bush",
+    "chinese": "拐弯抹角/不直说",
+    "context": "避免直接谈论主题。",
+    "tags": ["地道", "沟通"]
+  },
+  {
+    "id": "ph0056",
+    "english": "cut to the chase",
+    "chinese": "开门见山/直奔主题",
+    "context": "要求直接说重点。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0057",
+    "english": "in the same boat",
+    "chinese": "处境相同",
+    "context": "大家面临同样的问题或困境。",
+    "tags": ["地道", "社交"]
+  },
+  {
+    "id": "ph0058",
+    "english": "jump on the bandwagon",
+    "chinese": "随大流/赶潮流",
+    "context": "跟随大众做某事，尤其是流行的事。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0059",
+    "english": "keep your fingers crossed",
+    "chinese": "祝好运/祈祷成功",
+    "context": "希望某事顺利。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0060",
+    "english": "let sleeping dogs lie",
+    "chinese": "别惹麻烦/不要重提旧事",
+    "context": "避免提起可能引起麻烦的话题。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0061",
+    "english": "make a long story short",
+    "chinese": "长话短说",
+    "context": "简要概述，不讲细节。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0062",
+    "english": "on the ball",
+    "chinese": "机敏/反应快",
+    "context": "做事高效、警觉。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0063",
+    "english": "out of the blue",
+    "chinese": "突然/出乎意料",
+    "context": "完全没有预兆地发生。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0064",
+    "english": "over the moon",
+    "chinese": "欣喜若狂",
+    "context": "非常高兴，和on cloud nine类似。",
+    "tags": ["地道", "情感"]
+  },
+  {
+    "id": "ph0065",
+    "english": "play it by ear",
+    "chinese": "随机应变/走一步看一步",
+    "context": "没有固定计划，根据情况决定。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0066",
+    "english": "ring a bell",
+    "chinese": "听起来耳熟",
+    "context": "某事让人觉得有点熟悉。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0067",
+    "english": "rule of thumb",
+    "chinese": "经验法则/大致原则",
+    "context": "基于实践的粗略指导。",
+    "tags": ["地道", "正式"]
+  },
+  {
+    "id": "ph0068",
+    "english": "see eye to eye",
+    "chinese": "看法一致",
+    "context": "完全同意对方的观点。",
+    "tags": ["地道", "社交"]
+  },
+  {
+    "id": "ph0069",
+    "english": "sit on the fence",
+    "chinese": "骑墙/拿不定主意",
+    "context": "在两个选择间犹豫不决。",
+    "tags": ["地道", "决策"]
+  },
+  {
+    "id": "ph0070",
+    "english": "take the bull by the horns",
+    "chinese": "迎难而上/果断行动",
+    "context": "勇敢面对困难。",
+    "tags": ["地道", "励志"]
+  },
+  {
+    "id": "ph0071",
+    "english": "the early bird catches the worm",
+    "chinese": "早起的鸟儿有虫吃",
+    "context": "强调早行动有优势。",
+    "tags": ["地道", "谚语"]
+  },
+  {
+    "id": "ph0072",
+    "english": "throw in the towel",
+    "chinese": "认输/放弃",
+    "context": "承认失败，不再继续。",
+    "tags": ["地道", "运动"]
+  },
+  {
+    "id": "ph0073",
+    "english": "under the table",
+    "chinese": "秘密地/私下交易",
+    "context": "隐秘或非法地进行。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0074",
+    "english": "up in the air",
+    "chinese": "悬而未决",
+    "context": "计划或决定尚未确定。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0075",
+    "english": "wear many hats",
+    "chinese": "身兼数职",
+    "context": "一个人承担多种角色或职责。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0076",
+    "english": "wrap one's head around",
+    "chinese": "理解/想通",
+    "context": "努力理解复杂的事。",
+    "tags": ["地道", "学习"]
+  },
+  {
+    "id": "ph0077",
+    "english": "your guess is as good as mine",
+    "chinese": "我也不知道",
+    "context": "表示自己也不清楚答案。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0078",
+    "english": "back to square one",
+    "chinese": "从头开始/回到原点",
+    "context": "努力失败后重新开始。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0079",
+    "english": "call it a day",
+    "chinese": "今天到此为止",
+    "context": "结束一天的工作或活动。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0080",
+    "english": "get cold feet",
+    "chinese": "临阵退缩/害怕",
+    "context": "在关键时刻紧张或想放弃。",
+    "tags": ["地道", "情感"]
+  },
+  {
+    "id": "ph0001",
+    "english": "stir up a hornets' nest",
+    "chinese": "捅马蜂窝/惹出大麻烦",
+    "context": "引起大量争议或麻烦。通常用于警告不要轻举妄动。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0002",
+    "english": "an eye for an eye",
+    "chinese": "以眼还眼/以牙还牙",
+    "context": "以同样的方式报复。通常用于讨论惩罚或复仇。",
+    "tags": ["地道", "正式"]
+  },
+  {
+    "id": "ph0003",
+    "english": "back against the wall",
+    "chinese": "背水一战/陷入绝境",
+    "context": "处于绝望或无路可退的困境。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0004",
+    "english": "barking up the wrong tree",
+    "chinese": "找错对象/搞错方向",
+    "context": "追求错误的目标或误会了情况。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0005",
+    "english": "bite off more than you can chew",
+    "chinese": "贪多嚼不烂/承担过多",
+    "context": "承担了自己无法处理的任务。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0006",
+    "english": "pigs might fly",
+    "chinese": "太阳从西边出来/不可能",
+    "context": "表示某事绝不可能发生，常用于讽刺。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0007",
+    "english": "upset the applecart",
+    "chinese": "打乱计划/破坏现状",
+    "context": "破坏某人的计划或安排。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0008",
+    "english": "not enough room to swing a cat",
+    "chinese": "狭窄得转不开身",
+    "context": "空间非常狭小拥挤。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0009",
+    "english": "white elephant",
+    "chinese": "鸡肋/昂贵而无用的东西",
+    "context": "维护成本高但无实际用途的东西。",
+    "tags": ["地道", "正式"]
+  },
+  {
+    "id": "ph0010",
+    "english": "bounce ideas off someone",
+    "chinese": "和某人讨论想法/征求意见",
+    "context": "与他人交流想法以获取反馈。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0011",
+    "english": "keep someone at arm's length",
+    "chinese": "保持距离/不亲近",
+    "context": "避免与某人过于亲密。",
+    "tags": ["地道", "社交"]
+  },
+  {
+    "id": "ph0012",
+    "english": "cry wolf",
+    "chinese": "狼来了/虚张声势",
+    "context": "多次虚假报警，导致真正需要时无人相信。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0013",
+    "english": "scrape the barrel",
+    "chinese": "挖空底子/用最后的资源",
+    "context": "由于缺乏而使用最后的或最差的资源。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0014",
+    "english": "bend over backwards",
+    "chinese": "竭尽全力/拼命讨好",
+    "context": "极力努力取悦或帮助他人。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0015",
+    "english": "watch like a hawk",
+    "chinese": "盯得死死的/密切监视",
+    "context": "非常警惕地观察。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0016",
+    "english": "blow your own trumpet",
+    "chinese": "自吹自擂",
+    "context": "过度自我夸耀。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0017",
+    "english": "once in a blue moon",
+    "chinese": "千载难逢/极少发生",
+    "context": "非常罕见。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0018",
+    "english": "burn your boats",
+    "chinese": "破釜沉舟/背水一战",
+    "context": "彻底承诺，无退路。",
+    "tags": ["地道", "正式"]
+  },
+  {
+    "id": "ph0019",
+    "english": "flog a dead horse",
+    "chinese": "鞭打死马/白费力气",
+    "context": "在无望的事情上浪费精力。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0020",
+    "english": "take my breath away",
+    "chinese": "令人叹为观止/惊艳",
+    "context": "令人惊叹或震撼。",
+    "tags": ["地道", "情感"]
+  },
+  {
+    "id": "ph0021",
+    "english": "sell like hot cakes",
+    "chinese": "热销/抢手",
+    "context": "卖得非常快。",
+    "tags": ["地道", "商业"]
+  },
+  {
+    "id": "ph0022",
+    "english": "burn the candle at both ends",
+    "chinese": "透支身体/过度劳累",
+    "context": "过度工作导致疲惫。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0023",
+    "english": "separate the wheat from the chaff",
+    "chinese": "去芜存菁/区分优劣",
+    "context": "区分有价值的和无价值的。",
+    "tags": ["地道", "正式"]
+  },
+  {
+    "id": "ph0024",
+    "english": "change tune",
+    "chinese": "改变态度/变卦",
+    "context": "改变观点或态度，通常因形势变化。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0025",
+    "english": "bite the bullet",
+    "chinese": "硬着头皮/忍痛承受",
+    "context": "勇敢面对不愉快的事。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0026",
+    "english": "face the music",
+    "chinese": "承担后果/面对现实",
+    "context": "接受批评或惩罚。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0027",
+    "english": "a flash in the pan",
+    "chinese": "昙花一现",
+    "context": "短暂的成功，不可持续。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0028",
+    "english": "hold your horses",
+    "chinese": "别急/等等",
+    "context": "要求耐心等待。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0029",
+    "english": "kick the bucket",
+    "chinese": "翘辫子/去世",
+    "context": "死亡（俚语，非正式）。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0030",
+    "english": "let the cat out of the bag",
+    "chinese": "泄密/说漏嘴",
+    "context": "无意中透露秘密。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0031",
+    "english": "break a leg",
+    "chinese": "祝好运（演出前说）",
+    "context": "祝某人好运，尤其在表演前。",
+    "tags": ["地道", "娱乐"]
+  },
+  {
+    "id": "ph0032",
+    "english": "piece of cake",
+    "chinese": "小菜一碟/容易",
+    "context": "非常简单的事。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0033",
+    "english": "hit the nail on the head",
+    "chinese": "一针见血/说中要害",
+    "context": "准确描述或猜中。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0034",
+    "english": "under the weather",
+    "chinese": "身体不舒服",
+    "context": "感觉不适或生病。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0035",
+    "english": "spill the beans",
+    "chinese": "泄露秘密",
+    "context": "透露保密的信息。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "ph0036",
+    "english": "the ball is in your court",
+    "chinese": "轮到你决定",
+    "context": "现在由你采取行动。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0037",
+    "english": "burn bridges",
+    "chinese": "烧桥/断绝关系",
+    "context": "破坏关系，无法回头。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "ph0038",
+    "english": "on cloud nine",
+    "chinese": "乐极了/非常开心",
+    "context": "极其快乐。",
+    "tags": ["地道", "情感"]
+  },
+  {
+    "id": "ph0039",
+    "english": "cost an arm and a leg",
+    "chinese": "贵得要命",
+    "context": "非常昂贵。",
+    "tags": ["地道", "日常"]
+  },
+  {
+    "id": "ph0040",
+    "english": "hit the books",
+    "chinese": "埋头苦读",
+    "context": "认真学习。",
+    "tags": ["地道", "学习"]
+  },
+  {
+    "id": "sent0081",
+    "english": "It is imperative that the government take stronger measures to protect the environment.",
+    "chinese": "政府必须采取更强有力的措施来保护环境。",
+    "context": "It is imperative + that从句，使用虚拟语气（动词原形）。",
+    "tags": ["虚拟语气", "主语从句"]
+  },
+  {
+    "id": "sent0082",
+    "english": "Not until all the data have been collected can we draw a valid conclusion.",
+    "chinese": "直到所有数据收集完毕，我们才能得出有效结论。",
+    "context": "Not until置于句首的强调倒装结构，主句使用情态动词倒装。",
+    "tags": ["倒装句", "强调句型"]
+  },
+  {
+    "id": "sent0083",
+    "english": "The professor suggested that the students review the material before the examination.",
+    "chinese": "教授建议学生们在考试前复习材料。",
+    "context": "Suggest后的宾语从句使用虚拟语气（动词原形）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0084",
+    "english": "Even though the task was challenging, the team completed it successfully.",
+    "chinese": "尽管任务具有挑战性，团队还是成功完成了它。",
+    "context": "让步状语从句：even though引导，表示真实让步。",
+    "tags": ["让步状语从句", "连词"]
+  },
+  {
+    "id": "sent0085",
+    "english": "So complex is the issue that no single solution can address it fully.",
+    "chinese": "这个问题如此复杂，以至于没有单一解决方案能完全解决它。",
+    "context": "So + 形容词 + be + 主语 + that... 强调结构，导致部分倒装。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0086",
+    "english": "The research indicates that climate change is accelerating more rapidly than previously thought.",
+    "chinese": "研究表明，气候变化正在以比先前认为更快的速度加速。",
+    "context": "宾语从句：that引导，表示研究结果；比较结构than previously thought。",
+    "tags": ["宾语从句", "比较结构"]
+  },
+  {
+    "id": "sent0087",
+    "english": "Should there be any delays, the project manager will inform the team immediately.",
+    "chinese": "如果有任何延误，项目经理将立即通知团队。",
+    "context": "对将来情况的虚拟，倒装形式：Should there be... = If there should be...。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0088",
+    "english": "The committee proposed that funding be increased for scientific research.",
+    "chinese": "委员会提议增加对科学研究的资金。",
+    "context": "Propose后的that从句使用虚拟语气（be + 过去分词被动）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0089",
+    "english": "In order that the results may be accurate, all variables must be controlled.",
+    "chinese": "为了结果准确，所有变量都必须被控制。",
+    "context": "目的状语从句：in order that引导，从句中使用情态动词may；主句被动语态。",
+    "tags": ["目的状语从句", "被动语态"]
+  },
+  {
+    "id": "sent0090",
+    "english": "Hardly anyone expected that the policy would be implemented so quickly.",
+    "chinese": "几乎没人预料到这项政策会如此迅速地实施。",
+    "context": "Hardly表示否定，置于句首时可引起部分倒装（但此处未完全倒装，保持自然语序）。",
+    "tags": ["否定副词", "宾语从句"]
+  },
+  {
+    "id": "sent0091",
+    "english": "The evidence having been presented, the jury began deliberations.",
+    "chinese": "证据呈交后，陪审团开始审议。",
+    "context": "独立主格结构：having been done表示被动完成动作。",
+    "tags": ["独立主格", "非谓语动词"]
+  },
+  {
+    "id": "sent0092",
+    "english": "No sooner had the report been published than experts began to analyze it.",
+    "chinese": "报告刚一发布，专家们就开始分析它。",
+    "context": "No sooner...than... 结构，no sooner置于句首时倒装，使用过去完成时被动。",
+    "tags": ["倒装句", "时间状语"]
+  },
+  {
+    "id": "sent0093",
+    "english": "It is advisable that precautions be taken in advance.",
+    "chinese": "建议提前采取预防措施。",
+    "context": "It is advisable + that从句，使用虚拟语气（be + 过去分词）。",
+    "tags": ["虚拟语气", "主语从句"]
+  },
+  {
+    "id": "sent0094",
+    "english": "Although progress has been made, many challenges remain to be addressed.",
+    "chinese": "虽然已经取得了进展，但许多挑战仍有待解决。",
+    "context": "让步状语从句 + 不定式被动结构to be addressed。",
+    "tags": ["让步状语从句", "不定式"]
+  },
+  {
+    "id": "sent0095",
+    "english": "Such was the impact of the discovery that it revolutionized the field.",
+    "chinese": "这次发现的影响如此之大，以至于它彻底改变了该领域。",
+    "context": "Such + be + 名词 + that... 强调结构，导致部分倒装。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0096",
+    "english": "The regulations require that all participants register in advance.",
+    "chinese": "规定要求所有参与者提前注册。",
+    "context": "Require后的that从句使用虚拟语气（动词原形）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0097",
+    "english": "By the time the results are announced, the candidates will have waited anxiously for weeks.",
+    "chinese": "到结果公布时，候选人们将已经焦急地等待了好几周。",
+    "context": "将来完成进行时，强调动作的持续。",
+    "tags": ["将来完成进行时", "时间从句"]
+  },
+  {
+    "id": "sent0098",
+    "english": "Only after careful consideration should a decision be made.",
+    "chinese": "只有经过仔细考虑后才应该做出决定。",
+    "context": "Only + 状语置于句首，主句倒装；被动语态。",
+    "tags": ["倒装句", "被动语态"]
+  },
+  {
+    "id": "sent0099",
+    "english": "The lecture was postponed so that more students could attend.",
+    "chinese": "讲座被推迟，以便更多学生能够参加。",
+    "context": "目的状语从句：so that引导，使用情态动词could。",
+    "tags": ["目的状语从句", "情态动词"]
+  },
+  {
+    "id": "sent0100",
+    "english": "Were the hypothesis correct, the experiment would yield different results.",
+    "chinese": "如果假设正确，实验就会产生不同的结果。",
+    "context": "对现在情况的虚拟，倒装形式：Were + 主语 + 形容词。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0101",
+    "english": "It is crucial that the data be analyzed carefully before any conclusions are drawn.",
+    "chinese": "在得出任何结论之前，必须仔细分析数据。",
+    "context": "It is crucial + that从句，使用虚拟语气（动词原形或be + 过去分词）。",
+    "tags": ["虚拟语气", "主语从句"]
+  },
+  {
+    "id": "sent0102",
+    "english": "Scarcely had the researchers published their findings when other scientists began to replicate the study.",
+    "chinese": "研究人员刚发表他们的发现，其他科学家就开始复制这项研究。",
+    "context": "Scarcely...when... 结构，scarcely置于句首时主句倒装，使用过去完成时。",
+    "tags": ["倒装句", "时间状语"]
+  },
+  {
+    "id": "sent0103",
+    "english": "The board recommended that the budget for education be substantially increased.",
+    "chinese": "董事会建议大幅增加教育预算。",
+    "context": "Recommend后的that从句使用虚拟语气（be + 过去分词被动）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0104",
+    "english": "Despite numerous obstacles, the project was completed on schedule.",
+    "chinese": "尽管有许多障碍，项目仍按计划完成。",
+    "context": "让步状语：despite + 名词短语，表示真实让步。",
+    "tags": ["让步状语", "介词短语"]
+  },
+  {
+    "id": "sent0105",
+    "english": "So significant were the results that they were published in a prestigious journal.",
+    "chinese": "结果如此重要，以至于它们被发表在一家著名期刊上。",
+    "context": "So + 形容词 + be + 主语 + that... 强调结构，导致部分倒装。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0106",
+    "english": "The study reveals that renewable energy sources are becoming more efficient each year.",
+    "chinese": "这项研究表明，可再生能源每年都在变得更高效。",
+    "context": "宾语从句：that引导，表示研究内容；现在进行时表示趋势。",
+    "tags": ["宾语从句", "进行时"]
+  },
+  {
+    "id": "sent0107",
+    "english": "Had the warning been heeded, the accident might have been prevented.",
+    "chinese": "如果警告被重视，事故本可以避免。",
+    "context": "对过去的混合虚拟，倒装形式：Had + 主语 + been done。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0108",
+    "english": "The authorities ordered that the building be evacuated immediately.",
+    "chinese": "当局命令立即疏散大楼。",
+    "context": "Order后的that从句使用虚拟语气（be + 过去分词被动）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0109",
+    "english": "So that future generations may benefit, conservation efforts must continue.",
+    "chinese": "为了让后代受益，保护努力必须继续。",
+    "context": "目的状语从句：so that引导，使用情态动词may。",
+    "tags": ["目的状语从句", "情态动词"]
+  },
+  {
+    "id": "sent0110",
+    "english": "Rarely has a scientific breakthrough received such widespread attention.",
+    "chinese": "科学突破很少受到如此广泛的关注。",
+    "context": "频率副词rarely置于句首，主句倒装，使用现在完成时。",
+    "tags": ["倒装句", "频率副词"]
+  },
+  {
+    "id": "sent0111",
+    "english": "The equipment having been calibrated, the experiment proceeded smoothly.",
+    "chinese": "设备校准后，实验顺利进行。",
+    "context": "独立主格结构：having been done表示被动完成动作。",
+    "tags": ["独立主格", "非谓语动词"]
+  },
+  {
+    "id": "sent0112",
+    "english": "Not only did the conference attract experts, but it also fostered new collaborations.",
+    "chinese": "会议不仅吸引了专家，还促进了新的合作。",
+    "context": "Not only...but also... 结构，not only置于句首时主句倒装。",
+    "tags": ["倒装句", "并列结构"]
+  },
+  {
+    "id": "sent0113",
+    "english": "It is desirable that international cooperation be strengthened in this area.",
+    "chinese": "希望在这个领域加强国际合作。",
+    "context": "It is desirable + that从句，使用虚拟语气（be + 过去分词）。",
+    "tags": ["虚拟语气", "主语从句"]
+  },
+  {
+    "id": "sent0114",
+    "english": "Provided that funding is secured, the research will continue for another five years.",
+    "chinese": "只要资金到位，研究将再继续五年。",
+    "context": "条件状语从句：provided that引导，表示真实条件。",
+    "tags": ["条件状语从句", "连词"]
+  },
+  {
+    "id": "sent0115",
+    "english": "Such is the complexity of the problem that years of study are required.",
+    "chinese": "这个问题如此复杂，需要多年的研究。",
+    "context": "Such + be + 名词 + that... 强调结构，导致部分倒装。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0116",
+    "english": "The policy stipulates that all documents be submitted electronically.",
+    "chinese": "政策规定所有文件必须电子提交。",
+    "context": "Stipulate后的that从句使用虚拟语气（be + 过去分词）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0117",
+    "english": "By next decade, artificial intelligence will have transformed many industries.",
+    "chinese": "到下一个十年，人工智能将已经改变了许多行业。",
+    "context": "将来完成时，强调将来某一时间点完成的动作。",
+    "tags": ["将来完成时", "时态"]
+  },
+  {
+    "id": "sent0118",
+    "english": "Only through rigorous testing can the theory be validated.",
+    "chinese": "只有通过严格测试，该理论才能被验证。",
+    "context": "Only + 状语置于句首，主句倒装；被动语态。",
+    "tags": ["倒装句", "被动语态"]
+  },
+  {
+    "id": "sent0119",
+    "english": "The seminar was organized in order that participants could exchange ideas freely.",
+    "chinese": "研讨会组织的目的在于让参与者自由交流想法。",
+    "context": "目的状语从句：in order that引导，使用情态动词could。",
+    "tags": ["目的状语从句", "情态动词"]
+  },
+  {
+    "id": "sent0120",
+    "english": "Were further evidence available, the conclusion would be more convincing.",
+    "chinese": "如果有更多证据，结论会更有说服力。",
+    "context": "对现在情况的虚拟，倒装形式：Were + 形容词。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0121",
+    "english": "It is vital that measures be taken to reduce carbon emissions immediately.",
+    "chinese": "立即采取措施减少碳排放至关重要。",
+    "context": "It is vital + that从句，使用虚拟语气（be + 过去分词）。",
+    "tags": ["虚拟语气", "主语从句"]
+  },
+  {
+    "id": "sent0122",
+    "english": "Hardly had the results been announced when the media responded.",
+    "chinese": "结果刚一宣布，媒体就做出了反应。",
+    "context": "Hardly...when... 结构，hardly置于句首时倒装，使用过去完成时被动。",
+    "tags": ["倒装句", "时间状语"]
+  },
+  {
+    "id": "sent0123",
+    "english": "The council insisted that the regulations be strictly enforced.",
+    "chinese": "理事会坚持严格执行规定。",
+    "context": "Insist后的that从句（要求含义）使用虚拟语气。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0124",
+    "english": "Although the theory is widely accepted, some anomalies remain unexplained.",
+    "chinese": "虽然该理论被广泛接受，但一些异常现象仍未得到解释。",
+    "context": "让步状语从句：although引导，后面用正常语序。",
+    "tags": ["让步状语从句", "连词"]
+  },
+  {
+    "id": "sent0125",
+    "english": "So profound was the impact that it altered the course of history.",
+    "chinese": "影响如此深刻，以至于改变了历史进程。",
+    "context": "So + 形容词 + be + 主语 + that... 强调结构，倒装。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0126",
+    "english": "Evidence suggests that the phenomenon occurs under specific conditions.",
+    "chinese": "证据表明，这种现象在特定条件下发生。",
+    "context": "Suggest后的宾语从句使用陈述语气（表示事实）。",
+    "tags": ["宾语从句", "动词搭配"]
+  },
+  {
+    "id": "sent0127",
+    "english": "Should additional resources be required, the department will request them.",
+    "chinese": "如果需要额外资源，部门将提出申请。",
+    "context": "对将来虚拟的倒装形式：Should + be done。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0128",
+    "english": "The directive requires that safety protocols be reviewed annually.",
+    "chinese": "指令要求每年审查安全协议。",
+    "context": "Require后的that从句使用虚拟语气（be + 过去分词）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0129",
+    "english": "All preparations having been made, the conference commenced on time.",
+    "chinese": "所有准备工作完成后，会议准时开始。",
+    "context": "独立主格结构：having been done表示被动完成。",
+    "tags": ["独立主格", "非谓语动词"]
+  },
+  {
+    "id": "sent0130",
+    "english": "Never before has technology advanced at such a rapid pace.",
+    "chinese": "技术以前从未以如此快的速度进步。",
+    "context": "否定词never置于句首，主句倒装，使用现在完成时。",
+    "tags": ["倒装句", "否定前置"]
+  },
+  {
+    "id": "sent0131",
+    "english": "The initiative aims to ensure that equal opportunities are provided to all.",
+    "chinese": "该倡议旨在确保为所有人提供平等机会。",
+    "context": "宾语从句 + 被动语态结构。",
+    "tags": ["宾语从句", "被动语态"]
+  },
+  {
+    "id": "sent0132",
+    "english": "No sooner had the agreement been signed than implementation began.",
+    "chinese": "协议刚签署，实施就开始了。",
+    "context": "No sooner...than... 结构，no sooner置于句首倒装。",
+    "tags": ["倒装句", "时间状语"]
+  },
+  {
+    "id": "sent0133",
+    "english": "It is preferable that negotiations be conducted in a neutral venue.",
+    "chinese": "最好在中立场所进行谈判。",
+    "context": "It is preferable + that从句，使用虚拟语气。",
+    "tags": ["虚拟语气", "主语从句"]
+  },
+  {
+    "id": "sent0134",
+    "english": "As long as ethical standards are maintained, the research may proceed.",
+    "chinese": "只要保持伦理标准，研究就可以继续。",
+    "context": "条件状语从句：as long as引导，表示持续条件。",
+    "tags": ["条件状语从句", "连词"]
+  },
+  {
+    "id": "sent0135",
+    "english": "Such has been the progress that goals once deemed impossible are now achievable.",
+    "chinese": "进展如此之大，以前认为不可能的目标现在可以实现了。",
+    "context": "Such + have been + 名词 + that... 强调结构，倒装。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0136",
+    "english": "The law mandates that environmental impact assessments be conducted.",
+    "chinese": "法律要求进行环境影响评估。",
+    "context": "Mandate后的that从句使用虚拟语气（be + 过去分词）。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0137",
+    "english": "By the time the report is finalized, all data will have been verified.",
+    "chinese": "到报告定稿时，所有数据将已经验证完毕。",
+    "context": "将来完成时的被动语态。",
+    "tags": ["将来完成时", "被动语态"]
+  },
+  {
+    "id": "sent0138",
+    "english": "Only with international support can sustainable development be achieved.",
+    "chinese": "只有在国际支持下，才能实现可持续发展。",
+    "context": "Only + 状语置于句首，主句倒装；被动语态。",
+    "tags": ["倒装句", "被动语态"]
+  },
+  {
+    "id": "sent0139",
+    "english": "The program was designed so that access to education could be expanded.",
+    "chinese": "该计划的设计目的是扩大教育机会。",
+    "context": "目的状语从句：so that引导，使用情态动词could。",
+    "tags": ["目的状语从句", "情态动词"]
+  },
+  {
+    "id": "sent0140",
+    "english": "Were economic conditions different, the outcome might vary significantly.",
+    "chinese": "如果经济条件不同，结果可能会有很大差异。",
+    "context": "对现在情况的虚拟，倒装形式。",
+    "tags": ["虚拟语气", "倒装", "条件句"]
+  },
+  {
+    "id": "sent0141",
+    "english": "It is incumbent upon the committee that a thorough review be undertaken.",
+    "chinese": "委员会有责任进行彻底审查。",
+    "context": "正式结构 + that从句虚拟语气（be + 过去分词）。",
+    "tags": ["虚拟语气", "主语从句"]
+  },
+  {
+    "id": "sent0142",
+    "english": "Seldom do theoretical predictions align so closely with experimental results.",
+    "chinese": "理论预测很少与实验结果如此密切吻合。",
+    "context": "频率副词seldom置于句首，主句倒装。",
+    "tags": ["倒装句", "频率副词"]
+  },
+  {
+    "id": "sent0143",
+    "english": "The proposal advocates that investment in infrastructure be prioritized.",
+    "chinese": "该提案主张优先投资基础设施。",
+    "context": "Advocate后的that从句使用虚拟语气。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0144",
+    "english": "Even if challenges arise, the commitment to the project will remain firm.",
+    "chinese": "即使出现挑战，对项目的承诺也将保持坚定。",
+    "context": "让步状语从句：even if引导，表示假设让步。",
+    "tags": ["让步状语从句", "连词"]
+  },
+  {
+    "id": "sent0145",
+    "english": "So diverse are the applications that the technology has broad implications.",
+    "chinese": "应用如此多样，以至于该技术具有广泛影响。",
+    "context": "So + 形容词 + be + 主语 + that... 强调倒装结构。",
+    "tags": ["倒装句", "强调结构"]
+  },
+  {
+    "id": "sent0146",
+    "english": "Recent findings indicate that the process is more efficient than anticipated.",
+    "chinese": "最近的发现表明，该过程比预期的更高效。",
+    "context": "比较结构：more...than...。",
+    "tags": ["比较结构", "宾语从句"]
+  },
+  {
+    "id": "sent0147",
+    "english": "Should any discrepancies appear, they must be reported without delay.",
+    "chinese": "如果出现任何差异，必须立即报告。",
+    "context": "对将来虚拟的倒装形式 + 被动语态。",
+    "tags": ["虚拟语气", "倒装", "被动语态"]
+  },
+  {
+    "id": "sent0148",
+    "english": "The guidelines specify that procedures be followed precisely.",
+    "chinese": "指南规定必须精确遵循程序。",
+    "context": "Specify后的that从句使用虚拟语气。",
+    "tags": ["虚拟语气", "宾语从句"]
+  },
+  {
+    "id": "sent0149",
+    "english": "The analysis having been completed, recommendations were formulated.",
+    "chinese": "分析完成后，提出了建议。",
+    "context": "独立主格结构表示被动完成动作。",
+    "tags": ["独立主格", "非谓语动词"]
+  },
+  {
+    "id": "sent0150",
+    "english": "Under no circumstances should confidential information be disclosed.",
+    "chinese": "在任何情况下都不应披露机密信息。",
+    "context": "否定短语under no circumstances置于句首，主句倒装；被动语态。",
+    "tags": ["倒装句", "否定前置", "被动语态"]
+  },
+  {
+    "id": "b001",
+    "english": "I'm a bit of a night owl.",
+    "chinese": "我算是个夜猫子。",
+    "context": "用于自我介绍生活习惯，比直接说 I like to stay up late 更地道。",
+    "tags": ["自我介绍", "地道"]
+  },
+  {
+    "id": "b002",
+    "english": "I've heard so much about you.",
+    "chinese": "久仰大名。",
+    "context": "初次见面，经人介绍时的标准客套话（现在完成时）。",
+    "tags": ["社交", "礼貌"]
+  },
+  {
+    "id": "b003",
+    "english": "I'm between jobs at the moment.",
+    "chinese": "我目前处于职业空窗期。",
+    "context": "委婉表达待业状态，比 unemployed 更有礼貌。",
+    "tags": ["职场", "委婉"]
+  },
+  {
+    "id": "b004",
+    "english": "I'm originally from..., but I'm based in...",
+    "chinese": "我原籍是...，但现在定居在...。",
+    "context": "介绍背景的万能句式，区分 birth place 和 current residence。",
+    "tags": ["自我介绍", "常用"]
+  },
+  {
+    "id": "b005",
+    "english": "How should I address you?",
+    "chinese": "我该怎么称呼您？",
+    "context": "询问对方称呼偏好（正式/非正式）。",
+    "tags": ["商务", "礼貌"]
+  },
+  {
+    "id": "b006",
+    "english": "I'm still finding my feet.",
+    "chinese": "我还在适应阶段。",
+    "context": "用于新入职或刚搬到新地方，表达“尚在摸索”。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "b007",
+    "english": "I'm a huge fan of your work.",
+    "chinese": "我很喜欢你的作品/表现。",
+    "context": "搭讪或向崇拜的人开口时的万能句。",
+    "tags": ["搭讪", "赞美"]
+  },
+  {
+    "id": "b008",
+    "english": "I'm a people person.",
+    "chinese": "我是一个善于交际的人。",
+    "context": "描述性格开朗、喜欢与人打交道。",
+    "tags": ["自我介绍", "性格描述"]
+  },
+  {
+    "id": "b009",
+    "english": "What brings you here today?",
+    "chinese": "今天是什么风把你吹来了？",
+    "context": "非正式询问对方出现在某个场合的原因。",
+    "tags": ["闲聊", "地道"]
+  },
+  {
+    "id": "b010",
+    "english": "Don't I know you from somewhere?",
+    "chinese": "我是不是在哪见过你？",
+    "context": "经典的搭讪开头，用否定疑问句增强肯定感。",
+    "tags": ["搭讪", "社交"]
+  },
+
+  // --- 询问信息与寻求帮助 (ID: b016 - b030) ---
+  {
+    "id": "b011",
+    "english": "Do you happen to know...?",
+    "chinese": "你碰巧知道...吗？",
+    "context": "加上 happen to 使语气极度委婉，不给对方压力。",
+    "tags": ["询问信息", "委婉"]
+  },
+  {
+    "id": "b012",
+    "english": "Could you point me in the right direction?",
+    "chinese": "能给我指指路吗？",
+    "context": "不仅指物理指路，也可指寻求建议或指点。",
+    "tags": ["礼貌", "求助"]
+  },
+  {
+    "id": "b013",
+    "english": "I'm looking for a place to grab a bite.",
+    "chinese": "我想找个地方随便吃点东西。",
+    "context": "grab a bite 意为吃简餐、快餐。",
+    "tags": ["日常沟通", "美食"]
+  },
+  {
+    "id": "b014",
+    "english": "Is this seat taken?",
+    "chinese": "这儿有人坐吗？",
+    "context": "公共场合最实用的询问短句。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "b015",
+    "english": "Can you talk me through this?",
+    "chinese": "你能跟我详细讲解一下吗？",
+    "context": "请求对方解释流程或操作步骤。",
+    "tags": ["学习", "职场"]
+  },
+  {
+    "id": "b016",
+    "english": "What's the catch?",
+    "chinese": "有什么圈套/隐形成本吗？",
+    "context": "当一件事听起来太完美时，询问背后的风险。",
+    "tags": ["地道", "询问"]
+  },
+  {
+    "id": "b017",
+    "english": "I'll get back to you on that.",
+    "chinese": "那件事我稍后回复你。",
+    "context": "暂时不知道答案时的专业回应。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b018",
+    "english": "Does that make sense?",
+    "chinese": "我说明白了吗？/ 逻辑通吗？",
+    "context": "解释完复杂信息后，确认对方是否理解。",
+    "tags": ["沟通技巧", "语法重点"]
+  },
+  {
+    "id": "b019",
+    "english": "Are you with me so far?",
+    "chinese": "到目前为止你听得明白吗？",
+    "context": "交流中途停顿，确认对方进度。",
+    "tags": ["沟通", "职场"]
+  },
+  {
+    "id": "b020",
+    "english": "I'm lost. Could you repeat that?",
+    "chinese": "我没跟上，能重说一遍吗？",
+    "context": "用于听力跟不上或者思路断掉时。",
+    "tags": ["学习", "礼貌"]
+  },
+
+  // --- 日常沟通与态度表达 (ID: b021 - b040) ---
+  {
+    "id": "b021",
+    "english": "I'll play it by ear.",
+    "chinese": "到时候见机行事/随机应变。",
+    "context": "表示没有固定计划，根据情况决定。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "b022",
+    "english": "Let's call it a day.",
+    "chinese": "今天就到此为止吧（收工）。",
+    "context": "工作或活动结束时的常用语。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b023",
+    "english": "It's a long shot.",
+    "chinese": "虽然机会渺茫（但可以一试）。",
+    "context": "描述成功的可能性很小时。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "b024",
+    "english": "I can't put my finger on it.",
+    "chinese": "我说不上来具体哪不对。",
+    "context": "当你有种隐约的感觉，但无法精确描述时。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "b025",
+    "english": "Let's touch base next week.",
+    "chinese": "我们下周联络。",
+    "context": "保持联系的商务常用语。",
+    "tags": ["职场", "社交"]
+  },
+  {
+    "id": "b026",
+    "english": "I'm pulling your leg.",
+    "chinese": "我开你玩笑呢。",
+    "context": "不是真的拉腿，是逗你玩。",
+    "tags": ["幽默", "地道"]
+  },
+  {
+    "id": "b027",
+    "english": "Keep me in the loop.",
+    "chinese": "请让我随时知晓进展。",
+    "context": "要求被包含在信息传递的范围内。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b028",
+    "english": "I'm on the fence about it.",
+    "chinese": "我还在观望/犹豫不决。",
+    "context": "形容像坐在篱笆上，没决定往哪边跳。",
+    "tags": ["地道", "决策"]
+  },
+  {
+    "id": "b029",
+    "english": "It's on the house.",
+    "chinese": "这是本店赠送的（免费）。",
+    "context": "餐厅或酒店免单时说的话。",
+    "tags": ["日常", "生活"]
+  },
+  {
+    "id": "b030",
+    "english": "Give me a heads-up.",
+    "chinese": "提前跟我打个招呼。",
+    "context": "heads-up 指预先通知或预警。",
+    "tags": ["职场", "地道"]
+  },
+
+  // --- 闲聊与反馈 (ID: b031 - b050) ---
+  {
+    "id": "b031",
+    "english": "It's not my cup of tea.",
+    "chinese": "那不是我的菜/我不感兴趣。",
+    "context": "委婉地表达不喜欢某事物。",
+    "tags": ["地道", "委婉"]
+  },
+  {
+    "id": "b032",
+    "english": "You can say that again.",
+    "chinese": "我完全赞同。",
+    "context": "不是让你重说，而是表达极度认可。",
+    "tags": ["赞同", "口语"]
+  },
+  {
+    "id": "b033",
+    "english": "Tell me about it!",
+    "chinese": "可不是嘛！（深有同感）",
+    "context": "通常用于感叹共同的烦心事。",
+    "tags": ["吐槽", "地道"]
+  },
+  {
+    "id": "b034",
+    "english": "Fair enough.",
+    "chinese": "有道理/行吧/挺公平。",
+    "context": "表示接受对方的解释或折中方案。",
+    "tags": ["认可", "沟通"]
+  },
+  {
+    "id": "b035",
+    "english": "It's a small world.",
+    "chinese": "世界真小。",
+    "context": "偶遇熟人或发现共同点时的感叹。",
+    "tags": ["闲聊", "常用"]
+  },
+  {
+    "id": "b036",
+    "english": "Beat me.",
+    "chinese": "考倒我了/我也不知道。",
+    "context": "It beats me 的缩写，比 I don't know 更随性。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "b037",
+    "english": "I'm tied up right now.",
+    "chinese": "我现在手头正忙脱不开身。",
+    "context": "类似忙得像被绳子捆住了一样。",
+    "tags": ["职场", "地道"]
+  },
+  {
+    "id": "b038",
+    "english": "I'll take a rain check.",
+    "chinese": "这次先不去了，下次一定。",
+    "context": "礼貌拒绝邀请，并暗示下次可以。",
+    "tags": ["社交", "委婉"]
+  },
+  {
+    "id": "b039",
+    "english": "It's not the end of the world.",
+    "chinese": "没那么糟/天还没塌下来。",
+    "context": "安慰犯错或受挫的人。",
+    "tags": ["安慰", "口语"]
+  },
+  {
+    "id": "b040",
+    "english": "Cut to the chase.",
+    "chinese": "开门见山/直接说重点。",
+    "context": "要求对方不要绕圈子。",
+    "tags": ["沟通", "地道"]
+  },
+  {
+    "id": "b041",
+    "english": "That's a steal!",
+    "chinese": "真便宜！（简直像偷来的一样）",
+    "context": "形容价格划算到令人难以置信。",
+    "tags": ["生活", "购物"]
+  },
+  {
+    "id": "b042",
+    "english": "I'm all ears.",
+    "chinese": "我洗耳恭听。",
+    "context": "表达你在专注听对方说话。",
+    "tags": ["沟通", "常用"]
+  },
+  {
+    "id": "b043",
+    "english": "Don't sweat it.",
+    "chinese": "别担心/小事一桩。",
+    "context": "比 Don't worry 更口语化的安慰。",
+    "tags": ["安慰", "口语"]
+  },
+  {
+    "id": "b044",
+    "english": "Let's grab a coffee sometime.",
+    "chinese": "有空一起喝个咖啡。",
+    "context": "社交场合最通用的后续联系邀约。",
+    "tags": ["社交", "搭讪"]
+  },
+  {
+    "id": "b045",
+    "english": "Long time no see.",
+    "chinese": "好久不见。",
+    "context": "虽然语法不规范，但在英语世界已是标准用法。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "b046",
+    "english": "How's it going?",
+    "chinese": "最近怎么样？",
+    "context": "比 How are you 更自然的日常问候。",
+    "tags": ["闲聊", "基础"]
+  },
+  {
+    "id": "b047",
+    "english": "What have you been up to?",
+    "chinese": "你最近在忙什么呢？",
+    "context": "用于一段时间没见后的近况询问。",
+    "tags": ["闲聊", "语法重点"]
+  },
+  {
+    "id": "b048",
+    "english": "I'm starving.",
+    "chinese": "我饿扁了。",
+    "context": "比 I'm hungry 程度更深，非常地道。",
+    "tags": ["生活", "口语"]
+  },
+  {
+    "id": "b049",
+    "english": "It's up to you.",
+    "chinese": "由你决定/你说了算。",
+    "context": "给予对方决策权。",
+    "tags": ["日常", "常用"]
+  },
+  {
+    "id": "b050",
+    "english": "Couldn't be better!",
+    "chinese": "再好不过了！",
+    "context": "回答 How are you 的积极方式。",
+    "tags": ["社交", "正能量"]
+  },
+  {
+    "id": "b051",
+    "english": "To be honest, I'm not so sure.",
+    "chinese": "说实话，我也没把握。",
+    "context": "To be honest 放在句首作为插入语，增加真诚度。",
+    "tags": ["意见表达", "常用"]
+  },
+  {
+    "id": "b052",
+    "english": "If you ask me, it's worth a try.",
+    "chinese": "依我看，值得一试。",
+    "context": "If you ask me 是表达个人观点的地道句首。",
+    "tags": ["建议", "地道"]
+  },
+  {
+    "id": "b053",
+    "english": "That's a good point.",
+    "chinese": "很有道理 / 说得好。",
+    "context": "赞同对方提出的具体论点。",
+    "tags": ["赞同", "沟通"]
+  },
+  {
+    "id": "b054",
+    "english": "I'm not following you.",
+    "chinese": "我没太听懂你的意思。",
+    "context": "比 I don't understand 更有“思路没跟上”的感觉。",
+    "tags": ["沟通", "职场"]
+  },
+  {
+    "id": "b055",
+    "english": "What are you getting at?",
+    "chinese": "你想表达什么？/ 你的弦外之音是什么？",
+    "context": "询问对方暗示的真实意图。",
+    "tags": ["地道", "询问"]
+  },
+  {
+    "id": "b056",
+    "english": "I'll take your word for it.",
+    "chinese": "我听你的（我相信你说的）。",
+    "context": "表示虽然自己不确定，但选择相信对方。",
+    "tags": ["信任", "口语"]
+  },
+  {
+    "id": "b057",
+    "english": "Let's agree to disagree.",
+    "chinese": "让我们保留各自意见。",
+    "context": "当双方无法达成一致时，礼貌地结束争论。",
+    "tags": ["礼貌", "职场"]
+  },
+  {
+    "id": "b058",
+    "english": "It's a no-brainer.",
+    "chinese": "这根本不用动脑筋（太简单/显而易见）。",
+    "context": "形容决定很容易做，无需多虑。",
+    "tags": ["地道", "决策"]
+  },
+  {
+    "id": "b059",
+    "english": "I'm leaning towards the first option.",
+    "chinese": "我倾向于第一个选项。",
+    "context": "lean towards 表示还在考虑中，但有初步偏好。",
+    "tags": ["选择", "地道"]
+  },
+  {
+    "id": "b060",
+    "english": "That remains to be seen.",
+    "chinese": "那还有待观察。",
+    "context": "对某个预测或结果持保留态度。",
+    "tags": ["地道", "职场"]
+  },
+
+  // --- 职场效率与压力应对 (ID: b061 - b075) ---
+  {
+    "id": "b061",
+    "english": "I'm swamped with work.",
+    "chinese": "我忙得不可开交。",
+    "context": "swamped 形象地描述像掉进沼泽一样被淹没。",
+    "tags": ["职场", "地道"]
+  },
+  {
+    "id": "b062",
+    "english": "Can we push the meeting back?",
+    "chinese": "我们能把会议往后推吗？",
+    "context": "push back 指推迟时间。",
+    "tags": ["商务", "常用"]
+  },
+  {
+    "id": "b063",
+    "english": "I'm running a bit late.",
+    "chinese": "我要晚到一会。",
+    "context": "比 I will be late 听起来更像是在赶路的动态感。",
+    "tags": ["生活", "常用"]
+  },
+  {
+    "id": "b064",
+    "english": "Let's get down to business.",
+    "chinese": "我们言归正传/开始谈正事吧。",
+    "context": "闲聊结束，进入正式议题时的转场。",
+    "tags": ["职场", "地道"]
+  },
+  {
+    "id": "b065",
+    "english": "I'll look into it right away.",
+    "chinese": "我马上调查/处理这件事。",
+    "context": "承诺会去跟进某事。",
+    "tags": ["职场", "效率"]
+  },
+  {
+    "id": "b066",
+    "english": "Sorry to burst your bubble.",
+    "chinese": "抱歉要让你失望了。",
+    "context": "用于戳破对方不切实际的幻想或告知坏消息。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "b067",
+    "english": "It's on my radar.",
+    "chinese": "我在关注这件事 / 在我的计划内。",
+    "context": "表示自己知道这件事，并且正在处理中。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "b068",
+    "english": "We need to stay ahead of the curve.",
+    "chinese": "我们需要保持领先地位。",
+    "context": "curve 指趋势线，stay ahead 指走在趋势前面。",
+    "tags": ["职场", "励志"]
+  },
+  {
+    "id": "b069",
+    "english": "Can you give me a ballpark figure?",
+    "chinese": "你能给我一个大概数字吗？",
+    "context": "ballpark figure 指大概的估算。",
+    "tags": ["商务", "询问"]
+  },
+  {
+    "id": "b070",
+    "english": "I've got a lot on my plate.",
+    "chinese": "我手头有很多事要做。",
+    "context": "形容任务重，压力大。",
+    "tags": ["职场", "地道"]
+  },
+
+  // --- 社交尴尬与化解 (ID: b071 - b085) ---
+  {
+    "id": "b071",
+    "english": "Sorry, I didn't catch your name.",
+    "chinese": "抱歉，我刚才没听清你的名字。",
+    "context": "忘记名字或没听清时，最得体的询问方式。",
+    "tags": ["社交", "礼貌"]
+  },
+  {
+    "id": "b072",
+    "english": "It's on the tip of my tongue.",
+    "chinese": "就在嘴边（但就是想不起来）。",
+    "context": "话到嘴边突然忘词的尴尬瞬间。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "b073",
+    "english": "Let's not make a scene.",
+    "chinese": "咱们别在这大吵大闹（别丢人）。",
+    "context": "在公共场合劝阻他人情绪失控。",
+    "tags": ["社交", "警告"]
+  },
+  {
+    "id": "b074",
+    "english": "I'm just browsing, thanks.",
+    "chinese": "我只是随便看看，谢谢。",
+    "context": "在商店拒绝店员过度热情的推销。",
+    "tags": ["购物", "常用"]
+  },
+  {
+    "id": "b075",
+    "english": "Mind your own business.",
+    "chinese": "管好你自己的事。",
+    "context": "语气较重，用于回击别人的过分打听。",
+    "tags": ["地道", "情绪"]
+  },
+  {
+    "id": "b076",
+    "english": "I'm not in the mood.",
+    "chinese": "我没那个心情。",
+    "context": "不想参加活动或不想聊天时的直接表达。",
+    "tags": ["日常", "情绪"]
+  },
+  {
+    "id": "b077",
+    "english": "Sorry to bother you, but...",
+    "chinese": "很抱歉打扰你，但是...。",
+    "context": "打断别人或请求帮助的经典开场。",
+    "tags": ["礼貌", "询问"]
+  },
+  {
+    "id": "b078",
+    "english": "Everything is under control.",
+    "chinese": "一切都在掌控中。",
+    "context": "让对方放心时使用。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b079",
+    "english": "You're pulling my leg!",
+    "chinese": "你在跟我开玩笑吧！",
+    "context": "听到令人难以置信的消息时的反应。",
+    "tags": ["地道", "惊讶"]
+  },
+  {
+    "id": "b080",
+    "english": "It's a piece of cake.",
+    "chinese": "小菜一碟。",
+    "context": "形容事情极其简单。",
+    "tags": ["地道", "口语"]
+  },
+
+  // --- 闲聊进阶与常用俚语 (ID: b081 - b100) ---
+  {
+    "id": "b081",
+    "english": "What's the weather like?",
+    "chinese": "天气怎么样？",
+    "context": "最经典的打破沉默的话题。",
+    "tags": ["闲聊", "基础"]
+  },
+  {
+    "id": "b082",
+    "english": "Keep your fingers crossed.",
+    "chinese": "祈祷好运吧。",
+    "context": "做这个动作（中指叠在食指上）代表好运。",
+    "tags": ["地道", "社交"]
+  },
+  {
+    "id": "b083",
+    "english": "Better late than never.",
+    "chinese": "迟到总比不到好。",
+    "context": "用于宽慰迟到的人，或描述晚成的事业。",
+    "tags": ["地道", "生活"]
+  },
+  {
+    "id": "b084",
+    "english": "It costs an arm and a leg.",
+    "chinese": "这东西贵得要命。",
+    "context": "极度昂贵的夸张说法。",
+    "tags": ["地道", "购物"]
+  },
+  {
+    "id": "b085",
+    "english": "Break a leg!",
+    "chinese": "祝你演出成功！/ 好运！",
+    "context": "原指祝演员表演成功，现通用于祝人好运。",
+    "tags": ["地道", "祝福"]
+  },
+  {
+    "id": "b086",
+    "english": "I'm feeling under the weather.",
+    "chinese": "我感觉身体有点不舒服。",
+    "context": "通常指小感冒或没精神，不想具体说明病因。",
+    "tags": ["生活", "常用"]
+  },
+  {
+    "id": "b087",
+    "english": "The ball is in your court.",
+    "chinese": "现在看你的了（轮到你采取行动了）。",
+    "context": "源自网球，指下一步该对方走了。",
+    "tags": ["地道", "决策"]
+  },
+  {
+    "id": "b088",
+    "english": "Speak of the devil!",
+    "chinese": "说曹操，曹操到。",
+    "context": "正在谈论某人时，那个人正好出现了。",
+    "tags": ["地道", "社交"]
+  },
+  {
+    "id": "b089",
+    "english": "Let's keep in touch.",
+    "chinese": "保持联系。",
+    "context": "分别时的标准常用语。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "b090",
+    "english": "I'm heading out.",
+    "chinese": "我要出发了 / 我要走了。",
+    "context": "比 I'm leaving 更口语化。",
+    "tags": ["日常", "口语"]
+  },
+  {
+    "id": "b091",
+    "english": "Can I take a message?",
+    "chinese": "需要我留个言吗？",
+    "context": "接电话或代人接见时使用。",
+    "tags": ["职场", "电话"]
+  },
+  {
+    "id": "b092",
+    "english": "How do you like it here?",
+    "chinese": "你觉得这儿怎么样？",
+    "context": "询问对方对新环境、新城市的看法。",
+    "tags": ["闲聊", "常用"]
+  },
+  {
+    "id": "b093",
+    "english": "I'll keep that in mind.",
+    "chinese": "我会记下的 / 我会记住这一点的。",
+    "context": "表示接受了对方的建议或提醒。",
+    "tags": ["沟通", "职场"]
+  },
+  {
+    "id": "b094",
+    "english": "It's out of the question.",
+    "chinese": "这是不可能的 / 没得商量。",
+    "context": "表达强烈的拒绝。",
+    "tags": ["拒绝", "口语"]
+  },
+  {
+    "id": "b095",
+    "english": "We're on the same page.",
+    "chinese": "我们的想法一致。",
+    "context": "确认双方共识。",
+    "tags": ["职场", "地道"]
+  },
+  {
+    "id": "b096",
+    "english": "I'm exhausted.",
+    "chinese": "我精疲力竭了。",
+    "context": "比 I'm tired 程度更深。",
+    "tags": ["生活", "情绪"]
+  },
+  {
+    "id": "b097",
+    "english": "Good for you!",
+    "chinese": "真为你高兴！/ 真棒！",
+    "context": "听到别人好消息时的正面反馈。",
+    "tags": ["赞美", "社交"]
+  },
+  {
+    "id": "b098",
+    "english": "That's life.",
+    "chinese": "这就是生活（表示无奈或看开了）。",
+    "context": "面对无法改变的倒霉事时的感叹。",
+    "tags": ["感叹", "生活"]
+  },
+  {
+    "id": "b099",
+    "english": "I didn't mean to.",
+    "chinese": "我不是故意的。",
+    "context": "犯错后解释初衷。",
+    "tags": ["礼貌", "道歉"]
+  },
+  {
+    "id": "b100",
+    "english": "Long story short.",
+    "chinese": "长话短说。",
+    "context": "准备跳过细节直接说结果。",
+    "tags": ["地道", "沟通"]
+  },
+  {
+    "id": "b101",
+    "english": "It's a win-win situation.",
+    "chinese": "这是个双赢的局面。",
+    "context": "形容提议对双方都有利。",
+    "tags": ["职场", "商务"]
+  },
+  {
+    "id": "b102",
+    "english": "Don't push your luck.",
+    "chinese": "别得寸进尺。",
+    "context": "警告对方不要在运气好或别人容忍时过度要求。",
+    "tags": ["地道", "警告"]
+  },
+  {
+    "id": "b103",
+    "english": "I'll see what I can do.",
+    "chinese": "我尽量看看能做点什么。",
+    "context": "一种不打包票但愿意帮忙的委婉说法。",
+    "tags": ["委婉", "日常"]
+  },
+  {
+    "id": "b104",
+    "english": "We're running out of time.",
+    "chinese": "我们快没时间了。",
+    "context": "强调紧迫性，running out of 是常用搭配。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b105",
+    "english": "I'm not following your logic.",
+    "chinese": "我不理解你的逻辑。",
+    "context": "比 I don't understand 更有针对性地指出思维脱节。",
+    "tags": ["沟通", "职场"]
+  },
+  {
+    "id": "b106",
+    "english": "Let's sleep on it.",
+    "chinese": "咱们先考虑一晚再说（不急着决定）。",
+    "context": "用于重大决策，意为第二天再给答复。",
+    "tags": ["地道", "决策"]
+  },
+  {
+    "id": "b107",
+    "english": "You're on the right track.",
+    "chinese": "你的思路/方向是对的。",
+    "context": "鼓励正在努力或寻找方案的人。",
+    "tags": ["鼓励", "职场"]
+  },
+  {
+    "id": "b108",
+    "english": "It's a long story.",
+    "chinese": "一言难尽。",
+    "context": "当不想解释复杂的来龙去脉时使用。",
+    "tags": ["闲聊", "地道"]
+  },
+  {
+    "id": "b109",
+    "english": "What's the bottom line?",
+    "chinese": "底线是什么？/ 最终结论是什么？",
+    "context": "要求对方直接说出最重要的结果或价格。",
+    "tags": ["职场", "商务"]
+  },
+  {
+    "id": "b110",
+    "english": "I've had enough.",
+    "chinese": "我受够了。",
+    "context": "表达强烈的愤怒或厌倦。",
+    "tags": ["情绪", "地道"]
+  },
+  {
+    "id": "b111",
+    "english": "That makes two of us.",
+    "chinese": "我也是（我也一样）。",
+    "context": "用于表示双方处境相同，通常带有一丝无奈。",
+    "tags": ["共鸣", "口语"]
+  },
+  {
+    "id": "b112",
+    "english": "Don't take it personally.",
+    "chinese": "别往心里去 / 对事不对人。",
+    "context": "当你要说一些可能伤人自尊的实话前使用。",
+    "tags": ["委婉", "职场"]
+  },
+  {
+    "id": "b113",
+    "english": "I'm second-guessing myself.",
+    "chinese": "我在怀疑自己的决定。",
+    "context": "形容犹豫不决，反复推敲之前的选择。",
+    "tags": ["地道", "自我描述"]
+  },
+  {
+    "id": "b114",
+    "english": "Suit yourself.",
+    "chinese": "随你便吧。",
+    "context": "带有微弱的不满，表示随对方怎么做。",
+    "tags": ["情绪", "口语"]
+  },
+  {
+    "id": "b115",
+    "english": "That's a rip-off!",
+    "chinese": "简直是敲竹杠 / 抢钱！",
+    "context": "形容价格极其离谱地贵。",
+    "tags": ["购物", "地道"]
+  },
+  {
+    "id": "b116",
+    "english": "I can't help it.",
+    "chinese": "我没办法 / 我控制不住。",
+    "context": "形容某种不由自主的行为或情绪。",
+    "tags": ["常用", "口语"]
+  },
+  {
+    "id": "b117",
+    "english": "Get out of here!",
+    "chinese": "少在那吹牛了 / 真的吗？（表惊讶）",
+    "context": "并非赶人走，而是对惊人消息的反应。",
+    "tags": ["地道", "惊讶"]
+  },
+  {
+    "id": "b118",
+    "english": "It slipped my mind.",
+    "chinese": "我给忘了 / 把这茬给忘了。",
+    "context": "比 I forgot 更地道，像信息从脑子里滑走一样。",
+    "tags": ["地道", "道歉"]
+  },
+  {
+    "id": "b119",
+    "english": "I'll take a rain check.",
+    "chinese": "下次吧（改天再约）。",
+    "context": "礼貌拒绝当前的邀请，保留未来的可能性。",
+    "tags": ["社交", "委婉"]
+  },
+  {
+    "id": "b120",
+    "english": "You've got a deal.",
+    "chinese": "成交。",
+    "context": "不仅用于生意，也可用于日常协议。",
+    "tags": ["职场", "生活"]
+  },
+  {
+    "id": "b121",
+    "english": "I'm not in the loop.",
+    "chinese": "我不在圈子里 / 我不了解内情。",
+    "context": "表示自己没被告知相关信息。",
+    "tags": ["职场", "地道"]
+  },
+  {
+    "id": "b122",
+    "english": "It's better than nothing.",
+    "chinese": "总比没有强。",
+    "context": "面对不尽如人意的结果时的自我宽解。",
+    "tags": ["常用", "生活"]
+  },
+  {
+    "id": "b123",
+    "english": "You nailed it!",
+    "chinese": "你做得棒极了 / 总结得一针见血。",
+    "context": "nail 原意是钉钉子，这里指完美完成任务。",
+    "tags": ["赞美", "地道"]
+  },
+  {
+    "id": "b124",
+    "english": "Don't count your chickens before they hatch.",
+    "chinese": "不要高兴得太早。",
+    "context": "谚语：鸡蛋还没孵出来别急着数小鸡。",
+    "tags": ["谚语", "地道"]
+  },
+  {
+    "id": "b125",
+    "english": "I'm all set.",
+    "chinese": "我准备好了 / 我这边搞定了。",
+    "context": "表示一切就绪。",
+    "tags": ["常用", "日常"]
+  },
+  {
+    "id": "b126",
+    "english": "What are the odds?",
+    "chinese": "这几率有多大？ / 怎么会这么巧？",
+    "context": "遇到巧合时的惊叹。",
+    "tags": ["惊讶", "闲聊"]
+  },
+  {
+    "id": "b127",
+    "english": "It's a breeze.",
+    "chinese": "轻而易举的事。",
+    "context": "形容像一阵微风一样简单。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "b128",
+    "english": "Give me a break.",
+    "chinese": "饶了我吧 / 别逗了。",
+    "context": "表达不耐烦或不相信对方的话。",
+    "tags": ["情绪", "地道"]
+  },
+  {
+    "id": "b129",
+    "english": "I have mixed feelings about it.",
+    "chinese": "我对此心情复杂。",
+    "context": "既有喜欢的理由，也有不喜欢的理由。",
+    "tags": ["情绪", "深度沟通"]
+  },
+  {
+    "id": "b130",
+    "english": "That's not what I meant.",
+    "chinese": "我不是那个意思。",
+    "context": "澄清误解时的常用语。",
+    "tags": ["沟通", "常用"]
+  },
+  {
+    "id": "b131",
+    "english": "I'll keep my eyes peeled.",
+    "chinese": "我会密切留意的。",
+    "context": "形容睁大眼睛仔细寻找或观察。",
+    "tags": ["地道", "警觉"]
+  },
+  {
+    "id": "b132",
+    "english": "It's worth a shot.",
+    "chinese": "值得一试。",
+    "context": "shot 指射击，引申为尝试。",
+    "tags": ["鼓励", "口语"]
+  },
+  {
+    "id": "b133",
+    "english": "I'm hard-pressed to...",
+    "chinese": "我很左右为难 / 我很难（做到）...",
+    "context": "形容在压力下很难完成某事。",
+    "tags": ["地道", "正式"]
+  },
+  {
+    "id": "b134",
+    "english": "Let's kick things off.",
+    "chinese": "让我们开始吧（启动）。",
+    "context": "源自足球开球，常用于会议或项目启动。",
+    "tags": ["职场", "地道"]
+  },
+  {
+    "id": "b135",
+    "english": "You're preaching to the choir.",
+    "chinese": "你这是在对信徒讲道（白费口舌，我早同意了）。",
+    "context": "形容对方正在试图说服一个已经同意的人。",
+    "tags": ["地道", "幽默"]
+  },
+  {
+    "id": "b136",
+    "english": "I'm running on empty.",
+    "chinese": "我已经精疲力竭了（油箱空了）。",
+    "context": "形容体力或精神已经到了极限。",
+    "tags": ["情绪", "地道"]
+  },
+  {
+    "id": "b137",
+    "english": "Keep it under your hat.",
+    "chinese": "保守秘密（别告诉别人）。",
+    "context": "比 Keep it a secret 更口语化。",
+    "tags": ["地道", "社交"]
+  },
+  {
+    "id": "b138",
+    "english": "The bottom line is...",
+    "chinese": "关键的一点是... / 归根结底...",
+    "context": "用于总结陈词。",
+    "tags": ["职场", "总结"]
+  },
+  {
+    "id": "b139",
+    "english": "I'm not buying it.",
+    "chinese": "我不信这一套。",
+    "context": "表示不相信某人的借口或说辞。",
+    "tags": ["地道", "情绪"]
+  },
+  {
+    "id": "b140",
+    "english": "It's a gray area.",
+    "chinese": "这是一个灰色地带。",
+    "context": "形容规则不明、界限模糊的情况。",
+    "tags": ["职场", "描述"]
+  },
+  {
+    "id": "b141",
+    "english": "Don't get me wrong.",
+    "chinese": "别误会我的意思。",
+    "context": "在说出可能引起歧义的话之前做铺垫。",
+    "tags": ["沟通", "常用"]
+  },
+  {
+    "id": "b142",
+    "english": "I'll cross that bridge when I come to it.",
+    "chinese": "船到桥头自然直。",
+    "context": "表示现在先不担心未来的问题。",
+    "tags": ["地道", "生活"]
+  },
+  {
+    "id": "b143",
+    "english": "That's a bit of a stretch.",
+    "chinese": "这有点牵强。",
+    "context": "形容某种说法或逻辑不太站得住脚。",
+    "tags": ["意见表达", "地道"]
+  },
+  {
+    "id": "b144",
+    "english": "I'm game.",
+    "chinese": "我愿意参加 / 我加入。",
+    "context": "对提议的积极响应。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "b145",
+    "english": "Let's call a spade a spade.",
+    "chinese": "直言不讳 / 有什么说什么。",
+    "context": "主张实话实说，不绕弯子。",
+    "tags": ["地道", "性格"]
+  },
+  {
+    "id": "b146",
+    "english": "I can't place his name.",
+    "chinese": "我想不起他的名字了。",
+    "context": "place 在这里指“识别、定位”。",
+    "tags": ["社交", "地道"]
+  },
+  {
+    "id": "b147",
+    "english": "It's a no-go.",
+    "chinese": "行不通 / 不被批准。",
+    "context": "形容计划被否决或无法实施。",
+    "tags": ["职场", "口语"]
+  },
+  {
+    "id": "b148",
+    "english": "I'm in a bind.",
+    "chinese": "我处境左右为难。",
+    "context": "形容陷入困境或麻烦中。",
+    "tags": ["地道", "求助"]
+  },
+  {
+    "id": "b149",
+    "english": "Whatever floats your boat.",
+    "chinese": "随你喜欢吧（哪怕我不理解）。",
+    "context": "一种略带调侃的“你开心就好”。",
+    "tags": ["社交", "地道"]
+  },
+  {
+    "id": "b150",
+    "english": "Let's wrap this up.",
+    "chinese": "咱们结束吧 / 把这收个尾。",
+    "context": "在会议或工作接近尾声时使用。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b151",
+    "english": "I'm rooting for you.",
+    "chinese": "我支持你 / 我为你加油。",
+    "context": "rooting 像树根一样扎实地支持。",
+    "tags": ["鼓励", "地道"]
+  },
+  {
+    "id": "b152",
+    "english": "It's a game-changer.",
+    "chinese": "这是一个能彻底改变局面的事物。",
+    "context": "形容某项技术、决策或事件影响巨大。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b153",
+    "english": "Don't let it get to you.",
+    "chinese": "别让那件事影响你的情绪。",
+    "context": "安慰受挫的人。",
+    "tags": ["安慰", "生活"]
+  },
+  {
+    "id": "b154",
+    "english": "That's music to my ears.",
+    "chinese": "这对我来说真是个好消息（悦耳）。",
+    "context": "听到期待已久的好消息时的反应。",
+    "tags": ["地道", "情绪"]
+  },
+  {
+    "id": "b155",
+    "english": "I'm on top of things.",
+    "chinese": "一切都在我的掌控之中。",
+    "context": "形容工作井井有条，没有遗漏。",
+    "tags": ["职场", "自信"]
+  },
+  {
+    "id": "b156",
+    "english": "Let's touch base soon.",
+    "chinese": "咱们近期再联络。",
+    "context": "社交或职场结束时的客套话。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "b157",
+    "english": "It's a bit steep.",
+    "chinese": "价格有点偏高。",
+    "context": "steep 原指陡峭，这里形容价格过高。",
+    "tags": ["购物", "委婉"]
+  },
+  {
+    "id": "b158",
+    "english": "I'm out of the loop.",
+    "chinese": "我完全不知情。",
+    "context": "没被包括在信息圈内。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "b159",
+    "english": "It's a long shot, but let's try.",
+    "chinese": "虽然希望渺茫，但试试看吧。",
+    "context": "鼓励尝试低概率成功的事。",
+    "tags": ["口语", "决策"]
+  },
+  {
+    "id": "b160",
+    "english": "I'm drawing a blank.",
+    "chinese": "我脑子里一片空白。",
+    "context": "突然想不起答案或某事。",
+    "tags": ["地道", "生活"]
+  },
+  {
+    "id": "b161",
+    "english": "You're telling me!",
+    "chinese": "那还用你说！（我也这么觉得）",
+    "context": "极度赞同对方的观点，尤其是吐槽时。",
+    "tags": ["共鸣", "口语"]
+  },
+  {
+    "id": "b162",
+    "english": "Don't play dumb.",
+    "chinese": "别装傻。",
+    "context": "拆穿对方明知故问的行为。",
+    "tags": ["情绪", "地道"]
+  },
+  {
+    "id": "b163",
+    "english": "I'm heading home.",
+    "chinese": "我要回家了。",
+    "context": "heading 表达了“朝向”的动态感。",
+    "tags": ["生活", "常用"]
+  },
+  {
+    "id": "b164",
+    "english": "It's written all over your face.",
+    "chinese": "全写在你脸上了。",
+    "context": "对方试图隐藏情绪但失败时使用。",
+    "tags": ["社交", "地道"]
+  },
+  {
+    "id": "b165",
+    "english": "Can we talk offline?",
+    "chinese": "我们能私下/线下聊吗？",
+    "context": "常用于会议中，提议会后单独深入讨论。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b166",
+    "english": "It's a breath of fresh air.",
+    "chinese": "这真是一股清流 / 令人耳目一新。",
+    "context": "形容新奇、美好的事物。",
+    "tags": ["地道", "赞美"]
+  },
+  {
+    "id": "b167",
+    "english": "I'm all set for the trip.",
+    "chinese": "旅行的东西我都准备好了。",
+    "context": "all set 表示准备就绪。",
+    "tags": ["生活", "常用"]
+  },
+  {
+    "id": "b168",
+    "english": "What's the holdup?",
+    "chinese": "怎么耽搁了？/ 进度卡在哪了？",
+    "context": "询问延迟的原因。",
+    "tags": ["职场", "询问"]
+  },
+  {
+    "id": "b169",
+    "english": "It's second nature to me.",
+    "chinese": "这对我来说就像天性一样（熟练）。",
+    "context": "形容某事做得非常熟练，不需要思考。",
+    "tags": ["自信", "地道"]
+  },
+  {
+    "id": "b170",
+    "english": "You've got your work cut out for you.",
+    "chinese": "你这下有得忙了 / 任务很艰巨。",
+    "context": "形容某人面临巨大的工作量或挑战。",
+    "tags": ["职场", "地道"]
+  },
+  {
+    "id": "b171",
+    "english": "Don't beat yourself up.",
+    "chinese": "别自责了。",
+    "context": "劝慰犯错的朋友。",
+    "tags": ["安慰", "口语"]
+  },
+  {
+    "id": "b172",
+    "english": "The more, the merrier.",
+    "chinese": "人越多越热闹。",
+    "context": "用于邀请更多人加入聚会。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "b173",
+    "english": "I'll keep you posted.",
+    "chinese": "我会随时向你通报进展。",
+    "context": "posted 在这里指被告知信息。",
+    "tags": ["商务", "职场"]
+  },
+  {
+    "id": "b174",
+    "english": "It's not my place to say.",
+    "chinese": "不该由我来说。",
+    "context": "当涉及他人隐私或不属于自己权限范围时。",
+    "tags": ["委婉", "社交"]
+  },
+  {
+    "id": "b175",
+    "english": "That's the spirit!",
+    "chinese": "就该这个精神！/ 这才对嘛！",
+    "context": "鼓励别人保持积极的态度。",
+    "tags": ["鼓励", "常用"]
+  },
+  {
+    "id": "b176",
+    "english": "I'm not cut out for this.",
+    "chinese": "我天生就不是干这个的料。",
+    "context": "形容自己不适合某种工作或环境。",
+    "tags": ["性格", "地道"]
+  },
+  {
+    "id": "b177",
+    "english": "Let's take it from the top.",
+    "chinese": "咱们从头再来一遍。",
+    "context": "常用于排练或重新开始某项流程。",
+    "tags": ["地道", "口语"]
+  },
+  {
+    "id": "b178",
+    "english": "I'll play devil's advocate.",
+    "chinese": "我来唱个反调（为了讨论更全面）。",
+    "context": "通过提出反对意见来帮助团队更周全地思考。",
+    "tags": ["职场", "思维"]
+  },
+  {
+    "id": "b179",
+    "english": "You're overthinking it.",
+    "chinese": "你想多了 / 别钻牛角尖。",
+    "context": "提醒对方不要过度解读。",
+    "tags": ["建议", "常用"]
+  },
+  {
+    "id": "b180",
+    "english": "It's a blessing in disguise.",
+    "chinese": "塞翁失马，焉知非福。",
+    "context": "形容一开始看起来很糟，最后结果却很好。",
+    "tags": ["谚语", "生活"]
+  },
+  {
+    "id": "b181",
+    "english": "I'm on a tight budget.",
+    "chinese": "我预算很紧。",
+    "context": "委婉表达自己最近没钱。",
+    "tags": ["购物", "生活"]
+  },
+  {
+    "id": "b182",
+    "english": "Can you fill me in?",
+    "chinese": "你能跟我说说详情吗？",
+    "context": "请求别人补全你错过的信息。",
+    "tags": ["职场", "地道"]
+  },
+  {
+    "id": "b183",
+    "english": "I'll back you up.",
+    "chinese": "我会挺你的 / 做你的后盾。",
+    "context": "表示支持对方的决定或论点。",
+    "tags": ["社交", "支持"]
+  },
+  {
+    "id": "b184",
+    "english": "It's a long shot, but what the hell.",
+    "chinese": "希望渺茫，但管他呢（试试就试试）。",
+    "context": "带有一种豁出去的冒险精神。",
+    "tags": ["地道", "生活"]
+  },
+  {
+    "id": "b185",
+    "english": "I've got your back.",
+    "chinese": "我撑你 / 有我在没问题。",
+    "context": "非常可靠的支持表达。",
+    "tags": ["社交", "友情"]
+  },
+  {
+    "id": "b186",
+    "english": "That's a dead end.",
+    "chinese": "那是条死胡同 / 没前途。",
+    "context": "形容方案或职业路径没有发展空间。",
+    "tags": ["地道", "描述"]
+  },
+  {
+    "id": "b187",
+    "english": "Let's cut to the chase.",
+    "chinese": "开门见山吧。",
+    "context": "跳过废话，直接进入重点。",
+    "tags": ["职场", "效率"]
+  },
+  {
+    "id": "b188",
+    "english": "I'm in over my head.",
+    "chinese": "我有些应付不来了（水过头顶）。",
+    "context": "形容事情的难度超出了自己的能力范围。",
+    "tags": ["求助", "地道"]
+  },
+  {
+    "id": "b189",
+    "english": "Don't hold your breath.",
+    "chinese": "别指望了 / 别傻等了。",
+    "context": "意指某事发生的概率极低。",
+    "tags": ["地道", "调侃"]
+  },
+  {
+    "id": "b190",
+    "english": "It's on the tip of my tongue.",
+    "chinese": "话就在嘴边（但想不起来）。",
+    "context": "忘词时的标准表达。",
+    "tags": ["生活", "常用"]
+  },
+  {
+    "id": "b191",
+    "english": "It's a small world.",
+    "chinese": "世界真小。",
+    "context": "巧遇时的感叹。",
+    "tags": ["闲聊", "常用"]
+  },
+  {
+    "id": "b192",
+    "english": "I'm tied up right now.",
+    "chinese": "我现在脱不开身。",
+    "context": "比 I'm busy 更有“被事情缠住”的画面感。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b193",
+    "english": "Better safe than sorry.",
+    "chinese": "宁可事先谨慎，也不事后后悔。",
+    "context": "劝人保守稳妥的常用语。",
+    "tags": ["生活", "建议"]
+  },
+  {
+    "id": "b194",
+    "english": "I'm all ears.",
+    "chinese": "我洗耳恭听。",
+    "context": "表示正在专注倾听。",
+    "tags": ["地道", "沟通"]
+  },
+  {
+    "id": "b195",
+    "english": "It's up in the air.",
+    "chinese": "悬而未决 / 还没定下来。",
+    "context": "形容计划还存在变数。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "b196",
+    "english": "I'm out of my element.",
+    "chinese": "这不在我的专长范围内 / 我很不适应。",
+    "context": "形容在不熟悉的环境或领域。",
+    "tags": ["地道", "职场"]
+  },
+  {
+    "id": "b197",
+    "english": "Give it a rest.",
+    "chinese": "省省吧 / 别再说了。",
+    "context": "用于让喋喋不休或抱怨的人闭嘴。",
+    "tags": ["情绪", "冲突"]
+  },
+  {
+    "id": "b198",
+    "english": "You can say that again.",
+    "chinese": "我完全同意。",
+    "context": "极度赞同对方的话。",
+    "tags": ["赞同", "常用"]
+  },
+  {
+    "id": "b199",
+    "english": "Let's call it a night.",
+    "chinese": "今晚就到这吧。",
+    "context": "聚会或加班到深夜准备离开时使用。",
+    "tags": ["社交", "生活"]
+  },
+  {
+    "id": "b200",
+    "english": "The pleasure is all mine.",
+    "chinese": "这是我的荣幸。",
+    "context": "回答 Thank you 的最优雅方式之一。",
+    "tags": ["礼貌", "正式"]
+  },
+  {
+    "id": "c101",
+    "english": "I have been working here for three years.",
+    "chinese": "我在这里已经工作三年了。",
+    "context": "【现在完成进行时】表示动作从过去持续到现在且仍在继续。",
+    "tags": ["语法重点", "自我介绍"]
+  },
+  {
+    "id": "c102",
+    "english": "Could you tell me how I can get to the station?",
+    "chinese": "你能告诉我怎么去车站吗？",
+    "context": "【间接疑问句】注意宾语从句要用陈述语序（how I can...）。",
+    "tags": ["询问信息", "常用"]
+  },
+  {
+    "id": "c103",
+    "english": "The person who is standing over there is my mentor.",
+    "chinese": "站在那边的那个人的我的导师。",
+    "context": "【定语从句】使用 who 引导从句修饰先行词 person。",
+    "tags": ["语法重点", "社交"]
+  },
+  {
+    "id": "c104",
+    "english": "I'm not sure if he is available at the moment.",
+    "chinese": "我不确定他现在是否有空。",
+    "context": "【宾语从句】if 引导的不确定语气从句。",
+    "tags": ["日常沟通", "职场"]
+  },
+  {
+    "id": "c105",
+    "english": "If I were you, I would take this opportunity.",
+    "chinese": "如果我是你，我会把握住这个机会。",
+    "context": "【虚拟语气】对现在的虚拟，be 动词统一用 were。",
+    "tags": ["语法重点", "建议"]
+  },
+  {
+    "id": "c106",
+    "english": "I prefer drinking tea to drinking coffee.",
+    "chinese": "比起喝咖啡，我更喜欢喝茶。",
+    "context": "【习惯表达】prefer doing A to doing B 的结构。",
+    "tags": ["自我介绍", "表达偏好"]
+  },
+  {
+    "id": "c107",
+    "english": "It is important that we finish this project on time.",
+    "chinese": "按时完成这个项目很重要。",
+    "context": "【形式主语】It is + adj + that 从句的经典结构。",
+    "tags": ["职场", "语法重点"]
+  },
+  {
+    "id": "c108",
+    "english": "The more you practice, the better you will become.",
+    "chinese": "你练习得越多，就会变得越优秀。",
+    "context": "【比较级】the more... the more... 越...就越... 的结构。",
+    "tags": ["鼓励", "语法重点"]
+  },
+  {
+    "id": "c109",
+    "english": "I wonder if you could give me some advice.",
+    "chinese": "我想知道你是否能给我一些建议。",
+    "context": "【委婉语气】用 I wonder if 开头比直接提问更有礼貌。",
+    "tags": ["询问信息", "礼貌"]
+  },
+  {
+    "id": "c110",
+    "english": "By the time I arrived, the meeting had already started.",
+    "chinese": "等我到达的时候，会议已经开始了。",
+    "context": "【过去完成时】强调一个动作发生在另一个过去动作之前。",
+    "tags": ["语法重点", "职场"]
+  },
+  {
+    "id": "c111",
+    "english": "I am looking forward to meeting you in person.",
+    "chinese": "我期待着与您本人见面。",
+    "context": "【固定搭配】look forward to 后面必须接动名词 (ing)。",
+    "tags": ["商务", "社交"]
+  },
+  {
+    "id": "c112",
+    "english": "Neither my friend nor I know the answer.",
+    "chinese": "我的朋友和我都不知这个答案。",
+    "context": "【主谓一致】neither... nor... 连接主语时，谓语动词就近原则。",
+    "tags": ["语法重点", "日常"]
+  },
+  {
+    "id": "c113",
+    "english": "It took me two hours to finish the report.",
+    "chinese": "花了我两个小时完成这份报告。",
+    "context": "【常用句型】It takes sb some time to do sth。",
+    "tags": ["日常沟通", "职场"]
+  },
+  {
+    "id": "c114",
+    "english": "I wish I had more free time to travel.",
+    "chinese": "我希望我有更多的空闲时间去旅行。",
+    "context": "【虚拟语气】wish 后面的从句用过去时表示对现在的遗憾。",
+    "tags": ["闲聊", "自我介绍"]
+  },
+  {
+    "id": "c115",
+    "english": "This is the most interesting book I have ever read.",
+    "chinese": "这是我读过的最有趣的书。",
+    "context": "【最高级+完成时】形容经历的最极致体验。",
+    "tags": ["表达观点", "语法重点"]
+  },
+  {
+    "id": "c116",
+    "english": "Although it was raining, they decided to go hiking.",
+    "chinese": "尽管在下雨，他们还是决定去徒步。",
+    "context": "【让步状语从句】although 引导的从句不能与 but 连用。",
+    "tags": ["语法重点", "闲聊"]
+  },
+  {
+    "id": "c117",
+    "english": "You had better see a doctor as soon as possible.",
+    "chinese": "你最好尽快去看医生。",
+    "context": "【情态动词】had better 意为“最好”，后面接动词原形。",
+    "tags": ["建议", "日常"]
+  },
+  {
+    "id": "c118",
+    "english": "I am used to getting up early in the morning.",
+    "chinese": "我习惯了早起。",
+    "context": "【状态描述】be used to doing 表示习惯于某种状态。",
+    "tags": ["自我介绍", "常用"]
+  },
+  {
+    "id": "c119",
+    "english": "Not only is he smart, but he is also very hardworking.",
+    "chinese": "他不仅聪明，而且非常勤奋。",
+    "context": "【倒装句】not only 放在句首时，前一个分句要部分倒装。",
+    "tags": ["语法重点", "赞美"]
+  },
+  {
+    "id": "c120",
+    "english": "I will let you know as soon as I receive the information.",
+    "chinese": "我一收到消息就通知你。",
+    "context": "【时间状语从句】主将从现（主句将来时，从句一般现在时）。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "c121",
+    "english": "The reason why I am late is that I missed the bus.",
+    "chinese": "我迟到的原因是我错过了公交车。",
+    "context": "【表语从句】The reason is that... 结构。",
+    "tags": ["日常沟通", "解释"]
+  },
+  {
+    "id": "c122",
+    "english": "It's such a beautiful day, isn't it?",
+    "chinese": "天气真好，不是吗？",
+    "context": "【反义疑问句】用于寻求对方的认同，打破沉默。",
+    "tags": ["闲聊", "基础"]
+  },
+  {
+    "id": "c123",
+    "english": "I suggested that he should take a break.",
+    "chinese": "我建议他休息一下。",
+    "context": "【虚拟语气】suggest 引导的从句用 should + 动词原形。",
+    "tags": ["职场", "建议"]
+  },
+  {
+    "id": "c124",
+    "english": "This office is cleaned every day.",
+    "chinese": "这间办公室每天都有人打扫。",
+    "context": "【被动语态】强调动作的承受者。",
+    "tags": ["日常", "语法重点"]
+  },
+  {
+    "id": "c125",
+    "english": "Do you mind if I open the window?",
+    "chinese": "你介意我开窗吗？",
+    "context": "【礼貌请求】Do you mind if... 是非常委婉的询问方式。",
+    "tags": ["日常沟通", "礼貌"]
+  },
+  {
+    "id": "c126",
+    "english": "He seems to be enjoying his new job.",
+    "chinese": "他似乎很喜欢他的新工作。",
+    "context": "【系动词】seem to be doing 描述当下的状态。",
+    "tags": ["闲聊", "职场"]
+  },
+  {
+    "id": "c127",
+    "english": "Unless you hurry up, you will miss the train.",
+    "chinese": "除非你快点，否则你会错过火车的。",
+    "context": "【条件状语从句】unless 相当于 if not。",
+    "tags": ["日常", "语法重点"]
+  },
+  {
+    "id": "c128",
+    "english": "I have no idea what you are talking about.",
+    "chinese": "我完全不知道你在说什么。",
+    "context": "【宾语从句】have no idea 后面接疑问词引导的从句。",
+    "tags": ["沟通", "常用"]
+  },
+  {
+    "id": "c129",
+    "english": "I would rather stay at home than go out tonight.",
+    "chinese": "我宁愿待在家里也不想今晚出去。",
+    "context": "【选择表达】would rather do A than do B。",
+    "tags": ["表达意愿", "地道"]
+  },
+  {
+    "id": "c130",
+    "english": "The movie was so boring that I fell asleep.",
+    "chinese": "电影太无聊了，以至于我睡着了。",
+    "context": "【结果状语从句】so... that... 如此...以至于...。",
+    "tags": ["闲聊", "语法重点"]
+  },
+  {
+    "id": "c131",
+    "english": "Despite the cold weather, he went for a swim.",
+    "chinese": "尽管天气冷，他还是去游泳了。",
+    "context": "【让步短语】despite 后面接名词或名词性短语。",
+    "tags": ["语法重点", "日常"]
+  },
+  {
+    "id": "c132",
+    "english": "Could you explain how this machine works?",
+    "chinese": "你能解释一下这台机器是怎么运作的吗？",
+    "context": "【宾语从句】how 引导的陈述语序从句。",
+    "tags": ["询问信息", "职场"]
+  },
+  {
+    "id": "c133",
+    "english": "I don't think that is a good idea.",
+    "chinese": "我认为那不是个好主意。",
+    "context": "【否定转移】英语习惯说“我不认为那是...”，而不是“我认为那不是...”。",
+    "tags": ["意见表达", "委婉"]
+  },
+  {
+    "id": "c134",
+    "english": "There are several reasons for my decision.",
+    "chinese": "我的决定有几个原因。",
+    "context": "【存在句】There be 句型的正式运用。",
+    "tags": ["职场", "介绍"]
+  },
+  {
+    "id": "c135",
+    "english": "She is the only person who knows the truth.",
+    "chinese": "她是唯一知道真相的人。",
+    "context": "【定语从句】先行词被 only 修饰，关系词常用 who/that。",
+    "tags": ["描述", "常用"]
+  },
+  {
+    "id": "c136",
+    "english": "I am thinking of changing my career path.",
+    "chinese": "我正在考虑改变我的职业规划。",
+    "context": "【介词用法】think of doing sth 考虑做某事。",
+    "tags": ["自我介绍", "职场"]
+  },
+  {
+    "id": "c137",
+    "english": "What do you usually do in your spare time?",
+    "chinese": "你闲暇时间通常做什么？",
+    "context": "【一般现在时】询问习惯性动作。",
+    "tags": ["闲聊", "搭讪"]
+  },
+  {
+    "id": "c138",
+    "english": "I will finish the report by the end of this week.",
+    "chinese": "我会在本周末前完成报告。",
+    "context": "【时间介词】by 表示“不迟于某个时间点”。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "c139",
+    "english": "Is there anything else I can help you with?",
+    "chinese": "还有什么我可以帮您的吗？",
+    "context": "【服务用语】标准、专业的询问。 ",
+    "tags": ["职场", "礼貌"]
+  },
+  {
+    "id": "c140",
+    "english": "I used to live in London when I was a student.",
+    "chinese": "我当学生时曾住在伦敦。",
+    "context": "【过去状态】used to do 表示过去经常而现在不再持续的状态。",
+    "tags": ["自我介绍", "语法重点"]
+  },
+  {
+    "id": "c141",
+    "english": "The weather today is much warmer than yesterday.",
+    "chinese": "今天的天气比昨天暖和得多。",
+    "context": "【比较级修饰】用 much 修饰比较级表示程度深。",
+    "tags": ["日常沟通", "闲聊"]
+  },
+  {
+    "id": "c142",
+    "english": "I haven't seen you for ages!",
+    "chinese": "我有好久没见到你了！",
+    "context": "【现在完成时】for ages 意为“很长一段时间”。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "c143",
+    "english": "Can you tell me the reason for the delay?",
+    "chinese": "你能告诉我延迟的原因吗？",
+    "context": "【固定搭配】the reason for sth。",
+    "tags": ["询问信息", "常用"]
+  },
+  {
+    "id": "c144",
+    "english": "It depends on the situation.",
+    "chinese": "视情况而定。",
+    "context": "【常用动词】depend on 取决于。",
+    "tags": ["日常沟通", "常用"]
+  },
+  {
+    "id": "c145",
+    "english": "I'm sorry, I didn't mean to interrupt you.",
+    "chinese": "对不起，我不是故意打断你的。",
+    "context": "【礼貌用语】mean to do 打算做某事。",
+    "tags": ["社交", "礼貌"]
+  },
+  {
+    "id": "c146",
+    "english": "That sounds like a great plan.",
+    "chinese": "听起来是个很棒的计划。",
+    "context": "【感官动词】sound like 听起来像。",
+    "tags": ["赞同", "闲聊"]
+  },
+  {
+    "id": "c147",
+    "english": "I need to make a phone call.",
+    "chinese": "我需要打个电话。",
+    "context": "【固定词组】make a call 这里的 call 是名词。",
+    "tags": ["日常", "基础"]
+  },
+  {
+    "id": "c148",
+    "english": "Would you mind repeating that, please?",
+    "chinese": "麻烦请您重复一遍好吗？",
+    "context": "【礼貌请求】Would you mind doing... 比 Can you... 更正式。",
+    "tags": ["职场", "礼貌"]
+  },
+  {
+    "id": "c149",
+    "english": "I am not interested in sports.",
+    "chinese": "我对运动不感兴趣。",
+    "context": "【介词搭配】be interested in 对...感兴趣。",
+    "tags": ["自我介绍", "常用"]
+  },
+  {
+    "id": "c150",
+    "english": "It doesn't matter to me.",
+    "chinese": "对我来说没关系/无所谓。",
+    "context": "【态度表达】matter 作为动词表示“重要、要紧”。",
+    "tags": ["日常", "表达观点"]
+  },
+  {
+    "id": "c151",
+    "english": "Regardless of the cost, we must finish this.",
+    "chinese": "无论代价如何，我们必须完成这件事。",
+    "context": "【介词短语】regardless of 不管，不顾。",
+    "tags": ["职场", "语法重点"]
+  },
+  {
+    "id": "c152",
+    "english": "I was about to leave when the phone rang.",
+    "chinese": "我正要离开时电话响了。",
+    "context": "【时态搭配】be about to do... when... 正要...突然...。",
+    "tags": ["日常", "语法重点"]
+  },
+  {
+    "id": "c153",
+    "english": "Compared to last year, our sales have improved.",
+    "chinese": "与去年相比，我们的销售额有所提高。",
+    "context": "【分词作状语】compared to 与...相比。",
+    "tags": ["商务", "职场"]
+  },
+  {
+    "id": "c154",
+    "english": "I suspect that he is not telling the truth.",
+    "chinese": "我怀疑他没说实话。",
+    "context": "【宾语从句】suspect that 怀疑...。",
+    "tags": ["表达观点", "常用"]
+  },
+  {
+    "id": "c155",
+    "english": "That is exactly what I was thinking.",
+    "chinese": "那正是我所想的。",
+    "context": "【强调表达】exactly what... 强调内容一致。",
+    "tags": ["沟通", "赞同"]
+  },
+  {
+    "id": "c156",
+    "english": "No matter what happens, I will support you.",
+    "chinese": "无论发生什么，我都会支持你。",
+    "context": "【让步状语从句】no matter what 无论什么。",
+    "tags": ["社交", "支持"]
+  },
+  {
+    "id": "c157",
+    "english": "I'll be there as long as you need me.",
+    "chinese": "只要你需要我，我就会在那。",
+    "context": "【条件从句】as long as 只要。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "c158",
+    "english": "The price includes tax and service charges.",
+    "chinese": "价格包含了税费和服务费。",
+    "context": "【基础描述】include 为动词，注意主谓一致。",
+    "tags": ["日常", "购物"]
+  },
+  {
+    "id": "c159",
+    "english": "It is worth noting that the deadline is tomorrow.",
+    "chinese": "值得注意的是，截止日期是明天。",
+    "context": "【正式句型】It is worth noting that...。",
+    "tags": ["职场", "提醒"]
+  },
+  {
+    "id": "c160",
+    "english": "I'm sorry for the inconvenience caused.",
+    "chinese": "对于造成的便，我深感抱歉。",
+    "context": "【商务礼貌】caused 为过去分词作后置定语修饰 inconvenience。",
+    "tags": ["礼貌", "职场"]
+  },
+  {
+    "id": "c161",
+    "english": "Could you help me with this heavy box?",
+    "chinese": "能帮我搬一下这个重箱子吗？",
+    "context": "【固定用法】help sb with sth。",
+    "tags": ["日常", "请求"]
+  },
+  {
+    "id": "c162",
+    "english": "What is the difference between these two?",
+    "chinese": "这两个之间有什么区别？",
+    "context": "【比较询问】between 用于两者之间。",
+    "tags": ["询问信息", "常用"]
+  },
+  {
+    "id": "c163",
+    "english": "I am not sure whether I can make it or not.",
+    "chinese": "我不确定我是否能去/能成功。",
+    "context": "【宾语从句】whether... or not 是否。",
+    "tags": ["社交", "委婉"]
+  },
+  {
+    "id": "c164",
+    "english": "This problem is beyond my control.",
+    "chinese": "这个问题超出了我的控制范围。",
+    "context": "【介词用法】beyond 超出...的范围。",
+    "tags": ["职场", "地道"]
+  },
+  {
+    "id": "c165",
+    "english": "I'll do my best to solve the issue.",
+    "chinese": "我会尽力解决这个问题的。",
+    "context": "【态度表达】do one's best to do sth。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "c166",
+    "english": "I happen to have a spare key.",
+    "chinese": "我碰巧有一把备用钥匙。",
+    "context": "【常用动词】happen to do 碰巧做某事。",
+    "tags": ["生活", "常用"]
+  },
+  {
+    "id": "c167",
+    "english": "Please keep me informed of any changes.",
+    "chinese": "如有任何变动，请随时通知我。",
+    "context": "【正式要求】keep sb informed of 使某人知情。",
+    "tags": ["职场", "礼貌"]
+  },
+  {
+    "id": "c168",
+    "english": "He is capable of handling complex tasks.",
+    "chinese": "他有能力处理复杂的任务。",
+    "context": "【能力描述】be capable of doing sth。",
+    "tags": ["赞美", "职场"]
+  },
+  {
+    "id": "c169",
+    "english": "I'm looking for someone who speaks English.",
+    "chinese": "我在寻找一位会说英语的人。",
+    "context": "【定语从句】who 引导从句修饰 someone。",
+    "tags": ["询问信息", "常用"]
+  },
+  {
+    "id": "c170",
+    "english": "That is not what I expected.",
+    "chinese": "那不是我预期的样子。",
+    "context": "【表达失望】what 引导宾语从句。",
+    "tags": ["沟通", "常用"]
+  },
+  {
+    "id": "c171",
+    "english": "I'll stay here until you come back.",
+    "chinese": "我会待在这里直到你回来。",
+    "context": "【时间状语从句】until 引导从句。",
+    "tags": ["日常", "常用"]
+  },
+  {
+    "id": "c172",
+    "english": "What makes you think so?",
+    "chinese": "为什么你这么想？（什么让你这么想？）",
+    "context": "【使役动词】make sb do sth。",
+    "tags": ["沟通", "询问"]
+  },
+  {
+    "id": "c173",
+    "english": "I should have checked the schedule earlier.",
+    "chinese": "我本该早点查看时间表的。",
+    "context": "【虚拟语气】should have done 表示对过去本该做而未做之事的遗憾。",
+    "tags": ["语法重点", "自省"]
+  },
+  {
+    "id": "c174",
+    "english": "It is unlikely that the event will be canceled.",
+    "chinese": "活动不太可能被取消。",
+    "context": "【预测语气】It is unlikely that...。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "c175",
+    "english": "I have a lot of things to deal with.",
+    "chinese": "我有很多事情要处理。",
+    "context": "【不定式】to deal with 作定语修饰 things。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "c176",
+    "english": "How long does it take to get there on foot?",
+    "chinese": "走路去那里需要多长时间？",
+    "context": "【常用疑问句】How long does it take...。",
+    "tags": ["询问信息", "基础"]
+  },
+  {
+    "id": "c177",
+    "english": "I'll call you when I get home.",
+    "chinese": "我到家后给你打电话。",
+    "context": "【时间状语从句】when 引导的从句用一般现在时表将来。",
+    "tags": ["日常", "常用"]
+  },
+  {
+    "id": "c178",
+    "english": "He speaks English as if it were his native language.",
+    "chinese": "他说英语就像那是他的母语一样。",
+    "context": "【虚拟语气】as if 引导的从句常用虚拟语气。",
+    "tags": ["赞美", "语法重点"]
+  },
+  {
+    "id": "c179",
+    "english": "This is exactly what I needed.",
+    "chinese": "这正是我所需要的。",
+    "context": "【表达感谢】what 引导表语从句。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "c180",
+    "english": "I'm wondering if you have a moment.",
+    "chinese": "我想知道您现在是否有时间。",
+    "context": "【礼貌开场】if 引导宾语从句。",
+    "tags": ["职场", "礼貌"]
+  },
+  {
+    "id": "c181",
+    "english": "That is the reason why she left early.",
+    "chinese": "那就是她早退的原因。",
+    "context": "【定语从句】why 引导从句修饰 reason。",
+    "tags": ["描述", "语法重点"]
+  },
+  {
+    "id": "c182",
+    "english": "Instead of complaining, we should find a solution.",
+    "chinese": "与其抱怨，我们不如寻找解决方案。",
+    "context": "【介词搭配】instead of doing sth 而不是...。",
+    "tags": ["建议", "职场"]
+  },
+  {
+    "id": "c183",
+    "english": "I am not sure how to use this software.",
+    "chinese": "我不确定如何使用这个软件。",
+    "context": "【疑问词+不定式】how to use 作宾语。",
+    "tags": ["询问信息", "学习"]
+  },
+  {
+    "id": "c184",
+    "english": "I'll support you no matter what you decide.",
+    "chinese": "无论你决定什么，我都会支持你。",
+    "context": "【让步从句】no matter what 引导。",
+    "tags": ["支持", "常用"]
+  },
+  {
+    "id": "c185",
+    "english": "The meeting has been rescheduled for next Tuesday.",
+    "chinese": "会议已改期到下周二。",
+    "context": "【被动语态】现在完成时的被动语态。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "c186",
+    "english": "I'm very impressed by your progress.",
+    "chinese": "你的进步给我留下了深刻印象。",
+    "context": "【固定搭配】be impressed by 对...印象深刻。",
+    "tags": ["赞美", "职场"]
+  },
+  {
+    "id": "c187",
+    "english": "Could you provide me with more details?",
+    "chinese": "您能给我提供更多细节吗？",
+    "context": "【固定搭配】provide sb with sth。",
+    "tags": ["询问信息", "礼貌"]
+  },
+  {
+    "id": "c188",
+    "english": "I've been meaning to talk to you about this.",
+    "chinese": "我一直想找你谈谈这件事。",
+    "context": "【现在完成进行时】mean to do 打算做...",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "c189",
+    "english": "I'm sorry, I didn't catch what you said.",
+    "chinese": "抱歉，我没听清你刚才说的话。",
+    "context": "【日常沟通】what 引导宾语从句。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "c190",
+    "english": "That's why I'm here.",
+    "chinese": "那就是我来这里的原因。",
+    "context": "【总结表达】why 引导表语从句。",
+    "tags": ["日常", "常用"]
+  },
+  {
+    "id": "c191",
+    "english": "I will do it as soon as possible.",
+    "chinese": "我会尽快去做。",
+    "context": "【常用词组】as soon as possible。",
+    "tags": ["日常", "常用"]
+  },
+  {
+    "id": "c192",
+    "english": "I'm not used to speaking in public.",
+    "chinese": "我不习惯在公众面前讲话。",
+    "context": "【习惯表达】be used to doing sth。",
+    "tags": ["自我介绍", "常用"]
+  },
+  {
+    "id": "c193",
+    "english": "It is better to be safe than sorry.",
+    "chinese": "稳妥总比后悔好。",
+    "context": "【形式主语】It is adj to do...",
+    "tags": ["建议", "常用"]
+  },
+  {
+    "id": "c194",
+    "english": "I'm looking forward to our collaboration.",
+    "chinese": "我期待着我们的合作。",
+    "context": "【商务用语】look forward to + 名词。",
+    "tags": ["职场", "常用"]
+  },
+  {
+    "id": "c195",
+    "english": "You don't have to apologize.",
+    "chinese": "你没必要道歉。",
+    "context": "【情态动词】don't have to 没必要。",
+    "tags": ["社交", "常用"]
+  },
+  {
+    "id": "c196",
+    "english": "I will always be there for you.",
+    "chinese": "我会一直支持你的。",
+    "context": "【表达情感】be there for sb 在某人身边支持。",
+    "tags": ["支持", "常用"]
+  },
+  {
+    "id": "c197",
+    "english": "How do you feel about this proposal?",
+    "chinese": "你觉得这个提议怎么样？",
+    "context": "【询问意见】How do you feel about...？",
+    "tags": ["职场", "询问"]
+  },
+  {
+    "id": "c198",
+    "english": "I'm afraid I can't attend the meeting.",
+    "chinese": "恐怕我无法参加会议。",
+    "context": "【委婉拒绝】I'm afraid 用于引导不好的消息。",
+    "tags": ["职场", "礼貌"]
+  },
+  {
+    "id": "c199",
+    "english": "Everything will be fine.",
+    "chinese": "一切都会好起来的。",
+    "context": "【安慰用语】一般将来时。",
+    "tags": ["安慰", "常用"]
+  },
+  {
+    "id": "c200",
+    "english": "I'll let you know my decision tomorrow.",
+    "chinese": "我明天会把我的决定告诉你。",
+    "context": "【日常沟通】let sb know sth 告诉某人某事。",
+    "tags": ["常用", "日常"]
+  },
+  {
+    "id": "c001",
+    "english": "We would like a table for four, please.",
+    "chinese": "我们想要一张四个人的桌子。",
+    "context": "【礼貌请求】would like 比 want 更正式，常用于餐厅订座。",
+    "tags": ["餐厅", "礼貌"]
+  },
+  {
+    "id": "c002",
+    "english": "Could you tell us what the specials are today?",
+    "chinese": "能告诉我们今天的特色菜是什么吗？",
+    "context": "【宾语从句】注意陈述语序：what the specials are。",
+    "tags": ["餐厅", "询问"]
+  },
+  {
+    "id": "c003",
+    "english": "I am allergic to seafood. Does this dish contain any?",
+    "chinese": "我对海鲜过敏。这道菜里有吗？",
+    "context": "【生存表达】be allergic to 对...过敏。",
+    "tags": ["餐厅", "安全"]
+  },
+  {
+    "id": "c004",
+    "english": "We'll have the dressing on the side, please.",
+    "chinese": "请把酱料单独放在旁边。",
+    "context": "【介词短语】on the side 常用于要求调料不直接拌入菜中。",
+    "tags": ["餐厅", "地道"]
+  },
+  {
+    "id": "c005",
+    "english": "Is service included in the bill?",
+    "chinese": "账单里包含服务费吗？",
+    "context": "【被动语态】询问费用结构时的标准用语。",
+    "tags": ["餐厅", "购物"]
+  },
+  {
+    "id": "c006",
+    "english": "I'd like to check in for my flight to London.",
+    "chinese": "我想办理去伦敦航班的值机。",
+    "context": "【动词词组】check in for... 办理...的手续。",
+    "tags": ["旅行", "机场"]
+  },
+  {
+    "id": "c007",
+    "english": "Do you know which gate the plane departs from?",
+    "chinese": "你知道飞机在哪个登机口起飞吗？",
+    "context": "【宾语从句】从句结尾保留介词 from 是地道用法。",
+    "tags": ["旅行", "询问"]
+  },
+  {
+    "id": "c008",
+    "english": "My luggage hasn't arrived. Where can I file a claim?",
+    "chinese": "我的行李没到。我该去哪投诉/报失？",
+    "context": "【现在完成时】表示过去发生的动作对现在造成的影响。",
+    "tags": ["旅行", "求助"]
+  },
+  {
+    "id": "c009",
+    "english": "Is there a shuttle bus that goes to the city center?",
+    "chinese": "有去市中心的班车吗？",
+    "context": "【定语从句】that goes to... 引导从句修饰 bus。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "c010",
+    "english": "I'd like to change some money into local currency.",
+    "chinese": "我想换一些当地货币。",
+    "context": "【固定搭配】change A into B 将A换成B。",
+    "tags": ["旅行", "生活"]
+  },
+  {
+    "id": "c011",
+    "english": "Do you have this item in a smaller size?",
+    "chinese": "这件商品有更小一号的吗？",
+    "context": "【比较级】smaller 用于对比当前尺寸。",
+    "tags": ["购物", "常用"]
+  },
+  {
+    "id": "c012",
+    "english": "I'm just looking, but thank you anyway.",
+    "chinese": "我只是随便看看，但还是谢谢你。",
+    "context": "【拒绝推销】but... anyway 是一种礼貌的转折。",
+    "tags": ["购物", "礼貌"]
+  },
+  {
+    "id": "c013",
+    "english": "Can I try this on in the fitting room?",
+    "chinese": "我可以在试衣间试穿这件吗？",
+    "context": "【动词词组】try on 试穿。",
+    "tags": ["购物", "常用"]
+  },
+  {
+    "id": "c014",
+    "english": "Does this jacket come in any other colors?",
+    "chinese": "这件夹克还有别的颜色吗？",
+    "context": "【固定表达】come in + 颜色/尺寸 表示有某种规格。",
+    "tags": ["购物", "常用"]
+  },
+  {
+    "id": "c015",
+    "english": "This watch is much more expensive than I thought.",
+    "chinese": "这块表比我想象的要贵得多。",
+    "context": "【比较级修饰】much more... than... 的结构。",
+    "tags": ["购物", "感叹"]
+  },
+  {
+    "id": "c016",
+    "english": "I'd like to return this because it's defective.",
+    "chinese": "我想退掉这个，因为它有瑕疵。",
+    "context": "【原因状语从句】because 引导原因。",
+    "tags": ["购物", "维权"]
+  },
+  {
+    "id": "c017",
+    "english": "Could you wrap this up as a gift, please?",
+    "chinese": "能麻烦你把这个包装成礼物吗？",
+    "context": "【礼貌请求】wrap up 包装。",
+    "tags": ["购物", "常用"]
+  },
+  {
+    "id": "c018",
+    "english": "What time do you close on weekends?",
+    "chinese": "你们周末几点关门？",
+    "context": "【一般现在时】询问常规性的营业时间。",
+    "tags": ["询问信息", "常用"]
+  },
+  {
+    "id": "c019",
+    "english": "Is there a discount if I pay in cash?",
+    "chinese": "如果我付现金有折扣吗？",
+    "context": "【条件状语从句】if 引导的真实条件从句。",
+    "tags": ["购物", "省钱"]
+  },
+  {
+    "id": "c020",
+    "english": "I'll take it. Where is the cashier?",
+    "chinese": "我要了。收银台在哪？",
+    "context": "【未来时】表示瞬间做出的决定（I'll）。",
+    "tags": ["购物", "常用"]
+  },
+  {
+    "id": "c051",
+    "english": "Could you tell me more about your professional background?",
+    "chinese": "能请您多谈谈您的职业背景吗？",
+    "context": "【面试场景】用于引导对方深入介绍。",
+    "tags": ["职场", "面试"]
+  },
+  {
+    "id": "c052",
+    "english": "I have been working in this industry for over a decade.",
+    "chinese": "我已经在该行业工作超过十年了。",
+    "context": "【现在完成进行时】强调动作的持续性和经验的积累。",
+    "tags": ["面试", "自我介绍"]
+  },
+  {
+    "id": "c053",
+    "english": "My main responsibility is to coordinate between departments.",
+    "chinese": "我的主要职责是协调部门间的事务。",
+    "context": "【系表结构】to coordinate 是动词不定式作表语。",
+    "tags": ["面试", "职场"]
+  },
+  {
+    "id": "c054",
+    "english": "What are the biggest challenges you've faced so far?",
+    "chinese": "到目前为止你遇到的最大挑战是什么？",
+    "context": "【最高级+现在完成时】常考面试题。",
+    "tags": ["面试", "沟通"]
+  },
+  {
+    "id": "c055",
+    "english": "I am highly motivated and enjoy working in a team.",
+    "chinese": "我非常有积极性，并且享受团队协作。",
+    "context": "【副词修饰】highly 修饰形容词 motivated。",
+    "tags": ["面试", "自我评价"]
+  },
+  {
+    "id": "c056",
+    "english": "How do you handle high-pressure situations?",
+    "chinese": "你如何处理高压情况？",
+    "context": "【一般现在时】询问行为习惯。",
+    "tags": ["面试", "职场"]
+  },
+  {
+    "id": "c057",
+    "english": "I'm proficient in both written and spoken English.",
+    "chinese": "我精通英语口语和书面语。",
+    "context": "【形容词短语】be proficient in 在...方面熟练。",
+    "tags": ["面试", "自我介绍"]
+  },
+  {
+    "id": "c058",
+    "english": "Could you clarify what you mean by 'flexibility'?",
+    "chinese": "您能澄清一下您所说的“灵活性”是什么意思吗？",
+    "context": "【宾语从句】what you mean by... 引导的从句。",
+    "tags": ["正式沟通", "询问"]
+  },
+  {
+    "id": "c059",
+    "english": "I believe my skills are a perfect match for this role.",
+    "chinese": "我相信我的技能与这个职位完美匹配。",
+    "context": "【省略that的宾语从句】I believe (that)...。",
+    "tags": ["面试", "自信"]
+  },
+  {
+    "id": "c060",
+    "english": "What is the typical career path for this position?",
+    "chinese": "这个职位的典型晋升路径是怎样的？",
+    "context": "【正式询问】询问未来发展。",
+    "tags": ["面试", "职场"]
+  },
+  {
+    "id": "c061",
+    "english": "The research suggests that regular exercise improves memory.",
+    "chinese": "研究表明，规律运动能提高记忆力。",
+    "context": "【宾语从句】陈述客观事实或研究结论。",
+    "tags": ["学术", "探讨"]
+  },
+  {
+    "id": "c062",
+    "english": "Generally speaking, people tend to avoid risks.",
+    "chinese": "通常来说，人们倾向于规避风险。",
+    "context": "【插入语】Generally speaking 放在句首起转接作用。",
+    "tags": ["讨论", "观点"]
+  },
+  {
+    "id": "c063",
+    "english": "From my perspective, we should focus on quality.",
+    "chinese": "在我看来，我们应该关注质量。",
+    "context": "【表达观点】From my perspective 比 In my opinion 更正式。",
+    "tags": ["讨论", "职场"]
+  },
+  {
+    "id": "c064",
+    "english": "This theory is based on the assumption that resources are limited.",
+    "chinese": "该理论基于资源有限这一假设。",
+    "context": "【同位语从句】that... 解释 assumption 的内容。",
+    "tags": ["学术", "逻辑"]
+  },
+  {
+    "id": "c065",
+    "english": "Learning a new language requires patience and persistence.",
+    "chinese": "学习一门新语言需要耐心和坚持。",
+    "context": "【动名词作主语】Learning... 是整个句子的主语。",
+    "tags": ["教育", "语法重点"]
+  },
+  {
+    "id": "c066",
+    "english": "The data needs to be analyzed carefully before we conclude.",
+    "chinese": "在下结论之前，数据需要被仔细分析。",
+    "context": "【被动语态不定式】needs to be analyzed。",
+    "tags": ["逻辑", "职场"]
+  },
+  {
+    "id": "c067",
+    "english": "Despite the evidence, some people still disagree.",
+    "chinese": "尽管有证据，有些人仍然不同意。",
+    "context": "【让步短语】despite + 名词。",
+    "tags": ["逻辑", "辩论"]
+  },
+  {
+    "id": "c068",
+    "english": "It is widely accepted that the climate is changing.",
+    "chinese": "气候正在变化是广为接受的事实。",
+    "context": "【形式主语】It is widely accepted that... 的客观表述。",
+    "tags": ["学术", "通用"]
+  },
+  {
+    "id": "c069",
+    "english": "Consequently, we decided to postpone the launch.",
+    "chinese": "因此，我们决定推迟发布。",
+    "context": "【逻辑连接词】Consequently 引导结果，非常正式。",
+    "tags": ["正式沟通", "职场"]
+  },
+  {
+    "id": "c070",
+    "english": "The more information we have, the better decisions we can make.",
+    "chinese": "我们掌握的信息越多，能做出的决定就越好。",
+    "context": "【双重比较级】the + 比较级, the + 比较级。",
+    "tags": ["逻辑", "名言"]
+  },
+  {
+    "id": "c0021",
+    "english": "Is there a direct train to the airport, or do I need to transfer?",
+    "chinese": "有去机场的直达车吗，还是我需要换乘？",
+    "context": "【选择疑问句】使用 or 连接两个选择，transfer 表示换乘。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "c0022",
+    "english": "I'd like to book a room with an ocean view if possible.",
+    "chinese": "如果可能的话，我想预订一间海景房。",
+    "context": "【介词短语】with an ocean view 作定语修饰 room。",
+    "tags": ["住宿", "预订"]
+  },
+  {
+    "id": "c0023",
+    "english": "The hotel is located within walking distance of the station.",
+    "chinese": "酒店位于离车站步行可达的距离内。",
+    "context": "【固定表达】within walking distance 步行距离内。",
+    "tags": ["住宿", "地道"]
+  },
+  {
+    "id": "c0024",
+    "english": "Could you wake me up at 7 a.m. tomorrow morning?",
+    "chinese": "明天早上 7 点你能叫醒我吗？",
+    "context": "【动词短语】wake up 是及物动词短语，代词置于中间。",
+    "tags": ["服务", "住宿"]
+  },
+  {
+    "id": "c0025",
+    "english": "I'm looking for the items listed on this receipt.",
+    "chinese": "我正在找这张收据上列出的商品。",
+    "context": "【过去分词】listed on... 作后置定语修饰 items。",
+    "tags": ["购物", "语法重点"]
+  },
+  {
+    "id": "c0026",
+    "english": "The bus must be delayed due to the heavy traffic.",
+    "chinese": "公交车肯定是因为交通拥堵而延误了。",
+    "context": "【情态动词推测】must be 表示很有把握的肯定推测。",
+    "tags": ["交通", "语法重点"]
+  },
+  {
+    "id": "c0027",
+    "english": "While I was shopping, I ran into an old friend.",
+    "chinese": "当我在购物时，偶遇了一位老朋友。",
+    "context": "【时间状语从句】while 引导的从句通常使用进行时。",
+    "tags": ["日常", "社交"]
+  },
+  {
+    "id": "c0028",
+    "english": "This discount is only valid for a limited time.",
+    "chinese": "这个折扣仅在有限的时间内有效。",
+    "context": "【形容词搭配】be valid for 有效期为...。",
+    "tags": ["购物", "常用"]
+  },
+  {
+    "id": "c0029",
+    "english": "Could you tell me where the nearest pharmacy is?",
+    "chinese": "能告诉我最近的药店在哪吗？",
+    "context": "【间接疑问句】注意语序从 where is the... 变为 where the... is。",
+    "tags": ["生活", "询问"]
+  },
+  {
+    "id": "c0030",
+    "english": "I'd like to cancel my reservation, if that's okay.",
+    "chinese": "如果可以的话，我想取消我的预约。",
+    "context": "【礼貌表达】if that's okay 放在句尾增加委婉语气。",
+    "tags": ["日常", "维权"]
+  },
+  {
+    "id": "c0031",
+    "english": "I am not sure how much this will cost in total.",
+    "chinese": "我不确定这总共要花多少钱。",
+    "context": "【宾语从句】how much 引导的金额询问。",
+    "tags": ["生活", "购物"]
+  },
+  {
+    "id": "c0032",
+    "english": "Keep the receipt in case you want to exchange it.",
+    "chinese": "保留收据，以防你想调换。",
+    "context": "【状语从句】in case 引导目的/条件状语，意为“万一”。",
+    "tags": ["购物", "语法重点"]
+  },
+  {
+    "id": "c0033",
+    "english": "The service was much better than we had expected.",
+    "chinese": "服务比我们预期的要好得多。",
+    "context": "【过去完成时】had expected 发生在过去的服务评价之前。",
+    "tags": ["反馈", "常用"]
+  },
+  {
+    "id": "c0034",
+    "english": "Excuse me, I think you've given me the wrong change.",
+    "chinese": "不好意思，我觉得你找错零钱了。",
+    "context": "【现在完成时】表达过去已发生的动作带来的当前结果。",
+    "tags": ["购物", "纠错"]
+  },
+  {
+    "id": "c0035",
+    "english": "Do you accept credit cards or only cash?",
+    "chinese": "你们接受信用卡还是只收现金？",
+    "context": "【常用疑问句】询问支付方式。",
+    "tags": ["购物", "基础"]
+  },
+  {
+    "id": "c0036",
+    "english": "Is there any way to get a refund for this?",
+    "chinese": "这件东西有办法退款吗？",
+    "context": "【不定式】to get a refund 作定语修饰 way。",
+    "tags": ["购物", "维权"]
+  },
+  {
+    "id": "c0037",
+    "english": "I'm sorry, I'm not familiar with this area.",
+    "chinese": "抱歉，我对这一带不熟悉。",
+    "context": "【形容词搭配】be familiar with 对...熟悉。",
+    "tags": ["旅行", "社交"]
+  },
+  {
+    "id": "c0038",
+    "english": "Please let me know when the package arrives.",
+    "chinese": "包裹到的时候请通知我。",
+    "context": "【状语从句】时间状语从句中使用一般现在时表将来。",
+    "tags": ["生活", "语法重点"]
+  },
+  {
+    "id": "c0039",
+    "english": "The flight was canceled due to bad weather conditions.",
+    "chinese": "由于天气状况恶劣，航班被取消了。",
+    "context": "【被动语态】was canceled 强调结果而非执行者。",
+    "tags": ["旅行", "正式"]
+  },
+  {
+    "id": "c0040",
+    "english": "I'm here on a business trip, not for pleasure.",
+    "chinese": "我是来出差的，不是来玩的。",
+    "context": "【介词短语】on a business trip 在出差中。",
+    "tags": ["自我介绍", "旅行"]
+  },
+  {
+    "id": "c0041",
+    "english": "Does the room come with a complimentary breakfast?",
+    "chinese": "这间房附送免费早餐吗？",
+    "context": "【高级词汇】complimentary 意为“赠送的、免费的”。",
+    "tags": ["住宿", "地道"]
+  },
+  {
+    "id": "c0042",
+    "english": "I'll be staying here for another two nights.",
+    "chinese": "我还会在这里再住两晚。",
+    "context": "【将来进行时】表示将来某个时间正在持续的状态。",
+    "tags": ["住宿", "语法重点"]
+  },
+  {
+    "id": "c0043",
+    "english": "Which platform does the train to Paris leave from?",
+    "chinese": "去巴黎的火车在哪个站台出发？",
+    "context": "【特殊疑问句】Which 引导的站台询问。",
+    "tags": ["旅行", "交通"]
+  },
+  {
+    "id": "c0044",
+    "english": "I'd like to make a long-distance call.",
+    "chinese": "我想打个长途电话。",
+    "context": "【固定搭配】make a long-distance call。",
+    "tags": ["生活", "常用"]
+  },
+  {
+    "id": "c0045",
+    "english": "Can I have a copy of the menu, please?",
+    "chinese": "可以给我一份菜单吗？",
+    "context": "【礼貌请求】copy 这里指“一份”资料或菜单。",
+    "tags": ["餐厅", "基础"]
+  },
+  {
+    "id": "c0046",
+    "english": "Is there anything you would recommend in particular?",
+    "chinese": "你有什么特别推荐的吗？",
+    "context": "【定语从句】(that) you would recommend 修饰 anything。",
+    "tags": ["餐厅", "询问"]
+  },
+  {
+    "id": "c0047",
+    "english": "I'll have my steak medium-well, please.",
+    "chinese": "我的牛排要七分熟。",
+    "context": "【宾语补足语】medium-well 作 steak 的补足语说明状态。",
+    "tags": ["餐厅", "地道"]
+  },
+  {
+    "id": "c0048",
+    "english": "Could we have the check, please?",
+    "chinese": "麻烦结账。",
+    "context": "【地道称呼】美国用 check，英国常用 bill。",
+    "tags": ["餐厅", "常用"]
+  },
+  {
+    "id": "c0049",
+    "english": "I need a place where I can access the Internet.",
+    "chinese": "我需要一个可以上网的地方。",
+    "context": "【定语从句】where 引导关系副词修饰 place。",
+    "tags": ["生活", "旅行"]
+  },
+  {
+    "id": "c0050",
+    "english": "Wait here until I come back with the tickets.",
+    "chinese": "在这儿等我买票回来。",
+    "context": "【祈使句】用于指示或建议。",
+    "tags": ["日常", "基础"]
+  },
+  {
+    "id": "c071",
+    "english": "Furthermore, we must consider the long-term impact.",
+    "chinese": "此外，我们必须考虑长期影响。",
+    "context": "【逻辑连接词】Furthermore 用于递进，非常正式。",
+    "tags": ["正式沟通", "职场"]
+  },
+  {
+    "id": "c072",
+    "english": "If the results had been different, we would have changed our strategy.",
+    "chinese": "如果结果（当时）不同，我们早就改变策略了。",
+    "context": "【虚拟语气】对过去的虚拟：If + had done, would have done。",
+    "tags": ["语法重点", "逻辑"]
+  },
+  {
+    "id": "c073",
+    "english": "One of the most significant factors is the lack of funding.",
+    "chinese": "最重要的因素之一是缺乏资金。",
+    "context": "【主谓一致】主语是 One，谓语动词用单数 is。",
+    "tags": ["学术", "职场"]
+  },
+  {
+    "id": "c074",
+    "english": "What I am trying to say is that we need more time.",
+    "chinese": "我想说的是，我们需要更多时间。",
+    "context": "【主语从句】What I am trying to say 是整个句子的主语。",
+    "tags": ["沟通", "语法重点"]
+  },
+  {
+    "id": "c075",
+    "english": "The solution, however, remains controversial.",
+    "chinese": "然而，该解决方案仍然存在争议。",
+    "context": "【插入语】however 放在句中作为转折，语气平缓且正式。",
+    "tags": ["讨论", "观点"]
+  },
+  {
+    "id": "c076",
+    "english": "In conclusion, the project was a success despite the difficulties.",
+    "chinese": "总之，尽管存在困难，该项目还是取得了成功。",
+    "context": "【总结表达】In conclusion 常用于正式演讲或报告结尾。",
+    "tags": ["报告", "总结"]
+  },
+  {
+    "id": "c077",
+    "english": "Seldom have I seen such a brilliant performance.",
+    "chinese": "我很少见到如此精彩的表演。",
+    "context": "【部分倒装】否定副词 Seldom 置于句首，助动词提前。",
+    "tags": ["语法重点", "正式"]
+  },
+  {
+    "id": "c078",
+    "english": "The meeting was canceled because the manager was ill.",
+    "chinese": "会议被取消了，因为经理病了。",
+    "context": "【被动语态+原因从句】标准的职场陈述句。",
+    "tags": ["职场", "基础"]
+  },
+  {
+    "id": "c079",
+    "english": "I'm writing to inform you that your application has been accepted.",
+    "chinese": "我写信是想告知您，您的申请已被接受。",
+    "context": "【正式函电】inform sb that... 通知某人某事。",
+    "tags": ["商务", "正式"]
+  },
+  {
+    "id": "c080",
+    "english": "It is essential that everyone follows the safety guidelines.",
+    "chinese": "每个人都遵守安全准则至关重要。",
+    "context": "【虚拟语气】essential 后的 that 从句动词用原形（应有should）。",
+    "tags": ["正式", "语法重点"]
+  },
+  {
+    "id": "c081",
+    "english": "On behalf of the company, I would like to thank you for your support.",
+    "chinese": "我代表公司，对您的支持表示感谢。",
+    "context": "【正式表达】On behalf of 代表...。",
+    "tags": ["商务", "礼貌"]
+  },
+  {
+    "id": "c082",
+    "english": "To sum up, we need to balance the budget immediately.",
+    "chinese": "概括来说，我们需要立即平衡预算。",
+    "context": "【总结表达】To sum up 意为“总而言之”。",
+    "tags": ["职场", "总结"]
+  },
+  {
+    "id": "c083",
+    "english": "I'll be available for an interview at your convenience.",
+    "chinese": "在您方便的时候，我可以参加面试。",
+    "context": "【面试用语】at your convenience 在您方便的时候。",
+    "tags": ["面试", "地道"]
+  },
+  {
+    "id": "c084",
+    "english": "There is no doubt that the economy is recovering.",
+    "chinese": "毫无疑问，经济正在复苏。",
+    "context": "【同位语从句】that 引导从句解释 doubt 的内容。",
+    "tags": ["讨论", "观点"]
+  },
+  {
+    "id": "c085",
+    "english": "The company has decided to expand its operations overseas.",
+    "chinese": "公司已决定将其业务扩展到海外。",
+    "context": "【现在完成时】表达最近做出的决定。",
+    "tags": ["商务", "职场"]
+  },
+  {
+    "id": "c086",
+    "english": "Providing excellent customer service is our top priority.",
+    "chinese": "提供优质的客户服务是我们的首要任务。",
+    "context": "【动名词作主语】Providing... 引导主语短语。",
+    "tags": ["商务", "职场"]
+  },
+  {
+    "id": "c087",
+    "english": "So far, we haven't received any complaints.",
+    "chinese": "到目前为止，我们还没有收到任何投诉。",
+    "context": "【现在完成时】So far 是完成时的标志性状语。",
+    "tags": ["反馈", "职场"]
+  },
+  {
+    "id": "c088",
+    "english": "I am writing in response to your advertisement in the newspaper.",
+    "chinese": "我写信是为应聘您在报纸上刊登的广告。",
+    "context": "【求职信件】in response to 作为对...的回应。",
+    "tags": ["面试", "正式"]
+  },
+  {
+    "id": "c089",
+    "english": "The project must be completed by the end of the month.",
+    "chinese": "该项目必须在月底前完成。",
+    "context": "【情态动词被动语态】must be completed。",
+    "tags": ["职场", "语法重点"]
+  },
+  {
+    "id": "c090",
+    "english": "It is worth considering other alternatives before deciding.",
+    "chinese": "在决定之前，值得考虑其他替代方案。",
+    "context": "【固定搭配】be worth doing 值得做某事。",
+    "tags": ["建议", "逻辑"]
+  },
+  {
+    "id": "c091",
+    "english": "The research focuses on the relationship between diet and health.",
+    "chinese": "这项研究侧重于饮食与健康之间的关系。",
+    "context": "【学术表述】focus on 侧重/聚焦于。",
+    "tags": ["学术", "描述"]
+  },
+  {
+    "id": "c092",
+    "english": "This software allows users to customize their interface.",
+    "chinese": "这款软件允许用户自定义界面。",
+    "context": "【固定用法】allow sb to do sth。",
+    "tags": ["技术", "描述"]
+  },
+  {
+    "id": "c093",
+    "english": "I was impressed by the way you handled the situation.",
+    "chinese": "我对你处理这种情况的方式印象深刻。",
+    "context": "【被动语态】be impressed by 对...印象深刻。",
+    "tags": ["赞美", "职场"]
+  },
+  {
+    "id": "c094",
+    "english": "The goal is to increase efficiency while reducing costs.",
+    "chinese": "目标是在降低成本的同时提高效率。",
+    "context": "【并列结构】increase... while reducing... 逻辑清晰。",
+    "tags": ["职场", "目标"]
+  },
+  {
+    "id": "c095",
+    "english": "You should take into account the potential risks.",
+    "chinese": "你应该考虑到潜在的风险。",
+    "context": "【固定搭配】take into account 考虑到/顾及。",
+    "tags": ["建议", "职场"]
+  },
+  {
+    "id": "c096",
+    "english": "In spite of the rain, the event was very well-attended.",
+    "chinese": "尽管下雨，参加活动的人还是很多。",
+    "context": "【让步短语】In spite of 相当于 Despite。",
+    "tags": ["描述", "语法重点"]
+  },
+  {
+    "id": "c097",
+    "english": "Could you please confirm receipt of this email?",
+    "chinese": "请确认收到这封邮件好吗？",
+    "context": "【商务礼貌】confirm receipt of 确认收到。",
+    "tags": ["商务", "正式"]
+  },
+  {
+    "id": "c098",
+    "english": "It is my understanding that the meeting has been postponed.",
+    "chinese": "据我了解，会议已经推迟了。",
+    "context": "【委婉表述】It is my understanding that... 我的理解是...。",
+    "tags": ["职场", "委婉"]
+  },
+  {
+    "id": "c099",
+    "english": "We appreciate your patience during this transition.",
+    "chinese": "感谢您在此过渡期间的耐心。",
+    "context": "【正式感谢】appreciate sth 感谢某事。",
+    "tags": ["商务", "礼貌"]
+  },
+  {
+    "id": "c100",
+    "english": "I look forward to hearing from you at your earliest convenience.",
+    "chinese": "期待尽早收到您的回复。",
+    "context": "【正式结尾】商务信函的标准结束语。",
+    "tags": ["商务", "常用"]
+  },
+  {
+    "id": "d001",
+    "english": "Believe you can and you're halfway there.",
+    "chinese": "相信你能行，你就已经成功了一半。",
+    "context": "【祈使句+陈述句】经典励志语，强调自信的力量。",
+    "tags": ["励志", "自信"]
+  },
+  {
+    "id": "d002",
+    "english": "The only way to do great work is to love what you do.",
+    "chinese": "成就伟大事业的唯一途径是热爱你的工作。",
+    "context": "【主从复合句】what 引导宾语从句，to do 是不定式作定语。",
+    "tags": ["事业", "乔布斯"]
+  },
+  {
+    "id": "d003",
+    "english": "Don't wait for opportunity. Create it.",
+    "chinese": "不要等待机会，要创造机会。",
+    "context": "【祈使句】强调主动性，而非被动等待。",
+    "tags": ["行动", "职场"]
+  },
+  {
+    "id": "d004",
+    "english": "Everything you've ever wanted is on the other side of fear.",
+    "chinese": "你想要的一切都在恐惧的另一头。",
+    "context": "【定语从句】省略了关系词 that 的定语从句。",
+    "tags": ["勇气", "人生感悟"]
+  },
+  {
+    "id": "d005",
+    "english": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "chinese": "成功不是终点，失败也非致命：最重要的是继续前进的勇气。",
+    "context": "【强调句型】It is... that... 强调主语 courage。",
+    "tags": ["成功", "丘吉尔"]
+  },
+  {
+    "id": "d006",
+    "english": "It does not matter how slowly you go as long as you do not stop.",
+    "chinese": "走得多慢都不重要，只要你不停止脚步。",
+    "context": "【条件状语从句】as long as 引导条件从句。",
+    "tags": ["坚持", "孔子"]
+  },
+  {
+    "id": "d007",
+    "english": "Your time is limited, so don't waste it living someone else's life.",
+    "chinese": "你的时间有限，所以不要为别人而活。",
+    "context": "【现在分词】living... 作伴随状语，表示浪费时间的方式。",
+    "tags": ["自我", "人生感悟"]
+  },
+  {
+    "id": "d008",
+    "english": "Hardships often prepare ordinary people for an extraordinary destiny.",
+    "chinese": "苦难往往是在为普通人造就非凡的命运。",
+    "context": "【词汇对比】ordinary（普通）与 extraordinary（非凡）的对比。",
+    "tags": ["逆境", "激励"]
+  },
+  {
+    "id": "d009",
+    "english": "Dream big and dare to fail.",
+    "chinese": "怀抱梦想，敢于失败。",
+    "context": "【经典短句】常用作演讲的结束语或座右铭。",
+    "tags": ["勇气", "梦想"]
+  },
+  {
+    "id": "d010",
+    "english": "What defines us is how well we rise after falling.",
+    "chinese": "定义我们的，是我们在跌倒后如何优雅地站起来。",
+    "context": "【主语从句+宾语从句】两个从句嵌套，结构工整。",
+    "tags": ["坚韧", "感悟"]
+  },
+  {
+    "id": "d011",
+    "english": "The future belongs to those who believe in the beauty of their dreams.",
+    "chinese": "未来属于那些相信梦想之美的人。",
+    "context": "【定语从句】who 引导从句修饰 those。",
+    "tags": ["梦想", "经典"]
+  },
+  {
+    "id": "d012",
+    "english": "Action is the foundational key to all success.",
+    "chinese": "行动是通往所有成功的基石。",
+    "context": "【基础结构】key to sth 这里的 to 是介词。",
+    "tags": ["行动", "励志"]
+  },
+  {
+    "id": "d013",
+    "english": "Don't let yesterday take up too much of today.",
+    "chinese": "别让昨天占据太多今天的篇幅。",
+    "context": "【使役动词】let sb do sth，寓意活在当下。",
+    "tags": ["时间", "感悟"]
+  },
+  {
+    "id": "d014",
+    "english": "Consistency is what transforms average into excellence.",
+    "chinese": "持之以恒是化平庸为卓越的关键。",
+    "context": "【表语从句】what 引导从句，强调过程的重要性。",
+    "tags": ["坚持", "卓越"]
+  },
+  {
+    "id": "d015",
+    "english": "The best way to predict the future is to create it.",
+    "chinese": "预测未来的最好方法就是去创造它。",
+    "context": "【不定式】to predict 和 to create 两个不定式的应用。",
+    "tags": ["主动", "名言"]
+  },
+  {
+    "id": "d016",
+    "english": "If you want to live a happy life, tie it to a goal, not to people or things.",
+    "chinese": "如果你想过快乐的生活，请将其寄托在目标上，而非人或物。",
+    "context": "【条件状语从句】经典的爱因斯坦名言。",
+    "tags": ["幸福", "目标"]
+  },
+  {
+    "id": "d017",
+    "english": "Stay hungry. Stay foolish.",
+    "chinese": "求知若渴，虚心若愚。",
+    "context": "【祈使句】乔布斯在斯坦福演讲中最著名的一句。",
+    "tags": ["求知", "演讲"]
+  },
+  {
+    "id": "d018",
+    "english": "Opportunities don't happen. You create them.",
+    "chinese": "机会不会自动发生，是你创造了它们。",
+    "context": "【简单句对照】强调个人主观能动性。",
+    "tags": ["机会", "行动"]
+  },
+  {
+    "id": "d019",
+    "english": "It's not whether you get knocked down, it's whether you get up.",
+    "chinese": "重要的不是你是否被击倒，而是你是否能站起来。",
+    "context": "【并列宾语从句】whether... or not 的变体应用。",
+    "tags": ["坚韧", "体育精神"]
+  },
+  {
+    "id": "d020",
+    "english": "You miss 100% of the shots you don't take.",
+    "chinese": "如果你不去尝试，你就失去了100%的机会。",
+    "context": "【定语从句】shots (that) you don't take，寓意敢于尝试。",
+    "tags": ["尝试", "名言"]
+  },
+  {
+    "id": "d021",
+    "english": "Difficult roads often lead to beautiful destinations.",
+    "chinese": "艰难的道路往往通向美丽的终点。",
+    "context": "【比喻句】用 road 和 destination 隐喻人生旅程。",
+    "tags": ["逆境", "希望"]
+  },
+  {
+    "id": "d022",
+    "english": "The expert in anything was once a beginner.",
+    "chinese": "任何领域的专家都曾是初学者。",
+    "context": "【励志】鼓励人们不要害怕作为新手开始。",
+    "tags": ["学习", "成长"]
+  },
+  {
+    "id": "d023",
+    "english": "Small progress is still progress.",
+    "chinese": "微小的进步也是进步。",
+    "context": "【简洁句】用于在遇到瓶颈时自我宽慰。",
+    "tags": ["心态", "鼓励"]
+  },
+  {
+    "id": "d024",
+    "english": "Your only limit is your mind.",
+    "chinese": "你唯一的限制就是你的思想。",
+    "context": "【哲学感悟】强调心智模式的重要性。",
+    "tags": ["自我突破", "思维"]
+  },
+  {
+    "id": "d025",
+    "english": "Do something today that your future self will thank you for.",
+    "chinese": "今天做一件让未来的你会感谢自己的事。",
+    "context": "【定语从句】that 引导从句修饰 something。",
+    "tags": ["行动", "未来"]
+  },
+  {
+    "id": "d026",
+    "english": "Don't stop when you're tired. Stop when you're done.",
+    "chinese": "累了不要停下，完成了再停下。",
+    "context": "【时间状语从句】对比 when 引导的两个阶段。",
+    "tags": ["坚持", "自律"]
+  },
+  {
+    "id": "d027",
+    "english": "Courage is being scared to death, but saddling up anyway.",
+    "chinese": "勇气就是即便怕得要死，依然跨上马背出发。",
+    "context": "【动名词作表语】being... and saddling...。",
+    "tags": ["勇气", "地道"]
+  },
+  {
+    "id": "d028",
+    "english": "The secret of getting ahead is getting started.",
+    "chinese": "领先的秘诀就是开始行动。",
+    "context": "【动名词短语】getting ahead 和 getting started。",
+    "tags": ["行动", "职场"]
+  },
+  {
+    "id": "d029",
+    "english": "Mistakes are proof that you are trying.",
+    "chinese": "错误是你正在努力的证明。",
+    "context": "【同位语从句】that 解释说明 proof 的具体内容。",
+    "tags": ["心态", "成长"]
+  },
+  {
+    "id": "d030",
+    "english": "Fall seven times, stand up eight.",
+    "chinese": "跌倒七次，第八次站起来。",
+    "context": "【修辞】源自日文谚语，强调百折不挠。",
+    "tags": ["坚韧", "精神"]
+  },
+  {
+    "id": "d031",
+    "english": "Every strike brings me closer to the next home run.",
+    "chinese": "每一次击球失误都让我离下一次全垒打更近。",
+    "context": "【积极思维】贝比·鲁斯的棒球哲学。",
+    "tags": ["心态", "名言"]
+  },
+  {
+    "id": "d032",
+    "english": "Don't wish it were easier; wish you were better.",
+    "chinese": "不要希望事情变简单，要希望自己变得更强。",
+    "context": "【虚拟语气】wish 后面用过去时表示愿望。",
+    "tags": ["成长", "自我提升"]
+  },
+  {
+    "id": "d033",
+    "english": "You don't have to be great to start, but you have to start to be great.",
+    "chinese": "你不必因为伟大才开始，但你必须开始才能变得伟大。",
+    "context": "【回文排比】巧妙的逻辑对仗。",
+    "tags": ["起步", "演讲"]
+  },
+  {
+    "id": "d034",
+    "english": "Focus on the goal, not the obstacles.",
+    "chinese": "聚焦目标，而非障碍。",
+    "context": "【祈使句】引导注意力的转向。",
+    "tags": ["专注", "成功"]
+  },
+  {
+    "id": "d035",
+    "english": "The harder you work, the luckier you get.",
+    "chinese": "你越努力，就越幸运。",
+    "context": "【比较级排比】the harder... the luckier...。",
+    "tags": ["努力", "运气"]
+  },
+  {
+    "id": "d036",
+    "english": "Limits exist only in the mind.",
+    "chinese": "极限只存在于脑海中。",
+    "context": "【简洁有力】常用于运动或挑战前的动员。",
+    "tags": ["自我突破", "激励"]
+  },
+  {
+    "id": "d037",
+    "english": "A journey of a thousand miles begins with a single step.",
+    "chinese": "千里之行，始于足下。",
+    "context": "【翻译经典】老子名言的经典英译。",
+    "tags": ["积累", "中国智慧"]
+  },
+  {
+    "id": "d038",
+    "english": "What you do today can improve all your tomorrows.",
+    "chinese": "你今天所做的，能改善你所有的明天。",
+    "context": "【主语从句】What you do today 作主语。",
+    "tags": ["行动", "感悟"]
+  },
+  {
+    "id": "d039",
+    "english": "Life is 10% what happens to us and 90% how we react to it.",
+    "chinese": "生活10%取决于发生了什么，90%取决于你如何应对。",
+    "context": "【人生哲学】强调心态掌控权。",
+    "tags": ["态度", "感悟"]
+  },
+  {
+    "id": "d040",
+    "english": "Energy and persistence conquer all things.",
+    "chinese": "精力与毅力能征服万物。",
+    "context": "【并列主语】本杰明·富兰克林的名言。",
+    "tags": ["坚持", "意志"]
+  },
+  {
+    "id": "d041",
+    "english": "Discipline is choosing between what you want now and what you want most.",
+    "chinese": "自律是在“现在想要的”和“最想要的”之间做出选择。",
+    "context": "【动名词作表语】强调长远目标的价值。",
+    "tags": ["自律", "成功"]
+  },
+  {
+    "id": "d042",
+    "english": "Start where you are. Use what you have. Do what you can.",
+    "chinese": "就地开始，利用所有，尽力而为。",
+    "context": "【排比祈使句】Arthur Ashe 极其务实的励志名言。",
+    "tags": ["务实", "演讲"]
+  },
+  {
+    "id": "d043",
+    "english": "Great things never come from comfort zones.",
+    "chinese": "伟大的事物从不来自舒适区。",
+    "context": "【流行语】comfort zone（舒适区）是职场高频词。",
+    "tags": ["突破", "职场"]
+  },
+  {
+    "id": "d044",
+    "english": "If you are going through hell, keep going.",
+    "chinese": "如果你正身处地狱，请继续前行。",
+    "context": "【条件状语从句】丘吉尔在至暗时刻的鼓舞。",
+    "tags": ["逆境", "勇气"]
+  },
+  {
+    "id": "d045",
+    "english": "Kindness is a language which the deaf can hear and the blind can see.",
+    "chinese": "善良是一种聋子能听见，瞎子能看见的语言。",
+    "context": "【定语从句】which 引导从句修饰 language。",
+    "tags": ["善良", "感悟"]
+  },
+  {
+    "id": "d046",
+    "english": "Everything has beauty, but not everyone sees it.",
+    "chinese": "万物皆有其美，但并非人人都能看到。",
+    "context": "【部分否定】not everyone 表示“并非所有人”。",
+    "tags": ["审美", "感悟"]
+  },
+  {
+    "id": "d047",
+    "english": "It's not the years in your life that count. It's the life in your years.",
+    "chinese": "重要的不是你活了多少年，而是你那些年里活得怎样。",
+    "context": "【强调句型】It is... that... 强调核心价值。",
+    "tags": ["生命", "林肯"]
+  },
+  {
+    "id": "d048",
+    "english": "Success consists of going from failure to failure without loss of enthusiasm.",
+    "chinese": "成功就是从一个失败走向另一个失败，却始终不减热情。",
+    "context": "【固定短语】consist of（由...组成），enthusiasm（热情）。",
+    "tags": ["成功", "心态"]
+  },
+  {
+    "id": "d049",
+    "english": "The only person you should try to be better than is the person you were yesterday.",
+    "chinese": "你唯一应该试着去超越的人，是昨天的自己。",
+    "context": "【比较级+定语从句】经典的自我成长逻辑。",
+    "tags": ["自我超越", "感悟"]
+  },
+  {
+    "id": "d050",
+    "english": "Change the way you look at things and the things you look at change.",
+    "chinese": "改变你看待事物的方式，你看到的事物也会随之改变。",
+    "context": "【祈使句+陈述句】著名的量力哲学感悟。",
+    "tags": ["思维", "感悟"]
+  },
+  {
+    "id": "d051",
+    "english": "I have a dream that one day this nation will rise up.",
+    "chinese": "我有一个梦想，那就是有一天这个国家会站起来。",
+    "context": "【同位语从句】马丁·路德·金最著名的演讲词。",
+    "tags": ["梦想", "演讲"]
+  },
+  {
+    "id": "d052",
+    "english": "Ask not what your country can do for you; ask what you can do for your country.",
+    "chinese": "不要问你的国家能为你做什么，而要问你能为你的国家做什么。",
+    "context": "【倒装排比】肯尼迪就职演说，结构极具冲击力。",
+    "tags": ["奉献", "演讲"]
+  },
+  {
+    "id": "d053",
+    "english": "The only thing we have to fear is fear itself.",
+    "chinese": "我们唯一需要恐惧的，就是恐惧本身。",
+    "context": "【定语从句】罗斯福在经济大萧条时期的名言。",
+    "tags": ["勇气", "演讲"]
+  },
+  {
+    "id": "d054",
+    "english": "Government of the people, by the people, for the people.",
+    "chinese": "民有、民治、民享的政府。",
+    "context": "【介词短语排比】林肯《葛底斯堡演说》最核心的三个短语。",
+    "tags": ["民主", "演讲"]
+  },
+  {
+    "id": "d055",
+    "english": "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+    "chinese": "无论去哪都传播爱。不要让任何人在离开你时没变得更快乐。",
+    "context": "【状语从句+双重否定】特蕾莎修女的格言。",
+    "tags": ["仁爱", "感悟"]
+  },
+  {
+    "id": "d056",
+    "english": "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+    "chinese": "最终，我们记住的不是敌人的谩骂，而是朋友的沉默。",
+    "context": "【对比结构】not... but... 的深刻运用。",
+    "tags": ["人性", "感悟"]
+  },
+  {
+    "id": "d057",
+    "english": "Education is the most powerful weapon which you can use to change the world.",
+    "chinese": "教育是你可以用来改变世界的最强大的武器。",
+    "context": "【定语从句】曼德拉关于教育的名言。",
+    "tags": ["教育", "力量"]
+  },
+  {
+    "id": "d058",
+    "english": "Success is stumbling from failure to failure with no loss of enthusiasm.",
+    "chinese": "成功是在一次次失败中跌撞前行，却依然热情不减。",
+    "context": "【形象化动词】stumbling（踉跄、跌撞）非常有画面感。",
+    "tags": ["坚持", "成功"]
+  },
+  {
+    "id": "d059",
+    "english": "Keep your eyes on the stars, and your feet on the ground.",
+    "chinese": "仰望星空，脚踏实地。",
+    "context": "【经典对照】西奥多·罗斯福名言。",
+    "tags": ["务实", "理想"]
+  },
+  {
+    "id": "d060",
+    "english": "You must be the change you wish to see in the world.",
+    "chinese": "你必须成为你希望在世界上看到的那个改变。",
+    "context": "【定语从句】甘地关于个人责任的名言。",
+    "tags": ["改变", "责任"]
+  },
+  {
+    "id": "d061",
+    "english": "Darkness cannot drive out darkness; only light can do that.",
+    "chinese": "黑暗无法驱散黑暗，只有光可以。",
+    "context": "【隐喻】常用于倡导和平与爱的演讲。",
+    "tags": ["爱", "正能量"]
+  },
+  {
+    "id": "d062",
+    "english": "Life is either a daring adventure or nothing at all.",
+    "chinese": "生活要么是一场大胆的冒险，要么什么都不是。",
+    "context": "【并列结构】either... or...。",
+    "tags": ["冒险", "生命"]
+  },
+  {
+    "id": "d063",
+    "english": "The weak can never forgive. Forgiveness is the attribute of the strong.",
+    "chinese": "弱者永远无法学会宽恕。宽恕是强者的特质。",
+    "context": "【对比】attribute（特质、属性）。",
+    "tags": ["宽恕", "强大"]
+  },
+  {
+    "id": "d064",
+    "english": "An unexamined life is not worth living.",
+    "chinese": "混混噩噩的生活不值得过。",
+    "context": "【过去分词+固定搭配】unexamined（未经审视的），worth living（值得过）。",
+    "tags": ["哲学", "苏格拉底"]
+  },
+  {
+    "id": "d065",
+    "english": "Wisdom begins in wonder.",
+    "chinese": "智慧始于好奇。",
+    "context": "【简洁句】wonder 同时有“惊奇”和“思考”的意思。",
+    "tags": ["智慧", "求知"]
+  },
+  {
+    "id": "d066",
+    "english": "Happiness depends upon ourselves.",
+    "chinese": "幸福取决于我们自己。",
+    "context": "【动词搭配】depend upon（取决于）。",
+    "tags": ["幸福", "感悟"]
+  },
+  {
+    "id": "d067",
+    "english": "Quality is not an act, it is a habit.",
+    "chinese": "优秀不是一种行为，而是一种习惯。",
+    "context": "【对比】亚里士多德的名言，强调长期积累。",
+    "tags": ["卓越", "习惯"]
+  },
+  {
+    "id": "d068",
+    "english": "To handle yourself, use your head; to handle others, use your heart.",
+    "chinese": "管理自己要用脑，与人相处要用心。",
+    "context": "【平行结构】用 head 和 heart 做鲜明对比。",
+    "tags": ["情商", "处世"]
+  },
+  {
+    "id": "d069",
+    "english": "He who has a why to live can bear almost any how.",
+    "chinese": "一个人若知道自己为何而活，就能忍受任何一种生活。",
+    "context": "【主从复合句】尼采的经典存在主义哲学。",
+    "tags": ["意义", "意志"]
+  },
+  {
+    "id": "d070",
+    "english": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+    "chinese": "我们的身后事和眼前事，相比于我们的内心世界，都微不足道。",
+    "context": "【比较结构】强调内在力量的宏大。",
+    "tags": ["内在", "爱默生"]
+  },
+  {
+    "id": "d071",
+    "english": "The journey is the reward.",
+    "chinese": "旅程本身就是回报。",
+    "context": "【感悟】强调过程重于结果。",
+    "tags": ["过程", "感悟"]
+  },
+  {
+    "id": "d072",
+    "english": "Simplicity is the ultimate sophistication.",
+    "chinese": "极简是最高级的复杂。",
+    "context": "【艺术/生活感悟】达芬奇的名言。",
+    "tags": ["极简", "智慧"]
+  },
+  {
+    "id": "d073",
+    "english": "Turn your wounds into wisdom.",
+    "chinese": "将你的伤痕化作智慧。",
+    "context": "【固定搭配】turn A into B。",
+    "tags": ["成长", "苦难"]
+  },
+  {
+    "id": "d074",
+    "english": "You only live once, but if you do it right, once is enough.",
+    "chinese": "你只能活一次，但如果活得精彩，一次也足够了。",
+    "context": "【条件状语从句】著名的 YOLO（You Only Live Once）来源。",
+    "tags": ["生命", "精彩"]
+  },
+  {
+    "id": "d075",
+    "english": "Peace begins with a smile.",
+    "chinese": "和平从微笑开始。",
+    "context": "【简洁句】强调微小行动的力量。",
+    "tags": ["和平", "友善"]
+  },
+  {
+    "id": "d076",
+    "english": "Change is the only constant.",
+    "chinese": "改变是唯一的永恒。",
+    "context": "【哲学】意指万物皆变。",
+    "tags": ["变化", "智慧"]
+  },
+  {
+    "id": "d077",
+    "english": "Yesterday is history, tomorrow is a mystery, today is a gift.",
+    "chinese": "昨天已成历史，明天充满未知，而今天是一份礼物。",
+    "context": "【三位一体排比】常用于电影和演讲。",
+    "tags": ["当下", "感悟"]
+  },
+  {
+    "id": "d078",
+    "english": "The purpose of our lives is to be happy.",
+    "chinese": "我们生活的目的就是为了获得幸福。",
+    "context": "【不定式作表语】直白深刻的人生观。",
+    "tags": ["目的", "幸福"]
+  },
+  {
+    "id": "d079",
+    "english": "Do not let the noise of others' opinions drown out your own inner voice.",
+    "chinese": "不要让别人的议论声淹没你内心的声音。",
+    "context": "【使役动词】drown out（淹没、压过）。",
+    "tags": ["自我", "乔布斯"]
+  },
+  {
+    "id": "d080",
+    "english": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    "chinese": "生命最大的荣光不在于从不跌倒，而在于每次跌倒后都能站起来。",
+    "context": "【动名词+对比】曼德拉最著名的格言之一。",
+    "tags": ["坚韧", "荣光"]
+  },
+  {
+    "id": "d081",
+    "english": "If you want to go fast, go alone. If you want to go far, go together.",
+    "chinese": "如果你想走得快，就独自前行；如果你想走得远，就结伴而行。",
+    "context": "【条件状语从句】非洲谚语，常用于团队建设。",
+    "tags": ["团队", "智慧"]
+  },
+  {
+    "id": "d082",
+    "english": "Success is walking from failure to failure with no loss of enthusiasm.",
+    "chinese": "成功就是从失败走到失败，而热情不减。",
+    "context": "【核心搭配】no loss of（没有失去）。",
+    "tags": ["成功", "坚持"]
+  },
+  {
+    "id": "d083",
+    "english": "Imagination is more important than knowledge.",
+    "chinese": "想象力比知识更重要。",
+    "context": "【比较级】爱因斯坦强调创造性的名言。",
+    "tags": ["创新", "智慧"]
+  },
+  {
+    "id": "d084",
+    "english": "Life is what happens when you're busy making other plans.",
+    "chinese": "生活就是当你忙着制定其他计划时发生在你身上的事。",
+    "context": "【表语从句+时间从句】约翰·列侬的歌词，极富哲理。",
+    "tags": ["生活", "意外"]
+  },
+  {
+    "id": "d085",
+    "english": "Whatever you are, be a good one.",
+    "chinese": "无论你做什么，都要做个出色的。",
+    "context": "【让步状语从句】林肯对职业态度的嘱托。",
+    "tags": ["卓越", "职场"]
+  },
+  {
+    "id": "d086",
+    "english": "The more I read, the more I acquire, the more certain I am that I know nothing.",
+    "chinese": "读的书越多，获得的知识越多，我越发确信自己一无所知。",
+    "context": "【多重比较级排比】伏尔泰的谦逊哲学。",
+    "tags": ["求知", "谦逊"]
+  },
+  {
+    "id": "d087",
+    "english": "It always seems impossible until it's done.",
+    "chinese": "在事情未完成之前，一切总看似不可能。",
+    "context": "【时间状语从句】until 引导。曼德拉名言。",
+    "tags": ["坚持", "希望"]
+  },
+  {
+    "id": "d088",
+    "english": "If you judge people, you have no time to love them.",
+    "chinese": "如果你总是审判别人，你就没时间去爱他们了。",
+    "context": "【条件状语从句】特蕾莎修女倡导宽容。",
+    "tags": ["宽容", "爱"]
+  },
+  {
+    "id": "d089",
+    "english": "Only those who dare to fail greatly can ever achieve greatly.",
+    "chinese": "唯有那些敢于面对重大失败的人，才能取得巨大的成就。",
+    "context": "【定语从句】肯尼迪强调风险与收益的关系。",
+    "tags": ["勇气", "成就"]
+  },
+  {
+    "id": "d090",
+    "english": "Integrity is doing the right thing, even when no one is watching.",
+    "chinese": "正直就是在无人注视时，依然做正确的事。",
+    "context": "【感悟】even when 引导让步时间状语。",
+    "tags": ["正直", "人品"]
+  },
+  {
+    "id": "d091",
+    "english": "Well done is better than well said.",
+    "chinese": "做得好胜过说得好。",
+    "context": "【比较级】富兰克林强调实干。",
+    "tags": ["行动", "名言"]
+  },
+  {
+    "id": "d092",
+    "english": "Your life does not get better by chance, it gets better by change.",
+    "chinese": "你的生活不会因巧合而变好，而是因改变而变好。",
+    "context": "【对比】chance（巧合）与 change（改变）的押韵对比。",
+    "tags": ["改变", "励志"]
+  },
+  {
+    "id": "d093",
+    "english": "Comparison is the thief of joy.",
+    "chinese": "攀比是快乐的小偷。",
+    "context": "【隐喻】劝诫人们不要过度比较。",
+    "tags": ["快乐", "感悟"]
+  },
+  {
+    "id": "d094",
+    "english": "Everything you can imagine is real.",
+    "chinese": "所有你能想象到的都是真实的。",
+    "context": "【定语从句】毕加索关于创造力的格言。",
+    "tags": ["想象力", "艺术"]
+  },
+  {
+    "id": "d095",
+    "english": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    "chinese": "像明天就会不在那样生活，像永生不死那样学习。",
+    "context": "【虚拟语气】as if 引导的极致人生态度。",
+    "tags": ["学习", "甘地"]
+  },
+  {
+    "id": "d096",
+    "english": "Challenges are what make life interesting.",
+    "chinese": "挑战让生活变得有趣。",
+    "context": "【表语从句】what make life...。",
+    "tags": ["挑战", "生命"]
+  },
+  {
+    "id": "d097",
+    "english": "The only real mistake is the one from which we learn nothing.",
+    "chinese": "唯一的错误，是我们没能从中吸取教训的那个。",
+    "context": "【定语从句】介词 from 提前的关系从句。",
+    "tags": ["错误", "成长"]
+  },
+  {
+    "id": "d098",
+    "english": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    "chinese": "在这个不断试图把你变成别人的世界里，坚持做自己就是最大的成就。",
+    "context": "【主从复合句】爱默生关于自我坚持的宏大论述。",
+    "tags": ["自我", "成就"]
+  },
+  {
+    "id": "d099",
+    "english": "If opportunity doesn't knock, build a door.",
+    "chinese": "如果机会不来敲门，那就自己造扇门。",
+    "context": "【幽默励志】非常经典的积极应对逻辑。",
+    "tags": ["机会", "主动"]
+  },
+  {
+    "id": "d100",
+    "english": "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+    "chinese": "无论走到哪里，都要播撒爱。不要让任何人在离开你时没变得更快乐。",
+    "context": "【双重否定】表达极致的利他主义精神。",
+    "tags": ["仁爱", "经典"]
+  },
+  {
+    "id": "d101",
+    "english": "Success is the sum of small efforts, repeated day in and day out.",
+    "chinese": "成功是每天不断重复的小小努力的总和。",
+    "context": "【过去分词】repeated 作后置定语，修饰 efforts。",
+    "tags": ["积累", "习惯"]
+  },
+  {
+    "id": "d102",
+    "english": "Do not let what you cannot do interfere with what you can do.",
+    "chinese": "不要让你做不到的事，干扰了你能做到的事。",
+    "context": "【从句对比】两个 what 引导的宾语从句形成对仗。",
+    "tags": ["专注", "效能"]
+  },
+  {
+    "id": "d103",
+    "english": "Character is how you treat those who can do nothing for you.",
+    "chinese": "人品，体现在你如何对待那些对你毫无用处的人。",
+    "context": "【定语从句】who 引导从句，揭示深层的人格定义。",
+    "tags": ["品格", "人际"]
+  },
+  {
+    "id": "d104",
+    "english": "Growth is painful. Change is painful. But nothing is as painful as staying stuck somewhere you don't belong.",
+    "chinese": "成长是痛苦的，改变是痛苦的。但最痛苦的是困在一个不属于你的地方。",
+    "context": "【比较级】as... as... 结构，用于强调某种状态的最值。",
+    "tags": ["成长", "勇气"]
+  },
+  {
+    "id": "d105",
+    "english": "Focus on being productive instead of busy.",
+    "chinese": "关注于提高效率，而不是让自己瞎忙。",
+    "context": "【介词短语】instead of 后面接形容词作宾语补足状态。",
+    "tags": ["职场", "自律"]
+  },
+  {
+    "id": "d106",
+    "english": "If you are the smartest person in the room, then you are in the wrong room.",
+    "chinese": "如果你是屋子里最聪明的人，那说明你进错屋子了。",
+    "context": "【逻辑推论】鼓励人们寻求更高层次的社交圈。",
+    "tags": ["学习", "环境"]
+  },
+  {
+    "id": "d107",
+    "english": "Knowing is not enough; we must apply. Willing is not enough; we must do.",
+    "chinese": "光知道是不够的，必须运用；光有愿望是不够的，必须行动。",
+    "context": "【动名词主语】歌德名言，强调知行合一。",
+    "tags": ["行动", "名言"]
+  },
+  {
+    "id": "d108",
+    "english": "A ship in harbor is safe, but that is not what ships are built for.",
+    "chinese": "停在港口里的船是安全的，但那不是造船的目的。",
+    "context": "【隐喻】what 引导表语从句，末尾的 for 表示目的。",
+    "tags": ["冒险", "天职"]
+  },
+  {
+    "id": "d109",
+    "english": "The cave you fear to enter holds the treasure you seek.",
+    "chinese": "你不敢进入的那个山洞，藏着你寻找的宝藏。",
+    "context": "【定语从句】两个省略 that 的定语从句，极具文学色彩。",
+    "tags": ["勇气", "智慧"]
+  },
+  {
+    "id": "d110",
+    "english": "Life shrinks or expands in proportion to one's courage.",
+    "chinese": "生活的缩减或扩张与一个人的勇气成正比。",
+    "context": "【地道搭配】in proportion to（与...成比例）。",
+    "tags": ["勇气", "感悟"]
+  },
+  {
+    "id": "d111",
+    "english": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    "chinese": "我们重复的行为成就了我们。因此，卓越不是一种行为，而是一种习惯。",
+    "context": "【亚里士多德名言】强调习惯对人格的塑造。",
+    "tags": ["卓越", "哲学"]
+  },
+  {
+    "id": "d112",
+    "english": "It is our choices that show what we truly are, far more than our abilities.",
+    "chinese": "决定我们是什么样的人的，是我们的选择，而非我们的能力。",
+    "context": "【强调句型】It is... that... 强调 choices。",
+    "tags": ["选择", "哈利波特"]
+  },
+  {
+    "id": "d113",
+    "english": "The person who removes a mountain begins by carrying away small stones.",
+    "chinese": "移开大山的人，是从搬走小石子开始的。",
+    "context": "【定语从句】who 引导从句，强调量变到质变。",
+    "tags": ["坚持", "毅力"]
+  },
+  {
+    "id": "d114",
+    "english": "Don't judge each day by the harvest you reap but by the seeds that you plant.",
+    "chinese": "不要以收获多少来评价每一天，而要看你播下了多少种子。",
+    "context": "【对比结构】not... but... 引导的价值观转向。",
+    "tags": ["付出", "心态"]
+  },
+  {
+    "id": "d115",
+    "english": "Your energy is your currency. Spend it wisely.",
+    "chinese": "你的精力就是你的货币。明智地使用它。",
+    "context": "【隐喻】将 energy 比作 currency，强调精力的稀缺性。",
+    "tags": ["管理", "自律"]
+  },
+  {
+    "id": "d116",
+    "english": "He who is not courageous enough to take risks will accomplish nothing in life.",
+    "chinese": "一个没有勇气承担风险的人，一生将一事无成。",
+    "context": "【定语从句】形容词 enough to do 的结构嵌套。",
+    "tags": ["冒险", "拳王阿里"]
+  },
+  {
+    "id": "d117",
+    "english": "The best revenge is massive success.",
+    "chinese": "最好的报复是取得巨大的成功。",
+    "context": "【简洁有力】用成功代替愤怒的价值观。",
+    "tags": ["成功", "心态"]
+  },
+  {
+    "id": "d118",
+    "english": "Hard work beats talent when talent doesn't work hard.",
+    "chinese": "当才华不努力时，努力能击败才华。",
+    "context": "【时间状语从句】when 引导，常用于体育竞技和学习。",
+    "tags": ["努力", "励志"]
+  },
+  {
+    "id": "d119",
+    "english": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "chinese": "实现明天愿景的唯一障碍，是今天的疑虑。",
+    "context": "【抽象名词】realization（实现），强调心理暗示的影响。",
+    "tags": ["信念", "名言"]
+  },
+  {
+    "id": "d120",
+    "english": "You don't drown by falling into the water; you drown by staying there.",
+    "chinese": "掉进水里不会让你淹死，待在水里才会。",
+    "context": "【介词短语】by + doing 表达方式或途径。",
+    "tags": ["行动", "逆境"]
+  },
+  {
+    "id": "d121",
+    "english": "Mastering others is strength. Mastering yourself is true power.",
+    "chinese": "战胜别人是力量，战胜自我是真正的强大。",
+    "context": "【动名词作主语】对比 strength 和 power 的层级。",
+    "tags": ["老子", "自我超越"]
+  },
+  {
+    "id": "d122",
+    "english": "Do not seek to follow in the footsteps of the men of old; seek what they sought.",
+    "chinese": "不要求循古人的足迹，而要求古人所求的真理。",
+    "context": "【对比】seek what they sought 包含一个宾语从句。",
+    "tags": ["创新", "智慧"]
+  },
+  {
+    "id": "d123",
+    "english": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+    "chinese": "达成目标所获得的奖赏，远不如在达成目标过程中你所成就的自我重要。",
+    "context": "【比较级+从句】强调过程对人格的重塑。",
+    "tags": ["成长", "目标"]
+  },
+  {
+    "id": "d124",
+    "english": "Believe in yourself so strongly that the world can't help but believe in you too.",
+    "chinese": "坚定地相信自己，直到世界也不得不相信你。",
+    "context": "【结果状语从句】so... that... 引导，加上 can't help but（不得不）。",
+    "tags": ["自信", "精神"]
+  },
+  {
+    "id": "d125",
+    "english": "Patience is a bitter plant, but its fruit is sweet.",
+    "chinese": "忍耐是苦涩的植物，但它的果实是甜美的。",
+    "context": "【比喻句】用对比强调长远收益。",
+    "tags": ["耐心", "感悟"]
+  },
+  {
+    "id": "d126",
+    "english": "The obstacle is the path.",
+    "chinese": "障碍即是路径。",
+    "context": "【禅意短句】意指解决困难的过程就是前进本身。",
+    "tags": ["心态", "哲学"]
+  },
+  {
+    "id": "d127",
+    "english": "The man who has no imagination has no wings.",
+    "chinese": "没有想象力的人，就没有羽翼。",
+    "context": "【定语从句】用 wings（翅膀）比喻自由和高度。",
+    "tags": ["想象力", "名言"]
+  },
+  {
+    "id": "d128",
+    "english": "Success is having what you want; happiness is wanting what you have.",
+    "chinese": "成功是得到你想要的；幸福是珍惜你拥有的。",
+    "context": "【平行结构】极富哲理的对比，包含两个宾语从句。",
+    "tags": ["幸福", "成功"]
+  },
+  {
+    "id": "d129",
+    "english": "Doubt kills more dreams than failure ever will.",
+    "chinese": "怀疑杀死的梦想，比失败杀死的还要多。",
+    "context": "【比较级】强调心态对行动的毁灭性打击。",
+    "tags": ["勇气", "信念"]
+  },
+  {
+    "id": "d130",
+    "english": "If you don't design your own life plan, chances are you'll fall into someone else's plan.",
+    "chinese": "如果你不设计自己的人生计划，很可能会掉进别人的计划里。",
+    "context": "【固定句型】Chances are (that)... 很有可能...。",
+    "tags": ["规划", "独立"]
+  },
+  {
+    "id": "d131",
+    "english": "A diamond is a chunk of coal that did well under pressure.",
+    "chinese": "钻石不过是一块在压力下表现优异的煤炭。",
+    "context": "【定语从句】形象地阐述压力与价值的关系。",
+    "tags": ["压力", "成长"]
+  },
+  {
+    "id": "d132",
+    "english": "Logic will get you from A to B. Imagination will take you everywhere.",
+    "chinese": "逻辑能带你从 A 点到 B 点，而想象力能带你去任何地方。",
+    "context": "【平行对比】爱因斯坦关于创造力的经典语录。",
+    "tags": ["创新", "名言"]
+  },
+  {
+    "id": "d133",
+    "english": "You cannot have a positive life and a negative mind.",
+    "chinese": "你不可能带着消极的思想，去过积极的生活。",
+    "context": "【简单句】深刻揭示心态与现实的统一性。",
+    "tags": ["心态", "生活"]
+  },
+  {
+    "id": "d134",
+    "english": "Don't let the fear of losing be greater than the excitement of winning.",
+    "chinese": "不要让对失败的恐惧，压过了对获胜的渴望。",
+    "context": "【比较级】让...大于...（be greater than）。",
+    "tags": ["心态", "竞技"]
+  },
+  {
+    "id": "d135",
+    "english": "The difference between who you are and who you want to be is what you do.",
+    "chinese": "“你是谁”与“你想成为谁”之间的区别，在于你做了什么。",
+    "context": "【多重从句】包含两个宾语从句和一个表语从句。",
+    "tags": ["行动", "目标"]
+  },
+  {
+    "id": "d136",
+    "english": "The soul usually knows what to do to heal itself. The challenge is to silence the mind.",
+    "chinese": "灵魂通常知道如何自愈。挑战在于让喧嚣的大脑安静下来。",
+    "context": "【不定式】to silence the mind 作表语。",
+    "tags": ["冥想", "感悟"]
+  },
+  {
+    "id": "d137",
+    "english": "Stop being a prisoner of your past. Become the architect of your future.",
+    "chinese": "不要再做过去的囚徒。做自己未来的建筑师。",
+    "context": "【隐喻对比】prisoner 与 architect 的强烈反差。",
+    "tags": ["未来", "励志"]
+  },
+  {
+    "id": "d138",
+    "english": "The key to success is to start before you are ready.",
+    "chinese": "成功的关键在于，在还未完全准备好时就开始。",
+    "context": "【时间状语从句】强调行动的时机重于完美。",
+    "tags": ["行动", "职场"]
+  },
+  {
+    "id": "d139",
+    "english": "If you are not willing to learn, no one can help you. If you are determined to learn, no one can stop you.",
+    "chinese": "如果你不愿学习，没人能帮你；如果你决心学习，没人能挡你。",
+    "context": "【并列条件句】对比 willing（愿意）与 determined（决心）。",
+    "tags": ["学习", "毅力"]
+  },
+  {
+    "id": "d140",
+    "english": "Great things are done by a series of small things brought together.",
+    "chinese": "伟大的事业是由一系列汇聚在一起的小事成就的。",
+    "context": "【过去分词】brought together 作后置定语。",
+    "tags": ["细节", "梵高"]
+  },
+  {
+    "id": "d141",
+    "english": "Your life is as good as your mindset.",
+    "chinese": "你的生活质量取决于你的心态。",
+    "context": "【比较结构】as good as 这里的寓意是“等同于”。",
+    "tags": ["心态", "感悟"]
+  },
+  {
+    "id": "d142",
+    "english": "Be so good they can't ignore you.",
+    "chinese": "做到优秀到让他们无法忽视你的地步。",
+    "context": "【结果状语从句】省略 that 的 so... that 结构。",
+    "tags": ["卓越", "职场"]
+  },
+  {
+    "id": "d143",
+    "english": "Mistakes are the stairs we climb to reach success.",
+    "chinese": "错误是我们通往成功所攀登的阶梯。",
+    "context": "【定语从句】省略 that/which 的从句修饰 stairs。",
+    "tags": ["成长", "心态"]
+  },
+  {
+    "id": "d144",
+    "english": "The only way to find your limits is to keep going past them.",
+    "chinese": "寻找极限的唯一方法就是不断超越它们。",
+    "context": "【不定式】to find 和 to keep going 形成结构支撑。",
+    "tags": ["自我突破", "精神"]
+  },
+  {
+    "id": "d145",
+    "english": "What we achieve inwardly will change outer reality.",
+    "chinese": "我们在内心取得的成就将改变外部现实。",
+    "context": "【主语从句】What we achieve inwardly（内在所成的）。",
+    "tags": ["心理", "名言"]
+  },
+  {
+    "id": "d146",
+    "english": "Comparison is a direct path to unhappiness.",
+    "chinese": "对比是通往不幸的捷径。",
+    "context": "【地道表达】direct path to... 通往...的直接路径。",
+    "tags": ["心态", "感悟"]
+  },
+  {
+    "id": "d147",
+    "english": "Never look back unless you are planning to go that way.",
+    "chinese": "永远不要回头，除非你打算往回走。",
+    "context": "【条件状语从句】unless（除非），寓意坚定前行。",
+    "tags": ["决心", "感悟"]
+  },
+  {
+    "id": "d148",
+    "english": "Small daily improvements over time lead to stunning results.",
+    "chinese": "长期的微小改进会带来令人惊叹的结果。",
+    "context": "【介词短语】over time（随着时间推移）。",
+    "tags": ["积累", "成长"]
+  },
+  {
+    "id": "d149",
+    "english": "Be happy with what you have while working for what you want.",
+    "chinese": "在为想要的东西奋斗的同时，也要对已拥有的感到快乐。",
+    "context": "【时间状语从句】while 引导的伴随状态，强调平衡。",
+    "tags": ["幸福", "奋斗"]
+  },
+  {
+    "id": "d150",
+    "english": "The miracle is not that we do this work, but that we are happy to do it.",
+    "chinese": "奇迹不在于我们做了这份工作，而在于我们乐在其中。",
+    "context": "【并列主语从句】not that... but that... 结构的正式应用。",
+    "tags": ["热爱", "特蕾莎修女"]
+  },
+  {
+    "id": "d151",
+    "english": "If your actions inspire others to dream more, you are a leader.",
+    "chinese": "如果你的行动能激励他人追求更大的梦想，那你就是一名领导者。",
+    "context": "【条件状语从句】经典领导力定义。",
+    "tags": ["领导力", "激励"]
+  },
+  {
+    "id": "d152",
+    "english": "The best way to find yourself is to lose yourself in the service of others.",
+    "chinese": "寻找自我的最好方式是投身于为他人服务之中。",
+    "context": "【甘地名言】包含不定式作定语和表语。",
+    "tags": ["奉献", "人生"]
+  },
+  {
+    "id": "d153",
+    "english": "It is not the mountain we conquer, but ourselves.",
+    "chinese": "我们要征服的不是高山，而是我们自己。",
+    "context": "【强调句型】省略 that 的变体，强调宾语 ourselves。",
+    "tags": ["勇气", "希拉里"]
+  },
+  {
+    "id": "d154",
+    "english": "Leadership and learning are indispensable to each other.",
+    "chinese": "领导力与学习是彼此不可或缺的。",
+    "context": "【形容词搭配】be indispensable to（对...必不可少）。",
+    "tags": ["学习", "肯尼迪"]
+  },
+  {
+    "id": "d155",
+    "english": "Our greatest weakness lies in giving up.",
+    "chinese": "我们最大的弱点在于放弃。",
+    "context": "【动词词组】lie in（在于...）。",
+    "tags": ["坚持", "爱迪生"]
+  },
+  {
+    "id": "d156",
+    "english": "Opportunities are like sunrises. If you wait too long, you miss them.",
+    "chinese": "机会就像日出。如果你等太久，你就会错过。",
+    "context": "【比喻句】形象生动，容易背诵。",
+    "tags": ["机会", "时间"]
+  },
+  {
+    "id": "d157",
+    "english": "The most reliable way to predict the future is to create it.",
+    "chinese": "预测未来最可靠的方法就是去创造它。",
+    "context": "【形容词最高级】most reliable（最可靠的）。",
+    "tags": ["创造", "名言"]
+  },
+  {
+    "id": "d158",
+    "english": "Whatever the mind can conceive and believe, it can achieve.",
+    "chinese": "只要头脑能想到且相信的，它就能实现。",
+    "context": "【宾语从句前置】Whatever 引导的从句放在句首加强语气。",
+    "tags": ["信念", "名言"]
+  },
+  {
+    "id": "d159",
+    "english": "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+    "chinese": "不要踏着路径前行，而要走那无路之地，并留下你的足迹。",
+    "context": "【地点状语从句】where 引导的从句应用。",
+    "tags": ["创新", "爱默生"]
+  },
+  {
+    "id": "d160",
+    "english": "If you want to fly, you have to give up the things that weigh you down.",
+    "chinese": "如果你想飞翔，你必须放下那些拖累你的东西。",
+    "context": "【定语从句】weigh down（使垂下、拖累）。",
+    "tags": ["放下", "成长"]
+  },
+  {
+    "id": "d161",
+    "english": "A mind that is stretched by a new experience can never go back to its old dimensions.",
+    "chinese": "一个被新经历撑大的头脑，永远无法回到原来的尺寸。",
+    "context": "【被动定语从句】stretched by（被...拉伸）。",
+    "tags": ["成长", "经历"]
+  },
+  {
+    "id": "d162",
+    "english": "Your work is going to fill a large part of your life.",
+    "chinese": "你的工作将占据你生活的很大一部分。",
+    "context": "【将来时】fill a large part of（占据很大比例）。",
+    "tags": ["职业", "乔布斯"]
+  },
+  {
+    "id": "d163",
+    "english": "Success is not how high you have climbed, but how you make a positive difference to the world.",
+    "chinese": "成功不在于你爬得有多高，而在于你如何为世界带来积极的改变。",
+    "context": "【宾语从句对比】两个 how 引导的从句并列。",
+    "tags": ["成功", "价值"]
+  },
+  {
+    "id": "d164",
+    "english": "A surplus of effort could overcome a deficit of confidence.",
+    "chinese": "过量的努力可以弥补信心的不足。",
+    "context": "【词汇对比】surplus（盈余）与 deficit（赤字、亏损）。",
+    "tags": ["努力", "职场"]
+  },
+  {
+    "id": "d165",
+    "english": "Don't let what's broken in you define who you are.",
+    "chinese": "别让那些受过伤的部分，定义了你是谁。",
+    "context": "【使役动词+从句】what's broken（破碎的部分）。",
+    "tags": ["疗愈", "自我"]
+  },
+  {
+    "id": "d166",
+    "english": "The only way to achieve the impossible is to believe it is possible.",
+    "chinese": "达成“不可能”的唯一方法，就是相信它是可能的。",
+    "context": "【词根对比】impossible 与 possible。",
+    "tags": ["信念", "电影名言"]
+  },
+  {
+    "id": "d167",
+    "english": "Life isn't about finding yourself. Life is about creating yourself.",
+    "chinese": "生活不在于发现自我，而在于创造自我。",
+    "context": "【常用搭配】be about doing... 关于...（核心在于...）。",
+    "tags": ["创造", "萧伯纳"]
+  },
+  {
+    "id": "d168",
+    "english": "Innovation distinguishes between a leader and a follower.",
+    "chinese": "创新是区分领导者与追随者的标志。",
+    "context": "【动词搭配】distinguish between A and B。",
+    "tags": ["创新", "领导力"]
+  },
+  {
+    "id": "d169",
+    "english": "Perfection is not attainable, but if we chase perfection we can catch excellence.",
+    "chinese": "完美虽不可企及，但如果追求完美，我们可以收获卓越。",
+    "context": "【词汇转换】attainable（可达到的）。",
+    "tags": ["卓越", "格言"]
+  },
+  {
+    "id": "d170",
+    "english": "We may encounter many defeats but we must not be defeated.",
+    "chinese": "我们可能会遇到许多挫败，但决不能被击败。",
+    "context": "【词性转换】defeat 既作名词又作动词。",
+    "tags": ["坚韧", "玛雅·安杰卢"]
+  },
+  {
+    "id": "d171",
+    "english": "You don't have to see the whole staircase, just take the first step.",
+    "chinese": "你不必看清整段楼梯，只要踏出第一步就好。",
+    "context": "【隐喻】马丁·路德·金关于信念的名言。",
+    "tags": ["起步", "信念"]
+  },
+  {
+    "id": "d172",
+    "english": "The only thing standing between you and your goal is the story you keep telling yourself.",
+    "chinese": "横在你和目标之间的唯一障碍，就是你不断给自己编造的那个借口。",
+    "context": "【现在分词短语】standing between... 作后置定语。",
+    "tags": ["借口", "励志"]
+  },
+  {
+    "id": "d173",
+    "english": "Act as if what you do makes a difference. It does.",
+    "chinese": "表现得就像你的所作所为能改变世界一样。确实如此。",
+    "context": "【虚拟语气】act as if 引导从句。It does 起强调作用。",
+    "tags": ["行动", "价值"]
+  },
+  {
+    "id": "d174",
+    "english": "Great spirits have always encountered violent opposition from mediocre minds.",
+    "chinese": "伟大的灵魂总会遭遇平庸心智的强烈反对。",
+    "context": "【爱因斯坦名言】对比 spirits 与 minds。",
+    "tags": ["独立", "智慧"]
+  },
+  {
+    "id": "d175",
+    "english": "Only a life lived for others is a life worthwhile.",
+    "chinese": "唯有为他人而活的人生才是有价值的。",
+    "context": "【过去分词】lived for others 修饰 life。",
+    "tags": ["奉献", "人生"]
+  },
+  {
+    "id": "d176",
+    "english": "Keep away from people who try to belittle your ambitions.",
+    "chinese": "远离那些试图贬低你抱负的人。",
+    "context": "【定语从句】belittle（轻视、贬低）。马克吐温名言。",
+    "tags": ["人际", "雄心"]
+  },
+  {
+    "id": "d177",
+    "english": "It is better to fail in originality than to succeed in imitation.",
+    "chinese": "宁可在创新中失败，也不要在模仿中成功。",
+    "context": "【比较级对比】originality（原创）与 imitation（模仿）。",
+    "tags": ["独立", "创新"]
+  },
+  {
+    "id": "d178",
+    "english": "Everything is hard before it is easy.",
+    "chinese": "万事在变容易之前都是困难的。",
+    "context": "【规律总结】歌德名言，鼓励新手度过磨合期。",
+    "tags": ["过程", "学习"]
+  },
+  {
+    "id": "d179",
+    "english": "Do what you feel in your heart to be right – for you'll be criticized anyway.",
+    "chinese": "做你内心认为正确的事，因为无论如何你都会受到指责。",
+    "context": "【宾语补足语】to be right 作 feel 的补足语。",
+    "tags": ["主见", "罗斯福夫人"]
+  },
+  {
+    "id": "d180",
+    "english": "Don't count the days, make the days count.",
+    "chinese": "不要数着日子过，要让日子过得有意义。",
+    "context": "【双关/使役】count 的两种用法。make the days count。",
+    "tags": ["时间", "价值"]
+  },
+  {
+    "id": "d181",
+    "english": "Success is a ladder that cannot be climbed with your hands in your pockets.",
+    "chinese": "成功是一架梯子，双手插在口袋里是爬不上去的。",
+    "context": "【定语从句+with复合结构】形象地揭示努力的必要性。",
+    "tags": ["努力", "格言"]
+  },
+  {
+    "id": "d182",
+    "english": "I would rather die on my feet than live on my knees.",
+    "chinese": "我宁愿站着死，也不愿跪着生。",
+    "context": "【选择表达】would rather do... than do...。",
+    "tags": ["尊严", "勇气"]
+  },
+  {
+    "id": "d183",
+    "english": "Our lives begin to end the day we become silent about things that matter.",
+    "chinese": "当我们对重要的事情保持沉默那天起，我们的生命就开始凋谢了。",
+    "context": "【定语从句】things that matter（重要的事）。马丁路德金名言。",
+    "tags": ["勇气", "社会责任"]
+  },
+  {
+    "id": "d184",
+    "english": "Courage is grace under pressure.",
+    "chinese": "勇气是压力之下的优雅。",
+    "context": "【海明威名言】极简深刻。",
+    "tags": ["勇气", "抗压"]
+  },
+  {
+    "id": "d185",
+    "english": "Try to be a rainbow in someone's cloud.",
+    "chinese": "试着成为他人阴霾中的一道彩虹。",
+    "context": "【隐喻】鼓励给人带来希望和温暖。",
+    "tags": ["善良", "玛雅·安杰卢"]
+  },
+  {
+    "id": "d186",
+    "english": "If you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.",
+    "chinese": "如果你以爬树的能力来评判一条鱼，它将一辈子相信自己是个笨蛋。",
+    "context": "【条件从句+现在分词】believing... 作伴随状语。",
+    "tags": ["天赋", "教育"]
+  },
+  {
+    "id": "d187",
+    "english": "No legacy is so rich as honesty.",
+    "chinese": "没有任何遗产像诚实那样丰厚。",
+    "context": "【比较级】no... so... as... 结构的最高级意义。",
+    "tags": ["诚实", "莎士比亚"]
+  },
+  {
+    "id": "d188",
+    "english": "You can't use up creativity. The more you use, the more you have.",
+    "chinese": "创造力是不会被用完的。你用得越多，拥有的就越多。",
+    "context": "【双重比较级】the more... the more...。",
+    "tags": ["创新", "创造力"]
+  },
+  {
+    "id": "d189",
+    "english": "What you do speaks so loudly that I cannot hear what you say.",
+    "chinese": "你的所作所为声音太大，以至于我听不清你在说什么。",
+    "context": "【结果状语从句】so... that... 强调行动胜过言辞。",
+    "tags": ["言行一致", "名言"]
+  },
+  {
+    "id": "d190",
+    "english": "Never ruin a good day by thinking about a bad yesterday.",
+    "chinese": "永远不要因为纠结于糟糕的昨天，而毁掉美好的今天。",
+    "context": "【介词短语】by doing 引导方式状语。",
+    "tags": ["当下", "心态"]
+  },
+  {
+    "id": "d191",
+    "english": "It is not enough to aim; you must hit.",
+    "chinese": "光瞄准是不够的，你必须击中。",
+    "context": "【对比】强调结果导向。",
+    "tags": ["目标", "职场"]
+  },
+  {
+    "id": "d192",
+    "english": "Be a voice, not an echo.",
+    "chinese": "要做发声者，不要做传声筒。",
+    "context": "【隐喻】voice（声音/主见）与 echo（回声/盲从）。",
+    "tags": ["独立", "思考"]
+  },
+  {
+    "id": "d193",
+    "english": "Success is how high you bounce when you hit bottom.",
+    "chinese": "成功是你跌到谷底时反弹的高度。",
+    "context": "【宾语从句】how high you bounce。乔治巴顿名言。",
+    "tags": ["坚韧", "逆境"]
+  },
+  {
+    "id": "d194",
+    "english": "In order to be irreplaceable one must always be different.",
+    "chinese": "若要不可替代，就必须与众不同。",
+    "context": "【目的状语】In order to... 放在句首强调目的。香奈儿名言。",
+    "tags": ["独立", "职场"]
+  },
+  {
+    "id": "d195",
+    "english": "Everything you can imagine is real.",
+    "chinese": "凡是你所能想象的，都是真实的。",
+    "context": "【定语从句】省略 that。毕加索名言。",
+    "tags": ["想象力", "艺术"]
+  },
+  {
+    "id": "d196",
+    "english": "Life is a mirror and will reflect back to the thinker what he thinks into it.",
+    "chinese": "生活是一面镜子，它会将思考者的所思所想反射回来。",
+    "context": "【宾语从句】what he thinks into it。",
+    "tags": ["心态", "哲学"]
+  },
+  {
+    "id": "d197",
+    "english": "Whatever you do, do it with all your heart.",
+    "chinese": "无论做什么，都要全心全意。",
+    "context": "【让步从句】Whatever you do。",
+    "tags": ["投入", "工作"]
+  },
+  {
+    "id": "d198",
+    "english": "If you don't stand for something, you will fall for anything.",
+    "chinese": "如果你没有立场，你就会被任何事情左右。",
+    "context": "【条件从句】stand for（支持/立场），fall for（信以为真/上当）。",
+    "tags": ["原则", "名言"]
+  },
+  {
+    "id": "d199",
+    "english": "Wisdom is the reward you get for a lifetime of listening when you would have rather talked.",
+    "chinese": "智慧是你当你想说话时，却选择用一生去倾听所得到的回报。",
+    "context": "【虚拟语气+从句】would have rather talked（本想说话）。",
+    "tags": ["倾听", "智慧"]
+  },
+  {
+    "id": "d200",
+    "english": "The only thing that is constant is change.",
+    "chinese": "唯一不变的就是改变本身。",
+    "context": "【哲学断言】that 引导定语从句。赫拉克利特名言。",
+    "tags": ["变化", "智慧"]
   }
+
 
 ];

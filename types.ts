@@ -51,6 +51,13 @@ export interface ListenSettings {
   intervalMs: number;
 }
 
+export interface PhrasesSettings {
+  isRandomMode: boolean;
+  repeatCount: number;
+  intervalMs: number;
+  showChinese: boolean;
+}
+
 export interface WordProgress {
   wordId: string;
   nextReview: number; // Timestamp

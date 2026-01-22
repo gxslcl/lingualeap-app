@@ -27,24 +27,16 @@ function checkMissingWords(): void {
   
   for (const wordItem of vocabularyData) {
     // 添加英文单词
-    if (typeof wordItem.english === 'string') {
-      vocabularyWords.add(wordItem.english.toLowerCase());
-    } else if (Array.isArray(wordItem.english)) {
+    if (Array.isArray(wordItem.english)) {
       wordItem.english.forEach(eng => {
         vocabularyWords.add(eng.toLowerCase());
       });
+    } else if (typeof wordItem.english === 'string') {
+      vocabularyWords.add(wordItem.english.toLowerCase());
     }
     
     // 同时考虑chinese字段可能包含的英文单词
-    if (typeof wordItem.chinese === 'string') {
-      const chineseWords = wordItem.chinese
-        .toLowerCase()
-        .replace(/[^\w\s]/g, ' ')
-        .split(/\s+/)
-        .filter(word => word.trim().length > 0);
-        
-      chineseWords.forEach(w => vocabularyWords.add(w));
-    } else if (Array.isArray(wordItem.chinese)) {
+    if (Array.isArray(wordItem.chinese)) {
       for (const chinese of wordItem.chinese) {
         const chineseWords = chinese
           .toLowerCase()
@@ -54,6 +46,14 @@ function checkMissingWords(): void {
           
         chineseWords.forEach(w => vocabularyWords.add(w));
       }
+    } else if (typeof wordItem.chinese === 'string') {
+      const chineseWords = wordItem.chinese
+        .toLowerCase()
+        .replace(/[^\w\s]/g, ' ')
+        .split(/\s+/)
+        .filter(word => word.trim().length > 0);
+        
+      chineseWords.forEach(w => vocabularyWords.add(w));
     }
   }
 
