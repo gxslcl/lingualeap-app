@@ -43,7 +43,9 @@ const DEFAULT_PHRASES_SETTINGS: PhrasesSettings = {
   isRandomMode: true,
   repeatCount: 2,
   intervalMs: 500,
-  showChinese: true
+  showChinese: true,
+  playRange: 'loaded',
+  playMode: 'en'
 };
 
 export const storageService = {

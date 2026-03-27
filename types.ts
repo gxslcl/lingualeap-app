@@ -56,6 +56,8 @@ export interface PhrasesSettings {
   repeatCount: number;
   intervalMs: number;
   showChinese: boolean;
+  playRange: 'current' | 'loaded' | 'all' | 'favorites';
+  playMode: 'en' | 'en-zh' | 'zh';
 }
 
 export interface WordProgress {

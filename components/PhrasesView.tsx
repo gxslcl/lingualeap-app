@@ -11,6 +11,9 @@ import {
   Pause,
   Eye,
   EyeOff,
+  Layers,
+  Star,
+  CheckCircle,
   X,
   ArrowUp,
   ArrowDown,
@@ -21,6 +24,39 @@ import { TTSConfig, WordItem } from "../types";
 import { ttsService } from "../services/ttsService";
 import { storageService } from "../services/storage";
 
+// 难度级别定义
+type DifficultyLevel = "short" | "medium" | "long" | "all";
+
+interface DifficultyConfig {
+  label: string;
+  minWords: number;
+  maxWords: number;
+  color: string;
+}
+
+const DIFFICULTY_CONFIG: Record<DifficultyLevel, DifficultyConfig> = {
+  short: { label: "短句", minWords: 1, maxWords: 3, color: "bg-emerald-500" },
+  medium: { label: "中句", minWords: 4, maxWords: 6, color: "bg-amber-500" },
+  long: {
+    label: "长句",
+    minWords: 7,
+    maxWords: Infinity,
+    color: "bg-rose-500",
+  },
+  all: {
+    label: "全部",
+    minWords: 1,
+    maxWords: Infinity,
+    color: "bg-slate-700",
+  },
+};
+
+const getDifficultyByLength = (wordCount: number): DifficultyLevel => {
+  if (wordCount <= DIFFICULTY_CONFIG.short.maxWords) return "short";
+  if (wordCount <= DIFFICULTY_CONFIG.medium.maxWords) return "medium";
+  return "long";
+};
+
 interface PhrasesViewProps {
   ttsConfig: TTSConfig;
 }
@@ -28,16 +64,18 @@ interface PhrasesViewProps {
 export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
   const savedSettings = storageService.getPhrasesSettings();
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [isRandomMode, setIsRandomMode] = useState(
-    savedSettings.isRandomMode
-  );
+  const [isRandomMode, setIsRandomMode] = useState(savedSettings.isRandomMode);
   const [displayPhrases, setDisplayPhrases] = useState(phrasesData);
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [pageSize] = useState(20); // 每页显示20个
+  const [pageSize, setPageSize] = useState(20); // 每页显示20个
   const [currentPage, setCurrentPage] = useState(1);
   const [additionalCount, setAdditionalCount] = useState(0);
+  const [selectedDifficulty, setSelectedDifficulty] =
+    useState<DifficultyLevel>("all");
   const [intervalMs, setIntervalMs] = useState(savedSettings.intervalMs);
   const [repeatCount, setRepeatCount] = useState(savedSettings.repeatCount);
+  const [playRange, setPlayRange] = useState(savedSettings.playRange);
+  const [playMode, setPlayMode] = useState(savedSettings.playMode);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentLoop, setCurrentLoop] = useState(0);
@@ -47,6 +85,16 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
   const activePhraseRef = useRef<HTMLDivElement>(null);
   const pendingAutoAdvanceRef = useRef(false);
   const isAutoLoadingRef = useRef(false);
+  const playSequenceTokenRef = useRef(0);
+  const isPausedRef = useRef(false);
+  const [favoriteIds, setFavoriteIds] = useState<Set<string>>(() => {
+    const saved = localStorage.getItem("lingualeap_phrase_favorites");
+    return saved ? new Set(JSON.parse(saved)) : new Set<string>();
+  });
+  const [masteredIds, setMasteredIds] = useState<Set<string>>(() => {
+    const saved = localStorage.getItem("lingualeap_phrase_mastered");
+    return saved ? new Set(JSON.parse(saved)) : new Set<string>();
+  });
 
   // State for word popup
   const [selectedWord, setSelectedWord] = useState<{
@@ -58,7 +106,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
   const popupRef = useRef<HTMLDivElement>(null);
   const closeTimeout = useRef<NodeJS.Timeout | null>(null);
   const isMobile = useRef<boolean>(
-    /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    /iPhone|iPad|iPod|Android/i.test(navigator.userAgent),
   );
 
   // Close popup when clicking outside
@@ -81,38 +129,20 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
     };
   }, [selectedWord]);
 
-  // Close popup when scrolling
   useEffect(() => {
-    const handleScroll = () => {
-      setSelectedWord(null);
-      // Show back to top button when scrolled down 300px
+    const handleViewportMove = () => {
+      if (selectedWord) {
+        setSelectedWord(null);
+      }
       setShowBackToTop(window.scrollY > 300);
     };
 
-    if (selectedWord) {
-      window.addEventListener("scroll", handleScroll);
-    }
-
-    // Add scroll event listener for back to top button
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleViewportMove);
+    window.addEventListener("touchmove", handleViewportMove);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [selectedWord]);
-
-  // Close popup on touch move (for mobile scroll)
-  useEffect(() => {
-    const handleTouchMove = () => {
-      setSelectedWord(null);
-    };
-
-    if (selectedWord) {
-      window.addEventListener("touchmove", handleTouchMove);
-    }
-
-    return () => {
-      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("scroll", handleViewportMove);
+      window.removeEventListener("touchmove", handleViewportMove);
     };
   }, [selectedWord]);
 
@@ -133,16 +163,53 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
       intervalMs,
       repeatCount,
       showChinese,
+      playRange,
+      playMode,
     });
-  }, [isRandomMode, intervalMs, repeatCount, showChinese]);
+  }, [isRandomMode, intervalMs, repeatCount, showChinese, playRange, playMode]);
 
   // 计算当前页面显示的短语
-  const totalPages = Math.ceil(displayPhrases.length / pageSize);
+  const basePhrases = useMemo(() => {
+    let filtered = displayPhrases;
+
+    // 根据难度过滤
+    if (selectedDifficulty !== "all") {
+      const config = DIFFICULTY_CONFIG[selectedDifficulty];
+      filtered = filtered.filter((phrase) => {
+        const wordCount = phrase.english.split(/\s+/).length;
+        return wordCount >= config.minWords && wordCount <= config.maxWords;
+      });
+    }
+
+    if (playRange === "favorites") {
+      return filtered.filter((phrase) => favoriteIds.has(phrase.id));
+    }
+    return filtered;
+  }, [displayPhrases, playRange, favoriteIds, selectedDifficulty]);
+  const totalPages = Math.ceil(basePhrases.length / pageSize);
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize + additionalCount;
-  const displayedPhrases = useMemo(
-    () => displayPhrases.slice(startIndex, endIndex),
-    [displayPhrases, startIndex, endIndex]
+  const displayedPhrases = useMemo(() => {
+    if (playRange === "favorites") {
+      return basePhrases;
+    }
+    return basePhrases.slice(startIndex, endIndex);
+  }, [basePhrases, startIndex, endIndex, playRange]);
+  const playPhrases = useMemo(() => {
+    if (playRange === "favorites") {
+      return basePhrases;
+    }
+    if (playRange === "current") {
+      return basePhrases.slice(startIndex, endIndex);
+    }
+    if (playRange === "loaded") {
+      return basePhrases.slice(0, endIndex);
+    }
+    return basePhrases;
+  }, [basePhrases, startIndex, endIndex, playRange]);
+  const activePhraseId = useMemo(
+    () => playPhrases[currentIndex]?.id ?? null,
+    [playPhrases, currentIndex],
   );
 
   const handlePlay = (e: React.MouseEvent, text: string) => {
@@ -160,7 +227,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
 
     // 1. Exact match (High priority)
     let match = vocabularyData.find(
-      (v) => v.english.toLowerCase() === cleanWord
+      (v) => v.english.toLowerCase() === cleanWord,
     );
     if (match) return match;
 
@@ -351,17 +418,162 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
     setAdditionalCount((prev) => prev + pageSize);
   };
 
-  const playSequence = () => {
-    if (!isPlayingRef.current || displayedPhrases.length === 0) return;
+  const toggleFavorite = (e: React.MouseEvent, id: string) => {
+    e.stopPropagation();
+    setFavoriteIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
 
-    const phrase = displayedPhrases[currentIndex];
+  const toggleMastered = (e: React.MouseEvent, id: string) => {
+    e.stopPropagation();
+    setMasteredIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  useEffect(() => {
+    localStorage.setItem(
+      "lingualeap_phrase_favorites",
+      JSON.stringify(Array.from(favoriteIds)),
+    );
+  }, [favoriteIds]);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "lingualeap_phrase_mastered",
+      JSON.stringify(Array.from(masteredIds)),
+    );
+  }, [masteredIds]);
+
+  const shufflePhrases = () => {
+    setIsRandomMode(true);
+    setDisplayPhrases([...phrasesData].sort(() => Math.random() - 0.5));
+    setCurrentPage(1);
+    setAdditionalCount(0);
+    setExpandedId(null);
+  };
+
+  const stopPlayback = (resetIndex: boolean, markPaused: boolean) => {
+    setIsPlaying(false);
+    isPlayingRef.current = false;
+    isPausedRef.current = markPaused;
+    playSequenceTokenRef.current += 1;
+    if (playTimeoutRef.current) {
+      clearTimeout(playTimeoutRef.current);
+      playTimeoutRef.current = null;
+    }
+    ttsService.cancel();
+    if (resetIndex) {
+      setCurrentIndex(0);
+      setCurrentLoop(0);
+    }
+  };
+
+  const interruptPlayback = () => {
+    playSequenceTokenRef.current += 1;
+    if (playTimeoutRef.current) {
+      clearTimeout(playTimeoutRef.current);
+      playTimeoutRef.current = null;
+    }
+    ttsService.cancel();
+  };
+
+  const handlePhraseClick = (id: string) => {
+    toggleExpand(id);
+
+    if (!isPlayingRef.current && !isPausedRef.current) return;
+
+    const targetIndex = playPhrases.findIndex((phrase) => phrase.id === id);
+    if (targetIndex < 0) return;
+
+    interruptPlayback();
+    setCurrentLoop(0);
+    setCurrentIndex(targetIndex);
+
+    if (!isPlayingRef.current) {
+      isPlayingRef.current = true;
+      isPausedRef.current = false;
+      setIsPlaying(true);
+    }
+  };
+
+  const playSequence = () => {
+    if (!isPlayingRef.current || playPhrases.length === 0) return;
+
+    const sequenceId = ++playSequenceTokenRef.current;
+    const phrase = playPhrases[currentIndex];
     if (!phrase) return;
 
-    ttsService.speak(phrase.english, ttsConfig, "en-US", () => {
-      if (!isPlayingRef.current) return;
+    const isActive = () =>
+      playSequenceTokenRef.current === sequenceId && isPlayingRef.current;
+
+    const speakEnglish = (onEnd: () => void) => {
+      if (!isActive()) return;
+      ttsService.speak(
+        phrase.english,
+        { ...ttsConfig, rate: ttsConfig.rate },
+        "en-US",
+        () => {
+          if (!isActive()) return;
+          onEnd();
+        },
+      );
+    };
+
+    const speakChinese = (onEnd: () => void) => {
+      if (!isActive()) return;
+      ttsService.speak(
+        phrase.chinese,
+        { ...ttsConfig, rate: 1.0 },
+        "zh-CN",
+        () => {
+          if (!isActive()) return;
+          onEnd();
+        },
+      );
+    };
+
+    const speakWithMode = (onComplete: () => void) => {
+      if (!isActive()) return;
+      if (playMode === "en") {
+        speakEnglish(onComplete);
+        return;
+      }
+      if (playMode === "zh") {
+        speakChinese(onComplete);
+        return;
+      }
+      speakEnglish(() => {
+        if (!isActive()) return;
+        if (intervalMs > 0) {
+          playTimeoutRef.current = setTimeout(() => {
+            if (!isActive()) return;
+            speakChinese(onComplete);
+          }, intervalMs);
+        } else {
+          speakChinese(onComplete);
+        }
+      });
+    };
+
+    speakWithMode(() => {
+      if (!isActive()) return;
 
       const proceed = () => {
-        if (!isPlayingRef.current) return;
+        if (!isActive()) return;
 
         if (currentLoop < repeatCount - 1) {
           setCurrentLoop((prev) => prev + 1);
@@ -370,22 +582,19 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
 
         setCurrentLoop(0);
 
-        if (currentIndex < displayedPhrases.length - 1) {
+        if (currentIndex < playPhrases.length - 1) {
           setCurrentIndex((prev) => prev + 1);
           return;
         }
 
-        if (endIndex < displayPhrases.length) {
+        if (playRange === "loaded" && endIndex < basePhrases.length) {
           pendingAutoAdvanceRef.current = true;
           isAutoLoadingRef.current = true;
           loadMore();
           return;
         }
 
-        setIsPlaying(false);
-        isPlayingRef.current = false;
-        setCurrentIndex(0);
-        setCurrentLoop(0);
+        stopPlayback(true, false);
       };
 
       if (intervalMs > 0) {
@@ -398,20 +607,19 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
 
   const togglePlay = () => {
     if (isPlaying) {
-      setIsPlaying(false);
-      isPlayingRef.current = false;
-      ttsService.cancel();
+      stopPlayback(false, true);
       return;
     }
 
-    if (displayedPhrases.length === 0) return;
+    if (playPhrases.length === 0) return;
 
-    if (currentIndex >= displayedPhrases.length) {
+    if (currentIndex >= playPhrases.length) {
       setCurrentIndex(0);
       setCurrentLoop(0);
     }
 
     isPlayingRef.current = true;
+    isPausedRef.current = false;
     setIsPlaying(true);
   };
 
@@ -427,16 +635,23 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
     if (isPlaying && isPlayingRef.current) {
       playSequence();
     }
-  }, [currentIndex, currentLoop, isPlaying, displayedPhrases, intervalMs, repeatCount]);
+  }, [
+    currentIndex,
+    currentLoop,
+    isPlaying,
+    playPhrases,
+    intervalMs,
+    repeatCount,
+    playMode,
+    playRange,
+  ]);
 
   useEffect(() => {
     if (pendingAutoAdvanceRef.current && isPlaying) {
       pendingAutoAdvanceRef.current = false;
-      setCurrentIndex((prev) =>
-        Math.min(prev + 1, displayedPhrases.length - 1)
-      );
+      setCurrentIndex((prev) => Math.min(prev + 1, playPhrases.length - 1));
     }
-  }, [displayedPhrases, isPlaying]);
+  }, [playPhrases, isPlaying]);
 
   useEffect(() => {
     if (isPlaying && activePhraseRef.current) {
@@ -448,14 +663,31 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
   }, [currentIndex, isPlaying]);
 
   useEffect(() => {
+    if (playPhrases.length === 0 && isPlaying) {
+      stopPlayback(true, false);
+      return;
+    }
+    if (currentIndex >= playPhrases.length && playPhrases.length > 0) {
+      setCurrentIndex(0);
+      setCurrentLoop(0);
+    }
+  }, [playPhrases, currentIndex, isPlaying]);
+
+  useEffect(() => {
+    if (playRange === "all" && isPlaying) {
+      const needed = Math.max(0, currentIndex + 1 - pageSize);
+      setAdditionalCount((prev) => Math.max(prev, needed));
+    }
+  }, [playRange, isPlaying, currentIndex, pageSize]);
+
+  useEffect(() => {
     if (isAutoLoadingRef.current) {
       isAutoLoadingRef.current = false;
       return;
     }
     if (isPlayingRef.current) {
-      setIsPlaying(false);
-      isPlayingRef.current = false;
-      ttsService.cancel();
+      stopPlayback(true, false);
+      return;
     }
     setCurrentIndex(0);
     setCurrentLoop(0);
@@ -485,10 +717,10 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
           点击卡片查看中文释义，模仿发音进行跟读练习
         </p>
 
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+        <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
           <button
             onClick={() => setIsRandomMode(!isRandomMode)}
-            className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${
+            className={`inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 w-full ${
               isRandomMode
                 ? "bg-white text-brand-600 shadow-md transform scale-105"
                 : "bg-brand-700/30 text-brand-100 hover:bg-brand-700/50"
@@ -499,7 +731,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
             />
             {isRandomMode ? "随机模式：开启" : "随机模式：关闭"}
           </button>
-          <div className="flex items-center gap-1 bg-white/20 px-2 py-1.5 rounded-full border border-white/30">
+          <div className="flex items-center gap-1 bg-white/20 px-2 py-1.5 rounded-full border border-white/30 w-full justify-center">
             <Timer className="w-3 h-3 text-white/80" />
             <select
               value={intervalMs}
@@ -514,7 +746,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
               <option value={1200}>1.2s</option>
             </select>
           </div>
-          <div className="flex items-center gap-1 bg-white/20 px-2 py-1.5 rounded-full border border-white/30">
+          <div className="flex items-center gap-1 bg-white/20 px-2 py-1.5 rounded-full border border-white/30 w-full justify-center">
             <RefreshCw className="w-3 h-3 text-white/80" />
             <select
               value={repeatCount}
@@ -526,9 +758,37 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
               <option value={3}>3遍</option>
             </select>
           </div>
+          <div className="flex items-center gap-1 bg-white/20 px-2 py-1.5 rounded-full border border-white/30 w-full justify-center">
+            <Layers className="w-3 h-3 text-white/80" />
+            <select
+              value={playRange}
+              onChange={(e) =>
+                setPlayRange(e.target.value as "current" | "loaded" | "all")
+              }
+              className="bg-transparent text-xs font-bold text-white outline-none cursor-pointer"
+            >
+              <option value="current">当前页</option>
+              <option value="loaded">已加载</option>
+              <option value="all">全部短语</option>
+            </select>
+          </div>
+          <div className="flex items-center gap-1 bg-white/20 px-2 py-1.5 rounded-full border border-white/30 w-full justify-center">
+            <Volume2 className="w-3 h-3 text-white/80" />
+            <select
+              value={playMode}
+              onChange={(e) =>
+                setPlayMode(e.target.value as "en" | "en-zh" | "zh")
+              }
+              className="bg-transparent text-xs font-bold text-white outline-none cursor-pointer"
+            >
+              <option value="en">英文</option>
+              <option value="en-zh">英+中</option>
+              <option value="zh">中文</option>
+            </select>
+          </div>
           <button
             onClick={() => setShowChinese(!showChinese)}
-            className={`flex items-center gap-1 px-2 py-1.5 rounded-full border transition-colors text-xs font-bold ${
+            className={`flex items-center justify-center gap-1 px-2 py-1.5 rounded-full border transition-colors text-xs font-bold w-full ${
               showChinese
                 ? "bg-white text-brand-600 border-white"
                 : "bg-white/20 text-white border-white/30"
@@ -541,19 +801,63 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
             )}
             {showChinese ? "中文：开" : "中文：关"}
           </button>
+          <button
+            onClick={shufflePhrases}
+            className="flex items-center justify-center gap-1 px-2 py-1.5 rounded-full border transition-colors text-xs font-bold bg-white/20 text-white border-white/30 hover:bg-white/30 w-full"
+          >
+            <Shuffle className="w-3 h-3" />
+            换一批
+          </button>
+          <button
+            onClick={() =>
+              setPlayRange(playRange === "favorites" ? "loaded" : "favorites")
+            }
+            className={`flex items-center justify-center gap-1 px-2 py-1.5 rounded-full border transition-colors text-xs font-bold w-full ${
+              playRange === "favorites"
+                ? "bg-white text-brand-600 border-white"
+                : "bg-white/20 text-white border-white/30 hover:bg-white/30"
+            }`}
+          >
+            <Star className="w-3 h-3" />
+            已收藏
+          </button>
+
+          {/* 难度选择 */}
+          {(["all", "short", "medium", "long"] as const).map((level) => (
+            <button
+              key={level}
+              onClick={() => {
+                setSelectedDifficulty(level);
+                setCurrentPage(1);
+                setAdditionalCount(0);
+              }}
+              className={`flex items-center justify-center gap-1 px-2 py-1.5 rounded-full border transition-colors text-xs font-bold w-full ${
+                selectedDifficulty === level
+                  ? level === "all"
+                    ? "bg-slate-700 text-white border-slate-600"
+                    : `${DIFFICULTY_CONFIG[level].color} text-white border-white/50`
+                  : "bg-white/20 text-white border-white/30 hover:bg-white/30"
+              }`}
+            >
+              {level === "all" ? "全部" : DIFFICULTY_CONFIG[level].label}
+            </button>
+          ))}
         </div>
       </div>
 
       <div className="space-y-4">
-        {displayedPhrases.map((phrase, index) => {
+        {displayedPhrases.map((phrase) => {
           const isExpanded = expandedId === phrase.id;
-          const isActivePlaying = isPlaying && index === currentIndex;
-          const shouldShowChinese = isExpanded || (showChinese && isActivePlaying);
+          const isActivePlaying = isPlaying && phrase.id === activePhraseId;
+          const shouldShowChinese =
+            isExpanded || (showChinese && isActivePlaying);
+          const isFavorite = favoriteIds.has(phrase.id);
+          const isMastered = masteredIds.has(phrase.id);
           return (
             <div
               key={phrase.id}
               ref={isActivePlaying ? activePhraseRef : undefined}
-              onClick={() => toggleExpand(phrase.id)}
+              onClick={() => handlePhraseClick(phrase.id)}
               className={`bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 transition-all cursor-pointer overflow-hidden ${
                 isExpanded
                   ? "border-brand-400 shadow-md ring-1 ring-brand-100"
@@ -565,31 +869,59 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
               }`}
             >
               <div className="p-5">
-                <div className="flex justify-between items-start gap-4">
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="px-2 py-0.5 bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 text-[10px] font-bold rounded uppercase tracking-wider border border-indigo-100 dark:border-slate-600">
-                        {phrase.context}
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="px-2 py-0.5 bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 text-[10px] font-bold rounded uppercase tracking-wider border border-indigo-100 dark:border-slate-600">
+                      {phrase.context}
+                    </span>
+                    {phrase.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[10px] text-slate-400 dark:text-slate-300 flex items-center gap-1 bg-slate-50 dark:bg-slate-700 px-1.5 py-0.5 rounded"
+                      >
+                        <Tag className="w-3 h-3" /> {tag}
                       </span>
-                      {phrase.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[10px] text-slate-400 dark:text-slate-300 flex items-center gap-1 bg-slate-50 dark:bg-slate-700 px-1.5 py-0.5 rounded"
-                        >
-                          <Tag className="w-3 h-3" /> {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <h3 className="text-lg md:text-xl font-semibold text-slate-800 dark:text-slate-100 leading-relaxed pr-8">
-                      {renderClickableSentence(phrase.english)}
-                    </h3>
+                    ))}
                   </div>
-                  <button
-                    onClick={(e) => handlePlay(e, phrase.english)}
-                    className="flex-shrink-0 p-3 rounded-full bg-brand-50 dark:bg-slate-700 text-brand-600 dark:text-brand-300 hover:bg-brand-500 hover:text-white transition-all shadow-sm active:scale-90"
-                  >
-                    <Volume2 className="w-5 h-5 md:w-6 md:h-6" />
-                  </button>
+                  <h3 className="text-lg md:text-xl font-semibold text-slate-800 dark:text-slate-100 leading-relaxed">
+                    {renderClickableSentence(phrase.english)}
+                  </h3>
+                  <div className="flex items-center justify-end gap-2">
+                    <button
+                      onClick={(e) => toggleFavorite(e, phrase.id)}
+                      className={`p-2 rounded-full border transition-colors ${
+                        isFavorite
+                          ? "bg-yellow-50 text-yellow-500 border-yellow-200"
+                          : "bg-white dark:bg-slate-800 text-slate-400 border-slate-200 dark:border-slate-700 hover:text-yellow-500"
+                      }`}
+                    >
+                      <Star
+                        className={`w-4 h-4 ${
+                          isFavorite ? "fill-yellow-400" : ""
+                        }`}
+                      />
+                    </button>
+                    <button
+                      onClick={(e) => toggleMastered(e, phrase.id)}
+                      className={`p-2 rounded-full border transition-colors ${
+                        isMastered
+                          ? "bg-emerald-50 text-emerald-500 border-emerald-200"
+                          : "bg-white dark:bg-slate-800 text-slate-400 border-slate-200 dark:border-slate-700 hover:text-emerald-500"
+                      }`}
+                    >
+                      <CheckCircle
+                        className={`w-4 h-4 ${
+                          isMastered ? "fill-emerald-400" : ""
+                        }`}
+                      />
+                    </button>
+                    <button
+                      onClick={(e) => handlePlay(e, phrase.english)}
+                      className="flex-shrink-0 p-3 rounded-full bg-brand-50 dark:bg-slate-700 text-brand-600 dark:text-brand-300 hover:bg-brand-500 hover:text-white transition-all shadow-sm active:scale-90"
+                    >
+                      <Volume2 className="w-5 h-5 md:w-6 md:h-6" />
+                    </button>
+                  </div>
                 </div>
 
                 <div
@@ -621,7 +953,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
       </div>
 
       {/* Load More Button */}
-      {endIndex < displayPhrases.length && (
+      {playRange !== "favorites" && endIndex < basePhrases.length && (
         <div className="mt-8 flex justify-center pb-8">
           <button
             onClick={loadMore}
@@ -675,7 +1007,9 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
                   : selectedWord.def.chinese}
               </div>
             ) : (
-              <div className="text-slate-400 dark:text-slate-500 text-sm italic">暂无详细释义</div>
+              <div className="text-slate-400 dark:text-slate-500 text-sm italic">
+                暂无详细释义
+              </div>
             )}
           </div>
 
@@ -694,42 +1028,84 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
         </div>
       )}
 
+      {isMobile.current && (
+        <button
+          onClick={togglePlay}
+          disabled={playPhrases.length === 0}
+          className="fixed bottom-[72px] right-8 z-50 p-3 bg-indigo-500 text-white rounded-full shadow-lg hover:bg-indigo-600 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 disabled:bg-slate-300 dark:disabled:bg-slate-700"
+          aria-label={isPlaying ? "暂停播放" : "开始播放"}
+        >
+          {isPlaying ? (
+            <Pause className="w-5 h-5 fill-current" />
+          ) : (
+            <Play className="w-5 h-5 fill-current ml-0.5" />
+          )}
+        </button>
+      )}
+
       {/* Back to Top Button */}
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-[72px] right-8 z-50 p-3 bg-brand-500 text-white rounded-full shadow-lg hover:bg-brand-600 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-300 focus:ring-offset-2"
+          className={`fixed right-8 z-50 p-3 bg-brand-500 text-white rounded-full shadow-lg hover:bg-brand-600 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-300 focus:ring-offset-2 ${
+            isMobile.current ? "bottom-[132px]" : "bottom-[72px]"
+          }`}
           aria-label="回到顶部"
         >
           <ArrowUp className="w-5 h-5" />
         </button>
       )}
 
-  <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-50 transition-all">
-        <div className="mx-auto flex items-center max-w-3xl relative">
-          <div className="flex items-center gap-1">
-            <div className="text-xs text-slate-500 font-medium w-12 text-center">
-              {displayedPhrases.length > 0
-                ? `${Math.min(currentIndex + 1, displayedPhrases.length)}/${displayedPhrases.length}`
-                : "0/0"}
+      {!isMobile.current && (
+        <div className="fixed bottom-0 left-0 right-0 p-4 pb-[calc(env(safe-area-inset-bottom)+16px)] md:pb-4 md:bottom-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-50 transition-all md:translate-y-0 translate-y-[-12px]">
+          <div className="mx-auto flex items-center max-w-3xl relative">
+            <div className="flex items-center gap-2">
+              <div className="text-xs text-slate-500 font-medium w-12 text-center">
+                {playPhrases.length > 0
+                  ? `${Math.min(currentIndex + 1, playPhrases.length)}/${playPhrases.length}`
+                  : "0/0"}
+              </div>
+              <div className="text-[10px] font-bold text-indigo-500 bg-indigo-50 dark:bg-slate-800 px-2 py-0.5 rounded-full border border-indigo-100 dark:border-slate-700">
+                {playPhrases.length > 0
+                  ? `${Math.min(currentLoop + 1, repeatCount)}/${repeatCount}遍`
+                  : `0/${repeatCount}遍`}
+              </div>
+              <div className="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
+                <span>每页:</span>
+                <select
+                  value={pageSize}
+                  onChange={(e) => {
+                    setPageSize(Number(e.target.value));
+                    setCurrentPage(1);
+                    setAdditionalCount(0);
+                  }}
+                  className="bg-transparent font-bold text-brand-600 dark:text-brand-400 outline-none cursor-pointer"
+                >
+                  <option value={10}>10</option>
+                  <option value={20}>20</option>
+                  <option value={30}>30</option>
+                  <option value={50}>50</option>
+                  <option value={100}>100</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-4">
+              <button
+                onClick={togglePlay}
+                disabled={playPhrases.length === 0}
+                className="w-10 h-10 flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 disabled:bg-slate-300 dark:disabled:bg-slate-700 text-white rounded-full shadow-lg shadow-indigo-200 dark:shadow-none transition-transform active:scale-95"
+              >
+                {isPlaying ? (
+                  <Pause className="w-4 h-4 fill-current" />
+                ) : (
+                  <Play className="w-4 h-4 fill-current ml-0.5" />
+                )}
+              </button>
             </div>
           </div>
-
-          <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-4">
-            <button
-              onClick={togglePlay}
-              disabled={displayedPhrases.length === 0}
-              className="w-10 h-10 flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 disabled:bg-slate-300 dark:disabled:bg-slate-700 text-white rounded-full shadow-lg shadow-indigo-200 dark:shadow-none transition-transform active:scale-95"
-            >
-              {isPlaying ? (
-                <Pause className="w-4 h-4 fill-current" />
-              ) : (
-                <Play className="w-4 h-4 fill-current ml-0.5" />
-              )}
-            </button>
-          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

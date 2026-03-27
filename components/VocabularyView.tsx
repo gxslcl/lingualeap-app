@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import {
   Volume2,
   Eye,
+  EyeOff,
   BookOpen,
   Search,
   ArrowDown,
@@ -54,6 +55,12 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
   const [isRandomMode, setIsRandomMode] = useState(false);
   const [shuffleSeed, setShuffleSeed] = useState(0); // Used to trigger re-shuffle
 
+  // 显示中文切换状态 - 从 localStorage 加载
+  const [showChineseInVocab, setShowChineseInVocab] = useState(() => {
+    const saved = localStorage.getItem("lingualeap_vocab_show_chinese");
+    return saved ? JSON.parse(saved) : false;
+  });
+
   const categories = useMemo(() => {
     return ["全部", ...Object.values(Category), "生词练习"];
   }, []);
@@ -67,6 +74,11 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
       JSON.stringify(Array.from(learnedWords))
     );
   }, [learnedWords]);
+
+  // 保存显示中文设置到 localStorage
+  React.useEffect(() => {
+    localStorage.setItem("lingualeap_vocab_show_chinese", JSON.stringify(showChineseInVocab));
+  }, [showChineseInVocab]);
 
   // 1. Filter by Category
   // 优化：分离基础分类过滤逻辑，保持引用稳定
@@ -226,6 +238,22 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
               {isRandomMode ? "随机模式" : "顺序模式"}
             </button>
 
+            <button
+              onClick={() => setShowChineseInVocab(!showChineseInVocab)}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border ${
+                showChineseInVocab
+                  ? "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-700"
+                  : "bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700"
+              }`}
+            >
+              {showChineseInVocab ? (
+                <Eye className="w-4 h-4" />
+              ) : (
+                <EyeOff className="w-4 h-4" />
+              )}
+              {showChineseInVocab ? "显示中文" : "隐藏中文"}
+            </button>
+
             {isRandomMode && (
               <button
                 onClick={handleRefreshRandom}
@@ -349,12 +377,12 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
                     toggleReveal(word.id);
                   }}
                   className={`mt-3 p-3 rounded-lg text-center transition-all duration-300 cursor-pointer flex-shrink-0 ${
-                    isRevealed
+                    isRevealed || showChineseInVocab
                       ? "bg-brand-50/50 dark:bg-brand-900/20"
                       : "bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800"
                   }`}
                 >
-                  {isRevealed ? (
+                  {isRevealed || showChineseInVocab ? (
                     <span className="text-lg font-bold text-brand-600 dark:text-brand-400 animate-in fade-in slide-in-from-bottom-2 block">
                       {Array.isArray(word.chinese)
                         ? word.chinese.join(", ")
