@@ -1,0 +1,186 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1774738833279,
+  "projectRoot": "C:\\Users\\1\\Desktop\\项目\\lingualeap---英语自学助手",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.2.0",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.0",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "5.4.14",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "components",
+      "public"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "components": {
+      "path": "components",
+      "purpose": "UI components",
+      "fileCount": 8,
+      "lastAccessed": 1774738833251,
+      "keyFiles": [
+        "GameView.tsx",
+        "ListenView.tsx",
+        "PhrasesView.tsx",
+        "PomodoroTimer.tsx",
+        "SettingsPanel.tsx"
+      ]
+    },
+    "data": {
+      "path": "data",
+      "purpose": "Data files",
+      "fileCount": 3,
+      "lastAccessed": 1774738833251,
+      "keyFiles": [
+        "data.ts",
+        "phrases.ts",
+        "vocabulary.ts"
+      ]
+    },
+    "dev-dist": {
+      "path": "dev-dist",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1774738833251,
+      "keyFiles": [
+        "registerSW.js",
+        "sw.js",
+        "workbox-5a5d9309.js"
+      ]
+    },
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 8,
+      "lastAccessed": 1774738833252,
+      "keyFiles": [
+        "icon-192.png",
+        "icon-512.png",
+        "index.html",
+        "manifest.json",
+        "manifest.webmanifest"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 3,
+      "lastAccessed": 1774738833252,
+      "keyFiles": [
+        "icon-192.png",
+        "icon-512.png",
+        "manifest.json"
+      ]
+    },
+    "services": {
+      "path": "services",
+      "purpose": "Business logic services",
+      "fileCount": 4,
+      "lastAccessed": 1774738833252,
+      "keyFiles": [
+        "srs.ts",
+        "storage.ts",
+        "ttsService.ts",
+        "wordChecker.ts"
+      ]
+    },
+    "dist\\assets": {
+      "path": "dist\\assets",
+      "purpose": "Static assets",
+      "fileCount": 1,
+      "lastAccessed": 1774738833253,
+      "keyFiles": [
+        "index.BuXjbZ8m.js"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "components\\VocabularyView.tsx",
+      "accessCount": 25,
+      "lastAccessed": 1774742709537,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1774739015773,
+      "type": "directory"
+    },
+    {
+      "path": "data\\data.ts",
+      "accessCount": 1,
+      "lastAccessed": 1774740321926,
+      "type": "file"
+    },
+    {
+      "path": "data\\vocabulary.ts",
+      "accessCount": 1,
+      "lastAccessed": 1774740326225,
+      "type": "file"
+    },
+    {
+      "path": "data",
+      "accessCount": 1,
+      "lastAccessed": 1774740326363,
+      "type": "directory"
+    }
+  ],
+  "userDirectives": []
+}

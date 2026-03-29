@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "WebSearch"
+      "WebSearch",
+      "Bash(bash \"$HOME/.claude/plugins/marketplaces/omc/scripts/setup-claude-md.sh\" global)",
+      "Bash(bash \"$HOME/.claude/plugins/marketplaces/omc/scripts/setup-progress.sh\" save 2 global)",
+      "Bash(bash \"$HOME/.claude/plugins/marketplaces/omc/scripts/setup-progress.sh\" save 3 global)",
+      "Bash(npm view:*)",
+      "Bash(node:*)",
+      "Bash(bash \"$HOME/.claude/plugins/marketplaces/omc/scripts/setup-progress.sh\" save 6 global)",
+      "Bash(bash \"$HOME/.claude/plugins/marketplaces/omc/scripts/setup-progress.sh\" complete 4.9.3)",
+      "Bash(bash \"$HOME/.claude/plugins/marketplaces/omc/scripts/setup-progress.sh\" clear)",
+      "mcp__plugin_oh-my-claudecode_t__ast_grep_replace",
+      "Bash(npm run:*)"
     ]
   }
 }

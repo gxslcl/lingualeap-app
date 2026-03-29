@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Book, MessageSquare, Gamepad2, Settings as SettingsIcon, GraduationCap, Smartphone, Monitor, Brain, BarChart3, Headphones } from 'lucide-react';
+import { Button } from 'antd'; // 导入 Ant Design 的 Button 组件
 import { ViewState, TTSConfig, AppSettings } from './types';
 import { VocabularyView } from './components/VocabularyView';
 import { PhrasesView } from './components/PhrasesView';
@@ -192,12 +193,12 @@ const App: React.FC = () => {
                     >
                         <Smartphone className="w-5 h-5" />
                     </button>
-                    <button
-                        onClick={() => setShowSettings(true)}
-                        className="p-2 text-slate-500 hover:text-brand-600 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
-                    >
-                        <SettingsIcon className="w-5 h-5" />
-                    </button>
+                    <Button 
+                      type="text"
+                      icon={<SettingsIcon className="w-5 h-5" />}
+                      onClick={() => setShowSettings(true)}
+                      className="p-2 text-slate-500 hover:text-brand-600 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
+                    />
                 </div>
             </div>
           </div>
@@ -219,12 +220,12 @@ const App: React.FC = () => {
             >
                 <Monitor className="w-5 h-5" />
             </button>
-            <button
-                onClick={() => setShowSettings(true)}
-                className="p-2 text-slate-500 hover:text-brand-600 active:bg-slate-100 dark:active:bg-slate-700 rounded-full"
-            >
-                <SettingsIcon className="w-5 h-5" />
-            </button>
+            <Button
+              type="text"
+              icon={<SettingsIcon className="w-5 h-5" />}
+              onClick={() => setShowSettings(true)}
+              className="p-2 text-slate-500 hover:text-brand-600 active:bg-slate-100 dark:active:bg-slate-700 rounded-full"
+            />
           </div>
         </header>
       )}
