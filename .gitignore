@@ -41,3 +41,24 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+
+# Android 打包产物与本地自检截图
+release/
+.shots/
+android/local.properties
+
+# android/ 原生工程需要纳入版本管理（含自定义 TTS / 文件导出插件源码），
+# 仅忽略其构建产物，相关规则见 android/.gitignore。
+
+# 签名证书与口令：绝不入库
+*.jks
+*.keystore
+keystore.properties
+
+# 本地工具状态 / IDE 私有配置
+.omc/
+.claude/settings.local.json
+
+# Vite 加载 TS 配置时产生的临时文件
+dev-dist/
+vite.config.ts.timestamp-*
