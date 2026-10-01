@@ -14,11 +14,12 @@ import {
   Snail,
 } from "lucide-react";
 import { Category, PhraseItem, WordItem, WordProgress, TTSConfig } from "../types";
-import { vocabularyData } from "../data/vocabulary";
-import { phrasesData } from "../data/phrases";
 import { storageService } from "../services/storage";
 import { calculateReview } from "../services/srs";
 import { ttsService } from "../services/ttsService";
+import { sessionService } from "../services/session";
+// 内置数据 + 导入的自定义数据
+import { customDataService } from "../services/customData";
 
 interface StudySessionProps {
   ttsConfig: TTSConfig;
@@ -51,7 +52,7 @@ interface ListenExerciseState {
 }
 
 // 难度级别定义
-type DifficultyLevel = 'short' | 'medium' | 'long' | 'all';
+type DifficultyLevel = 'short' | 'medium' | 'long';
 
 interface DifficultyConfig {
   label: string;
@@ -61,14 +62,14 @@ interface DifficultyConfig {
 }
 
 const DIFFICULTY_CONFIG: Record<DifficultyLevel, DifficultyConfig> = {
-  short: { label: '短句', minWords: 1, maxWords: 3, color: 'bg-emerald-500' },
-  medium: { label: '中句', minWords: 4, maxWords: 6, color: 'bg-amber-500' },
-  long: { label: '长句', minWords: 7, maxWords: Infinity, color: 'bg-rose-500' },
+  short: { label: '短句', minWords: 1, maxWords: 5, color: 'bg-emerald-500' },
+  medium: { label: '中句', minWords: 5, maxWords: 7, color: 'bg-amber-500' },
+  long: { label: '长句', minWords: 8, maxWords: Infinity, color: 'bg-rose-500' },
 };
 
 const getDifficultyByLength = (wordCount: number): DifficultyLevel => {
-  if (wordCount <= DIFFICULTY_CONFIG.short.maxWords) return 'short';
-  if (wordCount <= DIFFICULTY_CONFIG.medium.maxWords) return 'medium';
+  if (wordCount <= 5) return 'short';
+  if (wordCount <= 7) return 'medium';
   return 'long';
 };
 
@@ -101,8 +102,10 @@ export const StudySession: React.FC<StudySessionProps> = ({
   });
   const MAX_PLAYS = 3; // 最多播放次数
 
-  // 难度选择
-  const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel | 'all'>('all');
+  // 难度选择 - 支持多选
+  const [selectedDifficulties, setSelectedDifficulties] = useState<Set<DifficultyLevel>>(
+    new Set<DifficultyLevel>(),
+  );
 
   // Quiz State
   const [options, setOptions] = useState<QuizOption[]>([]);
@@ -126,14 +129,14 @@ export const StudySession: React.FC<StudySessionProps> = ({
     const now = Date.now();
 
     // 1. Find words due for review
-    const dueWords = vocabularyData.filter((w) => {
+    const dueWords = customDataService.allWords().filter((w) => {
       const p = savedProgress[w.id];
       // If p exists and nextReview is in the past
       return p && p.nextReview <= now;
     });
 
     // 2. Find new words (never studied)
-    const newWords = vocabularyData.filter((w) => !savedProgress[w.id]);
+    const newWords = customDataService.allWords().filter((w) => !savedProgress[w.id]);
 
     // 3. Create a batch of batchSize
     let sessionWords = [...dueWords];
@@ -151,7 +154,7 @@ export const StudySession: React.FC<StudySessionProps> = ({
     // Fallback if empty (if user mastered everything or no due words)
     // Just pick random words to keep practicing
     if (sessionWords.length === 0) {
-      sessionWords = [...vocabularyData]
+      sessionWords = [...customDataService.allWords()]
         .sort(() => 0.5 - Math.random())
         .slice(0, batchSize);
     }
@@ -165,20 +168,20 @@ export const StudySession: React.FC<StudySessionProps> = ({
   }, [batchSize]);
 
   const generatePhraseBatch = useCallback(() => {
-    let filtered = phrasesData;
+    let filtered = customDataService.allPhrases();
 
-    // 根据难度过滤句子
-    if (selectedDifficulty !== 'all') {
-      const config = DIFFICULTY_CONFIG[selectedDifficulty];
-      filtered = phrasesData.filter(phrase => {
+    // 根据难度过滤句子 - 支持多选
+    if (selectedDifficulties.size > 0) {
+      filtered = customDataService.allPhrases().filter(phrase => {
         const wordCount = phrase.english.split(/\s+/).length;
-        return wordCount >= config.minWords && wordCount <= config.maxWords;
+        const difficulty = getDifficultyByLength(wordCount);
+        return selectedDifficulties.has(difficulty);
       });
     }
 
     // 如果过滤后为空，使用全部数据
     if (filtered.length === 0) {
-      filtered = phrasesData;
+      filtered = customDataService.allPhrases();
     }
 
     const shuffled = [...filtered].sort(() => 0.5 - Math.random());
@@ -186,7 +189,7 @@ export const StudySession: React.FC<StudySessionProps> = ({
     setPhraseIndex(0);
     setListenComplete(false);
     resetListenState();
-  }, [batchSize, selectedDifficulty]);
+  }, [batchSize, selectedDifficulties]);
 
   const resetListenState = () => {
     setListenState({
@@ -216,7 +219,7 @@ export const StudySession: React.FC<StudySessionProps> = ({
     const normalizedSet = new Set(
       baseTokens.map((token) => token.normalized)
     );
-    const pool = vocabularyData
+    const pool = customDataService.allWords()
       .filter((word) => word.category === Category.DailyLife)
       .map((word) => word.english)
       .filter((word) => !normalizedSet.has(word.toLowerCase()));
@@ -238,11 +241,39 @@ export const StudySession: React.FC<StudySessionProps> = ({
       }));
   };
 
+  // 恢复上次未完成的批次（关闭应用后接着学）
+  const restoredBatch: WordItem[] | null = (() => {
+    const saved = sessionService.getViewState<{ batchIds: string[] }>("study");
+    const ids = saved?.batchIds;
+    if (!ids || ids.length === 0) return null;
+    const pool = new Map(customDataService.allWords().map((w) => [w.id, w]));
+    const list = ids.map((id) => pool.get(id)).filter(Boolean) as WordItem[];
+    return list.length > 0 ? list : null;
+  })();
+  const restoredIndex = sessionService.getViewState<{ currentIndex: number }>("study")?.currentIndex ?? 0;
+  const skipInitialGenerate = useRef(!!restoredBatch);
+
   // Initialize Session on mount
   useEffect(() => {
-    generateBatch();
+    if (skipInitialGenerate.current) {
+      // 用恢复出来的批次，避免把上次的进度冲掉
+      skipInitialGenerate.current = false;
+      setBatch(restoredBatch ?? []);
+      setCurrentIndex(restoredIndex);
+    } else {
+      generateBatch();
+    }
     sessionStartTime.current = Date.now();
   }, [generateBatch]);
+
+  // 记录当前批次与进度，供下次启动恢复
+  useEffect(() => {
+    if (batch.length === 0) return;
+    sessionService.patchViewState("study", {
+      batchIds: batch.map((w) => w.id),
+      currentIndex,
+    });
+  }, [batch, currentIndex]);
 
   // 听力拼句模块暂时隐藏，不需要自动加载
   // useEffect(() => {
@@ -288,7 +319,7 @@ export const StudySession: React.FC<StudySessionProps> = ({
     const currentWord = batch[currentIndex];
 
     // 1. Pick 3 distractors
-    const otherWords = vocabularyData.filter((w) => w.id !== currentWord.id);
+    const otherWords = customDataService.allWords().filter((w) => w.id !== currentWord.id);
     const shuffledOthers = [...otherWords]
       .sort(() => 0.5 - Math.random())
       .slice(0, 3);
@@ -738,7 +769,7 @@ export const StudySession: React.FC<StudySessionProps> = ({
   }
 
   return (
-    <div className="max-w-xl mx-auto h-full flex flex-col pt-4 pb-8 px-4">
+    <div className="max-w-xl lg:max-w-3xl 2xl:max-w-4xl mx-auto h-full flex flex-col pt-4 pb-8 px-4">
       <div className="mb-6 space-y-2">
         <div className="flex items-center gap-2">
           <button
@@ -768,24 +799,33 @@ export const StudySession: React.FC<StudySessionProps> = ({
         {studyMode === "listen" && (
           <div className="flex items-center gap-2">
             <span className="text-xs text-slate-500 dark:text-slate-400">难度:</span>
-            {(['all', 'short', 'medium', 'long'] as const).map((level) => (
-              <button
-                key={level}
-                onClick={() => {
-                  setSelectedDifficulty(level);
-                  setTimeout(generatePhraseBatch, 50);
-                }}
-                className={`px-2.5 py-1 rounded-lg text-[10px] font-bold transition-all ${
-                  selectedDifficulty === level
-                    ? level === 'all'
-                      ? 'bg-slate-700 text-white dark:bg-slate-200 dark:text-slate-900'
-                      : `${DIFFICULTY_CONFIG[level].color} text-white shadow-sm`
-                    : 'bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-600'
-                }`}
-              >
-                {level === 'all' ? '全部' : DIFFICULTY_CONFIG[level].label}
-              </button>
-            ))}
+            {(['short', 'medium', 'long'] as const).map((level) => {
+              const isSelected = selectedDifficulties.has(level);
+              return (
+                <button
+                  key={level}
+                  onClick={() => {
+                    setSelectedDifficulties(prev => {
+                      const next = new Set(prev);
+                      if (next.has(level)) {
+                        next.delete(level);
+                      } else {
+                        next.add(level);
+                      }
+                      return next;
+                    });
+                    setTimeout(generatePhraseBatch, 50);
+                  }}
+                  className={`px-2.5 py-1 rounded-lg text-[10px] font-bold transition-all ${
+                    isSelected
+                      ? `${DIFFICULTY_CONFIG[level].color} text-white shadow-sm`
+                      : 'bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-600'
+                  }`}
+                >
+                  {DIFFICULTY_CONFIG[level].label}
+                </button>
+              );
+            })}
           </div>
         )}
         <div className="flex items-center justify-between text-xs font-medium text-slate-400 dark:text-slate-500">
@@ -828,7 +868,7 @@ export const StudySession: React.FC<StudySessionProps> = ({
             </h2>
 
             <div className="flex items-center gap-3 z-10">
-              <span className="text-xl text-slate-400 dark:text-slate-500 font-mono">
+              <span className="text-xl text-slate-400 dark:text-slate-500 ipa-text">
                 {currentWord.pronunciation}
               </span>
               <button
@@ -899,13 +939,17 @@ export const StudySession: React.FC<StudySessionProps> = ({
             {/* 难度标签和句子信息 */}
             <div className="flex items-center justify-between mb-6 z-10">
               <div className="flex items-center gap-2">
-                <span className={`px-3 py-1 rounded-full text-xs font-bold text-white ${
-                  selectedDifficulty === 'all'
-                    ? 'bg-slate-700 dark:bg-slate-200'
-                    : DIFFICULTY_CONFIG[selectedDifficulty].color
-                }`}>
-                  {selectedDifficulty === 'all' ? '全部' : DIFFICULTY_CONFIG[selectedDifficulty].label}
-                </span>
+                {selectedDifficulties.size === 0 ? (
+                  <span className="px-3 py-1 rounded-full text-xs font-bold text-white bg-slate-700 dark:bg-slate-200">
+                    全部
+                  </span>
+                ) : (
+                  Array.from<DifficultyLevel>(selectedDifficulties).map(level => (
+                    <span key={level} className={`px-3 py-1 rounded-full text-xs font-bold text-white ${DIFFICULTY_CONFIG[level].color}`}>
+                      {DIFFICULTY_CONFIG[level].label}
+                    </span>
+                  ))
+                )}
                 {currentPhrase && (
                   <span className="text-xs text-slate-500 dark:text-slate-400">
                     {currentPhrase.english.split(/\s+/).length} 个单词

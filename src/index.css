@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== 全局基础样式（离线：不依赖任何 CDN 字体/样式） ===== */
+:root {
+  --brand: #0ea5e9;
+
+  /* 系统栏尺寸：原生侧测量后会覆盖这几个值（见 src/native.ts）。
+     浏览器环境（含 iOS Safari）退回 CSS env()，两者写法保持一致。 */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  /* 顶部导航栏内容区高度（不含状态栏），供页面内吸顶元素对齐使用 */
+  --header-h: 64px;
+
+  /* 手机端底部标签栏高度；平板/桌面布局下由 App 覆盖为 0px，
+     这样固定定位的悬浮按钮、播放条都能「自动」让开标签栏 */
+  --bottom-nav-h: 0px;
+
+  /* 主内容区上下内边距（由 App 按布局写入，下边距已包含为底部标签栏预留的空间） */
+  --main-pt: 1.5rem;
+  --main-pb: 1.5rem;
+
+  /* 某个页面自带底部通栏时（如短语页在桌面端的操作栏），由该页面覆盖此值 */
+  --bottom-bar-h: 0px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* 暗色模式下同时告诉浏览器 UI 控件（滚动条、输入框）用深色 */
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  /* 注意：'Noto Sans' 需要排在中文超大字符集字体之前，
+     否则音标（如 /aɪ/ 中的 ɪ）会因缺少对应字形而显示成方框 */
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans', 'Roboto',
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC',
+    sans-serif;
+  /* 安卓 WebView 下禁掉点击高亮与橡皮筋滚动，体验更接近原生 */
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* 音标专用字体：安卓的等宽字体（Roboto Mono / Droid Sans Mono）缺少
+   IPA Extensions 字形，音标会渲染成方框，这里显式换成有 IPA 覆盖的常规字体。 */
+.ipa-text {
+  font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Helvetica Neue', Arial,
+    'Droid Sans', 'sans-serif';
+  font-variant-ligatures: none;
+  letter-spacing: 0.01em;
+}
+
+/* 隐藏滚动条 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ===== 安全区适配（状态栏 / 刘海屏 / 手势导航栏） ===== */
+.pb-safe {
+  padding-bottom: var(--safe-bottom);
+}
+.pt-safe {
+  padding-top: var(--safe-top);
+}
+.pl-safe {
+  padding-left: var(--safe-left);
+}
+.pr-safe {
+  padding-right: var(--safe-right);
+}
+.mb-safe {
+  margin-bottom: var(--safe-bottom);
+}
+.mt-safe {
+  margin-top: var(--safe-top);
+}
+
+
+/* 页面内吸顶元素：紧贴顶栏下沿停靠（替代写死的 top-16 / top-24） */
+.sticky-under-header {
+  position: sticky;
+  top: calc(var(--header-h) + var(--safe-top));
+}
+
+/* 主内容区：上下留白统一由变量驱动，底部已包含标签栏与手势栏所需空间 */
+.main-pad {
+  padding-top: var(--main-pt);
+  padding-bottom: var(--main-pb);
+}
+
+/* 页面内容底部留白：主内容已让开标签栏，这里再为悬浮按钮/底部通栏多留一点 */
+.pb-page {
+  padding-bottom: calc(var(--bottom-bar-h) + 2.5rem);
+}
+
+/* 悬浮元素（播放按钮、浮层提示）：浮在底部标签栏之上 */
+.bottom-above-nav {
+  bottom: calc(var(--safe-bottom) + var(--bottom-nav-h) + 1rem);
+}
+/* 需要在上面那个按钮再往上叠一个时使用（如「回到顶部」） */
+.bottom-above-nav-2 {
+  bottom: calc(var(--safe-bottom) + var(--bottom-nav-h) + 1rem + 3.75rem);
+}
+
+/* 通栏底栏（播放条、操作栏）：紧贴底部标签栏上方 */
+.bottom-bar-above-nav {
+  bottom: calc(var(--safe-bottom) + var(--bottom-nav-h));
+}
+
+/* 整屏视图高度：扣掉顶栏与主内容上下留白（下边距已含标签栏/手势栏），
+   避免页面被底栏裁掉；100dvh 不支持时退回 100vh */
+.h-viewport {
+  height: calc(
+    100vh - var(--safe-top) - var(--header-h) - var(--main-pt) - var(--main-pb)
+  );
+  height: calc(
+    100dvh - var(--safe-top) - var(--header-h) - var(--main-pt) - var(--main-pb)
+  );
+}
+
+/* 内容区左右安全区（横屏刘海机型） */
+.px-safe {
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
+}
+
+/* 平板/手机上放大可点击区域，避免误触 */
+button,
+[role='button'] {
+  touch-action: manipulation;
+}
+
+/* 长列表惯性滚动 */
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+}

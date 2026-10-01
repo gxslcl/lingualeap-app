@@ -14,6 +14,10 @@ export interface WordItem {
   chinese: string | string[];
   pronunciation?: string; // IPA
   category: Category;
+  /** 导入数据所属分组名（内置数据为空） */
+  group?: string;
+  /** 是否为导入的自定义数据 */
+  isCustom?: boolean;
 }
 
 export interface PhraseItem {
@@ -22,9 +26,20 @@ export interface PhraseItem {
   chinese: string;
   context: string; // e.g., "At a restaurant"
   tags: string[];
+  /** 导入数据所属分组名（内置数据为空） */
+  group?: string;
+  /** 是否为导入的自定义数据 */
+  isCustom?: boolean;
 }
 
-export type ViewState = 'vocabulary' | 'phrases' | 'game' | 'study' | 'stats' | 'listen';
+export type ViewState =
+  | 'vocabulary'
+  | 'phrases'
+  | 'game'
+  | 'study'
+  | 'stats'
+  | 'listen'
+  | 'data';
 
 export interface TTSConfig {
   rate: number; // 0.5 to 2
@@ -41,6 +56,7 @@ export interface AppSettings {
   fontSizeScale: number; // 0.8 to 1.2
   dailyGoal: number; // words per day
   themeMode?: 'auto' | 'light' | 'dark'; // 主题模式
+  layoutMode?: 'auto' | 'phone' | 'tablet'; // 布局形态：自动 / 锁定手机 / 锁定平板
 }
 
 export interface ListenSettings {
@@ -49,6 +65,7 @@ export interface ListenSettings {
   batchSize: number;
   repeatCount: number;
   intervalMs: number;
+  playbackStrategy?: 'focus' | 'balanced' | 'explore';
 }
 
 export interface PhrasesSettings {
@@ -57,7 +74,7 @@ export interface PhrasesSettings {
   intervalMs: number;
   showChinese: boolean;
   playRange: 'current' | 'loaded' | 'all' | 'favorites';
-  playMode: 'en' | 'en-zh' | 'zh';
+  playMode: 'en-repeat' | 'en-zh-en' | 'zh-en' | 'en-only';
 }
 
 export interface WordProgress {
@@ -70,12 +87,62 @@ export interface WordProgress {
   lastReviewed: number;
 }
 
+/** 单日活动记录（用于连续天数与近 7 日趋势图） */
+export interface DailyRecord {
+  date: string; // YYYY-MM-DD（按本地时区）
+  count: number; // 当日学习/练习次数
+  minutes: number; // 当日学习分钟
+}
+
 export interface UserStats {
   totalStudyTime: number; // Minutes
   wordsLearned: number;
   streakDays: number;
-  lastStudyDate: string; // YYYY-MM-DD
+  lastStudyDate: string; // YYYY-MM-DD（按本地时区）
   todayCount: number;
+  /** 近 N 天记录，最多保留 30 条 */
+  history?: DailyRecord[];
+  /** 累计练习过的词条数（含听读/短语），不区分是否掌握 */
+  totalPracticed?: number;
+  /** 已掌握（status=mastered）的单词数，由学习进度实时统计 */
+  masteredCount?: number;
+}
+
+/** 导入的自定义分组 */
+export interface CustomGroup {
+  id: string;
+  name: string;
+  type: 'word' | 'phrase';
+  createdAt: number;
+  items: CustomItem[];
+}
+
+/** 分组内的一条数据 */
+export interface CustomItem {
+  id: string;
+  english: string;
+  chinese: string;
+  pronunciation?: string;
+  /** 单词：分类；短句：情景 */
+  category?: string;
+  tags?: string[];
+  createdAt: number;
+}
+
+/** 导入结果统计 */
+export interface ImportResult {
+  total: number;
+  imported: number;
+  skipped: number;
+  errors: string[];
+  groupNames: string[];
+}
+
+/** 需要跨会话保留的界面状态 */
+export interface SessionState {
+  view: ViewState;
+  savedAt: number;
+  perView: Record<string, unknown>;
 }
 
 export interface Achievement {

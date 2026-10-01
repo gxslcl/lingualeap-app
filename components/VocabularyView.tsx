@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Volume2,
   Eye,
@@ -15,8 +15,11 @@ import {
   MoreVertical,
 } from 'lucide-react';
 import { Category, TTSConfig, WordItem } from '../types';
-import { vocabularyData } from '../data/vocabulary';
 import { ttsService } from '../services/ttsService';
+import { storageService } from '../services/storage';
+import { sessionService } from '../services/session';
+// 内置数据 + 导入的自定义数据
+import { customDataService } from '../services/customData';
 
 interface VocabularyViewProps {
   ttsConfig: TTSConfig;
@@ -36,7 +39,32 @@ function shuffleArray<T>(array: T[]): T[] {
 const LEARNED_WORDS_KEY = 'lingualeap_learned_words';
 
 export const VocabularyView: React.FC<VocabularyViewProps> = ({ ttsConfig }) => {
-  const [activeCategory, setActiveCategory] = useState<Category | 'All' | 'Unlearned'>('All');
+  // 自定义数据增删后重新读取（导入后无需重进应用）
+  const [dataVersion, setDataVersion] = useState(0);
+  useEffect(() => {
+    const unsub = customDataService.subscribe(() => setDataVersion((v) => v + 1));
+    return () => {
+      unsub();
+    };
+  }, []);
+  const allWords = useMemo(() => customDataService.allWords(), [dataVersion]);
+  const customGroups = useMemo(
+    () => customDataService.wordGroupNames(),
+    [dataVersion],
+  );
+
+  // 恢复上次的浏览状态（分类 / 页码 / 搜索词等）
+  const savedView = sessionService.getViewState<{
+    activeCategory: string;
+    currentPage: number;
+    pageSize: number;
+    isRandomMode: boolean;
+    searchQuery: string;
+  }>('vocabulary');
+
+  const [activeCategory, setActiveCategory] = useState<string>(
+    savedView?.activeCategory ?? 'All',
+  );
   const [revealedWords, setRevealedWords] = useState<Set<string>>(new Set());
   const [learnedWords, setLearnedWords] = useState<Set<string>>(() => {
     // 从 localStorage 加载已学习的单词
@@ -45,12 +73,12 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({ ttsConfig }) => 
   });
 
   // Pagination & Display Settings
-  const [pageSize, setPageSize] = useState(20);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(() => savedView?.pageSize ?? 20);
+  const [currentPage, setCurrentPage] = useState(() => savedView?.currentPage ?? 1);
   const [additionalCount, setAdditionalCount] = useState(0);
 
   // New states for mode switching
-  const [isRandomMode, setIsRandomMode] = useState(false);
+  const [isRandomMode, setIsRandomMode] = useState(() => savedView?.isRandomMode ?? false);
   const [shuffleSeed, setShuffleSeed] = useState(0); // Used to trigger re-shuffle
 
   // 显示中文切换状态 - 从 localStorage 加载
@@ -60,14 +88,26 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({ ttsConfig }) => 
   });
 
   // 搜索功能状态
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(() => savedView?.searchQuery ?? '');
 
   // 移动端分页器展开状态
   const [showPaginationMenu, setShowPaginationMenu] = useState(false);
 
+  // 内置分类 + 自定义导入分组
   const categories = useMemo(() => {
-    return ['全部', ...Object.values(Category), '生词练习'];
-  }, []);
+    return ['全部', ...Object.values(Category), '生词练习', ...customGroups];
+  }, [customGroups]);
+
+  // 记录浏览状态，供下次启动恢复
+  useEffect(() => {
+    sessionService.patchViewState('vocabulary', {
+      activeCategory,
+      currentPage,
+      pageSize,
+      isRandomMode,
+      searchQuery,
+    });
+  }, [activeCategory, currentPage, pageSize, isRandomMode, searchQuery]);
 
   const [slowPlayInterval, setSlowPlayInterval] = useState(500); // 慢速播放间隔时间 (ms)
 
@@ -84,19 +124,23 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({ ttsConfig }) => 
   // 1. Filter by Category
   // 优化：分离基础分类过滤逻辑，保持引用稳定
   const categoryBaseWords = useMemo(() => {
-    if (activeCategory === 'All') return vocabularyData;
+    if (activeCategory === 'All') return allWords;
     if (activeCategory === 'Unlearned') return null;
-    return vocabularyData.filter(w => w.category === activeCategory);
-  }, [activeCategory]);
+    // 自定义分组：按分组名筛选
+    if (customGroups.includes(activeCategory)) {
+      return allWords.filter(w => w.group === activeCategory);
+    }
+    return allWords.filter(w => w.category === activeCategory);
+  }, [activeCategory, allWords, customGroups]);
 
   const filteredWords = useMemo(() => {
-    let words: typeof vocabularyData;
+    let words: WordItem[];
 
     if (activeCategory === 'All') {
-      words = vocabularyData;
+      words = allWords;
     } else if (activeCategory === 'Unlearned') {
       // 过滤出未学习的单词
-      words = vocabularyData.filter(w => !learnedWords.has(w.id));
+      words = allWords.filter(w => !learnedWords.has(w.id));
     } else {
       // 其他分类下，使用稳定的引用，避免 learnedWords 变化触发重排
       words = categoryBaseWords || [];
@@ -219,6 +263,9 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({ ttsConfig }) => 
     // 标记单词为已学习，但不在"生词练习"模式下进行
     if (activeCategory !== 'Unlearned') {
       setLearnedWords(prev => {
+        if (prev.has(wordId)) return prev;
+        // 首次学习该词，记一次练习
+        storageService.recordPractice(1);
         const newSet = new Set(prev);
         newSet.add(wordId);
         return newSet;
@@ -232,6 +279,8 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({ ttsConfig }) => 
     // 标记单词为已学习，但不在"生词练习"模式下进行
     if (activeCategory !== 'Unlearned') {
       setLearnedWords(prev => {
+        if (prev.has(wordId)) return prev;
+        storageService.recordPractice(1);
         const newSet = new Set(prev);
         newSet.add(wordId);
         return newSet;
@@ -279,7 +328,7 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({ ttsConfig }) => 
     <div className="h-full flex flex-col md:flex-row gap-6">
       {/* Sidebar Filters (Desktop) / Horizontal Scroll (Mobile) */}
       <div className="w-full md:w-64 flex-shrink-0">
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-3 md:p-4 sticky top-16 md:top-24 border border-slate-100 dark:border-slate-700">
+        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-3 md:p-4 sticky-under-header border border-slate-100 dark:border-slate-700">
           <h3 className="hidden md:flex font-bold text-slate-800 dark:text-white mb-4 items-center gap-2">
             <BookOpen className="w-4 h-4 text-brand-500" />
             分类列表
@@ -515,7 +564,7 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({ ttsConfig }) => 
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-4">
           {displayedWords.map(word => {
             const isRevealed = revealedWords.has(word.id);
             return (
@@ -543,7 +592,7 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({ ttsConfig }) => 
                     {word.english}
                   </h3>
                   {word.pronunciation && (
-                    <p className="text-sm text-slate-400 dark:text-slate-500 font-mono font-medium">
+                    <p className="text-sm text-slate-400 dark:text-slate-500 ipa-text font-medium">
                       {word.pronunciation}
                     </p>
                   )}

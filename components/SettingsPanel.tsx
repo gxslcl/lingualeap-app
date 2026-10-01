@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Settings, X, Volume2, Gauge, Moon, Sun, Type, Mic } from 'lucide-react';
+import { Settings, X, Volume2, Gauge, Moon, Sun, Type, Mic, Database } from 'lucide-react';
 import { TTSConfig, AppSettings } from '../types';
 import { ttsService } from '../services/ttsService';
+import { DataManager } from './DataManager';
 
 interface SettingsPanelProps {
   ttsConfig: TTSConfig;
@@ -18,6 +19,12 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
     ttsConfig, appSettings, onTTSChange, onAppSettingsChange, isOpen, onClose, themeMode, onThemeModeChange
 }) => {
   const [availableVoices, setAvailableVoices] = useState<{en: SpeechSynthesisVoice[], zh: SpeechSynthesisVoice[]}>({ en: [], zh: [] });
+  // 设置内的分页：常规设置 / 数据管理（导入、分组）
+  const [tab, setTab] = useState<'general' | 'data'>('general');
+
+  useEffect(() => {
+    if (isOpen) setTab('general');
+  }, [isOpen]);
 
   useEffect(() => {
     // Subscribe to voice changes to ensure list is populated
@@ -44,13 +51,17 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-      <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-6 w-full max-w-sm relative overflow-hidden text-slate-800 dark:text-slate-100 max-h-[90vh] flex flex-col animate-in fade-in zoom-in-95 duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 pt-safe pb-safe px-safe">
+      <div
+        className={`bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-5 md:p-6 w-full relative overflow-hidden text-slate-800 dark:text-slate-100 max-h-[90vh] flex flex-col animate-in fade-in zoom-in-95 duration-200 ${
+          tab === 'data' ? 'max-w-[95vw] md:max-w-2xl lg:max-w-3xl' : 'max-w-sm'
+        }`}
+      >
         
         {/* Decorative background element */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-brand-50 dark:bg-brand-900/20 rounded-full -mr-16 -mt-16 pointer-events-none" />
 
-        <div className="flex justify-between items-center mb-6 relative z-10 flex-shrink-0">
+        <div className="flex justify-between items-center mb-4 relative z-10 flex-shrink-0">
           <h2 className="text-xl font-bold flex items-center gap-2">
             <Settings className="w-5 h-5 text-brand-500" />
             设置选项
@@ -60,7 +71,34 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           </button>
         </div>
 
-        <div className="space-y-6 relative z-10 overflow-y-auto no-scrollbar pr-2 flex-1">
+        {/* 分页切换：常规设置 / 数据管理 */}
+        <div className="flex gap-1 p-1 mb-4 bg-slate-100 dark:bg-slate-900/60 rounded-xl relative z-10 flex-shrink-0">
+          {([
+            { key: 'general' as const, label: '常规设置', icon: Settings },
+            { key: 'data' as const, label: '数据管理', icon: Database },
+          ]).map((item) => (
+            <button
+              key={item.key}
+              onClick={() => setTab(item.key)}
+              className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-bold transition-colors ${
+                tab === item.key
+                  ? 'bg-white dark:bg-slate-700 text-brand-600 dark:text-brand-300 shadow-sm'
+                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+              }`}
+            >
+              <item.icon className="w-4 h-4" />
+              {item.label}
+            </button>
+          ))}
+        </div>
+
+        {tab === 'data' && (
+          <div className="relative z-10 overflow-y-auto no-scrollbar px-1 flex-1">
+            <DataManager />
+          </div>
+        )}
+
+        <div className={`space-y-6 relative z-10 overflow-y-auto no-scrollbar pr-2 flex-1 ${tab === 'data' ? 'hidden' : ''}`}>
           
           {/* Appearance Section */}
           <div className="space-y-4 border-b border-slate-100 dark:border-slate-700 pb-6">

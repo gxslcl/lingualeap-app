@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Trophy, RefreshCw, CheckCircle, XCircle, Play } from "lucide-react";
-import { vocabularyData } from "../data/vocabulary";
+import { customDataService } from "../services/customData";
 import { WordItem, TTSConfig } from "../types";
 import { ttsService } from "../services/ttsService";
 
@@ -43,7 +43,7 @@ export const GameView: React.FC<GameViewProps> = ({ ttsConfig }) => {
 
   const initializeGame = useCallback(() => {
     // Pick 8 random words for a fuller game
-    const shuffledAll = shuffle(vocabularyData);
+    const shuffledAll = shuffle(customDataService.allWords());
     const gameWords = shuffledAll.slice(0, 8);
 
     setLeftColumn(shuffle(gameWords)); // English
@@ -126,8 +126,8 @@ export const GameView: React.FC<GameViewProps> = ({ ttsConfig }) => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto px-4">
-      <div className="flex justify-between items-center mb-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 sticky top-0 z-20">
+    <div className="max-w-4xl 2xl:max-w-6xl mx-auto px-4">
+      <div className="flex justify-between items-center mb-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 sticky-under-header z-20">
         <div className="flex items-center gap-3">
           <div className="bg-yellow-100 dark:bg-yellow-900/30 p-2 rounded-lg">
             <Trophy className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />

@@ -17,12 +17,14 @@ import {
   X,
   ArrowUp,
   ArrowDown,
+  ChevronDown,
 } from "lucide-react";
-import { phrasesData } from "../data/phrases";
-import { vocabularyData } from "../data/vocabulary";
 import { TTSConfig, WordItem } from "../types";
 import { ttsService } from "../services/ttsService";
 import { storageService } from "../services/storage";
+import { sessionService } from "../services/session";
+// 内置数据 + 导入的自定义数据
+import { customDataService } from "../services/customData";
 
 // 难度级别定义
 type DifficultyLevel = "short" | "medium" | "long" | "all";
@@ -63,15 +65,37 @@ interface PhrasesViewProps {
 
 export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
   const savedSettings = storageService.getPhrasesSettings();
+  // 自定义数据发生增删时重新读取（导入后不必重进应用）
+  const [dataVersion, setDataVersion] = useState(0);
+  useEffect(() => {
+    const unsub = customDataService.subscribe(() => setDataVersion((v) => v + 1));
+    return () => {
+      unsub();
+    };
+  }, []);
+  const allPhrases = useMemo(
+    () => customDataService.allPhrases(),
+    [dataVersion],
+  );
+  const allWords = useMemo(() => customDataService.allWords(), [dataVersion]);
+
+  // 恢复上次的浏览进度（页码 / 难度筛选等）
+  const savedView = sessionService.getViewState<{
+    currentPage: number;
+    selectedDifficulty: DifficultyLevel;
+    additionalCount: number;
+  }>("phrases");
+
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [isRandomMode, setIsRandomMode] = useState(savedSettings.isRandomMode);
-  const [displayPhrases, setDisplayPhrases] = useState(phrasesData);
+  const [displayPhrases, setDisplayPhrases] = useState(allPhrases);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [pageSize, setPageSize] = useState(20); // 每页显示20个
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(() => savedView?.currentPage ?? 1);
   const [additionalCount, setAdditionalCount] = useState(0);
-  const [selectedDifficulty, setSelectedDifficulty] =
-    useState<DifficultyLevel>("all");
+  const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel>(
+    savedView?.selectedDifficulty ?? "all",
+  );
   const [intervalMs, setIntervalMs] = useState(savedSettings.intervalMs);
   const [repeatCount, setRepeatCount] = useState(savedSettings.repeatCount);
   const [playRange, setPlayRange] = useState(savedSettings.playRange);
@@ -108,6 +132,30 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
   const isMobile = useRef<boolean>(
     /iPhone|iPad|iPod|Android/i.test(navigator.userAgent),
   );
+
+  // 蓝色卡片里的操作面板（随机播放 / 间隔 / 遍数 / 范围 / 难度筛选等）
+  // 手机上默认收起，避免占满首屏；用户的手动选择会记住
+  const [panelOpen, setPanelOpen] = useState<boolean>(() => {
+    try {
+      const saved = localStorage.getItem("lingualeap_phrases_panel");
+      if (saved === "open") return true;
+      if (saved === "closed") return false;
+    } catch {
+      // 隐私模式等场景下忽略存储异常
+    }
+    return window.innerWidth >= 768;
+  });
+  const togglePanel = () => {
+    setPanelOpen((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem("lingualeap_phrases_panel", next ? "open" : "closed");
+      } catch {
+        // 忽略
+      }
+      return next;
+    });
+  };
 
   // Close popup when clicking outside
   useEffect(() => {
@@ -148,9 +196,9 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
 
   useEffect(() => {
     if (isRandomMode) {
-      setDisplayPhrases([...phrasesData].sort(() => Math.random() - 0.5));
+      setDisplayPhrases([...allPhrases].sort(() => Math.random() - 0.5));
     } else {
-      setDisplayPhrases(phrasesData);
+      setDisplayPhrases(allPhrases);
     }
     // Reset to first page when changing random mode
     setCurrentPage(1);
@@ -212,6 +260,15 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
     [playPhrases, currentIndex],
   );
 
+  // 记录浏览进度，供下次启动恢复
+  useEffect(() => {
+    sessionService.patchViewState("phrases", {
+      currentPage,
+      selectedDifficulty,
+      additionalCount,
+    });
+  }, [currentPage, selectedDifficulty, additionalCount]);
+
   const handlePlay = (e: React.MouseEvent, text: string) => {
     e.stopPropagation();
     ttsService.speak(text, ttsConfig);
@@ -226,14 +283,14 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
     const cleanWord = word.replace(/[.,!?;:()"]/g, "").toLowerCase();
 
     // 1. Exact match (High priority)
-    let match = vocabularyData.find(
+    let match = allWords.find(
       (v) => v.english.toLowerCase() === cleanWord,
     );
     if (match) return match;
 
     // Helper to search in vocabulary
     const searchInVocab = (target: string) =>
-      vocabularyData.find((v) => v.english.toLowerCase() === target);
+      allWords.find((v) => v.english.toLowerCase() === target);
 
     // 2. Try variations of the clicked word (Stemming - Clicked "dogs", find "dog")
     const variations: string[] = [];
@@ -275,7 +332,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
 
     // 3. Try finding if the clicked word is a base for something in DB (Reverse - Clicked "dog", find "dogs")
     // We iterate through vocabulary and check if any word is a variation of cleanWord
-    match = vocabularyData.find((v) => {
+    match = allWords.find((v) => {
       const dbWord = v.english.toLowerCase();
 
       // Plurals
@@ -398,7 +455,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
         onClick={(e) => handleWordClick(e, word)}
         onMouseEnter={handleWordMouseEnter}
         onMouseLeave={handleWordMouseLeave}
-        className="inline-block hover:text-brand-600 hover:underline cursor-pointer transition-colors mr-1.5 rounded hover:bg-brand-50/50 px-0.5 -mx-0.5"
+        className="inline-block hover:text-brand-600 hover:underline cursor-pointer transition-colors mr-1.5 rounded hover:bg-brand-50/50 dark:hover:bg-brand-900/40 px-0.5 -mx-0.5"
       >
         {word}
       </span>
@@ -460,7 +517,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
 
   const shufflePhrases = () => {
     setIsRandomMode(true);
-    setDisplayPhrases([...phrasesData].sort(() => Math.random() - 0.5));
+    setDisplayPhrases([...allPhrases].sort(() => Math.random() - 0.5));
     setCurrentPage(1);
     setAdditionalCount(0);
     setExpandedId(null);
@@ -581,6 +638,8 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
         }
 
         setCurrentLoop(0);
+        // 每读完一句记一次练习（统计面板的数据来源）
+        storageService.recordPractice(1);
 
         if (currentIndex < playPhrases.length - 1) {
           setCurrentIndex((prev) => prev + 1);
@@ -707,17 +766,39 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
   }, []);
 
   return (
-    <div className="max-w-3xl mx-auto pb-24">
-      <div className="mb-6 md:mb-8 text-center bg-gradient-to-r from-brand-500 to-brand-600 rounded-2xl p-6 text-white shadow-lg">
-        <h2 className="text-2xl font-bold mb-2 flex items-center justify-center gap-2">
-          <Sparkles className="w-5 h-5 text-yellow-300" />
-          常用情景短语
-        </h2>
-        <p className="text-brand-100 text-sm">
+    <div
+      className="max-w-3xl xl:max-w-5xl 2xl:max-w-6xl mx-auto pb-page"
+      // 桌面/平板浏览器会显示底部通栏播放条，这里把它占的高度预留下来
+      style={{ "--bottom-bar-h": isMobile.current ? "0px" : "5rem" } as React.CSSProperties}
+    >
+      <div className="mb-6 md:mb-8 text-center bg-gradient-to-r from-brand-500 to-brand-600 rounded-2xl p-5 md:p-6 text-white shadow-lg">
+        <button
+          type="button"
+          onClick={togglePanel}
+          aria-expanded={panelOpen}
+          className="w-full flex items-center justify-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded-lg"
+        >
+          <h2 className="text-2xl font-bold flex items-center justify-center gap-2">
+            <Sparkles className="w-5 h-5 text-yellow-300" />
+            常用情景短语
+          </h2>
+          <ChevronDown
+            className={`w-5 h-5 text-white/80 transition-transform duration-300 ${
+              panelOpen ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+        <p className="text-brand-100 text-sm mt-2">
           点击卡片查看中文释义，模仿发音进行跟读练习
         </p>
+        {!panelOpen && (
+          <p className="text-[11px] text-white/70 mt-1">
+            点标题可展开随机播放、间隔与难度筛选
+          </p>
+        )}
 
-        <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
+        {panelOpen && (
+          <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
           <button
             onClick={() => setIsRandomMode(!isRandomMode)}
             className={`inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 w-full ${
@@ -842,7 +923,8 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
               {level === "all" ? "全部" : DIFFICULTY_CONFIG[level].label}
             </button>
           ))}
-        </div>
+          </div>
+        )}
       </div>
 
       <div className="space-y-4">
@@ -891,7 +973,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
                       onClick={(e) => toggleFavorite(e, phrase.id)}
                       className={`p-2 rounded-full border transition-colors ${
                         isFavorite
-                          ? "bg-yellow-50 text-yellow-500 border-yellow-200"
+                          ? "bg-yellow-50 dark:bg-yellow-900/30 text-yellow-500 dark:text-yellow-400 border-yellow-200 dark:border-yellow-800"
                           : "bg-white dark:bg-slate-800 text-slate-400 border-slate-200 dark:border-slate-700 hover:text-yellow-500"
                       }`}
                     >
@@ -983,7 +1065,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
                 {selectedWord.word}
               </h4>
               {selectedWord.def?.pronunciation && (
-                <span className="text-sm text-slate-500 dark:text-slate-300 font-mono">
+                <span className="text-sm text-slate-500 dark:text-slate-300 ipa-text">
                   {selectedWord.def.pronunciation}
                 </span>
               )}
@@ -1032,7 +1114,7 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
         <button
           onClick={togglePlay}
           disabled={playPhrases.length === 0}
-          className="fixed bottom-[72px] right-8 z-50 p-3 bg-indigo-500 text-white rounded-full shadow-lg hover:bg-indigo-600 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 disabled:bg-slate-300 dark:disabled:bg-slate-700"
+          className="fixed bottom-above-nav right-6 md:right-8 z-50 p-3 bg-indigo-500 text-white rounded-full shadow-lg hover:bg-indigo-600 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 disabled:bg-slate-300 dark:disabled:bg-slate-700"
           aria-label={isPlaying ? "暂停播放" : "开始播放"}
         >
           {isPlaying ? (
@@ -1047,8 +1129,8 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className={`fixed right-8 z-50 p-3 bg-brand-500 text-white rounded-full shadow-lg hover:bg-brand-600 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-300 focus:ring-offset-2 ${
-            isMobile.current ? "bottom-[132px]" : "bottom-[72px]"
+          className={`fixed right-6 md:right-8 z-50 p-3 bg-brand-500 text-white rounded-full shadow-lg hover:bg-brand-600 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-300 focus:ring-offset-2 ${
+            isMobile.current ? "bottom-above-nav-2" : "bottom-above-nav"
           }`}
           aria-label="回到顶部"
         >
@@ -1057,8 +1139,8 @@ export const PhrasesView: React.FC<PhrasesViewProps> = ({ ttsConfig }) => {
       )}
 
       {!isMobile.current && (
-        <div className="fixed bottom-0 left-0 right-0 p-4 pb-[calc(env(safe-area-inset-bottom)+16px)] md:pb-4 md:bottom-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-50 transition-all md:translate-y-0 translate-y-[-12px]">
-          <div className="mx-auto flex items-center max-w-3xl relative">
+        <div className="fixed bottom-bar-above-nav left-0 right-0 p-3 md:p-4 px-safe bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-40 transition-all">
+          <div className="mx-auto flex items-center max-w-3xl xl:max-w-5xl 2xl:max-w-6xl relative">
             <div className="flex items-center gap-2">
               <div className="text-xs text-slate-500 font-medium w-12 text-center">
                 {playPhrases.length > 0

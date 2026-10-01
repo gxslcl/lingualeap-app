@@ -14,6 +14,10 @@ export default defineConfig(({ mode }) => {
       build: {
         outDir: 'dist', // 明确指定输出目录
         assetsDir: 'assets', // 资源目录
+        // 由构建脚本负责清空输出目录（见 scripts/build-apk.mjs 的 cleanDir）：
+        // 打包环境对 Node 的批量删除有安全拦截，交给外部工具清理更稳妥，
+        // 这里关闭 Vite 的自动清空避免二次删除与残留旧资源。
+        emptyOutDir: false,
         rollupOptions: {
           output: {
             // 确保资源文件名一致
@@ -25,7 +29,11 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [
         react(),
+        // 打包 Android 时不生成 Service Worker：
+        // 原生包内资源本就是本地的，SW 只会带来「更新后仍加载旧版本」的缓存问题。
+        // 通过 VITE_TARGET=android 控制（见 scripts/build-apk.mjs）。
         VitePWA({
+          disable: process.env.VITE_TARGET === 'android',
           registerType: 'autoUpdate',
           devOptions: {
             enabled: true

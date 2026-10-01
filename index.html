@@ -4,99 +4,77 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
     <meta name="theme-color" content="#0ea5e9" />
     <meta name="description" content="一款帮助学习英语的离线应用程序" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/src/assets/icon-192.png" />
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="英语助手">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>英语自学助手 - 离线版</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                50: "#f0f9ff",
-                100: "#e0f2fe",
-                500: "#0ea5e9",
-                600: "#0284c7",
-                900: "#0c4a6e",
-              },
-            },
-            animation: {
-              "bounce-short": "bounce 0.5s ease-in-out 1",
-              shake: "shake 0.5s cubic-bezier(.36,.07,.19,.97) both",
-            },
-            keyframes: {
-              shake: {
-                "10%, 90%": { transform: "translate3d(-1px, 0, 0)" },
-                "20%, 80%": { transform: "translate3d(2px, 0, 0)" },
-                "30%, 50%, 70%": { transform: "translate3d(-4px, 0, 0)" },
-                "40%, 60%": { transform: "translate3d(4px, 0, 0)" },
-              },
-            },
-          },
-        },
-      };
-    </script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./icon-192.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="英语助手" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>英语自学助手</title>
     <style>
-      body {
-        font-family: "Inter", "Noto Sans SC", sans-serif;
+      /* 启动页遮罩：由 Capacitor 原生启动图接管前的兜底，避免白屏闪烁 */
+      #boot-mask {
+        position: fixed;
+        inset: 0;
+        background: #f0f9ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.25s ease;
       }
-      /* Hide scrollbar for chrome/safari/opera */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
+      #boot-mask.hidden {
+        opacity: 0;
+        pointer-events: none;
       }
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-      }
-      /* Mobile safe area */
-      .pb-safe {
-        padding-bottom: env(safe-area-inset-bottom);
-      }
-    </style>
-    <script type="importmap">
-      {
-        "imports": {
-          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-          "react/": "https://aistudiocdn.com/react@^19.2.0/",
-          "react": "https://aistudiocdn.com/react@^19.2.0",
-          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+      @media (prefers-color-scheme: dark) {
+        #boot-mask {
+          background: #0f172a;
+        }
+        #boot-mask > div {
+          color: #38bdf8 !important;
         }
       }
-    </script>
+    </style>
   </head>
   <body
-    class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white"
+    class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 antialiased selection:bg-brand-500 selection:text-white"
   >
+    <div id="boot-mask">
+      <div style="font-size: 15px; color: #0284c7; letter-spacing: 1px">
+        英语自学助手
+      </div>
+    </div>
     <div id="root"></div>
-    <!-- 修改为相对路径引用 -->
     <script type="module" src="./index.tsx"></script>
-    
     <script>
-      // Register service worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js')
-            .then(registration => {
-              console.log('SW registered: ', registration);
-            })
-            .catch(registrationError => {
-              console.log('SW registration failed: ', registrationError);
+      // 注册 Service Worker（仅 Web 部署时需要；安卓包内资源已是本地的，
+      // 启用 SW 反而会导致升级安装后仍加载旧版本缓存，故在原生环境跳过）
+      var inNativeApp = !!window.Capacitor;
+      if ('serviceWorker' in navigator && !inNativeApp) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker
+            .register('./sw.js')
+            .catch(function (err) {
+              console.log('SW registration skipped:', err);
             });
         });
       }
+      // 首屏渲染完成后移除启动遮罩
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var m = document.getElementById('boot-mask');
+          if (m) {
+            m.classList.add('hidden');
+            setTimeout(function () {
+              m.remove();
+            }, 300);
+          }
+        }, 120);
+      });
     </script>
   </body>
 </html>

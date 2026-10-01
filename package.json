@@ -1,15 +1,28 @@
 {
   "name": "lingualeap---英语自学助手",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "clean:vocabulary": "node scripts/clean-vocabulary-duplicates.mjs",
+    "generate:vocabulary-tiers": "node scripts/generate-vocabulary-tiers.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cap:sync": "cap sync android",
+    "cap:open": "cap open android",
+    "android:assets": "node scripts/generate-android-assets.mjs",
+    "android:apk": "node scripts/build-apk.mjs debug",
+    "android:release": "node scripts/build-apk.mjs release",
+    "layout:check": "node scripts/layout-check.mjs"
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.1",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.6.9",
+    "@capacitor/device": "^7.0.0",
+    "@capacitor/keyboard": "^7.0.0",
+    "@capacitor/splash-screen": "^7.0.0",
     "antd": "^6.3.4",
     "lucide-react": "^0.554.0",
     "microsoft-cognitiveservices-speech-sdk": "^1.47.0",
@@ -17,8 +30,13 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@capacitor/android": "^7.6.9",
+    "@capacitor/cli": "^7.6.9",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
     "typescript": "~5.8.2",
     "vite": "^5.4.14",
     "vite-plugin-pwa": "^0.20.0"

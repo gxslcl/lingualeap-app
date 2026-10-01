@@ -1,5 +1,14 @@
 
-import { WordProgress, UserStats, AppSettings, TTSConfig, ListenSettings, Category, PhrasesSettings } from '../types';
+import {
+  WordProgress,
+  UserStats,
+  AppSettings,
+  TTSConfig,
+  ListenSettings,
+  Category,
+  PhrasesSettings,
+  DailyRecord,
+} from '../types';
 
 const KEYS = {
   PROGRESS: 'lingualeap_progress',
@@ -16,7 +25,25 @@ const DEFAULT_STATS: UserStats = {
   streakDays: 0,
   lastStudyDate: '',
   todayCount: 0,
+  history: [],
+  totalPracticed: 0,
+  masteredCount: 0,
 };
+
+/** 本地时区的日期键（原来用 toISOString 会按 UTC 算，东八区会错一天） */
+function todayKey(d: Date = new Date()): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+function shiftDays(key: string, delta: number): string {
+  const [y, m, d] = key.split('-').map(Number);
+  const date = new Date(y, (m ?? 1) - 1, d ?? 1);
+  date.setDate(date.getDate() + delta);
+  return todayKey(date);
+}
 const DEFAULT_SETTINGS: AppSettings = {
   darkMode: false,
   fontSizeScale: 1.0,
@@ -36,7 +63,8 @@ const DEFAULT_LISTEN_SETTINGS: ListenSettings = {
   selectedCategory: Object.values(Category)[0],
   batchSize: 10,
   repeatCount: 2,
-  intervalMs: 500
+  intervalMs: 500,
+  playbackStrategy: 'balanced',
 };
 
 const DEFAULT_PHRASES_SETTINGS: PhrasesSettings = {
@@ -45,7 +73,7 @@ const DEFAULT_PHRASES_SETTINGS: PhrasesSettings = {
   intervalMs: 500,
   showChinese: true,
   playRange: 'loaded',
-  playMode: 'en'
+  playMode: 'en-zh-en'
 };
 
 export const storageService = {
@@ -66,96 +94,129 @@ export const storageService = {
 
   getStats: (): UserStats => {
     const data = localStorage.getItem(KEYS.STATS);
-    if (!data) return DEFAULT_STATS;
-    
-    const stats = JSON.parse(data);
-    
-    // Check for streak updates
-    const today = new Date().toISOString().split('T')[0];
-    if (stats.lastStudyDate !== today) {
-      // Logic for streak could be improved, but simple check:
-      const last = new Date(stats.lastStudyDate);
-      const curr = new Date(today);
-      const diffTime = Math.abs(curr.getTime() - last.getTime());
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+    const stats: UserStats = data
+      ? { ...DEFAULT_STATS, ...JSON.parse(data) }
+      : { ...DEFAULT_STATS };
+    if (!Array.isArray(stats.history)) stats.history = [];
 
-      if (diffDays > 1 && stats.lastStudyDate !== '') {
-        stats.streakDays = 0; // Reset streak if missed a day
+    const today = todayKey();
+    // 跨天时把「今日次数」按当天记录重新取，而不是简单清零
+    const todayRecord = stats.history.find((r) => r.date === today);
+    stats.todayCount = todayRecord?.count ?? 0;
+
+    // 连续天数按历史记录重算，避免多次累加导致数字虚高
+    if (stats.lastStudyDate !== today) {
+      const yesterday = shiftDays(today, -1);
+      const hasToday = stats.history.some((r) => r.date === today && (r.count > 0 || r.minutes > 0));
+      const hasYesterday = stats.history.some((r) => r.date === yesterday && (r.count > 0 || r.minutes > 0));
+      // 今天还没学、昨天也没学 → 连续中断
+      if (!hasToday && !hasYesterday) {
+        stats.streakDays = 0;
       }
-      stats.todayCount = 0; // Reset daily count
     }
-    
+    return stats;
+  },
+
+  /** 最近 N 天的记录（含没有学习的空白天，用于趋势图） */
+  getDailyHistory: (days = 7): DailyRecord[] => {
+    const stats = storageService.getStats();
+    const map = new Map((stats.history ?? []).map((r) => [r.date, r]));
+    const result: DailyRecord[] = [];
+    for (let i = days - 1; i >= 0; i--) {
+      const date = shiftDays(todayKey(), -i);
+      result.push(map.get(date) ?? { date, count: 0, minutes: 0 });
+    }
+    return result;
+  },
+
+  /** 从学习进度实时统计掌握情况 */
+  getMasteredCount: (): number => {
+    const progress = storageService.getProgress();
+    return Object.values(progress).filter((p) => p.status === 'mastered').length;
+  },
+
+  /** 记录一次练习（听读一个词、学一个词、练一句短语都算一次） */
+  recordPractice: (count = 1, minutes = 0) => {
+    const stats = storageService.getStats();
+    const today = todayKey();
+
+    if (!stats.history) stats.history = [];
+    let record = stats.history.find((r) => r.date === today);
+    if (!record) {
+      record = { date: today, count: 0, minutes: 0 };
+      stats.history.push(record);
+    }
+    record.count += count;
+    record.minutes = Math.round((record.minutes + minutes) * 10) / 10;
+    // 只保留最近 30 天
+    stats.history = stats.history
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .slice(-30);
+
+    stats.totalPracticed = (stats.totalPracticed ?? 0) + count;
+    stats.todayCount = record.count;
+
+    if (stats.lastStudyDate !== today) {
+      if (stats.lastStudyDate && shiftDays(stats.lastStudyDate, 1) === today) {
+        stats.streakDays += 1;
+      } else {
+        stats.streakDays = 1;
+      }
+      stats.lastStudyDate = today;
+    }
+
+    storageService.saveStats(stats);
     return stats;
   },
 
   updateStudyTime: (minutes: number) => {
     const stats = storageService.getStats();
     stats.totalStudyTime += minutes;
-    const today = new Date().toISOString().split('T')[0];
-    
-    if (stats.lastStudyDate !== today) {
-        if (stats.lastStudyDate) {
-             const last = new Date(stats.lastStudyDate);
-             const curr = new Date(today);
-             const diffDays = Math.ceil(Math.abs(curr.getTime() - last.getTime()) / (1000 * 60 * 60 * 24));
-             if (diffDays === 1) stats.streakDays += 1;
-             else if (diffDays > 1) stats.streakDays = 1;
-        } else {
-            stats.streakDays = 1;
-        }
-        stats.lastStudyDate = today;
+    const today = todayKey();
+
+    if (!stats.history) stats.history = [];
+    let record = stats.history.find((r) => r.date === today);
+    if (!record) {
+      record = { date: today, count: 0, minutes: 0 };
+      stats.history.push(record);
     }
-    
+    record.minutes = Math.round((record.minutes + minutes) * 10) / 10;
+    stats.history = stats.history
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .slice(-30);
+
+    if (stats.lastStudyDate !== today) {
+      if (stats.lastStudyDate && shiftDays(stats.lastStudyDate, 1) === today) {
+        stats.streakDays += 1;
+      } else {
+        stats.streakDays = 1;
+      }
+      stats.lastStudyDate = today;
+    }
+
     storageService.saveStats(stats);
     return stats;
   },
 
   updateWordStats: (isMastered: boolean) => {
-    const stats = storageService.getStats();
-    const today = new Date().toISOString().split('T')[0];
-    
-    // Ensure date is updated to prevent reset on next read
-    if (stats.lastStudyDate !== today) {
-        if (stats.lastStudyDate) {
-             const last = new Date(stats.lastStudyDate);
-             const curr = new Date(today);
-             const diffDays = Math.ceil(Math.abs(curr.getTime() - last.getTime()) / (1000 * 60 * 60 * 24));
-             if (diffDays === 1) stats.streakDays += 1;
-             else if (diffDays > 1) stats.streakDays = 1;
-        } else {
-            stats.streakDays = 1;
-        }
-        stats.lastStudyDate = today;
-    }
-
-    stats.todayCount += 1;
+    const stats = storageService.recordPractice(1);
     if (isMastered) {
       stats.wordsLearned += 1;
+      storageService.saveStats(stats);
     }
-    
-    storageService.saveStats(stats);
     return stats;
   },
 
   // App Settings
   saveSettings: (settings: AppSettings) => {
+    // 只负责持久化。主题（.dark 类）由 App 统一按 themeMode / 系统偏好应用，
+    // 这里若再按 darkMode 操作 classList 会与主题设置相互覆盖。
     localStorage.setItem(KEYS.SETTINGS, JSON.stringify(settings));
-    // Apply dark mode immediately
-    if (settings.darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
   },
 
   getSettings: (): AppSettings => {
     const data = localStorage.getItem(KEYS.SETTINGS);
-    const settings = data ? JSON.parse(data) : DEFAULT_SETTINGS;
-    // Initial apply
-    if (settings.darkMode) {
-      document.documentElement.classList.add('dark');
-    }
-    return settings;
+    return data ? { ...DEFAULT_SETTINGS, ...JSON.parse(data) } : DEFAULT_SETTINGS;
   },
 
   // TTS Config

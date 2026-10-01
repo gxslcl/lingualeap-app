@@ -14,10 +14,13 @@ import {
   Eye,
   EyeOff,
 } from "lucide-react";
-import { WordItem, TTSConfig, Category } from "../types";
-import { vocabularyData } from "../data/vocabulary";
+import { WordItem, TTSConfig, Category, ListenSettings } from "../types";
+import { vocabularyTiers, type VocabularyTier } from "../data/vocabularyTiers";
 import { ttsService } from "../services/ttsService";
 import { storageService } from "../services/storage";
+import { sessionService } from "../services/session";
+// 内置数据 + 导入的自定义数据
+import { customDataService } from "../services/customData";
 
 interface ListenViewProps {
   ttsConfig: TTSConfig;
@@ -32,6 +35,98 @@ function shuffle<T>(array: T[]): T[] {
   return newArr;
 }
 
+const TIER_ORDER: VocabularyTier[] = ["core", "active", "extended", "reserve"];
+
+type PlaybackStrategy = NonNullable<ListenSettings["playbackStrategy"]>;
+
+const STRATEGY_LABELS: Record<PlaybackStrategy, string> = {
+  focus: "高频巩固",
+  balanced: "均衡输入",
+  explore: "扩展输入",
+};
+
+function getTierMix(
+  batchSize: number,
+  playbackStrategy: PlaybackStrategy,
+): Record<VocabularyTier, number> {
+  if (batchSize <= 10) {
+    if (playbackStrategy === "focus") {
+      return { core: 7, active: 2, extended: 1, reserve: 0 };
+    }
+    if (playbackStrategy === "explore") {
+      return { core: 3, active: 4, extended: 2, reserve: 1 };
+    }
+    return { core: 5, active: 3, extended: 2, reserve: 0 };
+  }
+  if (batchSize <= 20) {
+    if (playbackStrategy === "focus") {
+      return { core: 12, active: 5, extended: 3, reserve: 0 };
+    }
+    if (playbackStrategy === "explore") {
+      return { core: 6, active: 8, extended: 5, reserve: 1 };
+    }
+    return { core: 9, active: 7, extended: 4, reserve: 0 };
+  }
+  if (playbackStrategy === "focus") {
+    return { core: 19, active: 8, extended: 3, reserve: 0 };
+  }
+  if (playbackStrategy === "explore") {
+    return { core: 8, active: 11, extended: 9, reserve: 2 };
+  }
+  return { core: 15, active: 10, extended: 4, reserve: 1 };
+}
+
+function buildTieredBatch(
+  candidates: WordItem[],
+  batchSize: number,
+  playbackStrategy: PlaybackStrategy,
+): WordItem[] {
+  const pools: Record<VocabularyTier, WordItem[]> = {
+    core: [],
+    active: [],
+    extended: [],
+    reserve: [],
+  };
+
+  for (const word of candidates) {
+    const tier = vocabularyTiers[word.id] ?? "extended";
+    pools[tier].push(word);
+  }
+
+  for (const tier of TIER_ORDER) {
+    pools[tier] = shuffle(pools[tier]);
+  }
+
+  const targetMix = getTierMix(batchSize, playbackStrategy);
+  const selected: WordItem[] = [];
+  const selectedIds = new Set<string>();
+
+  const takeFromTier = (tier: VocabularyTier, count: number) => {
+    for (const word of pools[tier]) {
+      if (selected.length >= batchSize || count <= 0) break;
+      if (selectedIds.has(word.id)) continue;
+      selected.push(word);
+      selectedIds.add(word.id);
+      count -= 1;
+    }
+  };
+
+  for (const tier of TIER_ORDER) {
+    takeFromTier(tier, targetMix[tier]);
+  }
+
+  if (selected.length < batchSize) {
+    const remainder = shuffle(candidates).filter((word) => !selectedIds.has(word.id));
+    for (const word of remainder) {
+      if (selected.length >= batchSize) break;
+      selected.push(word);
+      selectedIds.add(word.id);
+    }
+  }
+
+  return shuffle(selected);
+}
+
 export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
   const savedSettings = storageService.getListenSettings();
 
@@ -42,6 +137,9 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
   const [batchSize, setBatchSize] = useState(savedSettings.batchSize);
   const [repeatCount, setRepeatCount] = useState(savedSettings.repeatCount);
   const [intervalMs, setIntervalMs] = useState(savedSettings.intervalMs);
+  const [playbackStrategy, setPlaybackStrategy] = useState<PlaybackStrategy>(
+    savedSettings.playbackStrategy || "balanced",
+  );
   const [autoSwitch, setAutoSwitch] = useState(false);
   const [autoSwitchAfter, setAutoSwitchAfter] = useState(1);
   const [completedCycles, setCompletedCycles] = useState(0);
@@ -60,8 +158,9 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
       batchSize,
       repeatCount,
       intervalMs,
+      playbackStrategy,
     });
-  }, [mode, selectedCategory, batchSize, repeatCount, intervalMs]);
+  }, [mode, selectedCategory, batchSize, repeatCount, intervalMs, playbackStrategy]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -79,11 +178,37 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
     };
   }, [showSettingsMenu]);
 
-  const [words, setWords] = useState<WordItem[]>([]);
+  // 恢复上次听读的批次与进度（关闭应用后再打开接着听）
+  const savedBatch = sessionService.getViewState<{
+    wordIds: string[];
+    currentIndex: number;
+    currentLoop: number;
+  }>("listen");
+  const restoredWords: WordItem[] | null = (() => {
+    const ids = savedBatch?.wordIds;
+    if (!ids || ids.length === 0) return null;
+    const pool = new Map(customDataService.allWords().map((w) => [w.id, w]));
+    const list = ids.map((id) => pool.get(id)).filter(Boolean) as WordItem[];
+    return list.length > 0 ? list : null;
+  })();
+
+  const [words, setWords] = useState<WordItem[]>(restoredWords ?? []);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentLoop, setCurrentLoop] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(() => savedBatch?.currentIndex ?? 0);
+  const [currentLoop, setCurrentLoop] = useState(() => savedBatch?.currentLoop ?? 0);
   const [currentPhase, setCurrentPhase] = useState<"en" | "zh">("en");
+  /** 有可恢复的批次时不再自动生成新批次 */
+  const skipInitialGenerate = useRef(!!restoredWords);
+
+  // 记录进度，供下次启动恢复
+  useEffect(() => {
+    if (words.length === 0) return;
+    sessionService.patchViewState("listen", {
+      wordIds: words.map((w) => w.id),
+      currentIndex,
+      currentLoop,
+    });
+  }, [words, currentIndex, currentLoop]);
 
   const isPlayingRef = useRef(false);
   const activeWordRef = useRef<HTMLDivElement>(null);
@@ -95,16 +220,14 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
 
   const generateBatch = useCallback(
     (autoPlay = false) => {
-      let candidates = vocabularyData;
+      const allWords = customDataService.allWords();
+      let candidates = allWords;
 
       if (mode === "category") {
-        candidates = vocabularyData.filter(
-          (w) => w.category === selectedCategory
-        );
+        candidates = allWords.filter((w) => w.category === selectedCategory);
       }
 
-      const shuffled = shuffle(candidates);
-      setWords(shuffled.slice(0, batchSize));
+      setWords(buildTieredBatch(candidates, batchSize, playbackStrategy));
 
       setCurrentIndex(0);
       setCurrentLoop(0);
@@ -125,10 +248,15 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
         ttsService.cancel();
       }
     },
-    [batchSize, mode, selectedCategory]
+    [batchSize, mode, selectedCategory, playbackStrategy]
   );
 
   useEffect(() => {
+    // 已有恢复批次时跳过首次自动生成，避免把上次的进度冲掉
+    if (skipInitialGenerate.current) {
+      skipInitialGenerate.current = false;
+      return;
+    }
     generateBatch(false);
     return () => {
       ttsService.cancel();
@@ -228,6 +356,9 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
         setCurrentPhase("en");
         setCurrentWordIndex(null);
 
+        // 每完成一个词记一次练习（统计面板的数据来源）
+        storageService.recordPractice(1);
+
         if (currentIndex < words.length - 1) {
           setCurrentIndex((prev) => prev + 1);
         } else {
@@ -314,7 +445,9 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
           }
         }, shutdownTime * 60 * 1000);
       }
-      playSequence();
+      // 这里不再直接调用 playSequence()：setIsPlaying(true) 会触发表格下方的
+      // 播放循环 effect，直接调用会导致同一句被连续朗读两次
+      // （第二次会 cancel + FLUSH 掉第一次，在原生端还会产生多余的中断事件）。
     }
   };
 
@@ -341,10 +474,10 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
     }
 
     if (batchSize === 10) return "grid-cols-1 max-w-md mx-auto";
-    if (batchSize === 20) return "grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto";
+    if (batchSize === 20) return "grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 max-w-5xl 2xl:max-w-[1500px] mx-auto";
     if (batchSize === 30)
-      return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto";
-    return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto";
+      return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 mx-auto";
+    return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-6 mx-auto";
   };
 
   const formatTime = (seconds: number): string => {
@@ -376,7 +509,7 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
   }, [timerShutdown, isPlaying, remainingTime]);
 
   return (
-    <div className="h-[calc(100vh-8rem)] flex flex-col w-full mx-auto px-2">
+    <div className="h-viewport flex flex-col w-full mx-auto px-2">
       <div className="bg-white dark:bg-slate-800 rounded-xl p-3 mb-2 shadow-sm border border-slate-100 dark:border-slate-700 flex-shrink-0">
         <div className="flex flex-col gap-3">
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
@@ -449,6 +582,21 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
             </div>
 
             <div className="flex items-center gap-1 bg-slate-50 dark:bg-slate-700/50 px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+              <Layers className="w-3 h-3 text-slate-400" />
+              <select
+                value={playbackStrategy}
+                onChange={(e) =>
+                  setPlaybackStrategy(e.target.value as PlaybackStrategy)
+                }
+                className="bg-transparent text-xs font-bold text-slate-600 dark:text-slate-200 outline-none cursor-pointer"
+              >
+                <option value="focus">{STRATEGY_LABELS.focus}</option>
+                <option value="balanced">{STRATEGY_LABELS.balanced}</option>
+                <option value="explore">{STRATEGY_LABELS.explore}</option>
+              </select>
+            </div>
+
+            <div className="flex items-center gap-1 bg-slate-50 dark:bg-slate-700/50 px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
               <Timer className="w-3 h-3 text-slate-400" />
               <select
                 value={intervalMs}
@@ -510,7 +658,7 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
       </div>
 
       <div
-        className={`flex-1 overflow-y-auto no-scrollbar pb-16 grid gap-2 content-start w-full transition-all duration-300 ${getGridClass()}`}
+        className={`flex-1 overflow-y-auto no-scrollbar pb-24 grid gap-2 content-start w-full transition-all duration-300 ${getGridClass()}`}
       >
         {words.length > 0 ? (
           words.map((word, index) => {
@@ -585,7 +733,7 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
                       {word.english}
                     </div>
                   )}
-                  <div className="text-[10px] text-slate-400 font-mono truncate hidden sm:block">
+                  <div className="text-[10px] text-slate-400 ipa-text truncate hidden sm:block">
                     {word.pronunciation}
                   </div>
                 </div>
@@ -651,12 +799,8 @@ export const ListenView: React.FC<ListenViewProps> = ({ ttsConfig }) => {
         )}
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 p-2 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-50 transition-all">
-        <div
-          className={`mx-auto flex items-center max-w-4xl relative ${
-            window.innerWidth < 768 ? "mb-16" : ""
-          }`}
-        >
+      <div className="fixed bottom-bar-above-nav left-0 right-0 p-2 px-safe bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-40 transition-all">
+        <div className="mx-auto flex items-center max-w-4xl 2xl:max-w-6xl relative">
           <div className="flex items-center gap-1">
             <div className="text-xs text-slate-500 font-medium w-12 text-center">
               {words.length > 0 ? `${currentIndex + 1}/${words.length}` : "0/0"}
