@@ -1,0 +1,26 @@
+# 统一按 LF 存储，避免不同系统上产生整文件的换行符差异
+* text=auto eol=lf
+
+# Windows 专用脚本保持 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Gradle wrapper 必须是 LF，否则 Linux / macOS 上无法执行
+gradlew text eol=lf
+
+# 二进制文件不做换行符转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.docx binary
+*.rtf binary
+*.apk binary
+*.jks binary
+*.keystore binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.jar binary
